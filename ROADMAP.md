@@ -6,8 +6,11 @@
 
 ## Now (days 1–30) — prove someone will pay
 
-- [ ] Payment rail live (Payoneer/Grey) — **blocks everything**
-- [ ] Domain + Workspace + email warm-up started
+- [x] Payment rail live — **Grey account opened 2026-08-29**
+- [ ] Grey virtual VISA card created ($5) — needed to pay for domain + Workspace
+- [ ] Domain purchased + Google Workspace live
+- [ ] SPF · DKIM · DMARC verified — *non-compliant mail is now rejected outright, not spam-foldered*
+- [ ] Email warm-up clock started (5/day)
 - [ ] LinkedIn repositioned to specialist
 - [ ] Sheet template built
 - [ ] Signal pool at 120 rows
@@ -49,7 +52,8 @@ Website · brand · company registration · custom software · newsletter · pai
 
 | Item | Blocked by |
 |---|---|
-| Everything | Payment rail being live |
+| Domain + Workspace purchase | Grey virtual card being created |
+| Cold email sending | 14-day warm-up completing |
 | Retainer pricing decisions | Real close-rate data from 10+ quotes |
 | Hiring | $2,000 MRR and a written SOP |
 | Software | All four Phase 11 gates |
