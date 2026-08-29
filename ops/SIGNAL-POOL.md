@@ -163,7 +163,20 @@ Read the sheet as the buyer. **Delete any row you wouldn't personally send to a 
 - [ ] Currently live, and first published within 90 days
 - [ ] Source URL opened by you, in your browser
 - [ ] **Primary ATS link** (greenhouse / lever / ashby / workable / company careers page) — never an aggregator. `startups.gallery`, `builtin`, `sonara.ai`, `careerbeacon` and similar are secondary and fail this gate
-- [ ] Entity match confirmed — ambiguous names (Sirius, Swap, Aegis, Sequence) attach to the wrong company easily
+- [ ] **Entity match confirmed** — see below
+- [ ] LinkedIn **band** recorded, and **associated-employee count** recorded when it contradicts the band
+
+### Entity ambiguity is the error that will cost you a client
+
+In a 20-company headcount check, **8 had LinkedIn name collisions**: Sequence (four pages), Axion (`axion-ray` vs `axionhq` vs Axion Ventures), Assured (NYC healthcare vs Palo Alto claims), Coefficient (vs CoEfficient Labs, Coefficient Marketing), NewForm (vs New Form Entertainment), Coral AI, Pallet, Sirius.
+
+Attaching the wrong company's headcount to a row is **invisible until the client checks** — and then it destroys the one thing you sell. Confirm the match against the job posting itself: does the company description on LinkedIn match the product described in the vacancy? Record an `Entity Risk` flag of Low / Medium / High on every row.
+
+### Band vs associated-employee count
+
+LinkedIn shows two different numbers and they disagree. Forus: band 51–200, **217** associated. Sona: band 51–200, **242** associated.
+
+**Rule: gate on the band, but record both, and disclose the mismatch on the row.** If a client opens a company you called "51–200" and counts 242 employees, you have lost the credibility argument even though the band was accurate. Volunteering the discrepancy wins it back — and volunteering inconvenient detail is precisely the product.
 - [ ] Company is B2B, 11–200 people, in a target country
 - [ ] "Why Now" line contains no fact not present in the source
 - [ ] You would send this row yourself

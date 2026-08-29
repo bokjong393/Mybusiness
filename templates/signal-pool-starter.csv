@@ -1,44 +1,63 @@
-Company,Role,Signal Date,Days Open,Headcount,B2B,Status,Source URL (REPLACE with primary ATS link),Notes
-Eon,SDR New York,2026-08-12,17,51-200,Yes,VERIFIED,NEEDS PRIMARY LINK,Enterprise cloud backup / data protection
-ModernFi,BDR New York,~2026-08-12,~17,51-200,Yes,VERIFIED,NEEDS PRIMARY LINK,Fintech infrastructure sold to banks and credit unions
-Perfect Venue,BDR San Francisco,~2026-08-08,~21,11-50,Yes,VERIFIED,NEEDS PRIMARY LINK,Cleanest headcount evidence in sweep - 32 LinkedIn profiles
-Doxel,SDR Austin,~2026-08-05,~24,51-200,Yes,VERIFIED,NEEDS PRIMARY LINK,Construction progress software; 135 LinkedIn profiles
-Waterworth,SDR Victoria BC,2026-08-06,22,11-50,Yes,VERIFIED,NEEDS PRIMARY LINK,Sells to municipalities; smallest and cleanest
-Runwise,SDR,2026-08-14,15,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Prospects building owners - clearly B2B. Headcount is the only gate
-Axion,BDR,2026-08-07,22,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Headcount is the only gate
-Candid Health,BDR,2026-08-11,18,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Scaling fast - confirm still under 200
-Feathery,BDR,2026-08-21,8,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Forms / document workflow
-Collective,BDR,2026-08-23,6,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Close to upper headcount bound
-Reducto,BDR,2026-08-26,3,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Enterprise document AI
-Sirius,BDR,2026-08-27,2,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,a16z Speedrun churn/retention AI - name is ambiguous, match carefully
-Orbital,BDR,2026-08-22,7,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,AI proptech
-Happl,BDR,~2026-08-24,~5,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,London
-Adaptive Security,BDR London,~2026-08-25,~4,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,B2B cybersecurity SaaS
-Clera,Senior BDR,2026-08-21,8,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Munich
-NewForm,BDR,~2026-08-12,~17,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,NYC
-Archive,BDR,~2026-08-22,~7,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Austin
-Swap,BDR,~2026-08-11,~18,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Confirm correct Swap entity
-Alternative Payments,BDR Toronto,~2026-08-08,~21,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Financial OS for SMBs
-Aegis AI,BDR,IN WINDOW,CHECK,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Do NOT confuse with Aegis Technologies Group
-Sequence,BDR,CONFLICTING,CHECK,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Similarly named company in results - verify entity
-Noonlight,SDR,CONFLICTING,CHECK,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Date sources disagree - one week vs one month
-Unison Infrastructure,SDR,UNKNOWN,CHECK,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Live on own careers site; no original date recovered
-FacilityOS,BDR,UNKNOWN,CHECK,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Toronto
-Dealops,Founding SDR SF,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Explicitly early sales-development hire
-Hedge,Founding SDR SF,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Literal founding SDR title
-Teleskope,Founding SDR NYC,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Literal founding SDR
-Ajax,Founding SDR NYC,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Literal founding SDR
-Opus Training,Founding Enterprise BDR NYC,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,SaaS outbound
-Sitemate,Founding SDR Austin,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Scaling North America alongside CRO
-Humaans,Founding US BDR SF,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Agentic AI
-Composio,Founding BDR SF,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Literal founding BDR
-Netic,Founding SDR,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Literal founding SDR
-EnableComp,Founding SDR,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Healthcare finance execs; from Lever sweep
-Packmatic,SDR,2025-05-22,~465,CHECK,Yes,LONG-OPEN SEGMENT,NEEDS PRIMARY LINK,15 months open and still live - strongest failed-to-hire row in sweep
-Sona,Founding BDR NYC,2026-02,~200,CHECK,Yes,LONG-OPEN SEGMENT,NEEDS PRIMARY LINK,Founding role open since February
-Coefficient,Founding SDRs,PRE-WINDOW,90+,CHECK,Yes,LONG-OPEN SEGMENT,NEEDS PRIMARY LINK,Explicitly "our founding SDRs" - excellent role structure, long open
-Prismic,SDR London,~2026-05,~120,CHECK,Yes,LONG-OPEN SEGMENT,NEEDS PRIMARY LINK,Open roughly four months
-Growth Kitchen,SDR London,2026-05-11,~110,CHECK,Yes,LONG-OPEN SEGMENT,NEEDS PRIMARY LINK,Four months per Workable
-GoodFit,SDR London,2026-02/05,90+,CHECK,Yes,LONG-OPEN SEGMENT,NEEDS PRIMARY LINK,Removed and relisted
-Super Payments,SDR London,2026-03-05,~175,CHECK,Yes,LONG-OPEN SEGMENT,NEEDS PRIMARY LINK,Open since March
-Bigblue,Founding SDR Berlin,~2026-06,~60,CHECK,Yes,LONG-OPEN SEGMENT,NEEDS PRIMARY LINK,Founding role, two months open
+Company,Role,First Posted,Days Open,Tier,LinkedIn Band,Assoc. Employees,LinkedIn URL,B2B,Entity Risk,Primary ATS Link,Notes
+Eon,SDR New York,2026-08-12,17,1 FRESH,51-200,,linkedin.com/company/eon-io,Yes,Low,NEEDED,Enterprise cloud backup / data protection
+ModernFi,BDR New York,~2026-08-12,~17,1 FRESH,51-200,,linkedin.com/company/modernfi,Yes,Low,NEEDED,Fintech infra sold to banks and credit unions
+Perfect Venue,BDR San Francisco,~2026-08-08,~21,1 FRESH,11-50,32,linkedin.com/company/perfect-venue,Yes,Low,NEEDED,Cleanest headcount evidence in the sweep
+Doxel,SDR Austin,~2026-08-05,~24,1 FRESH,51-200,135,linkedin.com/company/doxel-sr-autonomous-inc.-,Yes,Low,NEEDED,Construction progress software
+Waterworth,SDR Victoria BC,2026-08-06,23,1 FRESH,11-50,,,Yes,Low,NEEDED,Sells to municipalities
+Runwise,SDR,2026-08-14,15,1 FRESH,51-200,,linkedin.com/company/wearerunwise,Yes,Low,NEEDED,PROMOTED - headcount was the only gate
+NewForm,BDR NYC,~2026-08-12,~17,1 FRESH,51-200,,linkedin.com/company/newformai,Yes,MEDIUM,NEEDED,PROMOTED. Not "New Form Entertainment" - confirm entity
+Candid Health,BDR,2026-08-11,18,1 FRESH,51-200,,linkedin.com/company/candid-health,Yes,Low,NEEDED,PROMOTED - confirmed under 200
+Archive,BDR,~2026-08-22,~7,1 FRESH,51-200,,linkedin.com/company/archiveresale,Yes,Low,NEEDED,PROMOTED - branded resale software
+Assured,BDR,2026-07-14,46,2 STRUGGLING,51-200,,linkedin.com/company/assured-health,Yes,HIGH,NEEDED,Two Assured companies. NYC healthcare AI vs Palo Alto claims. Confirm which posted
+Formance,BDR NYC,~2026-07,30-60,2 STRUGGLING,11-50,,linkedin.com/company/formancehq,Yes,Low,NEEDED,Attractive size. Confirm exact first-post date
+Coefficient,Founding SDRs,PRE-WINDOW,60-90?,2 STRUGGLING,51-200,,linkedin.com/company/coefficient-live-data-in-google-sheets-excel,Yes,HIGH,NEEDED,FOUNDING role. Not CoEfficient Labs / Coefficient Marketing
+Assail,SDR Boston,2026-05-27,94,3 FAILED TO HIRE,11-50,20,linkedin.com/company/assailai,Yes,Low,NEEDED,Offensive-AI cybersecurity. 3 months open at 20 people
+Trunk Tools,BDR Austin,MONTHS,120+,3 FAILED TO HIRE,51-200,,linkedin.com/company/trunktools,Yes,Low,NEEDED,Construction AI
+Forus,BDR NYC,~2026-04/05,~120,3 FAILED TO HIRE,51-200,217,linkedin.com/company/forushq,Yes,Low,NEEDED,BAND/COUNT MISMATCH - band 51-200 but 217 associated
+Sona,Founding BDR NYC,~2026-02,~200,3 FAILED TO HIRE,51-200,242,linkedin.com/company/getsona,Yes,Low,NEEDED,BAND/COUNT MISMATCH. Founding role open ~7 months
+Coral AI,BDR,2026-04-25,126,3 FAILED TO HIRE,11-50,,linkedin.com/company/trycoral,Yes,MEDIUM,NEEDED,NYC healthcare founded 2024. Several unrelated Coral pages
+Packmatic,SDR,2025-05-22,465,3 FAILED TO HIRE,CHECK,,,Yes,Low,NEEDED,15 months open and still live. Strongest failed-to-hire row found
+Super Payments,SDR London,2026-03-05,177,3 FAILED TO HIRE,CHECK,,,Yes,Low,NEEDED,
+Prismic,SDR London,~2026-05,~120,3 FAILED TO HIRE,CHECK,,,Yes,Low,NEEDED,
+Growth Kitchen,SDR London,2026-05-11,110,3 FAILED TO HIRE,CHECK,,,Yes,Low,NEEDED,
+GoodFit,SDR London,2026-02/05,90-200,3 FAILED TO HIRE,CHECK,,,Yes,Low,NEEDED,Removed and relisted
+FirstMind,SDR London,~2026-04/06,90-140,3 FAILED TO HIRE,CHECK,,,Yes,Low,NEEDED,
+Bigblue,Founding SDR Berlin,~2026-06,~60,2 STRUGGLING,CHECK,,,Yes,Low,NEEDED,FOUNDING role
+Secfix,BDR SMB English,~2026-06,~60,2 STRUGGLING,11-50 (Wellfound),,,Yes,Low,NEEDED,Compliance software. Fresher German-language variants exist
+Distro,SDR Atlanta,2026-07-03,57,2 STRUGGLING,CHECK,,,Yes,Low,NEEDED,
+Flai,BDR,2026-07-24,36,2 STRUGGLING,CHECK,,,Yes,Low,NEEDED,
+Mithrl,BDR,2026-07-20,40,2 STRUGGLING,CHECK,,,Yes,Low,NEEDED,Newer entry-level SDR signal also exists - recheck
+Wheelhouse,SDR,~2026-06-25,~65,2 STRUGGLING,CHECK,,,Yes,Low,NEEDED,
+Listen Labs,BDR,2026-06-09,81,2 STRUGGLING,CHECK,,,Yes,Low,NEEDED,
+Decoda Health,BDR,2026-06-09,81,2 STRUGGLING,CHECK,,,Yes,Low,NEEDED,
+Archera,SDR,2026-05-28,93,3 FAILED TO HIRE,CHECK,,,Yes,Low,NEEDED,
+Bland,BDR,~2026-04,~150,3 FAILED TO HIRE,CHECK,,,Yes,Low,NEEDED,
+SafetyKit,BDR,PREDATES,60-120?,3 FAILED TO HIRE,CHECK,,,Yes,Low,NEEDED,Confirm original date
+Sequence,BDR,CONFLICTING,?,HOLD,51-200,,linkedin.com/company/sequence-hq,Yes,HIGH,NEEDED,4 LinkedIn pages share the name. Resolve entity before use
+Noonlight,SDR Austin,CONFLICTING,?,HOLD,11-50,,linkedin.com/company/noonlight-safety,Yes,Low,NEEDED,Date sources disagree - one week vs one month
+Feathery,BDR,2026-08-21,8,HOLD,CHECK,,,Yes,Low,NEEDED,Fresh - needs headcount only
+Collective,BDR,2026-08-23,6,HOLD,CHECK,,,Yes,Low,NEEDED,Fresh - needs headcount only
+Reducto,BDR,2026-08-26,3,HOLD,CHECK,,,Yes,Low,NEEDED,Fresh - needs headcount only
+Sirius,BDR,2026-08-27,2,HOLD,CHECK,,,Yes,HIGH,NEEDED,a16z Speedrun churn/retention AI. Name highly ambiguous
+Orbital,BDR,2026-08-22,7,HOLD,CHECK,,,Yes,Low,NEEDED,Fresh - needs headcount only
+Happl,BDR London,~2026-08-24,~5,HOLD,CHECK,,,Yes,Low,NEEDED,Fresh - needs headcount only
+Adaptive Security,BDR London,~2026-08-25,~4,HOLD,CHECK,,,Yes,Low,NEEDED,Fresh - needs headcount only
+Clera,Senior BDR Munich,2026-08-21,8,HOLD,CHECK,,,Yes,Low,NEEDED,Fresh - needs headcount only
+Alternative Payments,BDR Toronto,~2026-08-08,~21,HOLD,CHECK,,,Yes,Low,NEEDED,Fresh - needs headcount only
+Aegis AI,BDR,IN WINDOW,<30,HOLD,CHECK,,,Yes,HIGH,NEEDED,Do NOT confuse with Aegis Technologies Group
+Unison Infrastructure,SDR Denver,UNKNOWN,?,HOLD,CHECK,,,Yes,Low,NEEDED,No original date recovered
+FacilityOS,BDR Toronto,UNKNOWN,?,HOLD,CHECK,,,Yes,Low,NEEDED,Date evidence weak
+Dealops,Founding SDR SF,UNVERIFIED,?,FOUNDING QUEUE,CHECK,,,Yes,Low,NEEDED,Early sales-development hire
+Hedge,Founding SDR SF,UNVERIFIED,?,FOUNDING QUEUE,CHECK,,,Yes,Low,NEEDED,Literal founding SDR
+Teleskope,Founding SDR NYC,UNVERIFIED,?,FOUNDING QUEUE,CHECK,,,Yes,Low,NEEDED,Literal founding SDR
+Ajax,Founding SDR NYC,UNVERIFIED,?,FOUNDING QUEUE,CHECK,,,Yes,MEDIUM,NEEDED,Ajax is a common name - confirm entity
+Opus Training,Founding Enterprise BDR NYC,UNVERIFIED,?,FOUNDING QUEUE,CHECK,,,Yes,Low,NEEDED,
+Sitemate,Founding SDR Austin,UNVERIFIED,?,FOUNDING QUEUE,CHECK,,,Yes,Low,NEEDED,Scaling N. America alongside CRO
+Humaans,Founding US BDR SF,UNVERIFIED,?,FOUNDING QUEUE,CHECK,,,Yes,Low,NEEDED,Agentic AI
+Composio,Founding BDR SF,UNVERIFIED,?,FOUNDING QUEUE,CHECK,,,Yes,Low,NEEDED,
+Netic,Founding SDR,UNVERIFIED,?,FOUNDING QUEUE,CHECK,,,Yes,Low,NEEDED,
+EnableComp,Founding SDR,UNVERIFIED,?,FOUNDING QUEUE,CHECK,,,Yes,Low,NEEDED,Healthcare finance
+Arcana Analytics,SDR,2026-07-20,40,DROPPED,201-500,,linkedin.com/company/arcanaanalytics,Yes,MEDIUM,-,DROP ON SIZE
+Pallet,SDR NYC,2026-06-11,79,DROPPED,201-500,,linkedin.com/company/trypallet,Yes,MEDIUM,-,DROP ON SIZE
+Axion,BDR,2026-08-07,22,DROPPED,201-500,,linkedin.com/company/axion-ray,Yes,HIGH,-,DROP ON SIZE - but entity unresolved (axion-ray vs axionhq)
+Swap,BDR,~2026-08-11,~18,DROPPED,201-500,,linkedin.com/company/sw-ap,Yes,MEDIUM,-,DROP ON SIZE
