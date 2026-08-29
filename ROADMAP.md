@@ -8,13 +8,13 @@
 
 - [x] Payment rail live — **Grey account opened 2026-08-29**
 - [x] Grey virtual VISA card created ($5)
-- [ ] Domain purchased + Google Workspace live
+- [ ] Domain purchased + Google Workspace live — **deferred, see DECISIONS.md D9.** Standard price only (~$11); LinkedIn leads instead
 - [ ] SPF · DKIM · DMARC verified — *non-compliant mail is now rejected outright, not spam-foldered*
 - [ ] Email warm-up clock started (5/day)
 - [ ] LinkedIn repositioned to specialist — *copy drafted, see templates/LINKEDIN.md*
 - [ ] Sheet template built — *templates/signal-sheet.csv ready to import*
 - [ ] Signal pool at 120 rows
-- [ ] Target list of 100 agencies
+- [ ] Target list of 100 agencies — *method + search strings in ops/TARGET-LIST.md*
 - [ ] 200 contacts sent
 - [ ] 5+ conversations held
 - [ ] **First $147 collected**

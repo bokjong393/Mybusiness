@@ -56,3 +56,15 @@ Each entry records what was decided, what it was decided *against*, and what evi
 **Decision:** Do not pursue O24, despite genuine demand and good skill fit.
 **Reasoning:** most real demand in that category is for work that constitutes academic misconduct, which carries direct risk to the founder's own standing as an enrolled student. Not worth it at any price.
 **Reverses if:** never.
+
+## D9 — Defer the domain; launch on LinkedIn *(2026-08-29)*
+
+**Decision:** Do not buy a domain at premium prices. Start outreach on LinkedIn immediately; buy a standard-priced domain (~$11) whenever one clears, or from the first client's revenue.
+
+**Context:** All shortlisted names came back taken or premium-priced. Three rounds of searching produced no purchase.
+
+**Reasoning:** The domain generates zero contacts for its first 14 days regardless — it exists to start a warm-up clock. LinkedIn is 70% of the week-1 acquisition plan, needs no domain, no DNS and no money, and can send its first 20 contacts within the hour. With $95 of capital remaining, a $60 domain would consume 63% of the budget for no conversations. Long descriptive names (`theearlysignal.com`, `earlysignalresearch.com`) are never premium and remain available whenever we want them.
+
+**Cost of deferring:** cold email starts around day 21 instead of day 14. Acceptable — email is the secondary channel until week 3.
+
+**Reverses if:** a standard-priced name clears (buy immediately, start warm-up same day), or LinkedIn reply rates come in under 3% over 100 contacts, making email the priority channel sooner.
