@@ -13,7 +13,7 @@
 - [ ] Email warm-up clock started (5/day)
 - [ ] LinkedIn repositioned to specialist — *copy drafted, see templates/LINKEDIN.md*
 - [ ] Sheet template built — *templates/signal-sheet.csv ready to import*
-- [ ] Signal pool at 120 rows
+- [ ] Signal pool at 120 rows — *method, sources and AI prompts in ops/SIGNAL-POOL.md*
 - [ ] Target list of 100 agencies — *method + search strings in ops/TARGET-LIST.md*
 - [ ] 200 contacts sent
 - [ ] 5+ conversations held
