@@ -55,11 +55,33 @@ Grey's onboarding asks for occupation and freelance platform. Answer both truthf
 | 9 | `signalledger.com` | — |
 | 10 | `northsignal.com` | Neutral firm-sounding fallback. |
 
+**All ten of the above were taken (checked 2026-08-29).** Every short two-word `.com` is registered — that is the default state of the internet, not bad luck. Three tricks reliably find open ones:
+
+**1. Pluralize** — the plural is often free when the singular is not. Best odds, best names.
+
+`earlysignals.com` · `freshsignals.com` · `signalrows.com` · `citedsignals.com` · `sourcedsignals.com` · `verifiedsignals.com`
+
+**2. Change vocabulary** — drop the contested word.
+
+`buyerbrief.com` · `triggerbrief.com` · `thesignaldesk.com` · `signalbench.com`
+
+**3. Guaranteed fallback** — these patterns are essentially always obtainable.
+
+`earlysignal.co` · `earlysignalhq.com` · `getearlysignal.com`
+
+`.co` carries no deliverability penalty and is a legitimate business TLD; `hq` and `get` prefixes are standard startup patterns. Not a downgrade — no agency owner has ever declined a proposal over a TLD.
+
 **The no-premium rule.** Short two-word `.com`s are often registered or parked behind a "make an offer" page. **If a domain costs more than standard registration (~$11), skip it and move down the list.** The domain is a mail-sending address, not a brand asset — no customer will ever buy because of it. On a $100 budget, paying a premium here is the first genuinely bad decision available.
 
 If all ten are taken or premium: take `.co` on the top choice. Never `.xyz` / `.info` / `.biz` / `.online` — deliverability, not aesthetics.
 
-**Where:** Porkbun or Namecheap. Both accept virtual cards without trouble. Five minutes: search in order, buy the first hit, don't check social handles, don't buy variants.
+**Where:** Porkbun or Namecheap. Both accept virtual cards, and both suggest available alternatives when a search comes back taken.
+
+### The terminating rule — this decision needs no further input
+
+> Take the first available name that is **`.com` or `.co`**, **no hyphens or numbers**, **two words or fewer**, **spellable when heard**, at **standard price**.
+
+If a registrar's own suggestion passes that rule, take it. The domain is a mail-sending address, not a brand asset — it earns nothing, and time spent here is time not spent building the signal pool, which is the only activity that produces conversations. **Hard cap: 10 minutes.** Buy something adequate and move on.
 
 **One domain, not two.** Standard cold-email advice is to keep a separate sending domain so a burn doesn't cost the brand. That solves a problem you don't have: it's for people blasting hundreds a day. At 20–30 highly personalized sends a day with real value attached, burn risk is low. Buy the second domain at month 3 if volume passes ~50/day.
 
