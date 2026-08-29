@@ -40,11 +40,26 @@ Grey's onboarding asks for occupation and freelance platform. Answer both truthf
 - **Avoid `leads`, `sales`, `marketing` in the domain itself** — filters weight these. `signal`, `brief`, `research`, `intel`, `desk` are clean.
 - Check it isn't an existing company's trademark.
 
-**Candidates** (take the first available that passes — do not spend more than 20 minutes here):
+**Candidates, in buy order.** Take the first one available at standard price and stop.
 
-`earlysignal` · `signalrow` · `signalbrief` · `signaldesk` · `freshsignal` · `signalsheet` · `firstsignal` · `verifiedsignal` · `northsignal` · `signalledger`
+| # | Domain | Why |
+|---:|---|---|
+| 1 | `earlysignal.com` | *Early signal* is the value proposition stated outright. Two clean words, spellable on hearing. |
+| 2 | `freshsignal.com` | "Fresh" is the actual differentiator — 30-day recency against stale lists. |
+| 3 | `signalrow.com` | Ties to the row-based deliverable. Short, distinctive. |
+| 4 | `signalbrief.com` | Reads clearly as a research product. |
+| 5 | `firstsignal.com` | Same logic as #1, slightly flatter. |
+| 6 | `signaldesk.com` | Professional, marginally generic. |
+| 7 | `signalsheet.com` | Descriptive of the deliverable. |
+| 8 | `verifiedsignal.com` | Longer, says the differentiator outright. |
+| 9 | `signalledger.com` | — |
+| 10 | `northsignal.com` | Neutral firm-sounding fallback. |
 
-**Where:** Porkbun or Namecheap. Both accept virtual cards without trouble.
+**The no-premium rule.** Short two-word `.com`s are often registered or parked behind a "make an offer" page. **If a domain costs more than standard registration (~$11), skip it and move down the list.** The domain is a mail-sending address, not a brand asset — no customer will ever buy because of it. On a $100 budget, paying a premium here is the first genuinely bad decision available.
+
+If all ten are taken or premium: take `.co` on the top choice. Never `.xyz` / `.info` / `.biz` / `.online` — deliverability, not aesthetics.
+
+**Where:** Porkbun or Namecheap. Both accept virtual cards without trouble. Five minutes: search in order, buy the first hit, don't check social handles, don't buy variants.
 
 **One domain, not two.** Standard cold-email advice is to keep a separate sending domain so a burn doesn't cost the brand. That solves a problem you don't have: it's for people blasting hundreds a day. At 20–30 highly personalized sends a day with real value attached, burn risk is low. Buy the second domain at month 3 if volume passes ~50/day.
 
