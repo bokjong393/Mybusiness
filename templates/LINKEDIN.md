@@ -8,47 +8,56 @@ The profile is not a résumé — it is the landing page for every connection re
 
 ## Headline
 
-> Buying-signal research for B2B outbound agencies — 50 verified prospects per ICP, every row dated and sourced. Free 3-row sample, no pitch.
+> West African market research (EN/FR) & B2B buying-signal research — every finding sourced, dated, and checkable in ten seconds. Free sample, no pitch.
 
-Under the 220-character limit. It states the buyer, the deliverable, the differentiator, and the offer in one line.
+Under the 220-character limit. Names both service lines, the differentiator, and the offer.
 
 ## About
 
 ```
-Most outbound campaigns run on lists that were accurate last quarter.
+I research West African markets — and B2B buying signals — so decision-makers
+can act on information they can actually verify.
 
-The company got acquired. The VP you're targeting left in March. The
-"growth-stage SaaS" cut a third of its team. Reply rates drop, and you
-can't tell whether it's the copy or the data.
+Economics training, deep West African context, and working fluency in English
+and French. Roots in Nigeria and the Republic of Benin, which means I read the
+francophone sources most analysts skip and write for anglophone readers who
+need them.
 
-I build the other kind of list.
+Every piece of research I deliver carries its sources. Dated, linked, checkable
+in ten seconds. That discipline is the product — not the data, which anyone can
+pull, but the verification, which most people don't do.
 
-Every row I deliver carries a buying signal from the last 30 days — a
-funding round, a new VP of Sales, an SDR job posting that reveals a gap,
-a tech-stack change, an expansion — with the date it happened and a link
-to where I verified it. You can audit any row in ten seconds.
+WEST AFRICA RESEARCH
+• Financial economics — fintech, banking, investment sector analysis
+• Real estate economics — market feasibility and property investment reports
+• Digital economics — e-commerce, digital payments, platform analysis
+• Market entry analysis and EN/FR localization
+For founders, investors, and development organizations.
 
-That verification is the whole job. AI will generate a thousand company
-names in a minute, and it will also tell you confidently about a funding
-round that closed two years ago. Checking whether the signal is still
-true is what I'm actually selling.
+B2B SIGNAL RESEARCH
+For outbound agencies: 50 companies matching one ICP, each with a buying signal
+from the last 30 days — funding, a leadership change, a job posting that reveals
+a gap — plus the date, the source link, and the contact. Google Sheet, 5-day
+turnaround, white-label. If fewer than 40 rows are usable, you don't pay.
 
-WHAT I DELIVER
-• 50 companies matching one ICP — signal, date, source link, named contact
-• Google Sheet, yours to keep, 5-day turnaround
-• White-label — your client never sees me
-• If fewer than 40 rows are usable, you don't pay
-
-WHO IT'S FOR
-Small B2B lead-gen, outbound and demand-gen agencies who need fresh,
-relevant prospects every month and would rather not spend their own
-hours finding them.
+WHY THE SAME PERSON DOES BOTH
+Both are the same job: establishing what's true right now in a place the reader
+can't easily check for themselves. A fintech report for a Lagos startup reads
+differently than one for a Cotonou investor or a Paris fund. A signal list has
+to survive an agency's client asking "how do you know?" I write for the person
+who has to defend the answer.
 
 FREE SAMPLE
-Tell me the ICP you're working on and I'll send 3 researched rows —
-signal, date, source. No pitch, no call. If they're useful, we can talk
-about the rest.
+Tell me the market or the ICP you're working on and I'll send a short piece of
+it — sourced and dated. No pitch, no call.
 ```
+
+### Editorial decisions in this version
+
+- **"Economics training," not "BSc Economics student at Miva Open University."** Honest without leading with the detail that reduces authority with these buyers. It stays visible in the Education section — correct placement, not concealment.
+- **The Lagos / Cotonou / Paris line is kept verbatim.** It is the strongest sentence in the original draft: it *demonstrates* the bilingual claim instead of asserting it.
+- **Verification is the through-line.** It is what genuinely unifies both service lines and is the differentiator in each.
+- **This is a compromise profile.** It converts slightly worse for agencies than a pure signal-research play, but buys credibility — "serious analyst with a rare specialty" beats "list guy," particularly against location skepticism. Split into a separate company page for the B2B line once there are 3+ agency clients.
 
 ## Profile settings
 

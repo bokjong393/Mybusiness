@@ -68,3 +68,24 @@ Each entry records what was decided, what it was decided *against*, and what evi
 **Cost of deferring:** cold email starts around day 21 instead of day 14. Acceptable — email is the secondary channel until week 3.
 
 **Reverses if:** a standard-priced name clears (buy immediately, start warm-up same day), or LinkedIn reply rates come in under 3% over 100 contacts, making email the priority channel sooner.
+
+## D10 — Founder has an EN/FR West Africa specialisation; keep the agency play for cash *(2026-08-29)*
+
+**New information:** the founder is bilingual English/French with roots in Nigeria and the Republic of Benin, and already positions as a West African market researcher across financial, real estate, and digital economics. **None of this was known during the Phase 1 interview, and the opportunity scoring in `research/OPPORTUNITY-ANALYSIS.md` did not account for it.**
+
+**Why it matters:** EN/FR West African economic research is a genuinely scarce skill. Reading francophone sources (BCEAO material, local press, government publications) and writing for anglophone decision-makers is hard to replicate. That is a real moat — unlike the agency signal-research line, which D-series notes elsewhere admit is undefended in year one.
+
+**The tension:**
+
+| | West Africa research | B2B signal research |
+|---|---|---|
+| Defensibility | High — scarce, hard to copy | Low |
+| Buyers | Development orgs, investors, funds | Small outbound agencies |
+| Sales cycle | Months; credential-heavy; procurement | Days; one decision-maker |
+| Path to first $147 | Slow | Fast |
+
+**Decision:** No change to the near-term plan. Run the agency play for cash — it is the only line that pays inside the 60-day deadline. Carry the West Africa positioning on the same profile, since analyst credibility helps against location skepticism.
+
+**Explicitly deferred:** re-scoring the opportunity set with the francophone asset weighted properly. Reopening strategy mid-execution is the documented failure mode; revisit at day 30 against real reply-rate data rather than speculation.
+
+**Reverses if:** at day 30, agency reply rates are under 3% while any inbound West Africa enquiry has arrived — that would suggest the scarce asset is the better wedge and the scoring should be re-run.
