@@ -12,7 +12,7 @@
 | A2 | Reply → real conversation | **50%** | ASSUMPTION | Low |
 | A3 | Conversation → $147 pilot | **35%** | ASSUMPTION — de-risked by the "don't pay if unusable" guarantee | Low |
 | A4 | Pilot → monthly retainer | **40%** | ASSUMPTION | Low |
-| A5 | Delivery time, 50 rows | **6 hrs → 3 hrs** | First month vs systematized with AI assist | Medium |
+| A5 | Delivery time, 50 rows | **9 hrs → 6 hrs** | **Revised 2026-08-29 after the first verification pass.** Candidate→verified yield is ~45–50%, so ~110 candidates are screened per 50 rows. The original 6→3 estimate was low by roughly 2×. | Medium-high (measured) |
 | A6 | Monthly churn, small agencies | **15%** (pessimistic 25%) | ASSUMPTION — small agencies have volatile cash flow | Low |
 | A7 | Average retainer | **$500/mo** | Midpoint of $450–650 band | Medium |
 | A8 | Tool cost | **$30/mo** at 1–2 clients, **$80/mo** at 5+ | Domain, Workspace, AI, data tiers | High |
@@ -28,12 +28,12 @@ That number is the most important one in this document. It says the business is 
 | Metric | Pilot | Retainer |
 |---|---:|---:|
 | Average selling price | $147 | $500/mo |
-| Delivery hours | 6 → 3 | 24 → 12 /mo |
+| Delivery hours | 9 → 6 | 36 → 24 /mo |
 | Cash cost of delivery | ~$5 | ~$20/mo |
 | Gross profit | ~$142 | ~$480/mo |
 | **Gross margin** | **96%** | **96%** |
-| Effective hourly (month 1) | $24/hr | $20/hr |
-| Effective hourly (systematized) | $47/hr | $40/hr |
+| Effective hourly (month 1) | $16/hr | $14/hr |
+| Effective hourly (systematized) | $25/hr | $21/hr |
 
 **CAC:** ~240 contacts at 3–4 minutes each = **~14 hours** plus ~$20 of tooling per acquired retainer. Cash CAC ≈ **$20**. Time CAC ≈ **14 hours**.
 
@@ -63,7 +63,7 @@ Contacts are cumulative-to-date. Hours are per month.
 
 ### Three honest warnings about this ladder
 
-1. **$3,000/month is the collision point with being a student.** 72 hours of delivery plus 20 of sales is ~23 hours/week of obligated work. That is the top of the stated availability with no slack for exams. **Do not sell past 4 clients without either raising prices or hiring.**
+1. **$3,000/month is the collision point with being a student.** 72 hours of delivery plus 20 of sales is ~23 hours/week of obligated work. That is the top of the stated availability with no slack for exams. **Do not sell past 4 clients without either raising prices or hiring** — and on revised delivery hours the collision arrives at **5 clients, not 6**.
 2. **$5,000/month is where the model must change.** Selling more of the same thing stops working. The choice is fewer clients at higher prices, or delegation. Delegation is where a Nigeria-based founder has a second arbitrage: a competent local research assistant costs $250–400/month and can be trained on a documented process.
 3. **$25,000/month is not this business.** It is either a 30-client agency with people management, or the software in Phase 11. That is a genuine strategic fork, and pretending it is a straight-line extension of the current plan would be dishonest.
 

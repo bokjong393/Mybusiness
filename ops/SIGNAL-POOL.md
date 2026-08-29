@@ -34,6 +34,32 @@ Criteria for a pool company:
 
 ---
 
+## A live Apply button is NOT a fresh signal
+
+**The single most important finding of the first verification pass** (57 candidates, 2026-08-29): a large share of live ATS postings are evergreen, re-posted, or re-syndicated. Sampled examples: Pallet's SDR traced to 11 June · Sona's "founding BDR" to February · **Packmatic's to May 2025 — fifteen months open and still accepting applications.**
+
+ATS pages stay live for months and third-party boards refresh them, which resets the *apparent* date without a new requisition existing.
+
+**This is the commercial core of the business.** Every competitor selling "companies hiring SDRs" checks whether the Apply button works. That means they ship majority-stale data and do not know it. Finding the *first-publication* date is the work no one else does.
+
+**Therefore: never use the date a job board displays.** Cross-check first publication against an independent index before recording it.
+
+## The `Days Open` column — turn the reject pile into a second product
+
+A role open four months is not a dead row. **A company that has been trying to hire an SDR since May and still hasn't is a *better* agency prospect than one that posted last Tuesday** — they attempted to build outbound in-house, it failed, and outsourcing is now the obvious move.
+
+| Days open | Segment | Line for the agency |
+|---:|---|---|
+| 0–30 | Building now | "They're staffing outbound this month" |
+| 31–90 | Struggling to fill | "This has been open two months" |
+| 90+ | **Failed to hire in-house** | **"Open since May and still unfilled — this is your call to make"** |
+
+Record `Days Open` on every row. It costs nothing once the first-posted date is known, and no competitor has it.
+
+**Freshness rule (revised):** admit any currently-live role whose first publication is within **90 days**, and always disclose `Days Open`. Reserve the strict 30-day gate for rows sold as "new this month." Under-admitting on a 30-day rule cost 55% of the first sweep for no commercial gain.
+
+---
+
 ## The five signal types, with sources
 
 Work them in this order — the first is the fastest and most abundant.
@@ -121,7 +147,7 @@ Read the sheet as the buyer. **Delete any row you wouldn't personally send to a 
 | 3 | 3 | 20 rows from leadership changes |
 | 4 | 2 | 10 rows from tech/expansion + full QA pass |
 
-**~6 minutes per row.** The first ten will take fifteen minutes each. By row forty you'll be at four. That improvement curve is the business becoming real — log it.
+**Revised after the first verification pass.** Yield from candidate to verified row is roughly 45–50% once headcount checks are batched, so **~110 candidates screened produces ~50 verified rows**: about **9 hours for the first pack, ~6 once systematized** — roughly double the original estimate. Log your actual rate; it sets the delivery economics.
 
 ## Assigning rows to agencies
 
@@ -132,9 +158,12 @@ Read the sheet as the buyer. **Delete any row you wouldn't personally send to a 
 
 ## Quality gate — before any row leaves
 
-- [ ] Signal dated within 30 days
+- [ ] First-publication date established — **not** the date a job board displays
+- [ ] `Days Open` recorded
+- [ ] Currently live, and first published within 90 days
 - [ ] Source URL opened by you, in your browser
-- [ ] Primary source, not an aggregator
+- [ ] **Primary ATS link** (greenhouse / lever / ashby / workable / company careers page) — never an aggregator. `startups.gallery`, `builtin`, `sonara.ai`, `careerbeacon` and similar are secondary and fail this gate
+- [ ] Entity match confirmed — ambiguous names (Sirius, Swap, Aegis, Sequence) attach to the wrong company easily
 - [ ] Company is B2B, 11–200 people, in a target country
 - [ ] "Why Now" line contains no fact not present in the source
 - [ ] You would send this row yourself

@@ -89,3 +89,19 @@ Each entry records what was decided, what it was decided *against*, and what evi
 **Explicitly deferred:** re-scoring the opportunity set with the francophone asset weighted properly. Reopening strategy mid-execution is the documented failure mode; revisit at day 30 against real reply-rate data rather than speculation.
 
 **Reverses if:** at day 30, agency reply rates are under 3% while any inbound West Africa enquiry has arrived — that would suggest the scarce asset is the better wedge and the scoring should be re-run.
+
+## D11 — A live Apply button is not a fresh signal; add the `Days Open` segment *(2026-08-29)*
+
+**Evidence:** a strict verification pass over 57 candidates admitted only **5**. Thirty-one were hard drops, most because the posting was evergreen, re-posted or re-syndicated — Pallet traced to June, Sona to February, Packmatic to **May 2025** while still live.
+
+**What it proves:** every competitor selling "companies hiring SDRs" validates by checking whether the Apply button works, which means they ship majority-stale data unknowingly. Establishing *first-publication* date is the work nobody else does. This is the commercial thesis, now evidenced rather than asserted.
+
+**Decision 1 — relax the freshness gate to 90 days, and always disclose `Days Open`.** A strict 30-day rule cost 55% of the sweep for no commercial gain. Reserve 30 days for rows sold as "new this month."
+
+**Decision 2 — the long-open rows are a second product, not waste.** A company that has been trying to hire an SDR since May and failed is a *stronger* agency prospect than one that posted last week: they tried in-house, it did not work, and outsourcing is the obvious next move. `Days Open` is a differentiator no competitor has.
+
+**Decision 3 — primary ATS links only.** The verification pass cited aggregators (`startups.gallery`, `builtin`, `sonara.ai`, `careerbeacon`). Those are secondary sources and fail the quality gate. Every shipped row needs the greenhouse/lever/ashby/workable/company link, opened directly.
+
+**Correction to earlier modelling:** delivery was estimated at 6→3 hrs per 50 rows. Measured yield puts it at **9→6 hrs**. METRICS.md updated; the capacity collision with study now arrives at 5 clients rather than 6.
+
+**Reverses if:** clients demonstrably discard long-open rows, in which case `Days Open` becomes a filter rather than a segment.

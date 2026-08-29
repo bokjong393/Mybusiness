@@ -1,0 +1,44 @@
+Company,Role,Signal Date,Days Open,Headcount,B2B,Status,Source URL (REPLACE with primary ATS link),Notes
+Eon,SDR New York,2026-08-12,17,51-200,Yes,VERIFIED,NEEDS PRIMARY LINK,Enterprise cloud backup / data protection
+ModernFi,BDR New York,~2026-08-12,~17,51-200,Yes,VERIFIED,NEEDS PRIMARY LINK,Fintech infrastructure sold to banks and credit unions
+Perfect Venue,BDR San Francisco,~2026-08-08,~21,11-50,Yes,VERIFIED,NEEDS PRIMARY LINK,Cleanest headcount evidence in sweep - 32 LinkedIn profiles
+Doxel,SDR Austin,~2026-08-05,~24,51-200,Yes,VERIFIED,NEEDS PRIMARY LINK,Construction progress software; 135 LinkedIn profiles
+Waterworth,SDR Victoria BC,2026-08-06,22,11-50,Yes,VERIFIED,NEEDS PRIMARY LINK,Sells to municipalities; smallest and cleanest
+Runwise,SDR,2026-08-14,15,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Prospects building owners - clearly B2B. Headcount is the only gate
+Axion,BDR,2026-08-07,22,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Headcount is the only gate
+Candid Health,BDR,2026-08-11,18,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Scaling fast - confirm still under 200
+Feathery,BDR,2026-08-21,8,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Forms / document workflow
+Collective,BDR,2026-08-23,6,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Close to upper headcount bound
+Reducto,BDR,2026-08-26,3,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Enterprise document AI
+Sirius,BDR,2026-08-27,2,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,a16z Speedrun churn/retention AI - name is ambiguous, match carefully
+Orbital,BDR,2026-08-22,7,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,AI proptech
+Happl,BDR,~2026-08-24,~5,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,London
+Adaptive Security,BDR London,~2026-08-25,~4,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,B2B cybersecurity SaaS
+Clera,Senior BDR,2026-08-21,8,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Munich
+NewForm,BDR,~2026-08-12,~17,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,NYC
+Archive,BDR,~2026-08-22,~7,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Austin
+Swap,BDR,~2026-08-11,~18,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Confirm correct Swap entity
+Alternative Payments,BDR Toronto,~2026-08-08,~21,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Financial OS for SMBs
+Aegis AI,BDR,IN WINDOW,CHECK,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Do NOT confuse with Aegis Technologies Group
+Sequence,BDR,CONFLICTING,CHECK,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Similarly named company in results - verify entity
+Noonlight,SDR,CONFLICTING,CHECK,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Date sources disagree - one week vs one month
+Unison Infrastructure,SDR,UNKNOWN,CHECK,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Live on own careers site; no original date recovered
+FacilityOS,BDR,UNKNOWN,CHECK,CHECK,Yes,PROMISING,NEEDS PRIMARY LINK,Toronto
+Dealops,Founding SDR SF,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Explicitly early sales-development hire
+Hedge,Founding SDR SF,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Literal founding SDR title
+Teleskope,Founding SDR NYC,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Literal founding SDR
+Ajax,Founding SDR NYC,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Literal founding SDR
+Opus Training,Founding Enterprise BDR NYC,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,SaaS outbound
+Sitemate,Founding SDR Austin,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Scaling North America alongside CRO
+Humaans,Founding US BDR SF,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Agentic AI
+Composio,Founding BDR SF,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Literal founding BDR
+Netic,Founding SDR,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Literal founding SDR
+EnableComp,Founding SDR,UNVERIFIED,CHECK,CHECK,Yes,FOUNDING QUEUE,NEEDS PRIMARY LINK,Healthcare finance execs; from Lever sweep
+Packmatic,SDR,2025-05-22,~465,CHECK,Yes,LONG-OPEN SEGMENT,NEEDS PRIMARY LINK,15 months open and still live - strongest failed-to-hire row in sweep
+Sona,Founding BDR NYC,2026-02,~200,CHECK,Yes,LONG-OPEN SEGMENT,NEEDS PRIMARY LINK,Founding role open since February
+Coefficient,Founding SDRs,PRE-WINDOW,90+,CHECK,Yes,LONG-OPEN SEGMENT,NEEDS PRIMARY LINK,Explicitly "our founding SDRs" - excellent role structure, long open
+Prismic,SDR London,~2026-05,~120,CHECK,Yes,LONG-OPEN SEGMENT,NEEDS PRIMARY LINK,Open roughly four months
+Growth Kitchen,SDR London,2026-05-11,~110,CHECK,Yes,LONG-OPEN SEGMENT,NEEDS PRIMARY LINK,Four months per Workable
+GoodFit,SDR London,2026-02/05,90+,CHECK,Yes,LONG-OPEN SEGMENT,NEEDS PRIMARY LINK,Removed and relisted
+Super Payments,SDR London,2026-03-05,~175,CHECK,Yes,LONG-OPEN SEGMENT,NEEDS PRIMARY LINK,Open since March
+Bigblue,Founding SDR Berlin,~2026-06,~60,CHECK,Yes,LONG-OPEN SEGMENT,NEEDS PRIMARY LINK,Founding role, two months open
