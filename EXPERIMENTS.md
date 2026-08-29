@@ -23,12 +23,16 @@ not a soft success. The only passing signals are (a) a specific named upcoming p
 
 ## E1 — Sample asset creation `Week 1`
 
-- **Hypothesis:** a public bilingual work sample substitutes for a commercial track record.
-- **Method:** produce one 6–10 page bilingual mini market brief (EN + FR side by side) on a
-  specific, narrow topic in francophone West Africa. Publish as a free PDF; post it on LinkedIn.
-- **Threshold:** ✅ finished, published, and linked in the LinkedIn Featured section within 7 days.
-- **Failure condition:** takes more than 10 days → scope was too big; halve it.
-- **Status:** NOT STARTED (founder has 1 existing sample — review and decide if it qualifies)
+- **Hypothesis:** a matched EN/FR sample pair substitutes for a commercial track record **and**
+  proves the bilingual claim, which the English-only sample does not.
+- **Method:** (a) fix the existing mobile money report — remove the "Economic Research Analyst"
+  byline (D-003), remove "Final Version (Verified)" from the cover, re-verify every headline figure
+  against its primary source; (b) produce the **French version** of the same report — research is
+  already done, so marginal cost is hours; (c) publish both, link in LinkedIn Featured.
+- **Threshold:** ✅ both language versions published and linked within 7 days.
+- **Failure condition:** the French version takes more than 3 days → the bilingual claim is weaker
+  than assumed, which would invalidate the core positioning. **Treat that as a thesis-level signal.**
+- **Status:** NOT STARTED — existing EN sample REVIEWED and judged strong enough to build on
 - **Result:** —
 
 ## E2 — Cold outreach message test `Weeks 2–3`

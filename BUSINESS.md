@@ -2,7 +2,7 @@
 
 **Founder:** Peace B. Sossa · Okpoma, Cross River State, Nigeria
 **Last updated:** 2026-08-29
-**Status:** Thesis PROPOSED (Phase 4 complete). Awaiting founder confirmation before Phase 5 offer design.
+**Status:** Thesis CONFIRMED by founder 2026-08-29. Phase 5 offer design complete — see OFFER.md.
 
 ---
 
@@ -80,11 +80,16 @@ scales beyond founder hours.
 ### 3. Best hybrid strategy → **the ladder**
 
 ```
-M1 Localization        →  M2 Research briefs   →  M3 Retainers        →  M7 Data product
-(cash + testimonial)      (margin + position)     (recurring revenue)    (scale beyond time)
+M2 Snapshot briefs     →  M2 Full/bilingual     →  M3 Retainers        →  M7 Data product
+(first paid customer)     briefs (margin)          (recurring revenue)    (scale beyond time)
 Week 2–6                  Month 2–4                Month 3–9              Year 1+
-$150–600/project          $600–2,500/brief         $500–1,500/month       Annual licence
+$150–250/snapshot         $600–1,400/brief         $500–1,500/month       Annual licence
+
+M1 Localization runs alongside throughout: marketplace revenue line + paid upgrade on every brief.
 ```
+
+**Amended 2026-08-29 (D-010):** research leads, localization follows. The founder's existing
+research sample neutralises the credential gap that originally made localization the safer entry.
 
 **Why this wins:** every rung is sold to the *same buyer list*, so distribution work compounds
 instead of restarting. A localization client who trusts you is the warmest possible buyer for a
@@ -108,8 +113,9 @@ technology the founder cannot afford.
 | Constraint | Consequence |
 |---|---|
 | **Cannot currently receive money** (no rail has ever paid out; Stripe unavailable in Nigeria) | **Blocker #1.** Solve before outreach — a "yes" you cannot collect on is worse than a no. |
-| **Never been paid by a client** | First paid job matters more than its price. Take a small one to break the seal. |
-| **One work sample** | Second, public, bilingual sample is a Week-1 deliverable. Costs $0. |
+| **Never been paid by a client** | First paid job matters more than its price. Month-1 target is $100 = one Tier 1 snapshot (D-012). |
+| **No warm network available** (D-011) | 100% cold acquisition. Published samples are the only trust-transfer mechanism. |
+| **One work sample — strong** | 14pp sourced market research report. Proves research capability in English; does **not** prove the bilingual moat. French version is the highest-leverage $0 action available. |
 | **<$100 budget** | Free tier only. If anything must be bought before a customer pays, we chose wrong. |
 | **55 followers** | Outbound is the channel. Content is the asset, not the engine. |
 | **Undergraduate credential vs. "Analyst" positioning** | Win on work samples and specificity. Never imply seniority you don't have — one check destroys the sale. |

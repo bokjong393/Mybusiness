@@ -53,12 +53,12 @@ budget. This is the most common failure mode for a founder monetizing their own 
 **Reverses if:** an institution (university, donor) will pay *on behalf of* students. Then the
 customer is the institution, not the student.
 
-## D-008 · The ladder: Localization → Briefs → Retainers → Data product `2026-08-29` · **PROPOSED**
+## D-008 · The ladder: Research briefs → Retainers → Data product `2026-08-29` · **DECIDED — founder confirmed**
 
 **Rationale:** highest-scoring executable models (7.55 / 7.30 / 7.15) sold to overlapping buyers, so
 distribution effort compounds. Each rung funds the next. Recurring revenue arrives via retainers,
 not via a subscription product that current payment rails cannot support.
-**Status:** awaiting founder confirmation before Phase 5 offer design.
+**Status:** confirmed by founder 2026-08-29. Amended by D-010 — research leads, localization follows.
 **Reverses if:** E2/E3 fail — reply rates below threshold or no named projects in 10 conversations.
 
 ## D-009 · $3,000/month is a month 6–9 target, not a 30-day target `2026-08-29` · **DECIDED**
@@ -67,3 +67,29 @@ not via a subscription product that current payment rails cannot support.
 ~$31/hour effective, which is a pricing and retention outcome, not a volume one. Reaching it needs
 3 retainers or equivalent, and retainers require delivered projects first.
 **Reverses if:** an unusually large first client compresses the timeline. Do not plan for it.
+
+## D-010 · Lead with research briefs, not localization `2026-08-29` · **DECIDED — reverses part of D-008**
+
+**Rationale:** the founder's existing work sample (*The Rise of Mobile Money in Nigeria*, 14pp)
+is a properly-sourced market research report with methodology, limitations, traceable institutional
+sources and genuine analytical insight. It substantially neutralises the credential gap that made
+localization the safer entry point. Selling translation while the portfolio piece is a research
+report creates a mismatch between the sample and the offer, which costs conversions.
+Localization is retained as the marketplace revenue line and as a paid upgrade on every brief.
+**Reverses if:** research briefs fail E4 (price test) while localization sells readily — then the
+market is telling us it buys documents, not analysis.
+
+## D-011 · No warm-network channel `2026-08-29` · **DECIDED**
+
+**Rationale:** the founder declined to name budget-holding contacts, so warm introductions are not
+an available channel. All acquisition is cold: LinkedIn outbound plus marketplaces. This raises the
+cost of the first customer and makes the published work samples proportionally more important —
+they are the only trust-transfer mechanism available.
+**Reverses if:** a warm contact surfaces later. Warm beats cold by an order of magnitude; revisit.
+
+## D-012 · Month-1 revenue target is $100 `2026-08-29` · **DECIDED**
+
+**Rationale:** founder-set. Deliberately low, and correct — it maps to exactly one Tier 1 Market
+Snapshot. The purpose of month 1 is to convert a stranger into a payer for the first time, not to
+earn. Under-pricing the first sale is acceptable; never being paid is not.
+**Reverses if:** never for month 1. From month 2 onward, price rises with each delivered project.
