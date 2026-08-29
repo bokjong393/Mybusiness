@@ -19,6 +19,16 @@ Grey issues virtual VISA cards: **$4 one-time creation + $1 initial funding**. C
 
 This matters more than it looks. Ordinary naira debit cards are routinely declined for USD subscriptions because of bank international-spending limits and forex controls. The Grey card is what makes the domain and Workspace purchases actually go through. Create a dedicated card for business subscriptions so spend stays separate.
 
+### KYC consistency — the one rule that protects the rail
+
+Grey's onboarding asks for occupation and freelance platform. Answer both truthfully, and keep the answers consistent with everything downstream.
+
+- **Occupation:** describe the income-generating work — `Freelancer` / `Self-employed`, or free-text `Freelance research analyst`. **Not "Student."** Student status is fine and shouldn't be hidden if asked, but "Student" paired with recurring USD inflows from foreign businesses is the exact pattern that triggers compliance review.
+- **Freelance platform:** `None` / `Direct clients` / `Other` until an account actually exists. Never name a platform you can't produce statements for.
+- **Downstream consistency:** invoices must say "research services," source-of-funds answers must match, and client payment references should be recognisable. Grey will review at higher volume; the story has to already line up.
+
+**A frozen payment rail kills the business outright — it is the one piece of infrastructure with no fallback.** Treat KYC accuracy as a hard operational requirement, not paperwork.
+
 ## 2. Domain
 
 **Rules — each one is a deliverability or credibility decision, not taste:**
