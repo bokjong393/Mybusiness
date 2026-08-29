@@ -7,12 +7,12 @@
 ## Now (days 1–30) — prove someone will pay
 
 - [x] Payment rail live — **Grey account opened 2026-08-29**
-- [ ] Grey virtual VISA card created ($5) — needed to pay for domain + Workspace
+- [x] Grey virtual VISA card created ($5)
 - [ ] Domain purchased + Google Workspace live
 - [ ] SPF · DKIM · DMARC verified — *non-compliant mail is now rejected outright, not spam-foldered*
 - [ ] Email warm-up clock started (5/day)
-- [ ] LinkedIn repositioned to specialist
-- [ ] Sheet template built
+- [ ] LinkedIn repositioned to specialist — *copy drafted, see templates/LINKEDIN.md*
+- [ ] Sheet template built — *templates/signal-sheet.csv ready to import*
 - [ ] Signal pool at 120 rows
 - [ ] Target list of 100 agencies
 - [ ] 200 contacts sent
@@ -52,7 +52,7 @@ Website · brand · company registration · custom software · newsletter · pai
 
 | Item | Blocked by |
 |---|---|
-| Domain + Workspace purchase | Grey virtual card being created |
+| Domain + Workspace purchase | — ready to buy |
 | Cold email sending | 14-day warm-up completing |
 | Retainer pricing decisions | Real close-rate data from 10+ quotes |
 | Hiring | $2,000 MRR and a written SOP |

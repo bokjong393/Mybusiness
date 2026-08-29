@@ -5,7 +5,7 @@ Everything needed before the first cold email. **Total cost: ~$25.** Budget is $
 | Item | Cost | Status |
 |---|---:|---|
 | Grey account (USD rail) | $0 | ✅ Done |
-| Grey virtual VISA card | $5 | ☐ |
+| Grey virtual VISA card | $5 | ✅ Done |
 | Domain | ~$11/yr | ☐ |
 | Google Workspace | ~$7/mo | ☐ |
 | SPF · DKIM · DMARC records | $0 | ☐ |
