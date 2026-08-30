@@ -18,7 +18,7 @@ Every experiment gets a written hypothesis **before** it runs and a verdict **af
 
 | Metric | Target | Actual |
 |---|---:|---:|
-| Contacts | 200 | **3** |
+| Contacts | 200 | **13** |
 | Replies | 10 | 0 |
 | **Connections accepted** | — | **1** |
 | Reply rate | 5% | — *(n too small to read)* |
@@ -33,6 +33,12 @@ Every experiment gets a written hypothesis **before** it runs and a verdict **af
 |---|---:|---:|---|---|
 | 2026-08-30 | 3 | 3 | LinkedIn | **First outreach.** ThynkGrowth (IN), Danish Lead Co (DK), LeadLeadBangBang (FR) — all Smartlead partners, all pass the meetings test. Sample: Eon / Runwise / Archive. Xavier approached in French. |
 | 2026-08-30 | — | 3 | LinkedIn | **First connection accepted — Faraz Ahmed, ThynkGrowth.** Sample delivered with the 57-posting stale-rate finding as the hook. No price quoted deliberately (price-sensitivity test: India-based, so our cost arbitrage is neutralised — if he asks price after seeing the work, quality is what sells). |
+
+| 2026-08-30 | 10 | **13** | LinkedIn | Batch 2 sent: Cold Labs (tailored signal-supply opener), the three francophone agencies in French (Reachly, SalesGent, Grow Surely), plus Top of Funnel, Kale Acquisition, Leadinate, ProspectUp, frontBrick, Vision Media. |
+
+**Pipeline state:** 13 contacted · 9 queued (Spring Drive, ScaleSprint, Newlead, Digital Creativs, BuildingReach, LeadHaste, Kinetyca, Brokr Leads, Leadgrove) · 1 blocked (ColdIQ, needs correct LinkedIn URL).
+
+**Expected replies at n=13:** 0.65–1.0 at the 5–8% benchmark. **One reply is on-model. Zero is also on-model.** Neither outcome carries information yet.
 
 **Follow-ups due:** 2026-09-02 (day 3) · 2026-09-06 (day 7) · 2026-09-20 (fresh signals, no pitch)
 
