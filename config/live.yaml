@@ -1,0 +1,51 @@
+# LIVE TRADING CONFIG -- THIS FILE MOVES REAL MONEY.
+#
+# Even with this file, `fxbot live` refuses to start unless:
+#   1. environment: live          (below)
+#   2. allow_live: true           (below)
+#   3. FXBOT_ALLOW_LIVE=I_UNDERSTAND_THE_RISK   (in your environment)
+#   4. OANDA_API_TOKEN / OANDA_ACCOUNT_ID point at a live account
+#
+# Run the identical config on `fxbot paper` for weeks before you touch this.
+
+symbol: EUR_USD
+granularity: H1
+account_currency: USD
+
+# practice | live | backtest
+# 'live' additionally requires allow_live below AND the environment variable
+# FXBOT_ALLOW_LIVE=I_UNDERSTAND_THE_RISK. See config/live.yaml.
+environment: live
+allow_live: true
+
+strategy: ema_crossover
+strategy_params:
+  fast: 12
+  slow: 26
+  atr_period: 14
+  stop_atr_multiple: 2.0
+  target_atr_multiple: 3.0
+  # Only take entries while these centres are open. Signals fired into thin
+  # liquidity pay a wider spread and revert more often.
+  sessions: [london, new_york]
+
+# --- Risk. These are hard limits, not suggestions. ---
+risk_per_trade: 0.005          # halved for live
+max_daily_loss: 0.02           # tighter for live
+max_open_positions: 3
+max_margin_utilisation: 0.20  # never commit more than 20% of equity as margin
+max_units_per_trade: 500000
+
+# --- Backtest cost assumptions. Raise them if your broker is worse. ---
+slippage_pips: 0.2
+spread_pips:
+  EUR_USD: 0.8
+  GBP_USD: 1.2
+  USD_JPY: 0.9
+# Swap in pips per financing day, [long, short]. Negative means you pay.
+# Get these from your broker; leaving them at zero flatters any carry trade.
+swap_pips: {}
+
+poll_seconds: 30
+state_file: state/fxbot_state.json
+log_file: logs/fxbot.log

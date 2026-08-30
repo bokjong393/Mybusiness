@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fxbot"
+version = "0.1.0"
+description = "A spot FX trading bot: backtesting, paper trading, and gated live execution"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+# The core runs on the standard library alone -- deliberate, for something that
+# runs unattended against money. PyYAML is needed only to read config files.
+dependencies = ["pyyaml>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.scripts]
+fxbot = "fxbot.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]

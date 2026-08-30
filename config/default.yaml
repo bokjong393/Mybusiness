@@ -1,0 +1,44 @@
+# fxbot configuration -- safe to commit. Credentials live in the environment,
+# never here (see .env.example).
+
+symbol: EUR_USD
+granularity: H1
+account_currency: USD
+
+# practice | live | backtest
+# 'live' additionally requires allow_live below AND the environment variable
+# FXBOT_ALLOW_LIVE=I_UNDERSTAND_THE_RISK. See config/live.yaml.
+environment: practice
+allow_live: false
+
+strategy: ema_crossover
+strategy_params:
+  fast: 12
+  slow: 26
+  atr_period: 14
+  stop_atr_multiple: 2.0
+  target_atr_multiple: 3.0
+  # Only take entries while these centres are open. Signals fired into thin
+  # liquidity pay a wider spread and revert more often.
+  sessions: [london, new_york]
+
+# --- Risk. These are hard limits, not suggestions. ---
+risk_per_trade: 0.01          # 1% of equity risked between entry and stop
+max_daily_loss: 0.03          # halt for the day after -3%, reset at 17:00 NY
+max_open_positions: 3
+max_margin_utilisation: 0.20  # never commit more than 20% of equity as margin
+max_units_per_trade: 500000
+
+# --- Backtest cost assumptions. Raise them if your broker is worse. ---
+slippage_pips: 0.2
+spread_pips:
+  EUR_USD: 0.8
+  GBP_USD: 1.2
+  USD_JPY: 0.9
+# Swap in pips per financing day, [long, short]. Negative means you pay.
+# Get these from your broker; leaving them at zero flatters any carry trade.
+swap_pips: {}
+
+poll_seconds: 30
+state_file: state/fxbot_state.json
+log_file: logs/fxbot.log
