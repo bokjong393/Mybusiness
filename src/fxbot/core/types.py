@@ -108,6 +108,12 @@ class Signal:
     target_pips: float | None = None
     reason: str = ""
     confidence: float = 1.0
+    #: Partial exits as (R multiple, fraction of the initial position). The
+    #: fractions need not sum to 1; whatever is left runs to ``target_pips``
+    #: or a strategy exit. Expressed in R so the plan is size-independent.
+    scale_out: tuple[tuple[float, float], ...] = ()
+    #: Move the stop to entry once the first scale-out fills.
+    breakeven_after_scale: bool = False
 
     @property
     def is_entry(self) -> bool:
@@ -138,6 +144,10 @@ class Order:
     time_in_force: TimeInForce = TimeInForce.FOK
     client_id: str = field(default_factory=_new_id)
     reason: str = ""
+    #: Partial exits as (price, fraction of the order). Resolved from the
+    #: signal's R multiples once the fill price is known.
+    scale_targets: list[tuple[float, float]] = field(default_factory=list)
+    breakeven_after_scale: bool = False
 
 
 @dataclass
@@ -173,6 +183,22 @@ class Position:
     entry_cost: float = 0.0
     #: Commission, which unlike the spread is a separate debit from balance.
     commission: float = 0.0
+    #: Signed size at entry, held constant as partials reduce ``units`` so
+    #: that scale-out fractions always refer to the original position.
+    initial_units: int = 0
+    #: Distance from entry to stop, in price. One R.
+    risk_price: float = 0.0
+    #: Remaining partial exits as (price, fraction of initial).
+    scale_targets: list[tuple[float, float]] = field(default_factory=list)
+    #: Account-currency P&L already banked from partial exits.
+    realized: float = 0.0
+    #: How many partials have filled.
+    scale_outs: int = 0
+    breakeven_after_scale: bool = False
+
+    def __post_init__(self) -> None:
+        if self.initial_units == 0:
+            self.initial_units = self.units
 
     @property
     def side(self) -> Side:
@@ -203,6 +229,11 @@ class Trade:
     costs: float = 0.0
     financing: float = 0.0
     exit_reason: str = ""
+    #: Result as a multiple of the risk taken. -1.0 is a full stop-out. This is
+    #: the only P&L unit that is comparable across pairs and account sizes.
+    r_multiple: float = 0.0
+    #: Number of partial exits taken before the position closed.
+    scale_outs: int = 0
 
     @property
     def is_win(self) -> bool:

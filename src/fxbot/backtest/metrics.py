@@ -50,6 +50,14 @@ class Metrics:
     profit_factor: float = 0.0
     expectancy: float = 0.0
     expectancy_pips: float = 0.0
+    #: Expectancy in R -- the number that actually decides whether a strategy
+    #: survives, because it is independent of pair, size and account balance.
+    expectancy_r: float = 0.0
+    avg_win_r: float = 0.0
+    avg_loss_r: float = 0.0
+    best_r: float = 0.0
+    worst_r: float = 0.0
+    breakeven_win_rate: float = 0.0
     avg_win: float = 0.0
     avg_loss: float = 0.0
     largest_win: float = 0.0
@@ -87,6 +95,9 @@ class Metrics:
             f"  Profit factor        {self.profit_factor:>15.2f}",
             f"  Expectancy / trade   {self.expectancy:>15,.2f}",
             f"  Expectancy (pips)    {self.expectancy_pips:>15.1f}",
+            f"  Expectancy (R)       {self.expectancy_r:>15.3f}",
+            f"  Avg win / loss (R)   {self.avg_win_r:>7.2f} / {self.avg_loss_r:>7.2f}",
+            f"  Break-even win rate  {self.breakeven_win_rate * 100:>14.1f}%",
             f"  Avg win / avg loss   {self.avg_win:>7,.2f} / {self.avg_loss:>7,.2f}",
             f"  Largest win / loss   {self.largest_win:>7,.2f} / {self.largest_loss:>7,.2f}",
             f"  Max consec. losses   {self.max_consecutive_losses:>15,}",
@@ -191,6 +202,20 @@ def compute(
     )
     m.expectancy = fmean([t.pnl for t in trades])
     m.expectancy_pips = fmean([t.pips for t in trades])
+
+    r_values = [t.r_multiple for t in trades if t.r_multiple != 0.0]
+    if r_values:
+        m.expectancy_r = fmean(r_values)
+        wins_r = [r for r in r_values if r > 0]
+        losses_r = [r for r in r_values if r <= 0]
+        m.avg_win_r = fmean(wins_r) if wins_r else 0.0
+        m.avg_loss_r = fmean(losses_r) if losses_r else 0.0
+        m.best_r, m.worst_r = max(r_values), min(r_values)
+        # The win rate this payoff ratio needs just to break even. Compare it
+        # to the achieved win rate: the gap is the entire edge.
+        if m.avg_win_r > 0 and m.avg_loss_r < 0:
+            payoff = m.avg_win_r / abs(m.avg_loss_r)
+            m.breakeven_win_rate = 1.0 / (1.0 + payoff)
     m.avg_win = fmean([t.pnl for t in wins]) if wins else 0.0
     m.avg_loss = fmean([t.pnl for t in losses]) if losses else 0.0
     m.largest_win = max((t.pnl for t in trades), default=0.0)

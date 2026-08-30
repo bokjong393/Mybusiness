@@ -162,6 +162,26 @@ def cmd_trade(args, environment: str) -> int:
     return 0
 
 
+def cmd_plan(args) -> int:
+    """Arithmetic on a scale-out plan, before any money is involved."""
+    from .analysis import Plan, breakeven_grid, evaluate
+
+    scale = tuple(
+        (float(m), float(f))
+        for m, f in (pair.split(":") for pair in (args.scale or ["3:0.5"]))
+    )
+    plan = Plan(
+        stop_pips=args.stop, scale_out=scale, final_r=args.target,
+        round_trip_pips=args.cost, breakeven_after_scale=not args.no_breakeven,
+    )
+    print("What this plan needs, before you risk anything\n")
+    print(breakeven_grid(plan))
+    if args.hit_target is not None or args.hit_partial is not None:
+        print()
+        print(evaluate(plan, args.hit_target or 0.0, args.hit_partial or 0.0).report())
+    return 0
+
+
 def cmd_strategies(_args) -> int:
     print("Available strategies:\n")
     for name, cls in sorted(REGISTRY.items()):
@@ -226,6 +246,23 @@ def build_parser() -> argparse.ArgumentParser:
         p.add_argument("--cycles", type=int, default=None, help="stop after N polls")
         p.add_argument("--yes", action="store_true", help="skip the live confirmation prompt")
         p.set_defaults(func=lambda a, env=name: cmd_trade(a, env))
+
+    plan = sub.add_parser(
+        "plan", help="what a stop/scale-out plan must achieve to break even"
+    )
+    plan.set_defaults(func=cmd_plan)
+    plan.add_argument("--stop", type=float, default=5.0, help="stop distance in pips")
+    plan.add_argument("--scale", action="append",
+                      help="partial exit as R:fraction, e.g. --scale 3:0.5")
+    plan.add_argument("--target", type=float, default=10.0, help="final target in R")
+    plan.add_argument("--cost", type=float, default=1.2,
+                      help="round-trip spread + slippage in pips")
+    plan.add_argument("--no-breakeven", action="store_true",
+                      help="do not move the stop to entry after the first partial")
+    plan.add_argument("--hit-target", type=float, default=None,
+                      help="assumed share of trades reaching the final target")
+    plan.add_argument("--hit-partial", type=float, default=None,
+                      help="assumed share reaching the first partial but not the target")
 
     sub.add_parser("strategies", help="list available strategies").set_defaults(
         func=cmd_strategies

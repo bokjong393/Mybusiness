@@ -120,6 +120,9 @@ def run(
                     _tally(rejections, "sized to zero units")
                 else:
                     offset = instrument.pips_to_price(stop_pips) * side.sign
+                    # One R in price, used to place both the stop and every
+                    # partial target, so the plan is identical on any pair.
+                    r_price = instrument.pips_to_price(stop_pips)
                     order = Order(
                         symbol=instrument.symbol,
                         side=side,
@@ -133,6 +136,16 @@ def run(
                             if signal.target_pips
                             else None
                         ),
+                        scale_targets=[
+                            (
+                                instrument.round_price(
+                                    fill_price + r_price * multiple * side.sign
+                                ),
+                                fraction,
+                            )
+                            for multiple, fraction in signal.scale_out
+                        ],
+                        breakeven_after_scale=signal.breakeven_after_scale,
                         reason=signal.reason,
                     )
                     decision = risk.evaluate(

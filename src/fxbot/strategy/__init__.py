@@ -1,11 +1,13 @@
 from .base import Strategy, StrategyContext
 from .donchian_breakout import DonchianBreakout
 from .ema_crossover import EmaCrossover
+from .session_sweep import SessionSweep
 
 #: Name -> class, for config files and the CLI.
 REGISTRY: dict[str, type[Strategy]] = {
     "ema_crossover": EmaCrossover,
     "donchian_breakout": DonchianBreakout,
+    "session_sweep": SessionSweep,
 }
 
 
@@ -21,6 +23,6 @@ def build(name: str, **params) -> Strategy:
 
 
 __all__ = [
-    "Strategy", "StrategyContext", "EmaCrossover", "DonchianBreakout",
+    "Strategy", "StrategyContext", "EmaCrossover", "DonchianBreakout", "SessionSweep",
     "REGISTRY", "build",
 ]

@@ -97,13 +97,55 @@ class SimulatedBroker(Broker):
         self._seed_rates(candle)
 
     def check_exits(self, candle: Candle) -> list[Trade]:
-        """Resolve stops and take-profits against this bar's range."""
+        """Resolve stops, scale-outs and take-profits against this bar's range."""
         closed: list[Trade] = []
         for symbol, position in list(self._positions.items()):
             exit_price, reason = self._exit_trigger(position, candle)
             if exit_price is not None:
                 closed.append(self._close_at(symbol, exit_price, candle.time, reason))
+                continue
+            # Only reached when the bar did not stop the position out, so a bar
+            # covering both the stop and a partial target never scales out.
+            self._check_scale_outs(position, candle)
         return closed
+
+    def _check_scale_outs(self, position: Position, candle: Candle) -> None:
+        """Fill any partial targets this bar reached."""
+        if not position.scale_targets:
+            return
+        half = self.costs.half_spread_price(self.instrument, self._liquid(candle.time))
+        adjust = -half if position.is_long else half
+        high, low = candle.high + adjust, candle.low + adjust
+
+        remaining: list[tuple[float, float]] = []
+        for price, fraction in position.scale_targets:
+            reached = high >= price if position.is_long else low <= price
+            if reached and abs(position.units) > 0:
+                self._reduce_at(position, price, fraction, candle.time)
+            else:
+                remaining.append((price, fraction))
+        position.scale_targets = remaining
+
+    def _reduce_at(
+        self, position: Position, price: float, fraction: float, when: datetime
+    ) -> None:
+        """Bank a partial exit, leaving the rest of the position running."""
+        units = int(position.initial_units * fraction)
+        # Never close more than is actually left.
+        if abs(units) > abs(position.units):
+            units = position.units
+        if units == 0:
+            return
+
+        pnl_quote = (price - position.entry_price) * units
+        banked = self._to_account(pnl_quote)
+        self._balance += banked
+        position.realized += banked
+        position.units -= units
+        position.scale_outs += 1
+
+        if position.breakeven_after_scale:
+            position.stop_loss = position.entry_price
 
     def _exit_trigger(
         self, position: Position, candle: Candle
@@ -210,6 +252,10 @@ class SimulatedBroker(Broker):
             take_profit=order.take_profit,
             entry_cost=spread_cost,
             commission=commission,
+            initial_units=units,
+            risk_price=abs(price - order.stop_loss) if order.stop_loss else 0.0,
+            scale_targets=list(order.scale_targets),
+            breakeven_after_scale=order.breakeven_after_scale,
         )
         fill = Fill(
             order_id=order.client_id,
@@ -245,12 +291,12 @@ class SimulatedBroker(Broker):
         # must not be subtracted again; commission was debited at entry.
         gross = self._to_account(pnl_quote) + position.financing
         self._balance += gross
-        pnl = gross - position.commission
+        pnl = gross + position.realized - position.commission
 
         trade = Trade(
             symbol=symbol,
             side=position.side,
-            units=abs(position.units),
+            units=abs(position.initial_units),
             entry_time=position.entry_time,
             entry_price=position.entry_price,
             exit_time=when,
@@ -262,6 +308,8 @@ class SimulatedBroker(Broker):
             costs=position.entry_cost + position.commission,
             financing=position.financing,
             exit_reason=reason,
+            r_multiple=pnl / risk if (risk := self._risk_amount(position)) > 0 else 0.0,
+            scale_outs=position.scale_outs,
         )
         self._trades.append(trade)
         return trade
@@ -308,6 +356,16 @@ class SimulatedBroker(Broker):
     def _to_account(self, quote_amount: float) -> float:
         return self.rates.convert(quote_amount, self.instrument.quote, self.account_currency)
 
+    def _risk_amount(self, position: Position) -> float:
+        """One R in account currency: what a full stop-out was set to cost."""
+        if position.risk_price <= 0:
+            return 0.0
+        return self._to_account(abs(position.initial_units) * position.risk_price)
+
     def _unrealized_account(self, position: Position) -> float:
         # No entry_cost term: it is already reflected in entry_price.
-        return self._to_account(position.unrealized_quote(self._mid())) + position.financing
+        return (
+            self._to_account(position.unrealized_quote(self._mid()))
+            + position.financing
+            + position.realized
+        )
