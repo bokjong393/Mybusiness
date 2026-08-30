@@ -6,7 +6,7 @@ Every experiment gets a written hypothesis **before** it runs and a verdict **af
 
 ---
 
-## E1 — Proof-first outreach to B2B agencies *(status: not started)*
+## E1 — Proof-first outreach to B2B agencies *(status: **RUNNING** — started 2026-08-30)*
 
 **Hypothesis:** Small B2B agencies will reply at ≥5% to a cold message containing 3 free, verified, cited buying signals, and ≥1 in 200 will pay $147 for a 50-row pack.
 
@@ -18,13 +18,23 @@ Every experiment gets a written hypothesis **before** it runs and a verdict **af
 
 | Metric | Target | Actual |
 |---|---:|---:|
-| Contacts | 200 | |
-| Replies | 10 | |
-| Reply rate | 5% | |
-| Conversations | 5 | |
-| Serious leads | 3 | |
-| Paid | 1 | |
-| Revenue | $147 | |
+| Contacts | 200 | **3** |
+| Replies | 10 | 0 |
+| Reply rate | 5% | — *(n too small to read)* |
+| Conversations | 5 | 0 |
+| Serious leads | 3 | 0 |
+| Paid | 1 | 0 |
+| Revenue | $147 | $0 |
+
+### Log
+
+| Date | Sent | Cumulative | Channel | Note |
+|---|---:|---:|---|---|
+| 2026-08-30 | 3 | 3 | LinkedIn | **First outreach.** ThynkGrowth (IN), Danish Lead Co (DK), LeadLeadBangBang (FR) — all Smartlead partners, all pass the meetings test. Sample: Eon / Runwise / Archive. Xavier approached in French. |
+
+**Follow-ups due:** 2026-09-02 (day 3) · 2026-09-06 (day 7) · 2026-09-20 (fresh signals, no pitch)
+
+**Do not read anything into the first 60 contacts.** At n=3 a zero reply rate carries no information — the benchmark reply rate is 5–8%, so the expected number of replies from 3 contacts is roughly 0.2. Silence here is the most likely outcome even if the message is excellent. The diagnostic thresholds in `plans/VALIDATION.md` only become meaningful from ~150 contacts.
 
 **Verdict:** *(pending)*
 **What we learned:** *(pending)*
