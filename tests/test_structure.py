@@ -185,6 +185,26 @@ class TestZoneTracker:
         tracker.zones.extend([below, above])
         assert tracker.nearest(1.090, is_demand=True) is below
 
+    def test_a_zone_price_is_inside_is_the_canonical_hit(self):
+        """Reacting *inside* a zone is the case the whole idea is about."""
+        tracker = ZoneTracker()
+        zone = Zone(top=1.0860, bottom=1.0840, time=T0, is_demand=True)
+        tracker.zones.append(zone)
+        assert tracker.nearest(1.0850, is_demand=True) is zone
+
+    def test_a_demand_zone_price_has_dropped_below_is_discarded(self):
+        tracker = ZoneTracker()
+        tracker.zones.append(Zone(top=1.0860, bottom=1.0840, time=T0, is_demand=True))
+        assert tracker.nearest(1.0830, is_demand=True) is None
+
+    def test_supply_zones_mirror_the_rule(self):
+        tracker = ZoneTracker()
+        zone = Zone(top=1.0860, bottom=1.0840, time=T0, is_demand=False)
+        tracker.zones.append(zone)
+        assert tracker.nearest(1.0850, is_demand=False) is zone   # inside
+        assert tracker.nearest(1.0830, is_demand=False) is zone   # below
+        assert tracker.nearest(1.0880, is_demand=False) is None   # price above
+
     def test_zone_count_is_bounded(self):
         tracker = ZoneTracker(max_zones=3)
         for i in range(10):

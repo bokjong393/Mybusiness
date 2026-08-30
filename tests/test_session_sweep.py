@@ -89,6 +89,18 @@ class TestGating:
         candles = m1_series(datetime(2024, 1, 2, 8, tzinfo=UTC), 30)
         assert not any(sig.is_entry for sig in feed(s, candles, ins))
 
+    def test_the_funnel_shows_where_setups_die(self, ins):
+        from fxbot.data.synthetic import generate
+
+        s = SessionSweep()
+        feed(s, generate(symbol="EUR_USD", granularity="M1", bars=20_000, seed=5), ins)
+        cl = s.checklist
+        assert cl.started > 0
+        # Each step can only see what the previous one let through.
+        reached = [cl.reached.get(step.key, 0) for step in cl.steps]
+        assert reached == sorted(reached, reverse=True)
+        assert "Session window" in s.funnel()
+
     def test_skips_are_counted_so_filters_can_be_audited(self, ins):
         from fxbot.data.synthetic import generate
 

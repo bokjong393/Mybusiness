@@ -36,12 +36,27 @@ from zoneinfo import ZoneInfo
 from ..core.resample import Resampler
 from ..core.types import Candle, Signal, SignalAction
 from .base import Strategy, StrategyContext
+from .checklist import Checklist, Step
 from .structure import Direction, InducementDetector, MarketStructure, ZoneTracker
 
 LONDON = ZoneInfo("Europe/London")
 
 #: The two windows, in London local time, as documented.
 DEFAULT_WINDOWS: tuple[tuple[str, str], ...] = (("08:00", "09:00"), ("14:00", "15:00"))
+
+#: The entry sequence, in the order it is evaluated. Declared as data so the
+#: funnel reads in the same words as the rules, and so a differently-named
+#: framework can be mapped onto it by editing this one tuple.
+ENTRY_STEPS: tuple[Step, ...] = (
+    Step("window", "Session window", "outside session window"),
+    Step("budget", "Trade budget", "window trade limit reached"),
+    Step("warmup", "Timeframes ready", "higher timeframes still warming up"),
+    Step("bias", "Structure", "no M1 structure yet"),
+    Step("align", "Alignment", "M15 disagrees with M1"),
+    Step("sweep", "Liquidity sweep", "no inducement sweep"),
+    Step("zone", "Location", "not at an H1 zone"),
+    Step("risk", "Risk band", "stop outside the permitted band"),
+)
 
 
 def _parse(hhmm: str) -> clock_time:
@@ -96,12 +111,13 @@ class SessionSweep(Strategy):
         self.max_hold_bars = max_hold_bars
         # M1 execution needs the H1 zones to exist first: roughly a day of bars.
         self.warmup = 60 * 24
-        #: Set by on_bar; counts setups discarded and why. Reading this is how
-        #: you find out whether a filter is doing work or just blocking trades.
-        self.skips: dict[str, int] = {}
         self.reset()
 
     def reset(self) -> None:
+        #: Records how far each bar gets through the entry sequence. Read
+        #: ``checklist.funnel()`` after a backtest to see which step is
+        #: actually deciding whether this strategy trades.
+        self.checklist = Checklist(steps=ENTRY_STEPS)
         self._htf = Resampler(self.htf)
         self._mtf = Resampler(self.mtf)
         self._htf_structure = MarketStructure(confirm=self.swing_confirm)
@@ -112,13 +128,22 @@ class SessionSweep(Strategy):
         self._window_key: tuple | None = None
         self._trades_this_window = 0
         self._bars_held = 0
-        self.skips = {}
 
     # -- helpers ----------------------------------------------------------
 
-    def _skip(self, ctx: StrategyContext, reason: str) -> Signal:
-        self.skips[reason] = self.skips.get(reason, 0) + 1
-        return self.hold(ctx, reason)
+    @property
+    def skips(self) -> dict[str, int]:
+        """Rejections per step, keyed by the reason shown to the caller."""
+        return {
+            step.detail: rejected
+            for step in ENTRY_STEPS
+            if (rejected := self.checklist.reached.get(step.key, 0)
+                - self.checklist.passed.get(step.key, 0)) > 0
+        }
+
+    def funnel(self) -> str:
+        """How far bars get through the entry sequence."""
+        return self.checklist.funnel()
 
     def _active_window(self, candle: Candle) -> tuple | None:
         """The window this bar falls in, keyed by date so it resets daily."""
@@ -163,43 +188,45 @@ class SessionSweep(Strategy):
 
         self._bars_held = 0
 
-        # 3. Entries happen only inside a window.
+        # 3. The entry sequence, evaluated in order. Every bar that gets this
+        #    far is one evaluation, so the funnel counts real opportunities
+        #    rather than only the ones that nearly worked.
+        run = self.checklist.run()
+
         window = self._active_window(candle)
-        if window is None:
-            return self.hold(ctx, "outside session window")
+        if not run.check("window", window is not None):
+            return self.hold(ctx, run.failure)
         if window != self._window_key:
             self._window_key = window
             self._trades_this_window = 0
-        if self._trades_this_window >= self.max_trades_per_window:
-            return self._skip(ctx, "window trade limit reached")
+        if not run.check("budget", self._trades_this_window < self.max_trades_per_window):
+            return self.hold(ctx, run.failure)
+        if not run.check("warmup", self._htf.ready and self._mtf.ready):
+            return self.hold(ctx, run.failure)
 
-        if not self._htf.ready or not self._mtf.ready:
-            return self.hold(ctx, "warming up higher timeframes")
-
-        # 4. Direction: M1 structure must have broken, and the M15 must agree.
         bias = self._ltf_structure.direction
-        if bias is None:
-            return self._skip(ctx, "no M1 structure yet")
-        if self.require_mtf_alignment and self._mtf_bias() not in (None, bias):
-            return self._skip(ctx, "M15 disagrees with M1")
+        if not run.check("bias", bias is not None):
+            return self.hold(ctx, run.failure)
+        aligned = not self.require_mtf_alignment or self._mtf_bias() in (None, bias)
+        if not run.check("align", aligned):
+            return self.hold(ctx, run.failure)
 
-        # 5. The trigger: a sweep of liquidity in the direction of the bias.
-        if sweep is not bias and not self._inducement.recent_sweep(bias):
-            return self._skip(ctx, "no inducement sweep")
+        swept = sweep is bias or self._inducement.recent_sweep(bias)
+        if not run.check("sweep", swept):
+            return self.hold(ctx, run.failure)
 
-        # 6. Location: price must be reacting at an H1 zone.
         zone = self._zones.nearest(candle.close, is_demand=bias is Direction.UP)
-        if self.require_htf_zone:
-            if zone is None:
-                return self._skip(ctx, "no H1 zone in play")
-            if not zone.touched_by(candle):
-                return self._skip(ctx, "not at the H1 zone")
+        at_zone = not self.require_htf_zone or (zone is not None and zone.touched_by(candle))
+        if not run.check("zone", at_zone):
+            return self.hold(ctx, run.failure)
 
-        # 7. Risk: the structural stop must land inside the documented band.
         stop_pips = self._stop_distance(candle, ctx, bias)
-        if stop_pips is None:
-            return self._skip(ctx, f"stop outside {self.min_stop_pips}-{self.max_stop_pips} pips")
+        if not run.check("risk", stop_pips is not None):
+            return self.hold(
+                ctx, f"stop outside {self.min_stop_pips}-{self.max_stop_pips} pips"
+            )
 
+        run.complete()
         self._trades_this_window += 1
         return Signal(
             action=SignalAction.ENTER_LONG if bias is Direction.UP else SignalAction.ENTER_SHORT,

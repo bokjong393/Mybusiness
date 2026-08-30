@@ -278,10 +278,17 @@ class ZoneTracker:
         return None
 
     def nearest(self, price: float, is_demand: bool) -> Zone | None:
-        """The closest live zone of the given type, ignoring ones price is past."""
+        """The closest live zone of the given type that price can still trade into.
+
+        A demand zone stays relevant while price is at or above its floor --
+        which includes price being *inside* it, the canonical "reacting at the
+        zone" case. Only a zone price has dropped entirely below is discarded,
+        and one of those is usually already marked broken.
+        """
         candidates = [
             z for z in self.zones
-            if z.is_demand is is_demand and (z.top <= price if is_demand else z.bottom >= price)
+            if z.is_demand is is_demand
+            and (price >= z.bottom if is_demand else price <= z.top)
         ]
         if not candidates:
             return None

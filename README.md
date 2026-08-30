@@ -38,7 +38,7 @@ pip install -e ".[dev]"
 fxbot demo                 # synthetic backtest, no credentials required
 fxbot strategies           # what's available and with which parameters
 fxbot plan --stop 5        # what a stop/target plan must achieve to break even
-pytest                     # 296 tests
+pytest                     # 319 tests
 ```
 
 `demo` generates plausible-but-fake candles and runs a full backtest through
@@ -82,6 +82,36 @@ Three results worth knowing before adopting any tight-stop plan:
 
 None of that depends on a backtest, a strategy, or an opinion. It is arithmetic,
 and it disqualifies a lot of plans in about ten seconds.
+
+---
+
+## Find out which rule is actually deciding
+
+Checklist systems are taught as an ordered sequence, and encoding one as nested
+`if` statements throws away the most useful diagnostic there is: **where in the
+sequence setups die.** `strategy/checklist.py` records, for every step, how many
+evaluations reached it and how many passed:
+
+```
+  step                         reached    passed   rejected
+  ---------------------------------------------------------
+  window · Session window      119,600     9,701      91.9%
+  budget · Trade budget          9,701     9,385       3.3%
+  warmup · Timeframes ready      9,385     9,385       0.0%
+  bias · Structure               9,385     9,385       0.0%
+  align · Alignment              9,385     4,798      48.9%
+  sweep · Liquidity sweep        4,798     2,555      46.7%
+  zone · Location                2,555        52      98.0%
+  risk · Risk band                  52        14      73.1%
+```
+
+Read it as a funnel. A step passing everything is switched off; a step killing
+99% is the whole game. This one immediately exposed a bug — `Location` was
+rejecting setups where price was trading *inside* a zone, which is the case the
+rule exists for. Tightening any other step would have changed nothing.
+
+Steps are declared as data (`ENTRY_STEPS`), so a differently-named framework
+maps onto them by editing one tuple and the funnel then reads in its own words.
 
 ---
 
@@ -223,6 +253,7 @@ src/fxbot/
 ├── strategy/
 │   ├── indicators.py   Streaming SMA/EMA/ATR/RSI/Donchian
 │   ├── structure.py    Swings, BOS/CHOCH, supply-demand zones, sweeps
+│   ├── checklist.py    Ordered entry rules with a conversion funnel
 │   ├── ema_crossover.py
 │   ├── donchian_breakout.py
 │   └── session_sweep.py    Multi-timeframe London session model
@@ -285,9 +316,10 @@ files. Return stop distances in **pips** and let the risk layer size the trade.
 ## Testing
 
 ```bash
-pytest                        # 296 tests
+pytest                        # 319 tests
 pytest -k "sizing or clock"   # the FX-specific arithmetic
 pytest -k "structure"         # swings, BOS, sweeps
+pytest -k "checklist"         # the entry funnel
 ruff check src tests
 ```
 
