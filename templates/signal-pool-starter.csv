@@ -1,5 +1,5 @@
 Company,Role,First Posted,Days Open,Tier,LinkedIn Band,Assoc. Employees,LinkedIn URL,B2B,Entity Risk,Primary ATS Link,Notes
-Eon,SDR New York,2026-08-12,17,BLOCKED,51-200,,linkedin.com/company/eon-io,Yes,CONFIRMED ERROR,DISPUTED: eonhealth.bamboohr.com/careers/78,"ENTITY MISMATCH CAUGHT 2026-08-29. Row profiled Eon.io (cloud backup, linkedin.com/company/eon-io). Supplied posting is eonhealth.bamboohr.com = Eon Health, a different company. Find Eon.io ATS posting or drop the row."
+Eon,SDR New York,2026-08-12,17,1 FRESH,51-200,,linkedin.com/company/eon-io,Yes,Resolved,https://job-boards.eu.greenhouse.io/eonio/jobs/4705904101,"Entity mismatch caught and corrected 2026-08-29. First link was eonhealth.bamboohr.com (Eon Health, unrelated). Correct board slug is eonio, job ID 4705904101 matches original sweep. EU Greenhouse instance. Confirm title=SDR and location=New York on open."
 ModernFi,BDR New York,~2026-08-12,~17,1 FRESH,51-200,,linkedin.com/company/modernfi,Yes,Low,NEEDED,Fintech infra sold to banks and credit unions
 Perfect Venue,BDR San Francisco,~2026-08-08,~21,1 FRESH,11-50,32,linkedin.com/company/perfect-venue,Yes,Low,NEEDED,Cleanest headcount evidence in the sweep
 Doxel,SDR Austin,~2026-08-05,~24,1 FRESH,51-200,135,linkedin.com/company/doxel-sr-autonomous-inc.-,Yes,Low,NEEDED,Construction progress software
