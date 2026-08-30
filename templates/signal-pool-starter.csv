@@ -1,13 +1,13 @@
 Company,Role,First Posted,Days Open,Tier,LinkedIn Band,Assoc. Employees,LinkedIn URL,B2B,Entity Risk,Primary ATS Link,Notes
-Eon,SDR New York,2026-08-12,17,1 FRESH,51-200,,linkedin.com/company/eon-io,Yes,Low,NEEDED,Enterprise cloud backup / data protection
+Eon,SDR New York,2026-08-12,17,BLOCKED,51-200,,linkedin.com/company/eon-io,Yes,CONFIRMED ERROR,DISPUTED: eonhealth.bamboohr.com/careers/78,"ENTITY MISMATCH CAUGHT 2026-08-29. Row profiled Eon.io (cloud backup, linkedin.com/company/eon-io). Supplied posting is eonhealth.bamboohr.com = Eon Health, a different company. Find Eon.io ATS posting or drop the row."
 ModernFi,BDR New York,~2026-08-12,~17,1 FRESH,51-200,,linkedin.com/company/modernfi,Yes,Low,NEEDED,Fintech infra sold to banks and credit unions
 Perfect Venue,BDR San Francisco,~2026-08-08,~21,1 FRESH,11-50,32,linkedin.com/company/perfect-venue,Yes,Low,NEEDED,Cleanest headcount evidence in the sweep
 Doxel,SDR Austin,~2026-08-05,~24,1 FRESH,51-200,135,linkedin.com/company/doxel-sr-autonomous-inc.-,Yes,Low,NEEDED,Construction progress software
 Waterworth,SDR Victoria BC,2026-08-06,23,1 FRESH,11-50,,,Yes,Low,NEEDED,Sells to municipalities
-Runwise,SDR,2026-08-14,15,1 FRESH,51-200,,linkedin.com/company/wearerunwise,Yes,Low,NEEDED,PROMOTED - headcount was the only gate
-NewForm,BDR NYC,~2026-08-12,~17,1 FRESH,51-200,,linkedin.com/company/newformai,Yes,MEDIUM,NEEDED,PROMOTED. Not "New Form Entertainment" - confirm entity
+Runwise,SDR,2026-08-14,15,1 FRESH,51-200,,linkedin.com/company/wearerunwise,Yes,Low,https://job-boards.greenhouse.io/runwise/jobs/4402138006,"PRIMARY LINK CONFIRMED. Job ID matches original sweep. Date is aggregator-sourced - claim ""open since at least 2026-08-14"""
+NewForm,BDR NYC,~2026-08-12,~17,1 FRESH,51-200,,linkedin.com/company/newformai,Yes,MEDIUM,NEEDED,"PROMOTED. Not ""New Form Entertainment"" - confirm entity"
 Candid Health,BDR,2026-08-11,18,1 FRESH,51-200,,linkedin.com/company/candid-health,Yes,Low,NEEDED,PROMOTED - confirmed under 200
-Archive,BDR,~2026-08-22,~7,1 FRESH,51-200,,linkedin.com/company/archiveresale,Yes,Low,NEEDED,PROMOTED - branded resale software
+Archive,BDR,~2026-08-22,~7,1 FRESH,51-200,,linkedin.com/company/archiveresale,Yes,Low,https://www.archiveresale.com/about/careers?ashby_jid=65943db0-fdbf-454b-bb6c-ae49467411cc,PRIMARY LINK CONFIRMED on company domain - stronger than an ATS link. Ashby jid matches original sweep
 Assured,BDR,2026-07-14,46,2 STRUGGLING,51-200,,linkedin.com/company/assured-health,Yes,HIGH,NEEDED,Two Assured companies. NYC healthcare AI vs Palo Alto claims. Confirm which posted
 Formance,BDR NYC,~2026-07,30-60,2 STRUGGLING,11-50,,linkedin.com/company/formancehq,Yes,Low,NEEDED,Attractive size. Confirm exact first-post date
 Coefficient,Founding SDRs,PRE-WINDOW,60-90?,2 STRUGGLING,51-200,,linkedin.com/company/coefficient-live-data-in-google-sheets-excel,Yes,HIGH,NEEDED,FOUNDING role. Not CoEfficient Labs / Coefficient Marketing

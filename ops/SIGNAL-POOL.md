@@ -172,6 +172,24 @@ In a 20-company headcount check, **8 had LinkedIn name collisions**: Sequence (f
 
 Attaching the wrong company's headcount to a row is **invisible until the client checks** — and then it destroys the one thing you sell. Confirm the match against the job posting itself: does the company description on LinkedIn match the product described in the vacancy? Record an `Entity Risk` flag of Low / Medium / High on every row.
 
+### Dating standard: claim the floor, never a precision you cannot defend
+
+Greenhouse and Ashby job pages **do not display a posted date**. Any specific date therefore comes from an aggregator and is second-hand.
+
+**Rule: record the earliest date you can evidence, name the source, and phrase it as a floor** — "open since at least 14 Aug (source: X)" — never as an exact posting date. `Days Open` becomes "at least N".
+
+This is still far beyond any competitor, who quotes whatever a board displays. And a claim stated as a floor cannot be falsified by a client who finds an earlier date; a claim stated as exact can.
+
+Free ways to push the floor earlier: LinkedIn Jobs "posted N days ago" · a date-restricted Google search for the exact title plus company · comparing job IDs within the same company board, which run roughly chronologically.
+
+### First entity error caught in production — 2026-08-29
+
+The very first row shipped for primary-link verification failed this gate. The row profiled **Eon.io** (cloud backup, `linkedin.com/company/eon-io`, 51–200, NY). The supplied posting was `eonhealth.bamboohr.com` — **Eon Health**, an unrelated healthcare company.
+
+Every attribute on the row was correct *for a different company*. Nothing about the row looked wrong; only opening the link exposed it.
+
+**A BambooHR/Greenhouse/Lever subdomain is the company's own name.** Read it before accepting the link: `eonhealth` ≠ `eon-io`. Cost when caught here: ten minutes. Cost when caught by a client: the account and its referrals.
+
 ### Band vs associated-employee count
 
 LinkedIn shows two different numbers and they disagree. Forus: band 51–200, **217** associated. Sona: band 51–200, **242** associated.
