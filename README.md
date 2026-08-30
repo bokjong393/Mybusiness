@@ -12,10 +12,12 @@ smaller attack surface and a shorter list of things that can break at 3am.
 
 ## Read this first
 
-**This bot ships no edge.** The two included strategies — an EMA crossover and
-a Donchian breakout — are textbook demonstrations of the framework. Both are
-widely known, both whipsaw in ranging markets, and neither is a reason to
-expect profit. What the project actually gives you is the surrounding
+**This bot ships no edge.** The included strategies — an EMA crossover, a
+Donchian breakout, and a session-windowed liquidity sweep — are demonstrations
+of the framework. The first two are textbook and whipsaw in ranging markets;
+the third encodes a methodology taught publicly on YouTube and has not been
+validated on real data by anyone here. None of them is a reason to expect
+profit. What the project actually gives you is the surrounding
 machinery: correct pip arithmetic, honest cost modelling, position sizing that
 respects a risk budget, and a backtest that will not lie to you about
 look-ahead. Bring your own hypothesis; use this to test it properly.
@@ -35,7 +37,8 @@ pip install -e ".[dev]"
 
 fxbot demo                 # synthetic backtest, no credentials required
 fxbot strategies           # what's available and with which parameters
-pytest                     # 217 tests
+fxbot plan --stop 5        # what a stop/target plan must achieve to break even
+pytest                     # 296 tests
 ```
 
 `demo` generates plausible-but-fake candles and runs a full backtest through
@@ -56,6 +59,29 @@ fxbot backtest --csv data/EUR_USD_H1.csv --strategy ema_crossover --trades
 fxbot paper --config config/default.yaml --dry-run   # log intent, send nothing
 fxbot paper --config config/default.yaml             # practice account, real feed
 ```
+
+---
+
+## Check the arithmetic before the chart
+
+`fxbot plan` answers the question a backtest cannot: given a stop and a
+scale-out ladder, **how often must each outcome occur for this to break even?**
+It charges the spread properly, which matters enormously at tight stops.
+
+```bash
+fxbot plan --stop 5 --scale 3:0.5 --target 10
+```
+
+Three results worth knowing before adopting any tight-stop plan:
+
+| | |
+|---|---|
+| **The spread is a tax on your risk** | A 5-pip stop with a 1.2-pip round trip spends 24% of its risk on cost before the trade does anything. At 3 pips it is 40%. |
+| **Tight stops force large positions** | 1% risk on a 5-pip stop is 2.0 standard lots — 43% of a $10k account as margin at 50:1, and 72% at 30:1. At 3 pips it needs 120% and the broker rejects it. |
+| **Scale-out plans make a promise** | 50% at 3R with the rest to 10R needs price to reach 3R on ~50% of trades to break even, if the 10R tail never pays. |
+
+None of that depends on a backtest, a strategy, or an opinion. It is arithmetic,
+and it disqualifies a lot of plans in about ten seconds.
 
 ---
 
@@ -123,14 +149,18 @@ Four choices, each of which makes results worse and reality closer:
 | **Gaps beat stops** | If a bar opens through your stop, you fill at the open, not the stop. A 20-pip stop can and does cost 100 pips. |
 | **Stop before target** | When one bar's range covers both levels, the simulator assumes the stop hit first. Without tick data the order is unknowable, so it resolves against you. |
 | **Costs are charged** | Entries cross the spread, which widens outside London/New York. Slippage is applied. Swap accrues at every rollover crossed. |
+| **Higher timeframes lag** | An H1 bar is only visible to a strategy once the following bar opens. On a finished chart the 08:00–09:00 bar is drawn in full; at 08:05 it does not exist yet. |
 
 Cost assumptions live in `config/default.yaml` and default to typical retail
 spreads, not institutional ones. If your broker is worse, raise them — a
 strategy whose edge disappears under a 1.5-pip spread was never viable.
 
 Reported metrics: total return, CAGR, max drawdown and its duration, Sharpe,
-Sortino, Calmar, profit factor, expectancy in both currency and pips, win rate,
-max consecutive losses, and a breakdown of how positions actually exited.
+Sortino, Calmar, profit factor, expectancy in currency, pips **and R**, win
+rate, the **break-even win rate** your payoff ratio implies, max consecutive
+losses, and a breakdown of how positions actually exited. Reading the achieved
+win rate against the break-even rate is the fastest read on whether an edge
+exists at all.
 Annualisation uses the FX week (24×5, ≈6,240 hours/year), not the 252-day
 equity convention.
 
@@ -184,15 +214,20 @@ src/fxbot/
 ├── core/
 │   ├── instrument.py   Pip size, precision, unit rounding
 │   ├── types.py        Candle, Quote, Signal, Order, Position, Trade
-│   └── clock.py        Market hours, sessions, rollover, triple swap
+│   ├── clock.py        Market hours, sessions, rollover, triple swap
+│   └── resample.py     Multi-timeframe aggregation without look-ahead
 ├── data/
 │   ├── oanda.py        Historical candles, paginated
 │   ├── csv_source.py   Vendor CSVs (rejects naive timestamps)
 │   └── synthetic.py    Fake candles for tests and demos
 ├── strategy/
 │   ├── indicators.py   Streaming SMA/EMA/ATR/RSI/Donchian
+│   ├── structure.py    Swings, BOS/CHOCH, supply-demand zones, sweeps
 │   ├── ema_crossover.py
-│   └── donchian_breakout.py
+│   ├── donchian_breakout.py
+│   └── session_sweep.py    Multi-timeframe London session model
+├── analysis/
+│   └── expectancy.py   What a stop and scale-out plan must achieve
 ├── risk/
 │   ├── sizing.py       Pip value, conversion, position size, margin
 │   └── manager.py      Limits, daily loss, kill switch
@@ -250,8 +285,9 @@ files. Return stop distances in **pips** and let the risk layer size the trade.
 ## Testing
 
 ```bash
-pytest                        # 217 tests
+pytest                        # 296 tests
 pytest -k "sizing or clock"   # the FX-specific arithmetic
+pytest -k "structure"         # swings, BOS, sweeps
 ruff check src tests
 ```
 
@@ -265,6 +301,7 @@ interlocks, and a dedicated look-ahead test.
 ## Known limitations
 
 - **One position per symbol.** No pyramiding, scaling in, or hedged books.
+  Scaling *out* is supported (partial exits in R, optional breakeven move).
 - **One instrument per running bot.** Run several processes for a portfolio;
   the daily-loss limit is then per-process, not per-account.
 - **Bar-close decisions only.** No tick-level logic, no intrabar stop
