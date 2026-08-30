@@ -8,7 +8,8 @@ The goal is 100 qualified agencies with a named human and a reachable channel. B
 
 | Source | What to do | Yield |
 |---|---|---|
-| **Clutch.co** | Filter: service = *Lead Generation* or *Email Marketing*, size = 2–9 and 10–49, location = US/UK/CA/AU. Every listing has a website and often a named founder. | 30–40 |
+| **Cold-email tool directories** | Instantly agency directory · Smartlead partner program · Clay expert directory · Apollo partners. **Highest yield on the list** — every agency listed runs outbound as its actual business, so no filtering is required. | 25–40 |
+| **Clutch.co** | ⚠️ **Do not filter on "Lead Generation" alone** — see the correction below. Use it only with the meetings-vs-traffic test applied to every candidate. | 10–20 |
 | **Sortlist · DesignRush · GoodFirms · Agency Spotter** | Same filters. Overlaps with Clutch but surfaces different firms. | 15–25 |
 | **LinkedIn company search** | Search the strings below, filter company size 2–10 and 11–50. Then find the founder from the company page's "People" tab. | 30+ |
 | **LinkedIn people search** | Search job titles directly — gets you the decision-maker without a second lookup. | 20+ |
@@ -46,6 +47,48 @@ intitle:"lead generation agency" (US OR UK OR Canada OR Australia)
 "we book meetings for" "B2B" -jobs -indeed
 "appointment setting agency" "case study"
 ```
+
+---
+
+---
+
+## ⚠️ Correction — the Clutch "Lead Generation" filter returns the wrong buyer
+
+**Logged 2026-08-29 after three candidates were disqualified before contact.**
+
+Clutch's *Lead Generation* category is dominated by PPC, SEO and brand agencies, because to them "lead generation" means **ads and landing pages**, not cold outbound. The first three agencies sourced this way were:
+
+| Agency | Actually sells | Outbound? |
+|---|---|---|
+| Accelerated Digital Media | Paid media for digital health / ecommerce | No |
+| Syrup | Brand, visual identity, web, B2B marketing | No |
+| Direct Online Marketing | SEO, PPC, programmatic, web | No |
+
+Watch for **"Email Marketing"** on a service list. That means newsletters and nurture sequences to opted-in contacts — the opposite of cold outbound to strangers. The word overlaps; the business does not.
+
+**Why this is worse than three wasted messages:** wrong-buyer failure is indistinguishable from wrong-offer failure. Sending a signal list to a PPC shop produces polite confusion, which reads in the funnel as "the sample isn't compelling" — and leads to rewriting a message that was never the problem. Contaminating the validation experiment is the real cost.
+
+### The five-second test — apply to every candidate
+
+> **Does the homepage promise MEETINGS or TRAFFIC?**
+
+| Promises | Reads like | Verdict |
+|---|---|---|
+| "We book you 15 qualified meetings a month" · "appointment setting" · "we fill your calendar" · "SDR as a service" | Outbound | **ICP** |
+| "Drive qualified traffic" · "improve ROAS" · "brand strategy" · "boost conversions" · "increase organic rankings" | Paid media / brand / SEO | **Not ICP** |
+
+### Search strings that find genuine outbound agencies
+
+```
+"appointment setting agency" B2B "book meetings"
+"SDR as a service" agency
+"we book qualified meetings" B2B agency
+"outbound lead generation agency" -jobs -indeed
+"cold email agency" B2B clients
+site:linkedin.com/in/ ("founder" OR "co-founder") ("outbound agency" OR "appointment setting" OR "cold email agency")
+```
+
+Also **r/coldemail** — agency owners post there constantly and are pre-qualified by the subreddit itself.
 
 ---
 
