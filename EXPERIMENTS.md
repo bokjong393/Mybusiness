@@ -18,7 +18,7 @@ Every experiment gets a written hypothesis **before** it runs and a verdict **af
 
 | Metric | Target | Actual |
 |---|---:|---:|
-| Contacts | 200 | **13** |
+| Contacts | 200 | **23** |
 | Replies | 10 | 0 |
 | **Connections accepted** | — | **1** |
 | Reply rate | 5% | — *(n too small to read)* |
@@ -36,7 +36,9 @@ Every experiment gets a written hypothesis **before** it runs and a verdict **af
 
 | 2026-08-30 | 10 | **13** | LinkedIn | Batch 2 sent: Cold Labs (tailored signal-supply opener), the three francophone agencies in French (Reachly, SalesGent, Grow Surely), plus Top of Funnel, Kale Acquisition, Leadinate, ProspectUp, frontBrick, Vision Media. |
 
-**Pipeline state:** 13 contacted · 9 queued (Spring Drive, ScaleSprint, Newlead, Digital Creativs, BuildingReach, LeadHaste, Kinetyca, Brokr Leads, Leadgrove) · 1 blocked (ColdIQ, needs correct LinkedIn URL).
+| 2026-08-31 | 10 | **23** | LinkedIn | Batch 3 — first 20 complete. Variant A to seven generalists, Variant B (Runwise only) to BuildingReach and Brokr Leads, Variant C (conceding opener) to ColdIQ. |
+
+**Pipeline state:** 23 contacted · 40 queued (was: 13 contacted · 9 queued (Spring Drive, ScaleSprint, Newlead, Digital Creativs, BuildingReach, LeadHaste, Kinetyca, Brokr Leads, Leadgrove) · 1 blocked (ColdIQ, needs correct LinkedIn URL).
 
 **Expected replies at n=13:** 0.65–1.0 at the 5–8% benchmark. **One reply is on-model. Zero is also on-model.** Neither outcome carries information yet.
 
