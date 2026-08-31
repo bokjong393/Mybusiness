@@ -105,3 +105,15 @@ Each entry records what was decided, what it was decided *against*, and what evi
 **Correction to earlier modelling:** delivery was estimated at 6→3 hrs per 50 rows. Measured yield puts it at **9→6 hrs**. METRICS.md updated; the capacity collision with study now arrives at 5 clients rather than 6.
 
 **Reverses if:** clients demonstrably discard long-open rows, in which case `Days Open` becomes a filter rather than a segment.
+
+## D12 — Start LinkedIn content now, bounded to outreach support *(2026-08-31)*
+
+**Reverses part of the D-series position recorded in `ops/ACQUISITION.md`,** which deferred content to month 4+.
+
+**Why:** that rule's stated precondition was evidence — "content before evidence is procrastination in a productive costume." The 57-posting verification pass supplied it: 31 stale, one open fifteen months, all with live Apply buttons. That is a novel, defensible finding, not an opinion.
+
+**Scope, and it matters:** content as *outreach support*, not as an acquisition channel. Outreach runs on LinkedIn, so every prospect who accepts a connection views the profile; substantive posts raise the value of a visit that is already happening. Content as an audience-building channel with inbound as the goal stays deferred.
+
+**Guardrail:** no posting on a day the outreach quota is unmet; 30 minutes per post maximum. Content is the comfortable work and cold outreach is the work that produces money — the moment one displaces the other, this decision has failed.
+
+**Reverses if:** weekly contact volume drops below target in any week where posts went out. That is the signal that posting has become avoidance.

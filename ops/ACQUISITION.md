@@ -68,9 +68,37 @@
 
 Zero cost, highest conversion, but nothing to activate until there is a happy client. Ask once, immediately after a delivery the client praised. Offer a free 3-row sample to whoever they name — same mechanic, warmer entry.
 
-## Channel 5 — Content (month 4+, not before)
+## Channel 5 — Content *(revised 2026-08-31: start now, tightly bounded)*
 
-A weekly public "signals roundup" post or newsletter. Deliberately deferred: content before evidence is procrastination in a productive costume. It becomes worth building once we know from real clients which signals actually convert — at which point we are publishing insight, not opinion.
+**Original position:** deferred to month 4+, because content before evidence is procrastination in a productive costume.
+
+**Why it changed:** the precondition was evidence, and the precondition has been met. The 57-posting verification pass produced a finding nobody else in this market has published — 31 stale, one open since May 2025, all with working Apply buttons. The rule was never "don't post," it was "don't post before there is something true to say."
+
+**Keep the two uses separate:**
+
+| Content as an acquisition channel | Content as outreach support |
+|---|---|
+| Daily posting, audience building, inbound | 1–2 posts/week doubling as sales material |
+| 6–12 months to revenue | Works the same week |
+| **Still deferred** | **Active now** |
+
+Outreach runs on LinkedIn, so every prospect who accepts a request looks at the profile. Two substantive posts change what that visit is worth, at zero cost.
+
+### The hard rule
+
+> **No posting on a day the day's sends aren't done.** Cap at 30 minutes per post.
+
+Content is the comfortable work; cold outreach is the uncomfortable work that produces money. The moment posting displaces sending it has become the exact procrastination this section originally warned about, with better production values.
+
+### What to publish
+
+Findings, not opinions. Anything that would also work as a line in a sales message:
+- The stale-rate study (31 of 57) — **first post**
+- Entity-collision errors: two companies called Eon, one cloud backup, one healthcare
+- The `Days Open` segmentation: why a role open four months is a *better* prospect than one posted last week
+- Monthly: what the current sweep found
+
+Admitting our own errors publicly is the highest-credibility move available — it is what distinguishes a practitioner from someone running a content calendar. Close each post with a soft offer of the raw data. Requests for it arrive as warm DMs from exactly the ICP.
 
 ---
 
