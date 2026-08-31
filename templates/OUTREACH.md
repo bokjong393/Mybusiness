@@ -114,3 +114,41 @@ Copy, fill the braces, send. **Edit these from real reply data, not from taste.*
 7. What does a *bad* row look like to you?
 
 **Question 7 saves more rework than the other six combined.** Ask it every time.
+
+---
+
+# Live message variants (2026-08-31)
+
+Three variants cover every prospect type in the current pipeline. The sample rows below expire around 20 September — refresh them then.
+
+## Variant A — Standard, three rows
+
+Use for any generalist B2B outbound agency.
+
+**Connection note:**
+> Hi {First} — I research buying signals for outbound agencies. Pulled 3 B2B companies hiring SDRs this month, with sources. Happy to send them over, no pitch. Thought {Agency} might find them useful.
+
+**On acceptance:** deliver Eon / Runwise / Archive with dated links, then:
+> I ran a strict check across 57 SDR postings recently and **31 were stale** — re-posted, re-syndicated, or evergreen. One had been live since May 2025. Every one still had a working Apply button.
+>
+> That's the part I do: checking whether the signal is still true before it goes in a list.
+>
+> If your supply side ever gets tight, happy to run 50 for one of your clients' ICPs.
+
+## Variant B — Single row, niche agency
+
+Use when the agency serves a vertical the sample rows do not match (real estate, commercial services, healthcare…). **Send one relevant row, never three irrelevant ones.**
+
+> I only sent one because the other two I verified this week are cloud infrastructure and retail software — no use to you. That's the job, really: checking each row against the actual ICP before it goes out.
+
+Sending one row instead of three is the strongest move available: it demonstrates filtering rather than blasting, which is the product itself.
+
+## Variant C — Sophisticated buyer
+
+Use for agencies with deep in-house tooling (Clay experts, larger shops). Do not pitch capability — they have it. Lead with the finding and concede the obvious.
+
+> You almost certainly do this in-house better than most, so I'll be brief. [finding] … The finding is the point rather than the rows — at scale, "live ATS page" badly overstates real hiring intent, and almost nobody checks first-publication dates because it's slow and boring.
+
+## Price handling
+
+Never pre-discount, including for prospects in low-cost markets. When asked: **$147**, flat, with the guarantee (fewer than 40 usable rows and they don't pay). An agency owner who has seen verified rows and asks the price is not price-shopping.
