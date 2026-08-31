@@ -90,15 +90,20 @@ Outreach runs on LinkedIn, so every prospect who accepts a request looks at the 
 
 Content is the comfortable work; cold outreach is the uncomfortable work that produces money. The moment posting displaces sending it has become the exact procrastination this section originally warned about, with better production values.
 
-### What to publish
+### What to publish — corrected 2026-08-31
 
-Findings, not opinions. Anything that would also work as a line in a sales message:
-- The stale-rate study (31 of 57) — **first post**
-- Entity-collision errors: two companies called Eon, one cloud backup, one healthcare
-- The `Days Open` segmentation: why a role open four months is a *better* prospect than one posted last week
-- Monthly: what the current sweep found
+**Not signal-research content.** The profile is already established as an economic research analyst (sovereign borrowing, financial/real estate/digital economics, West Africa). Agency content there breaks the positioning and reads as noise.
 
-Admitting our own errors publicly is the highest-credibility move available — it is what distinguishes a practitioner from someone running a content calendar. Close each post with a soft offer of the raw data. Requests for it arrive as warm DMs from exactly the ICP.
+**The agency business is a DM business.** Its only content requirement is that a prospect who accepts a connection finds a serious analyst — which the existing profile already satisfies. An agency founder is arguably more impressed by rigorous sovereign-debt work than by a post about job boards, because it signals capability rather than sales.
+
+**Publish on-niche, and publish the differentiated end of the niche.** Measured engagement: sovereign borrowing 272 impressions, "economist in the AI era" 94, trust commentary 71 — specialist material outperformed general commentary roughly 3×.
+
+- Digital payments across the Nigeria–francophone West Africa divide (BCEAO vs CBN)
+- Sovereign borrowing as a continuing series — the best-performing format so far
+- Lagos vs Cotonou real estate economics
+- What francophone sources report that anglophone analysts miss — **the unfair advantage, and fully on-niche**
+
+**Distribution is near zero, so treat content as a portfolio rather than a channel.** Judge it by whether a visiting prospect takes the profile seriously, never by impressions.
 
 ---
 

@@ -117,3 +117,15 @@ Each entry records what was decided, what it was decided *against*, and what evi
 **Guardrail:** no posting on a day the outreach quota is unmet; 30 minutes per post maximum. Content is the comfortable work and cold outreach is the work that produces money — the moment one displaces the other, this decision has failed.
 
 **Reverses if:** weekly contact volume drops below target in any week where posts went out. That is the signal that posting has become avoidance.
+
+### Amended same day, after seeing the actual profile
+
+The founder already runs an established LinkedIn presence as an **economic research analyst** — sovereign borrowing, financial/real estate/digital economics, West Africa. Posting signal-research content there would break that positioning and read as noise beside it. **Amended: keep the profile purely on the economics niche.**
+
+The agency business is a **DM business**. Its content requirement is that a prospect who accepts a connection sees a serious analyst — which the existing profile already delivers, arguably better than agency-specific content would, since rigorous sovereign-debt analysis signals capability rather than sales.
+
+**Engagement data supports specialisation over topicality.** Sovereign borrowing: 272 impressions. "Economist in the AI era": 94. Trust commentary: 71. The most specialist post outperformed general commentary roughly 3×.
+
+**Distribution is near zero (71–272 impressions), so content is currently a portfolio, not a channel.** Judge it by whether a visiting prospect takes the profile seriously, never by impressions, and cap it at 30 minutes per post until distribution exists.
+
+**Content angles that stay on-niche and are genuinely differentiated:** digital payments across the Nigeria–francophone West Africa divide (BCEAO vs CBN); sovereign borrowing as a continuing series; Lagos vs Cotonou real estate economics; what francophone sources report that anglophone analysts miss. The last is the closest thing to an unfair content advantage and is fully on-niche.
