@@ -1,7 +1,7 @@
 Company,Role,First Posted,Days Open,Tier,LinkedIn Band,Assoc. Employees,LinkedIn URL,B2B,Entity Risk,Primary ATS Link,Notes
 Eon,SDR New York,2026-08-12,17,1 FRESH,51-200,,linkedin.com/company/eon-io,Yes,Resolved,https://job-boards.eu.greenhouse.io/eonio/jobs/4705904101,"Entity mismatch caught and corrected 2026-08-29. First link was eonhealth.bamboohr.com (Eon Health, unrelated). Correct board slug is eonio, job ID 4705904101 matches original sweep. EU Greenhouse instance. Confirm title=SDR and location=New York on open."
 ModernFi,BDR New York,~2026-08-12,~17,1 FRESH,51-200,,linkedin.com/company/modernfi,Yes,Low,NEEDED,Fintech infra sold to banks and credit unions
-Perfect Venue,BDR San Francisco,~2026-08-08,~21,1 FRESH,11-50,32,linkedin.com/company/perfect-venue,Yes,Low,NEEDED,Cleanest headcount evidence in the sweep
+Perfect Venue,BDR San Francisco,~2026-08-08,~21,1 FRESH,11-50,32,linkedin.com/company/perfect-venue,Yes,Low - board slug matches company,https://jobs.ashbyhq.com/perfect-venue/b6765d3f-9037-43ba-917b-2d962d041c54,"PRIMARY LINK CONFIRMED 2026-09-01. Ashby board slug perfect-venue matches linkedin.com/company/perfect-venue. Cleanest headcount evidence in the sweep (11-50, 32 profiles). Reserved as the day-3 follow-up row."
 Doxel,SDR Austin,~2026-08-05,~24,1 FRESH,51-200,135,linkedin.com/company/doxel-sr-autonomous-inc.-,Yes,Low,NEEDED,Construction progress software
 Waterworth,SDR Victoria BC,2026-08-06,23,1 FRESH,11-50,,,Yes,Low,NEEDED,Sells to municipalities
 Runwise,SDR,2026-08-14,15,1 FRESH,51-200,,linkedin.com/company/wearerunwise,Yes,Low,https://job-boards.greenhouse.io/runwise/jobs/4402138006,"PRIMARY LINK CONFIRMED. Job ID matches original sweep. Date is aggregator-sourced - claim ""open since at least 2026-08-14"""
