@@ -18,7 +18,7 @@ Every experiment gets a written hypothesis **before** it runs and a verdict **af
 
 | Metric | Target | Actual |
 |---|---:|---:|
-| Contacts | 200 | **23** |
+| Contacts | 200 | **36** |
 | Replies | 10 | 0 |
 | **Connections accepted** | — | **2** |
 | Reply rate | 5% | — *(n too small to read)* |
@@ -39,6 +39,8 @@ Every experiment gets a written hypothesis **before** it runs and a verdict **af
 | 2026-08-31 | 10 | **23** | LinkedIn | Batch 3 — first 20 complete. Variant A to seven generalists, Variant B (Runwise only) to BuildingReach and Brokr Leads, Variant C (conceding opener) to ColdIQ. |
 
 | 2026-08-31 | — | 23 | LinkedIn | **Second acceptance — Dimitar Petkov, LeadHaste.** Acceptance rate 2/23 (~9%). LeadHaste publishes on cold-email deliverability, so the opener referenced their own subject matter before the stale-rate finding. |
+
+| 2026-09-01 | 13 | **36** | LinkedIn | Batch 4. Audience-pitch variant to Lead Gen Jay and Revenue Boost; standard to eleven others. Romain Osman (Five Element) and Nate Calhoun (Inbox Accelerator) not locatable on LinkedIn — blocked pending a channel switch. |
 
 **Pipeline state:** 23 contacted · 40 queued (was: 13 contacted · 9 queued (Spring Drive, ScaleSprint, Newlead, Digital Creativs, BuildingReach, LeadHaste, Kinetyca, Brokr Leads, Leadgrove) · 1 blocked (ColdIQ, needs correct LinkedIn URL).
 
