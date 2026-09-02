@@ -46,6 +46,8 @@ Every experiment gets a written hypothesis **before** it runs and a verdict **af
 
 | 2026-09-02 | — | 36 | LinkedIn | Sixth acceptance — Cesar Espino (Leadify). Acceptance 6/36 (17%), up from ~6% two days earlier. Six samples now delivered, still 0 replies; the day-3 follow-up round is the first real test of the message. |
 
+| 2026-09-02 | — | 36 | LinkedIn | **First follow-up sent** — Faraz (ThynkGrowth), Perfect Venue row, no ask. Dimitar due 3 Sept; Kenny, Ericson, Huzaifa, Cesar due 4 Sept. |
+
 **Pipeline state:** 23 contacted · 40 queued (was: 13 contacted · 9 queued (Spring Drive, ScaleSprint, Newlead, Digital Creativs, BuildingReach, LeadHaste, Kinetyca, Brokr Leads, Leadgrove) · 1 blocked (ColdIQ, needs correct LinkedIn URL).
 
 **Expected replies at n=13:** 0.65–1.0 at the 5–8% benchmark. **One reply is on-model. Zero is also on-model.** Neither outcome carries information yet.
