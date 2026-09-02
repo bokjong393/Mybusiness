@@ -10,7 +10,7 @@ Application materials for finance / economics internships and entry roles.
 | `cover-letter-finance-intern.md` | Cover letter with slots to fill per employer. |
 | `interview-prep-finance-intern.md` | Questions you will actually be asked, and how to answer them. |
 | `application-tracker.md` | One row per application so nothing goes cold. |
-| `job-2928-jobdockets.md` | The JobDockets Finance Intern role — notes and vetting checklist. |
+| `metro-group/` | **The live application.** Role brief and company research, plus a CV, cover letter and email tailored to Metro Group. |
 
 ## How to use it
 
@@ -25,9 +25,11 @@ Application materials for finance / economics internships and entry roles.
 ## Your three real advantages — lead with these
 
 1. **Fluent English + French.** This is not a soft "language skill" line. Any company with operations,
-   suppliers, or customers in Benin, Togo, Côte d'Ivoire, Senegal or Cameroon needs someone who can read
-   a French invoice and get on a call without a translator. Very few Nigerian finance-intern applicants
-   can. Put it in your profile paragraph, not buried at the bottom.
+   suppliers or customers in Benin, Togo, Côte d'Ivoire, Senegal or Cameroon — or diaspora customers
+   remitting from France, Belgium or Quebec — needs someone who can read a French document and get on
+   the call without a translator. Very few Nigerian finance-intern applicants can. Put it in your profile
+   paragraph, not buried at the bottom. But tie it to the employer's actual operations: if you cannot
+   name why French matters *to them*, it drops to a one-line skill and something else leads.
 2. **Economics, not just accounting.** You can talk about *why* the numbers moved — inflation, FX,
    demand — not only what they are. Finance teams value the person who explains the variance.
 3. **Fully online degree.** Frame it as self-management, not as a lesser degree: you set your own

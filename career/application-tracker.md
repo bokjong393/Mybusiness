@@ -5,7 +5,7 @@ interviews — most candidates never send one, so the ones who do stand out for 
 
 | # | Date sent | Company | Role | Source | CV version | Contact | Status | Follow-up due | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | [[2026-09-02]] | [[?]] | Finance Intern | JobDockets #2928 | | | Not yet applied — vetting | | Company name not yet confirmed |
+| 1 | [[fill on send]] | Metro Group (Metroscape) | Finance Intern | JobDockets #2928 / LinkedIn | Metro Group v1 | hr@mtscape.com · Ayobami Kolawole | Not yet applied — building projects first | [[send date + 7 working days]] | On-site Lagos, ₦200,000 (confirm monthly). See `metro-group/00-role-brief.md` |
 | 2 | | | | | | | | | |
 | 3 | | | | | | | | | |
 
