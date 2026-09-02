@@ -111,3 +111,13 @@ Every experiment gets a written hypothesis **before** it runs and a verdict **af
 - Does a redacted public sample file outperform a testimonial in cold outreach?
 - Do recruiters (Plan C) reply at a higher rate than agencies to the same mechanic?
 - Does stating "based in Nigeria" up front help or hurt reply rates? *(Uncomfortable to test, but the answer is worth knowing — assumption is currently untested in both directions.)*
+
+---
+
+## Tracker accuracy note (2026-09-02)
+
+Send dates were being logged from the batch **recommended** rather than the batch **actually sent**. A LinkedIn thread screenshot showed Vision Media's connection note went out 1 September, not 30 August as recorded — shifting its follow-up from 2 September to the 4th.
+
+**Rule going forward: log only what the founder reports sending, never an assumed batch.** Where the two conflict, LinkedIn's own thread timestamps are authoritative.
+
+Same discipline as the signal pool: the primary source wins over the plausible reconstruction.
