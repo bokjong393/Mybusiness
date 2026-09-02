@@ -1,150 +1,177 @@
 # Rayda — Data Analyst Intern: Review
 
 **Posting:** https://rayda.zohorecruit.com/jobs/Careers/759575000002968033/Data-Analyst-Intern
-**Reviewed:** 2 September 2026
-**Verdict:** Strong fit for your goals. Apply — and apply this week.
-
-> **One caveat up front:** I could not open the Zoho page itself (this session's network
-> policy blocks `rayda.zohorecruit.com`, `rayda.co`, and the job aggregators that mirror it).
-> Everything below about the *company* is independently verified from press and company
-> databases. Everything about the *role* is reconstructed from job-board indexes of this
-> exact posting, so treat stipend, duration, and deadline as **unconfirmed** — see
-> "What you still need to check" at the end. Paste the posting text to me and I'll do a
-> line-by-line match against your CV.
+**Opened:** 21 August 2026 · **Reviewed against the full posting text:** 2 September 2026
+**Verdict:** You meet every hard requirement. Apply this week. The real decision is hours, not skills.
 
 ---
 
-## 1. What Rayda actually is
+## What changed once I read the actual posting
 
-Not a mystery company. This checks out.
+My first read was written blind — the Zoho page was unreachable from this environment. Three
+corrections now that the text is in front of me, and they all matter:
+
+1. **SQL is not the gate.** The posting says *"Basic knowledge of SQL is an advantage."* I had
+   called it the one thing that decides it. It isn't. The only hard tool requirement is
+   *"Familiarity with Excel or Google Sheets."* That changes what you should do this week.
+2. **You are named in the requirements.** *"Currently pursuing … a degree in Data Science,
+   Statistics, Mathematics, Computer Science, **Economics**, Business Analytics or a related
+   field."* You are not stretching for this role. You are the described candidate.
+3. **It is listed as full time, at ₦80,000–₦100,000, while you are 200L.** This is the actual
+   thing to think hard about — see §3. It's a scheduling decision, not a qualifications one.
+
+## 1. The company
+
+Rayda describes itself as *"an asset lifecycle management company, enabling businesses to
+acquire, manage, track and dispose of their fixed assets globally."* Independently verified:
 
 | | |
 |---|---|
-| **What they sell** | An IT operations platform: companies use Rayda to buy, ship, track, repair and recover employee laptops and devices — especially for remote teams in hard-to-serve regions |
-| **Founded** | 2022 by Ogochukwu Francis Osifo (CEO); publicly launched January 2023. Dan Duggan joined as co-founder/CRO in 2024 |
+| **Founded** | 2022 by Ogochukwu Francis Osifo (CEO); launched January 2023. Dan Duggan joined as co-founder/CRO in 2024 |
 | **Backing** | Techstars London 2024 cohort; pre-seed from Microtraction, Beta Ventures, Techstars, HOAQ Club and angels |
 | **Size** | ~27 people |
 | **Health** | Reported profitable since early 2025 — rare and good for a startup this young |
-| **Markets** | Africa, LATAM, APAC — strong Lagos presence, incorporated in Delaware, US |
+| **Markets** | Africa, LATAM, APAC. Strong Lagos presence, incorporated in Delaware |
 
-**Why that matters for you:** a 27-person profitable startup is the best kind of internship
-for someone who wants to run her own business one day. You will see how the whole machine
-works — billing, customers, product, logistics — not one slice of it. At a 2,000-person bank
-you would see one slice.
+Note the word **dispose** in their own description, and **sustainability** in the benefits. They
+don't just ship laptops — they recover and resell or retire them at end of life. That's a
+second revenue stream and it's directly relevant to your portfolio project (§6).
 
-## 2. What the job really is
+## 2. What the job actually is
 
-The posting lists **Statistics, SQL, and Data Visualization** as the skills, and the work is
-described as supporting the collection, cleaning and organisation of data from different
-business systems — feeding into Rayda's data warehouse, which pulls together **product,
-billing and customer-interaction data** from tools like **Segment, PostHog and Customer.io**.
+Nine listed duties. Grouped by what they really mean:
 
-Translated out of job-post language:
+**The bulk of it — data plumbing**
+- Collect, clean and organise data from different business systems
+- Data validation and quality checks so reports are accurate
+- Document datasets, reports and basic analysis processes
+- Improve the availability and usability of business data
 
-- **Segment** = the pipe that collects "what users did" events
-- **PostHog** = product analytics — who clicked what, who dropped off
-- **Customer.io** = the emails/messages sent to customers
-- **Billing data** = who pays what, when
+**The visible part — reporting**
+- Prepare regular reports and dashboards for **Product, Growth and Commercial** teams
+- Track and report key business and product metrics
 
-Your actual day will be roughly **70% cleaning and joining messy data, 20% writing SQL
-queries to answer someone's question, 10% making a chart that makes the answer obvious.**
-Anyone who tells you a first analyst job is mostly modelling is selling a course.
+**The part that grows you — analysis**
+- Identify trends, patterns and areas requiring attention
+- Translate business questions into simple data analyses and insights
+- Ad hoc analysis and data requests
 
-That 70% is not a warning. It is the part that teaches you how a business actually earns
-money, and it is exactly the knowledge you need later.
+Two details worth catching:
 
-## 3. Honest fit assessment
+- **"Support the Data Analyst"** — singular. There is an existing analyst. You'd have someone
+  to learn from rather than being the first data person guessing alone. That's a meaningfully
+  better internship, and it answers one of my open questions from the first review.
+- **"for Product, Growth, Commercial and other teams"** — you'd sit across the whole business,
+  not in one function. For someone who wants to run her own company, that vantage point is the
+  single most valuable thing on offer here.
 
-### What you have going for you
+## 3. The money and the hours — read this part twice
 
-**Statistics is your degree, not a side hobby.** You are 200L Economics — descriptive stats,
-distributions, regression are your coursework. Most applicants for a role like this are
-self-taught from YouTube. Say the words "Economics, 200L, statistics and econometrics
-coursework" early in your application.
+| | |
+|---|---|
+| **Salary** | ₦80,000 – ₦100,000 (monthly, as Nigerian postings quote) |
+| **Job type** | Full time |
+| **Experience** | 0–1 year |
+| **Location** | Remote |
+| **Opened** | 21 August 2026 |
 
-**You are already remote-native.** Miva is an online university. You have been managing your
-own schedule, deadlines and learning without someone standing over you for two years. For a
-remote-first company that is a genuine hiring signal — say it explicitly, don't assume they
-infer it.
+**On the money.** Nigeria's national minimum wage is ₦70,000/month. So this is roughly 1.1× to
+1.4× minimum wage for a full-time technology role. That is low, and you should know it's low
+rather than find out later.
 
-**French is your quiet advantage.** Rayda is expanding across Africa. Francophone West Africa
-— Benin, Côte d'Ivoire, Senegal — is the part almost no Lagos-based applicant can support.
-You are Beninese-Nigerian and fluent. Very few people in that applicant pile can say that.
-Put it on line one of the cover letter, not buried in "Languages" at the bottom of page two.
+Two things push the real value up:
 
-**The role matches your actual ambition.** You want to make money from home and eventually
-run your own business. Data analysis is one of the few skills that is genuinely remote,
-genuinely portable, and directly useful when you are running your own numbers later.
+- **Remote means no transport, no lodging, no Lagos rent.** Against an office job paying the
+  same, that gap is worth real money every month.
+- **What you're actually buying is the first line on your CV**, a named analyst to learn from,
+  and a year of provable remote work with a funded company. At 21 and 200L with no work
+  history, that is worth more than the difference between ₦100k and ₦150k. It stops being
+  worth more once you have it — so treat this as a 12-month trade, not a career.
 
-### What is missing
+**On the hours — this is the real decision.** "Full time" alongside 200L Economics is not a
+formality. The only reason it's even feasible is that Miva is asynchronous: you control when
+you study. But full time is full time, and 200L→300L is when Economics gets heavier.
 
-**SQL.** This is the one thing that decides it. Not "have you heard of SQL" — can you write a
-`JOIN` and a `GROUP BY` without looking them up. If you can't yet, you can get to
-interview-credible in about a week of real effort. See the application kit.
+Be honest with yourself about which of these is true:
 
-**No named-tool experience.** You have not used Segment, PostHog or Customer.io. That is
-completely fine — nobody expects an intern to have. Do not fake it, and do not apologise for
-it either. The correct line is: *"I haven't used PostHog, but I've read their docs and the
-model is events and properties — here's a similar thing I did in [tool]."*
+- *"I can do 40 hours a week and still pass well."* Then apply and take it if offered.
+- *"I can do maybe 20–25 hours."* Then still apply — **and ask about hours in the first
+  conversation, not after an offer.** Startups of 27 people flex on this constantly, especially
+  for a paid intern. The question is normal. Asking it late is what looks bad.
+- *"My grades would suffer."* Then don't. The degree is the asset you're already two years into.
 
-**No portfolio yet.** This is the real gap, and it is also the easiest to close. See §5.
+**Do not resolve this by staying silent and hoping.** Ask: *"The posting lists this as full
+time — is there flexibility on hours for a current student, or is 40 hours firm?"* A good
+company answers that plainly. The answer tells you a lot about them either way.
 
-### The honest risk
+## 4. Requirement-by-requirement match
 
-Remote analyst internships at funded startups get **hundreds** of applicants in Nigeria. A
-plain CV with no project attached does not get read. Your entire strategy has to be: *be the
-one who attached proof.*
+| What they ask for | Where you stand |
+|---|---|
+| Pursuing a degree in Data Science, Statistics, Maths, CS, **Economics**, Business Analytics | ✅ **Named.** BSc Economics, 200L, Miva Open University |
+| Basic understanding of data analysis and statistics | ✅ Above the bar — it's your coursework, not a hobby |
+| Familiarity with Excel or Google Sheets | ⚠️ **The only hard tool requirement.** Make sure it's genuinely solid: pivot tables, `VLOOKUP`/`XLOOKUP`, `SUMIFS`, charts |
+| Basic SQL — *"is an advantage"* | ○ Bonus. Nice to have, not a gate |
+| Power BI / Tableau / Looker Studio — *"is an advantage"* | ○ Bonus. **Looker Studio is free and takes an afternoon** — cheapest point you'll ever score |
+| Strong attention to detail, willingness to learn | ✅ Demonstrate it, don't claim it — see the project |
+| Good analytical and problem-solving skills | ✅ This is literally what Economics trains |
+| Good written and verbal communication | ✅ English and French, fluent. Real strength |
+| Works collaboratively in a fast-paced environment | ✅ Address it in one line of the letter |
 
-## 4. Legitimacy check — this one is clean
+**Zero hard blockers.** The gap between you and this job is a portfolio link, not a skill.
 
-Zoho Recruit is a normal, widely used applicant-tracking system; the `source=Free-JobBoards-Network`
-tag in your link is just their tracking, not a red flag. Named founders, press coverage,
-real investors, a real product. Green.
+## 5. Legitimacy — clean
 
-Standard rules still apply, for this and every other application:
+Zoho Recruit is a standard applicant-tracking system; the `source=Free-JobBoards-Network` tag
+in your link is their tracking, not a red flag. Named founders, press coverage, real investors,
+a real product, a stated salary range. All green.
+
+Standing rules, for this and every application:
 
 - **Never pay** for training, equipment, onboarding or a "background check". Ever.
-- **Never give BVN, bank details or NIN** before you have a signed offer and a contract.
-- Interviews come from a **@rayda.co address** and a named human. Not WhatsApp-only, not Telegram.
-- If any of the above breaks, it isn't Rayda — it's someone using their name.
+- **Never give BVN, bank details or NIN** before a signed offer and a contract.
+- Interviews come from a **@rayda.co** address and a named human — not WhatsApp-only, not Telegram.
 
-## 5. What to do, in order
+If any of that breaks, it isn't Rayda — it's someone using their name.
 
-**The posting was already about ten days old when job boards indexed it. Speed beats polish.**
-Do not spend two weeks preparing and then apply. Apply now, build the proof this week, follow up.
+## 6. What to do, in order
+
+The posting opened **21 August**. It's now 12 days old with no stated deadline. Move.
 
 ### Today (2–3 hours)
-1. Submit the application. CV + the cover letter draft in `application-kit.md`.
-2. Do not wait for the portfolio to exist before applying.
+1. **Apply.** CV + the cover letter in `application-kit.md`, which now mirrors the posting's
+   own language.
+2. Don't wait for a portfolio to exist first.
 
-### This week (about an hour a day)
-3. SQL: `SELECT`, `WHERE`, `GROUP BY`, `JOIN`, `CTE`, then window functions. Free, in-browser,
-   no install: SQLBolt, Mode's SQL Tutorial, or PostgreSQL Exercises.
-4. Build the **device lifecycle mini-project** described in the application kit. It is designed
-   to be about Rayda's own business problem.
-5. Publish it — Google Sheets link, a GitHub repo, or a one-page write-up. It needs a URL.
+### Day 1–2 — the highest-return hours (about 4)
+3. **Build the Asset Lifecycle dashboard in Looker Studio** (free, Google account, no install).
+   This closes *two* stated "advantage" requirements at once — data visualisation tooling *and*
+   the portfolio proof — and it's built on their own business problem. Full brief in the kit.
+4. Sharpen Google Sheets while you build it: pivot tables, `XLOOKUP`, `SUMIFS`. That's the one
+   hard requirement.
+
+### Day 3–7 — the bonus (an hour a day)
+5. **SQL basics.** `SELECT` → `JOIN` → `GROUP BY` → CTEs. Enough to say "basic knowledge of SQL"
+   truthfully, which is exactly the level they asked for. Don't over-invest here; it's a
+   tiebreaker, not a gate.
 
 ### Day 7–10
-6. Follow up on your application with one short message: *"I built a small analysis of device
-   recovery rates while waiting to hear back — here it is."* This is the move that gets replies.
+6. **Follow up once**, with the dashboard link. This is the move that gets replies.
 
-## 6. What you still need to check
+## 7. Still worth confirming
 
-I could not read these off the posting. Confirm them from the page itself before or during
-the process — and do not treat asking as rude. It is a normal thing a serious candidate does.
+Most of my earlier questions are now answered by the posting. Four remain:
 
-- [ ] **Is it paid?** Amount and currency. (I saw a stipend figure floating around for a
-      *different* Rayda internship — do not assume it applies here.)
-- [ ] **Hours per week**, and whether it flexes around your Miva schedule and exams
-- [ ] **Duration**, and whether there is a path to a full-time or contract role after
-- [ ] **Application deadline**
-- [ ] **Fully remote, or Lagos hybrid?** The listing shows both "remote" and "Lagos" signals
-- [ ] **Laptop and data**: do they provide equipment or a stipend? (Fair question at a company
-      whose entire product is providing equipment.)
-- [ ] Who you'd report to, and whether there is an existing data person to learn from
+- [ ] **Hours** — is 40/week firm, or is there flex for a current student? *(Ask early.)*
+- [ ] **Fixed-term or ongoing?** Titled "Intern" but typed "Full time" — how long is the term,
+      and does it convert to a permanent role?
+- [ ] **Equipment and data** — provided, or a stipend? A fair question at a company whose entire
+      product is providing equipment, and the benefits section doesn't mention it.
+- [ ] **Is ₦80–100k negotiable at the top of the band** given you'd arrive with a dashboard
+      already built? Ask only once they've made an offer, never before.
 
 ---
 
-*Sources: Crunchbase, Tracxn, CB Insights, PitchBook, TechCabal (July 2026), and job-board
-indexes of the Rayda posting. The Zoho posting itself was not directly reachable from this
-session.*
+*Role details confirmed from the posting text. Company details from Crunchbase, Tracxn,
+CB Insights, PitchBook and TechCabal (July 2026). Minimum wage reference: Nigeria's national
+minimum wage, ₦70,000/month as set in 2024.*

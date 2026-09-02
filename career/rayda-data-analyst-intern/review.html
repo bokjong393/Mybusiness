@@ -207,7 +207,7 @@
     font-size: .95rem;
     display: flex;
     flex-direction: column;
-    gap: .55rem;
+    gap: .7rem;
   }
   .note .tag {
     font-family: var(--mono);
@@ -217,8 +217,9 @@
     text-transform: uppercase;
     color: var(--signal);
   }
+  .note ol { margin: 0; padding-left: 1.15rem; display: flex; flex-direction: column; gap: .55rem; }
 
-  /* ---------- company facts ---------- */
+  /* ---------- fact grids ---------- */
   .facts {
     display: grid;
     grid-template-columns: minmax(6.5rem, 8rem) 1fr;
@@ -245,83 +246,51 @@
     border-bottom: 1px solid var(--rule);
   }
   .facts dd:last-of-type { border-bottom: 0; padding-bottom: 0; }
+  .facts dd b { font-family: var(--mono); font-weight: 600; font-variant-numeric: tabular-nums; }
 
-  /* ---------- tool decode ---------- */
-  .decode { display: flex; flex-direction: column; gap: .55rem; }
-  .decode-row {
-    display: grid;
-    grid-template-columns: minmax(7rem, 9rem) 1fr;
-    gap: .3rem 1rem;
-    align-items: baseline;
-    padding-bottom: .55rem;
-    border-bottom: 1px dashed var(--rule);
-  }
-  .decode-row:last-child { border-bottom: 0; padding-bottom: 0; }
-  .decode-row code {
+  /* ---------- duty groups ---------- */
+  .duties { display: grid; gap: 1.25rem; }
+  @media (min-width: 46rem) { .duties { grid-template-columns: repeat(3, 1fr); gap: 1.75rem; } }
+  .duty { display: flex; flex-direction: column; gap: .6rem; }
+  .duty-head {
     font-family: var(--mono);
-    font-size: .82rem;
-    font-weight: 500;
-    color: var(--accent);
-    background: var(--accent-soft);
-    padding: .12rem .45rem;
-    border-radius: 2px;
-    justify-self: start;
-  }
-  .decode-row span { font-size: .96rem; color: var(--ink-2); }
-
-  /* ---------- day split bar ---------- */
-  .split { display: flex; flex-direction: column; gap: .7rem; }
-  .split-bar {
-    display: flex;
-    height: 2.6rem;
-    border-radius: 3px;
-    overflow: hidden;
-    border: 1px solid var(--rule-strong);
-  }
-  .seg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--mono);
-    font-size: .78rem;
-    font-weight: 600;
-    font-variant-numeric: tabular-nums;
-    color: var(--surface);
-    white-space: nowrap;
-  }
-  .seg-a { flex: 70; background: var(--accent); }
-  .seg-b { flex: 20; background: color-mix(in srgb, var(--accent) 55%, var(--ground)); color: var(--ink); }
-  .seg-c { flex: 10; background: color-mix(in srgb, var(--accent) 22%, var(--ground)); color: var(--ink); }
-  .split-key {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .35rem 1.4rem;
-    font-size: .85rem;
-    color: var(--ink-2);
-  }
-  .split-key div { display: flex; align-items: center; gap: .45rem; }
-  .swatch { width: .7rem; height: .7rem; border-radius: 2px; flex: none; }
-  .caption { font-size: .82rem; color: var(--ink-3); }
-
-  /* ---------- fit columns ---------- */
-  .fit { display: grid; gap: 1.5rem; }
-  @media (min-width: 40rem) { .fit { grid-template-columns: 1fr 1fr; gap: 2rem; } }
-
-  .fit-col { display: flex; flex-direction: column; gap: 1rem; }
-  .fit-head {
-    font-family: var(--mono);
-    font-size: .7rem;
+    font-size: .68rem;
     font-weight: 600;
     letter-spacing: .12em;
     text-transform: uppercase;
-    padding-bottom: .5rem;
-    border-bottom: 2px solid currentColor;
+    color: var(--accent);
+    padding-bottom: .45rem;
+    border-bottom: 2px solid var(--accent);
   }
-  .fit-col.plus .fit-head { color: var(--good); }
-  .fit-col.minus .fit-head { color: var(--warn); }
-  .fit-item { display: flex; flex-direction: column; gap: .3rem; }
-  .fit-item p { font-size: .95rem; color: var(--ink-2); }
+  .duty ul { margin: 0; padding-left: 1.05rem; display: flex; flex-direction: column; gap: .45rem; font-size: .92rem; color: var(--ink-2); }
 
+  /* ---------- pull quote ---------- */
+  .pull {
+    border-left: 3px solid var(--accent);
+    padding: .2rem 0 .2rem 1.1rem;
+    font-size: 1.02rem;
+    color: var(--ink-2);
+    font-style: italic;
+  }
+
+  /* ---------- decision block ---------- */
+  .decision {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--signal);
+    border-radius: 0 3px 3px 0;
+    padding: 1.25rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    box-shadow: var(--shadow);
+  }
+  .branch { display: grid; gap: .75rem; margin: 0; padding: 0; list-style: none; }
+  .branch li { display: flex; flex-direction: column; gap: .15rem; font-size: .95rem; }
+  .branch .if { font-family: var(--display); font-weight: 600; font-size: .95rem; }
+  .branch .then { color: var(--ink-2); }
+
+  /* ---------- risk / clean ---------- */
   .risk {
     background: var(--warn-soft);
     border-left: 3px solid var(--warn);
@@ -329,8 +298,6 @@
     font-size: .97rem;
     border-radius: 0 3px 3px 0;
   }
-
-  /* ---------- legitimacy ---------- */
   .clean {
     display: flex;
     align-items: center;
@@ -360,6 +327,12 @@
     font-size: .85rem;
     line-height: 1.7;
   }
+
+  /* ---------- strengths ---------- */
+  .edge { display: grid; gap: 1.25rem; }
+  @media (min-width: 42rem) { .edge { grid-template-columns: repeat(3, 1fr); gap: 1.75rem; } }
+  .edge-item { display: flex; flex-direction: column; gap: .35rem; }
+  .edge-item p { font-size: .93rem; color: var(--ink-2); }
 
   /* ---------- plan timeline ---------- */
   .plan { display: flex; flex-direction: column; gap: 0; }
@@ -441,7 +414,7 @@
     gap: .9rem;
     font-size: .97rem;
   }
-  .letter p:last-child { font-family: var(--mono); font-size: .82rem; color: var(--ink-2); }
+  .letter .sig { font-family: var(--mono); font-size: .82rem; color: var(--ink-2); }
   .letter .fill {
     font-family: var(--mono);
     font-size: .85rem;
@@ -484,24 +457,58 @@
   /* ---------- tables ---------- */
   .scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 3px; background: var(--surface); }
   table { border-collapse: collapse; width: 100%; font-size: .9rem; }
-  th, td { text-align: left; padding: .6rem .9rem; border-bottom: 1px solid var(--rule); }
+  th, td { text-align: left; padding: .65rem .9rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
   tr:last-child td { border-bottom: 0; }
   th {
-    font-family: var(--mono);
-    font-size: .68rem;
+    font-family: var(--display);
+    font-size: .72rem;
     font-weight: 600;
-    letter-spacing: .1em;
+    letter-spacing: .08em;
     text-transform: uppercase;
     color: var(--ink-3);
     white-space: nowrap;
   }
-  td:first-child { font-family: var(--mono); font-size: .82rem; color: var(--accent); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .sql-table td:first-child { font-family: var(--mono); font-size: .82rem; color: var(--accent); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .match-table td:last-child { color: var(--ink-2); }
+  .match-table td { min-width: 11rem; }
+
+  .pill {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: .62rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .16rem .45rem;
+    border-radius: 2px;
+    white-space: nowrap;
+    margin-right: .4rem;
+  }
+  .pill-yes { background: var(--good-soft); color: var(--good); }
+  .pill-must { background: var(--warn-soft); color: var(--warn); }
+  .pill-bonus { background: var(--surface-2); color: var(--ink-3); border: 1px solid var(--rule); }
+
+  /* ---------- skills list ---------- */
+  .skills { display: flex; flex-direction: column; gap: .55rem; margin: 0; padding: 0; list-style: none; }
+  .skills li {
+    display: grid;
+    grid-template-columns: minmax(7rem, 9.5rem) 1fr;
+    gap: .2rem .9rem;
+    font-size: .93rem;
+    color: var(--ink-2);
+    padding-bottom: .5rem;
+    border-bottom: 1px dashed var(--rule);
+  }
+  .skills li:last-child { border-bottom: 0; padding-bottom: 0; }
+  .skills b { font-family: var(--mono); font-size: .82rem; font-weight: 600; color: var(--accent); }
 
   /* ---------- Q&A ---------- */
   .qa { display: flex; flex-direction: column; gap: 1.1rem; }
   .qa-item { display: flex; flex-direction: column; gap: .35rem; }
   .q { font-family: var(--display); font-weight: 600; font-size: .97rem; }
   .a { font-size: .95rem; color: var(--ink-2); }
+
+  .caption { font-size: .82rem; color: var(--ink-3); }
 
   footer {
     border-top: 1px solid var(--rule);
@@ -519,29 +526,33 @@
 
   <header class="masthead">
     <div class="kicker">
-      <span>Reviewed 2 Sep 2026</span>
-      <span>Rayda · Zoho Recruit</span>
-      <span>Remote · Lagos</span>
+      <span>Opened 21 Aug 2026</span>
+      <span>Reviewed 2 Sep</span>
+      <span>Rayda · Remote · Full time</span>
     </div>
     <h1>Data Analyst Intern at Rayda</h1>
-    <p class="dek">A read on the company, the role, and whether it's worth your week — plus the exact materials to send.</p>
+    <p class="dek">Read against the full posting text. You meet every hard requirement — the real decision here is hours, not skills.</p>
     <div class="verdict">
-      <b>Apply, and apply this week.</b>
-      <span>Real company, real fit, and the posting is already about ten days old.</span>
+      <b>Apply this week.</b>
+      <span>Twelve days open, no stated deadline, and the requirements list names your degree.</span>
     </div>
   </header>
 
   <div class="note">
-    <span class="tag">One caveat, up front</span>
-    <p>I couldn't open the Zoho page itself — this environment blocks <code>rayda.zohorecruit.com</code> and the job boards that mirror it. Everything about the <strong>company</strong> below is independently verified from press and company databases. Everything about the <strong>role</strong> is reconstructed from job-board indexes of this exact posting, so treat stipend, duration and deadline as unconfirmed. Paste me the posting text and I'll match it line by line against your CV.</p>
+    <span class="tag">Three corrections to my first read</span>
+    <p>That version was written blind — the Zoho page was unreachable. Now that the text is here:</p>
+    <ol>
+      <li><strong>SQL is not the gate.</strong> The posting says <em>"Basic knowledge of SQL is an advantage."</em> I'd called it the thing that decides it. It isn't — and that changes what you should do this week.</li>
+      <li><strong>You're named in the requirements.</strong> <em>"Currently pursuing … a degree in … Economics …"</em> You aren't stretching for this role. You're the described candidate.</li>
+      <li><strong>It's listed full time at ₦80,000–₦100,000, and you're 200L.</strong> That's the thing to actually think about.</li>
+    </ol>
   </div>
 
   <section>
     <div class="eyebrow">The company</div>
     <h2>Rayda checks out</h2>
+    <p class="pull">"An asset lifecycle management company, enabling businesses to acquire, manage, track and dispose of their fixed assets globally."</p>
     <dl class="facts">
-      <dt>Product</dt>
-      <dd>An IT operations platform — companies use it to buy, ship, track, repair and recover employee laptops, especially for remote teams in hard-to-serve regions.</dd>
       <dt>Founded</dt>
       <dd>2022 by Ogochukwu Francis Osifo (CEO); launched January 2023. Dan Duggan joined as co-founder and CRO in 2024.</dd>
       <dt>Backing</dt>
@@ -553,84 +564,115 @@
       <dt>Markets</dt>
       <dd>Africa, LATAM, APAC. Strong Lagos presence, incorporated in Delaware.</dd>
     </dl>
-    <p>A 27-person profitable startup is the best kind of internship for someone who wants to run her own business one day. You'll see the whole machine — billing, customers, product, logistics — not one slice of it. At a 2,000-person bank you'd see one slice.</p>
+    <p>Note <strong>dispose</strong> in their own description of themselves, and <strong>sustainability</strong> in the benefits. They don't just ship laptops — they recover and resell or retire them at end of life. That's a second revenue stream, and it's why your portfolio project below has a disposal question in it.</p>
   </section>
 
   <section>
     <div class="eyebrow">The role</div>
-    <h2>What the job really is</h2>
-    <p>The posting names <strong>Statistics, SQL and Data Visualization</strong>, and describes supporting the collection, cleaning and organisation of data from different business systems — feeding Rayda's data warehouse, which brings together product, billing and customer-interaction data.</p>
-    <div class="decode">
-      <div class="decode-row"><code>Segment</code><span>The pipe that collects "what users did" events</span></div>
-      <div class="decode-row"><code>PostHog</code><span>Product analytics — who clicked what, who dropped off</span></div>
-      <div class="decode-row"><code>Customer.io</code><span>The emails and messages sent to customers</span></div>
-      <div class="decode-row"><code>Billing data</code><span>Who pays what, and when</span></div>
-    </div>
-    <div class="split">
-      <h3>How the day actually splits</h3>
-      <div class="split-bar" role="img" aria-label="Estimated split of a first analyst role: 70 percent cleaning and joining data, 20 percent writing queries, 10 percent building charts.">
-        <div class="seg seg-a">70%</div>
-        <div class="seg seg-b">20%</div>
-        <div class="seg seg-c">10%</div>
+    <h2>Nine duties, three jobs</h2>
+    <div class="duties">
+      <div class="duty">
+        <div class="duty-head">The bulk of it</div>
+        <ul>
+          <li>Collect, clean and organise data from different business systems</li>
+          <li>Data validation and quality checks so reports are accurate</li>
+          <li>Document datasets, reports and processes</li>
+          <li>Improve availability and usability of business data</li>
+        </ul>
       </div>
-      <div class="split-key">
-        <div><span class="swatch" style="background: var(--accent)"></span>Cleaning &amp; joining messy data</div>
-        <div><span class="swatch" style="background: color-mix(in srgb, var(--accent) 55%, var(--ground))"></span>Writing queries</div>
-        <div><span class="swatch" style="background: color-mix(in srgb, var(--accent) 22%, var(--ground))"></span>Charts</div>
+      <div class="duty">
+        <div class="duty-head">The visible part</div>
+        <ul>
+          <li>Regular reports and dashboards for Product, Growth and Commercial teams</li>
+          <li>Track and report key business and product metrics</li>
+        </ul>
       </div>
-      <p class="caption">My estimate for a first analyst role, not a figure from the posting. Anyone who tells you a first analyst job is mostly modelling is selling a course.</p>
+      <div class="duty">
+        <div class="duty-head">The part that grows you</div>
+        <ul>
+          <li>Identify trends, patterns and areas needing attention</li>
+          <li>Translate business questions into simple analyses and insights</li>
+          <li>Ad hoc analysis and data requests</li>
+        </ul>
+      </div>
     </div>
-    <p>That 70% isn't a warning. It's the part that teaches you how a business actually earns money — exactly the knowledge you'll want later.</p>
+    <p>Two details worth catching. <strong>"Support the Data Analyst"</strong> — singular. There is an existing analyst, so you'd have someone to learn from rather than being the first data person guessing alone. And <strong>"Product, Growth, Commercial and other teams"</strong> means you'd sit across the whole business, not inside one function. For someone who wants to run her own company, that vantage point is the most valuable thing on offer here.</p>
   </section>
 
   <section>
-    <div class="eyebrow">Fit</div>
-    <h2>Honest assessment</h2>
-    <div class="fit">
-      <div class="fit-col plus">
-        <div class="fit-head">Working for you</div>
-        <div class="fit-item">
-          <h3>Statistics is your degree</h3>
-          <p>200L Economics — distributions, regression and inference are coursework, not a YouTube hobby. Most applicants for this role are self-taught. Say "Economics, 200L, statistics and econometrics coursework" early.</p>
-        </div>
-        <div class="fit-item">
-          <h3>You're already remote-native</h3>
-          <p>Miva is an online university. Two years of managing your own deadlines without supervision is a genuine hiring signal for a remote-first company. Say it explicitly — don't assume they infer it.</p>
-        </div>
-        <div class="fit-item">
-          <h3>French is your quiet advantage</h3>
-          <p>Rayda is expanding across Africa, and Francophone West Africa is the part almost no Lagos-based applicant can support. Put it on line one of the cover letter, not buried under "Languages" on page two.</p>
-        </div>
-        <div class="fit-item">
-          <h3>It matches the actual ambition</h3>
-          <p>Analysis is one of the few skills that's genuinely remote, genuinely portable, and directly useful when you're running your own numbers later.</p>
-        </div>
+    <div class="eyebrow">Compensation</div>
+    <h2>The money and the hours</h2>
+    <dl class="facts">
+      <dt>Salary</dt>
+      <dd><b>₦80,000 – ₦100,000</b> monthly, as Nigerian postings quote</dd>
+      <dt>Job type</dt>
+      <dd><b>Full time</b> — despite the "Intern" title</dd>
+      <dt>Experience</dt>
+      <dd>0–1 year</dd>
+      <dt>Location</dt>
+      <dd>Remote</dd>
+    </dl>
+    <p><strong>On the money.</strong> Nigeria's national minimum wage is ₦70,000/month, so this lands at roughly 1.1× to 1.4× minimum wage for a full-time technology role. That's low, and it's better to know it's low now than to find out later.</p>
+    <p>Two things push the real value up. <strong>Remote means no transport, no lodging, no Lagos rent</strong> — against an office job paying the same, that gap is real money every month. And what you're actually buying is the first line on your CV, a named analyst to learn from, and a year of provable remote work with a funded company. At 21 and 200L with no work history, that's worth more than the gap between ₦100k and ₦150k. It stops being worth more once you have it — so treat this as a twelve-month trade, not a career.</p>
+    <div class="decision">
+      <h3>On the hours — this is the real decision</h3>
+      <p>Full time alongside 200L Economics isn't a formality. The only reason it's feasible at all is that Miva is asynchronous: you control when you study. But full time is full time, and 200L into 300L is when Economics gets heavier.</p>
+      <ul class="branch">
+        <li><span class="if">"I can do 40 hours and still pass well."</span><span class="then">Apply, and take it if offered.</span></li>
+        <li><span class="if">"I can do maybe 20–25 hours."</span><span class="then">Still apply — and ask about hours in the first conversation, not after an offer. A 27-person startup flexes on this constantly, especially for a paid intern. Asking is normal; asking late is what looks bad.</span></li>
+        <li><span class="if">"My grades would suffer."</span><span class="then">Then don't. The degree is the asset you're already two years into.</span></li>
+      </ul>
+      <p><strong>Don't resolve this by staying silent and hoping.</strong> Ask them: <em>"The posting lists this as full time — is there flexibility on hours for a current student, or is 40 hours firm?"</em> A good company answers plainly. The answer tells you a lot about them either way.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Requirements</div>
+    <h2>Line by line</h2>
+    <div class="scroll">
+      <table class="match-table">
+        <thead><tr><th>What they ask for</th><th>Where you stand</th></tr></thead>
+        <tbody>
+          <tr><td>Pursuing a degree in Data Science, Statistics, Maths, CS, <strong>Economics</strong>, Business Analytics</td><td><span class="pill pill-yes">Named</span>BSc Economics, 200L, Miva Open University</td></tr>
+          <tr><td>Basic understanding of data analysis and statistics</td><td><span class="pill pill-yes">Above bar</span>Coursework, not a hobby</td></tr>
+          <tr><td>Familiarity with Excel or Google Sheets</td><td><span class="pill pill-must">The one gate</span>The only unhedged tool requirement. Make it genuinely solid — pivot tables, <code>XLOOKUP</code>, <code>SUMIFS</code>, charts</td></tr>
+          <tr><td>Basic knowledge of SQL — <em>"is an advantage"</em></td><td><span class="pill pill-bonus">Bonus</span>Worth a week, not a month</td></tr>
+          <tr><td>Power BI, Tableau or Looker Studio — <em>"is an advantage"</em></td><td><span class="pill pill-bonus">Bonus</span>Looker Studio is free and takes an afternoon. Cheapest point you'll ever score</td></tr>
+          <tr><td>Attention to detail, willingness to learn</td><td><span class="pill pill-yes">Show it</span>Demonstrate through the project, don't claim it</td></tr>
+          <tr><td>Analytical and problem-solving skills</td><td><span class="pill pill-yes">Yes</span>Literally what Economics trains</td></tr>
+          <tr><td>Good written and verbal communication</td><td><span class="pill pill-yes">Strength</span>English and French, fluent</td></tr>
+          <tr><td>Collaborative, fast-paced environment</td><td><span class="pill pill-yes">Yes</span>Worth one line in the letter</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Zero hard blockers.</strong> The gap between you and this job is a portfolio link, not a skill.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Your edge</div>
+    <h2>Three things the table doesn't capture</h2>
+    <div class="edge">
+      <div class="edge-item">
+        <h3>French</h3>
+        <p>Rayda is expanding across Africa, and Francophone West Africa is the part almost no Lagos-based applicant can support. Put it in the letter, not buried under "Languages" on page two.</p>
       </div>
-      <div class="fit-col minus">
-        <div class="fit-head">Gaps to close</div>
-        <div class="fit-item">
-          <h3>SQL</h3>
-          <p>This is the one thing that decides it. Not "have you heard of SQL" — can you write a <code>JOIN</code> and a <code>GROUP BY</code> without looking them up. A week of real effort gets you to interview-credible.</p>
-        </div>
-        <div class="fit-item">
-          <h3>No named-tool experience</h3>
-          <p>You haven't used Segment, PostHog or Customer.io. Completely fine — nobody expects an intern to have. Don't fake it, and don't apologise for it either.</p>
-        </div>
-        <div class="fit-item">
-          <h3>No portfolio yet</h3>
-          <p>The real gap, and the easiest to close. Four to six hours of work, and it's the thing that gets you read.</p>
-        </div>
+      <div class="edge-item">
+        <h3>Remote-native already</h3>
+        <p>Miva is an online university. Two years of managing your own deadlines without supervision is a genuine signal for a globally distributed team — say it, don't assume they infer it.</p>
+      </div>
+      <div class="edge-item">
+        <h3>It matches the ambition</h3>
+        <p>Analysis is one of the few skills that's genuinely remote, genuinely portable, and directly useful when you're running your own numbers later.</p>
       </div>
     </div>
-    <p class="risk"><strong>The honest risk:</strong> remote analyst internships at funded startups draw hundreds of applicants in Nigeria. A plain CV with nothing attached doesn't get read. Your whole strategy is: be the one who attached proof.</p>
+    <p class="risk"><strong>The honest risk:</strong> remote analyst internships at funded startups draw hundreds of applicants in Nigeria, and this one has now been open twelve days. A plain CV with nothing attached doesn't get read. Your whole strategy is: be the one who attached proof.</p>
   </section>
 
   <section>
     <div class="eyebrow">Safety check</div>
     <h2>This one is clean</h2>
-    <p class="clean">✓ Verified — real company, real founders, real investors</p>
-    <p>Zoho Recruit is a normal, widely-used applicant-tracking system, and the <code>source=Free-JobBoards-Network</code> tag in your link is just their tracking, not a red flag. Named founders, press coverage, a real product.</p>
-    <p>The standard rules still apply — to this and every other application:</p>
+    <p class="clean">✓ Verified — real company, real founders, real investors, stated salary</p>
+    <p>Zoho Recruit is a standard applicant-tracking system, and the <code>source=Free-JobBoards-Network</code> tag in your link is just their tracking, not a red flag. The standing rules still apply — to this and every other application:</p>
     <ul class="rules">
       <li>Never pay for training, equipment, onboarding or a "background check". Ever.</li>
       <li>Never give BVN, bank details or NIN before a signed offer and a contract.</li>
@@ -642,30 +684,34 @@
   <section>
     <div class="eyebrow">Sequence</div>
     <h2>Speed beats polish</h2>
-    <p>Don't spend two weeks preparing and then apply. Apply now, build the proof this week, follow up with it.</p>
     <div class="plan">
       <div class="step">
         <div class="when">Today</div>
         <div class="step-body">
-          <p><strong>Submit the application.</strong> CV plus the cover letter below. Two to three hours.</p>
-          <p>Do not wait for the portfolio to exist before applying.</p>
+          <p><strong>Apply.</strong> CV plus the cover letter below, which now mirrors the posting's own language. Two to three hours.</p>
+          <p>Don't wait for the portfolio to exist first.</p>
         </div>
       </div>
       <div class="step">
-        <div class="when">This week</div>
+        <div class="when">Day 1–2</div>
         <div class="step-body">
-          <p>About an hour a day.</p>
+          <p><strong>The highest-return four hours you'll spend.</strong></p>
           <ul>
-            <li>Work the SQL sprint below — <code>SELECT</code> through window functions.</li>
-            <li>Build the device lifecycle project. It's about Rayda's own business problem.</li>
-            <li>Publish it. Google Sheet, GitHub repo, or a one-page write-up — it needs a URL.</li>
+            <li>Build the Asset Lifecycle dashboard in <strong>Looker Studio</strong> — free, browser-based. It closes two stated "advantage" requirements at once: visualisation tooling <em>and</em> the portfolio proof.</li>
+            <li>Sharpen Google Sheets while building it. That's the one hard requirement.</li>
           </ul>
+        </div>
+      </div>
+      <div class="step">
+        <div class="when">Day 3–7</div>
+        <div class="step-body">
+          <p><strong>SQL basics</strong>, an hour a day. Enough to say "basic knowledge of SQL" truthfully — which is exactly the level they asked for. Don't over-invest; it's a tiebreaker, not a gate.</p>
         </div>
       </div>
       <div class="step">
         <div class="when">Day 7–10</div>
         <div class="step-body">
-          <p><strong>Follow up once</strong>, with the link. This is the move that gets replies — see the message at the bottom.</p>
+          <p><strong>Follow up once</strong>, with the dashboard link. This is the move that gets replies.</p>
         </div>
       </div>
     </div>
@@ -673,112 +719,124 @@
 
   <section>
     <div class="eyebrow">Open questions</div>
-    <h2>Confirm these from the posting</h2>
-    <p>I couldn't read these off the page. Check them before or during the process — asking isn't rude, it's what a serious candidate does. Tick them off as you confirm each one.</p>
+    <h2>Four things left to confirm</h2>
+    <p>The posting answered most of my earlier questions. These four remain — tick them off as you get answers.</p>
     <div class="check" id="checklist">
-      <label class="check-item"><input type="checkbox" data-k="paid"><span class="check-label"><span>Is it paid, and how much?</span><em>I saw a stipend figure attached to a different Rayda internship — don't assume it applies here.</em></span></label>
-      <label class="check-item"><input type="checkbox" data-k="hours"><span class="check-label"><span>Hours per week, and does it flex around Miva deadlines and exams?</span></span></label>
-      <label class="check-item"><input type="checkbox" data-k="length"><span class="check-label"><span>Duration — and is there a path to a full-time or contract role after?</span></span></label>
-      <label class="check-item"><input type="checkbox" data-k="deadline"><span class="check-label"><span>Application deadline</span></span></label>
-      <label class="check-item"><input type="checkbox" data-k="remote"><span class="check-label"><span>Fully remote, or Lagos hybrid?</span><em>The listing carries both "remote" and "Lagos" signals.</em></span></label>
-      <label class="check-item"><input type="checkbox" data-k="kit"><span class="check-label"><span>Laptop and data — provided, or a stipend?</span><em>A fair question at a company whose entire product is providing equipment.</em></span></label>
-      <label class="check-item"><input type="checkbox" data-k="manager"><span class="check-label"><span>Who you'd report to, and whether there's an existing data person to learn from</span></span></label>
+      <label class="check-item"><input type="checkbox" data-k="hours"><span class="check-label"><span>Is 40 hours a week firm, or is there flex for a current student?</span><em>Ask in the first conversation, not after an offer.</em></span></label>
+      <label class="check-item"><input type="checkbox" data-k="term"><span class="check-label"><span>Fixed-term or ongoing?</span><em>Titled "Intern" but typed "Full time" — how long is the term, and does it convert?</em></span></label>
+      <label class="check-item"><input type="checkbox" data-k="kit"><span class="check-label"><span>Equipment and data — provided, or a stipend?</span><em>A fair question at a company whose entire product is providing equipment, and the benefits section doesn't mention it.</em></span></label>
+      <label class="check-item"><input type="checkbox" data-k="band"><span class="check-label"><span>Is ₦80–100k negotiable at the top of the band?</span><em>Ask only once they've made an offer — never before.</em></span></label>
     </div>
   </section>
 
   <section>
     <div class="eyebrow">What to send</div>
     <h2>Cover letter draft</h2>
-    <p>Under 200 words. At a 27-person company, a founder may read this personally. Edit it — if a sentence isn't true about you, cut it.</p>
+    <p>Under 200 words. It deliberately echoes the posting's phrases — <em>collecting, cleaning and organising data</em>, <em>asset lifecycle</em> — because whoever screens this is matching against that text, whether they realise it or not.</p>
     <div class="letter">
       <p>Hi Rayda team,</p>
-      <p>I'm applying for the Data Analyst Intern role. I'm a 200-level Economics student at Miva Open University, where statistics and econometrics are my core coursework rather than a side interest — so cleaning messy data and asking whether a number actually means anything is what I train on daily.</p>
-      <p>Two things I'd bring beyond the basics. First, I'm fluent in French and English — Beninese-Nigerian — which may be useful as Rayda grows across Francophone West Africa. Second, I already work fully remotely: Miva is an online university, so managing my own schedule and deadlines without supervision is simply how I've studied for two years.</p>
-      <p>To understand the problem you actually solve, I built a small analysis of device lifecycle data — recovery rates, time-to-deploy and repair cost per device. It's here: <span class="fill">[LINK]</span>.</p>
-      <p>I'm comfortable in spreadsheets and I'm working through SQL now. I'd like to learn the rest on real data, with people who'll tell me when I'm wrong.</p>
-      <p>Peace Sossa · <span class="fill">[phone]</span> · peace.launchoperator@gmail.com</p>
+      <p>I'm applying for the Data Analyst Intern role. I'm a 200-level Economics student at Miva Open University, so the statistics side of this is my coursework rather than a side interest — and the collecting, cleaning and organising part is the work I actually enjoy, because that's where you find out whether a number means what people say it means.</p>
+      <p>To understand what you do, I built a small asset lifecycle dashboard in Looker Studio — recovery rate by country, time-to-deploy, true cost per device once repairs are counted, and recovered value at disposal. It's here: <span class="fill">[LINK]</span>. The dataset is synthetic, but the questions are the ones I'd want answered if I ran the fleet.</p>
+      <p>Two things beyond the basics. I'm fluent in French and English — Beninese-Nigerian — which may be useful as Rayda grows across Francophone West Africa. And I already work fully remotely: Miva is an online university, so managing my own deadlines without supervision is simply how I've studied for two years.</p>
+      <p class="sig">Peace Sossa · <span class="fill">[phone]</span> · peace.launchoperator@gmail.com</p>
     </div>
-    <h3>Why it's written that way</h3>
+    <h3>Why it's built this way</h3>
     <ul class="why">
-      <li>Line one says what you're applying for. No "I am writing to express my keen interest."</li>
-      <li>French comes early, framed as useful to <em>them</em> — not as a fact about you.</li>
-      <li>The project link is the letter's whole job. Everything else is context for it.</li>
-      <li>"Tell me when I'm wrong" signals coachability, which is what people actually hire interns for.</li>
-      <li>Only claim SQL fluency once it's true. Say the honest version and they'll respect it; claim it and fail a live query, and it's over.</li>
+      <li>It mirrors their verbs. Free points at the screening stage.</li>
+      <li>The dashboard link is the letter's whole job. Everything else is context for it.</li>
+      <li>"The dataset is synthetic" — said plainly, up front. Honesty costs nothing and protects you completely.</li>
+      <li>French comes late here on purpose. If you apply <em>before</em> the dashboard exists, cut that paragraph and lead with French instead.</li>
+      <li>Note what's missing: no apology for SQL. They called it an advantage — don't volunteer a weakness they didn't ask about.</li>
     </ul>
   </section>
 
   <section>
     <div class="eyebrow">The differentiator</div>
-    <h2>Device Lifecycle Analytics</h2>
-    <p>Anyone can submit a Titanic notebook. Almost nobody submits an analysis of <em>the thing the company sells</em>. Four to six hours.</p>
+    <h2>Asset Lifecycle Analytics</h2>
+    <p>A small version of Rayda's own business, in their own words — <em>acquire, manage, track and dispose</em>. Building it in Looker Studio closes a stated "advantage" requirement at the same time. Two birds, one afternoon.</p>
     <div class="proj">
       <div class="proj-step">
         <div class="proj-num">1</div>
         <div class="proj-body">
           <h3>Make the data — 60 min</h3>
-          <p>You don't need real data and shouldn't pretend you have it. Generate about 300 rows in Google Sheets, one per device: <code>device_id</code>, <code>model</code>, <code>country</code>, <code>assigned_date</code>, <code>employee_status</code>, <code>return_date</code>, <code>repair_count</code>, <code>repair_cost_usd</code>, <code>purchase_cost_usd</code>.</p>
-          <p>Countries: Nigeria, Kenya, Ghana, Côte d'Ivoire, Philippines, Brazil. Make some returns late, some never returned, some repaired twice. Realistic messiness is the point.</p>
+          <p>You don't need real data and shouldn't pretend you have it. Generate about 300 rows in Google Sheets, one per device: <code>device_id</code>, <code>model</code>, <code>country</code>, <code>purchase_cost_usd</code>, <code>assigned_date</code>, <code>delivered_date</code>, <code>employee_status</code>, <code>return_date</code>, <code>repair_count</code>, <code>repair_cost_usd</code>, <code>disposal_status</code>, <code>resale_value_usd</code>.</p>
+          <p>Countries: Nigeria, Kenya, Ghana, Côte d'Ivoire, Philippines, Brazil. Some returns late, some never returned, some repaired twice, some sold on and some scrapped. Realistic messiness is the point — cleaning it is literally duty number one in the posting.</p>
         </div>
       </div>
       <div class="proj-step">
         <div class="proj-num">2</div>
         <div class="proj-body">
-          <h3>Answer five questions — 2 hrs</h3>
-          <p>These are the questions an IT-ops company loses money on.</p>
+          <h3>Answer six questions — 2 hrs</h3>
+          <p>These are the questions an asset lifecycle company loses money on. The last one exists because <em>dispose</em> is in their own description of themselves.</p>
           <ol>
             <li><strong>Recovery rate</strong> — of devices assigned to employees who left, what share came back? By country.</li>
             <li><strong>Time-to-deploy</strong> — median days from assignment to delivery. Where is it slowest?</li>
-            <li><strong>Cost per device per year</strong> — purchase amortised plus repairs. Which model is actually cheapest once repairs count? Often <em>not</em> the cheapest to buy — that's your headline.</li>
+            <li><strong>True cost per device per year</strong> — purchase amortised plus repairs. Which model is actually cheapest once repairs count? Often <em>not</em> the cheapest to buy — that's your headline.</li>
             <li><strong>Repair concentration</strong> — do 20% of devices generate 80% of repair cost?</li>
             <li><strong>Value at risk</strong> — total book value of unrecovered devices. One number, in dollars.</li>
+            <li><strong>Recovery at disposal</strong> — what share of purchase cost comes back as resale value, and how does it vary by model and by age at retirement?</li>
           </ol>
         </div>
       </div>
       <div class="proj-step">
         <div class="proj-num">3</div>
         <div class="proj-body">
-          <h3>Five charts — 1 hr</h3>
-          <p>Bar chart for recovery by country. Line for time-to-deploy by month. Nothing 3D, no pie chart with eleven slices. Label the axes.</p>
+          <h3>Build it in Looker Studio — 1 hr</h3>
+          <p>Connect the Google Sheet directly. Free, browser-based, nothing to install, and one of the three tools the posting names. Six tiles: scorecards for the headline numbers, a bar chart for recovery by country, a time series for time-to-deploy. Nothing 3D, no pie chart with eleven slices. Label the axes, then set sharing to "anyone with the link can view".</p>
         </div>
       </div>
       <div class="proj-step">
         <div class="proj-num">4</div>
         <div class="proj-body">
           <h3>The one-page memo — 1 hr</h3>
-          <p><strong>This is your real differentiator.</strong> Three findings, and for each: the number, why it happens, what you'd do about it. An Economics student who writes <em>"recovery in Côte d'Ivoire is 41% against 78% in Nigeria; at $600 a laptop that's $X a year; I'd test a prepaid return label at exit"</em> is thinking like an owner, not a button-pusher. That's who gets hired.</p>
+          <p><strong>This is your real differentiator.</strong> Three findings, and for each: the number, why it happens, what you'd do about it. An Economics student who writes <em>"recovery in Côte d'Ivoire is 41% against 78% in Nigeria; at $600 a laptop that's $X a year; I'd test a prepaid return label issued at exit"</em> is thinking like an owner, not a button-pusher. It also maps straight onto the posting's <em>"translate business questions into simple data analyses and insights."</em></p>
         </div>
       </div>
       <div class="proj-step">
         <div class="proj-num">5</div>
         <div class="proj-body">
-          <h3>Publish, and label it honestly</h3>
-          <p>A Google Sheet set to "anyone with the link can view" is fine; a GitHub repo with a README is better. Put a line at the top: <em>"Synthetic dataset built to model a real device-lifecycle problem."</em> Never imply it's real company data — the honesty costs you nothing and protects you completely.</p>
-          <p>Want more? Load the same CSV into DB Fiddle or SQLite Online and write the five answers as queries instead of formulas. Screenshot them into the README — now you've <em>demonstrated</em> SQL rather than claimed it.</p>
+          <h3>Label it honestly</h3>
+          <p>Put one line at the top of the dashboard and the memo: <em>"Synthetic dataset built to model a real asset-lifecycle problem."</em> Never imply it's real company data.</p>
+          <p><strong>For the extra point:</strong> load the same CSV into DB Fiddle or SQLite Online and write two or three answers as queries. Screenshot them into the memo — now "basic knowledge of SQL" is demonstrated rather than claimed, which is exactly the level they asked for.</p>
         </div>
       </div>
     </div>
   </section>
 
   <section>
-    <div class="eyebrow">One week</div>
-    <h2>The SQL sprint</h2>
-    <p>An hour a day. All free, all in-browser, no installation — works on a laptop or a phone.</p>
+    <div class="eyebrow">The one gate</div>
+    <h2>Google Sheets</h2>
+    <p><em>"Familiarity with Excel or Google Sheets"</em> is the only tool requirement not hedged with "is an advantage". These should be automatic before an interview:</p>
+    <ul class="skills">
+      <li><b>Pivot tables</b><span>Group by country, sum a cost column. Build three from your device data.</span></li>
+      <li><b>XLOOKUP</b><span>Pull a value from another table by matching an ID. <code>VLOOKUP</code> if that's what you know.</span></li>
+      <li><b>SUMIFS</b><span>Conditional totals — the workhorse of every business report. <code>COUNTIFS</code> too.</span></li>
+      <li><b>IF</b><span>Flag rows: returned late, never returned, over-repaired.</span></li>
+      <li><b>Date maths</b><span><code>delivered_date − assigned_date</code>, then a median of it.</span></li>
+      <li><b>Charts</b><span>Bar, line, and knowing which to use when.</span></li>
+      <li><b>Clean-up</b><span>Remove duplicates, <code>TRIM</code>, split columns, spot blanks.</span></li>
+    </ul>
+    <p class="caption">Building the project exercises every one of these. That's deliberate — don't study them separately, just build the thing.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">The bonus</div>
+    <h2>SQL, one week and no more</h2>
+    <p>They asked for <em>basic</em> SQL as an <em>advantage</em>. Get to honest-basic and stop — spend the extra hours on the dashboard instead.</p>
     <div class="scroll">
-      <table>
+      <table class="sql-table">
         <thead><tr><th>Day</th><th>Focus</th></tr></thead>
         <tbody>
           <tr><td>1</td><td><code>SELECT</code>, <code>WHERE</code>, <code>ORDER BY</code>, <code>LIMIT</code></td></tr>
           <tr><td>2</td><td><code>GROUP BY</code>, <code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, <code>HAVING</code></td></tr>
           <tr><td>3</td><td><code>JOIN</code> — inner and left. The one interviewers test</td></tr>
           <tr><td>4</td><td><code>CASE WHEN</code>, date functions, <code>NULL</code> handling</td></tr>
-          <tr><td>5</td><td>CTEs (<code>WITH … AS</code>) — how real analysts write readable queries</td></tr>
-          <tr><td>6</td><td>Window functions: <code>ROW_NUMBER()</code>, <code>RANK()</code>, running totals</td></tr>
-          <tr><td>7</td><td>Rewrite your five project questions as SQL queries</td></tr>
+          <tr><td>5</td><td>CTEs (<code>WITH … AS</code>)</td></tr>
+          <tr><td>6–7</td><td>Rewrite two or three project questions as queries</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="caption">SQLBolt · Mode's SQL Tutorial · PostgreSQL Exercises. By day 7 you can honestly say "I write SQL." Not "expert" — nobody believes an intern is.</p>
+    <p class="caption">SQLBolt · Mode's SQL Tutorial · PostgreSQL Exercises. All free, all in-browser.</p>
   </section>
 
   <section>
@@ -791,23 +849,27 @@
       </div>
       <div class="qa-item">
         <p class="q">You have no work experience — why should we take you?</p>
-        <p class="a">Don't apologise. <em>"I don't have a job history, so I built the thing instead — here's an analysis of device recovery rates and what I'd do about them."</em> Then send the link.</p>
+        <p class="a">Don't apologise. <em>"I don't have a job history, so I built the thing instead — here's an asset lifecycle dashboard and what I'd do about what it shows."</em> Then send the link.</p>
       </div>
       <div class="qa-item">
-        <p class="q">Do you know Segment, PostHog or Customer.io?</p>
-        <p class="a"><em>"Not yet. I understand what each is for — Segment collects events, PostHog analyses product usage, Customer.io sends lifecycle messages — and I'd expect to be useful on them within a couple of weeks."</em> Confident, honest, specific. Never bluff a tool.</p>
+        <p class="q">How comfortable are you with SQL?</p>
+        <p class="a">They asked for basic, so answer at that level without shrinking. <em>"Basic — I can select, filter, group and join, and I've written queries against my own dataset. I'd expect to be faster within a few weeks on real tables."</em> Never bluff a level you can't demonstrate live.</p>
       </div>
       <div class="qa-item">
-        <p class="q">What's a JOIN?</p>
-        <p class="a">Be ready to say it in one sentence <em>and</em> write one. <em>"It combines rows from two tables on a matching column. A LEFT JOIN keeps every row from the left table even when there's no match — I use it when I don't want to silently drop records."</em></p>
+        <p class="q">Do you know Power BI or Tableau?</p>
+        <p class="a"><em>"I built my project dashboard in Looker Studio. The concepts carry — data source, dimensions, measures, filters — so I'd expect to pick up Power BI quickly if that's what the team uses."</em></p>
       </div>
       <div class="qa-item">
         <p class="q">How would you handle messy data?</p>
-        <p class="a">Give a process, not an adjective: check duplicates, check nulls, check the date range makes sense, check totals against a known source — then ask whoever owns the system about anything that still looks wrong. That last step is the one juniors forget and managers love.</p>
+        <p class="a">Give a process, not an adjective: check duplicates, check nulls, check the date range makes sense, check totals against a known source — then ask whoever owns the system about anything that still looks wrong. That last step is the one juniors forget and managers love, and it's duty five in the posting.</p>
+      </div>
+      <div class="qa-item">
+        <p class="q">Can you work full time?</p>
+        <p class="a"><strong>Have your real answer ready before they ask.</strong> If you can, say so plainly. If you need flex, say it early and without apology: <em>"I'm a 200-level student at an online university, so my schedule is genuinely flexible — but I want to be straight with you about it. Is there room to agree hours, or is 40 a week firm?"</em></p>
       </div>
       <div class="qa-item">
         <p class="q">Your two questions for them</p>
-        <p class="a"><em>"What would a successful first three months look like for this intern?"</em> and <em>"Is there an existing data person I'd be learning from, or am I the first?"</em> The second answer changes the job enormously — ask it.</p>
+        <p class="a"><em>"What would a successful first three months look like for this intern?"</em> and <em>"I saw the role supports an existing Data Analyst — what does that working relationship look like day to day?"</em> The second shows you read the posting properly. Very few candidates do.</p>
       </div>
     </div>
   </section>
@@ -816,14 +878,14 @@
     <div class="eyebrow">Day 7–10</div>
     <h2>The follow-up</h2>
     <div class="letter">
-      <p>Hi <span class="fill">[Name]</span>, I applied for the Data Analyst Intern role on <span class="fill">[date]</span>. While waiting I put together a short analysis of device lifecycle data — recovery rates by country, cost per device once repairs are counted, and where the value leaks: <span class="fill">[LINK]</span>. Happy to walk through it if useful. — Peace</p>
+      <p>Hi <span class="fill">[Name]</span>, I applied for the Data Analyst Intern role on <span class="fill">[date]</span>. While waiting I built a small asset lifecycle dashboard — recovery rates by country, true cost per device once repairs are counted, and value recovered at disposal: <span class="fill">[LINK]</span>. Synthetic data, but the questions are real ones. Happy to walk through it if useful. — Peace</p>
     </div>
-    <p>One follow-up. If there's no answer after that, move on and reuse the whole kit for the next application — the project doesn't expire.</p>
+    <p>One follow-up. If there's no answer after that, move on and reuse the whole kit — the dashboard doesn't expire, and every asset-heavy or logistics company in Nigeria has the same problem.</p>
   </section>
 
   <footer>
     <p>Source files: <code>career/rayda-data-analyst-intern/review.md</code> and <code>application-kit.md</code>, on branch <code>claude/job-posting-review-v2l95l</code>.</p>
-    <p>Company details from Crunchbase, Tracxn, CB Insights, PitchBook and TechCabal (July 2026). Role details from job-board indexes — the Zoho posting itself was not reachable from this session.</p>
+    <p>Role details confirmed from the posting text. Company details from Crunchbase, Tracxn, CB Insights, PitchBook and TechCabal (July 2026). Minimum wage reference: Nigeria's national minimum wage, ₦70,000/month as set in 2024.</p>
   </footer>
 
 </div>
