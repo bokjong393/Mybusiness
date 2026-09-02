@@ -122,3 +122,21 @@ An agency that **sells lead lists** is not a competitor — it is one of your be
 ## Tracking
 
 Use `templates/target-list.csv`. Log every contact the day you send it — the reply rate by channel is the single most valuable number the first month produces, and it is unrecoverable if you don't record it as you go.
+
+---
+
+## Partner directories go stale — verify affiliation before naming it
+
+**Found 2026-09-02.** The Smartlead directory listed Christian Oland as founder of *RevGen Labs*; his LinkedIn shows him founding *Revenue.Inc & Close3x*. RevGen Labs appears to be an older or separate venture.
+
+**Directories have no incentive to update a listing when a partner moves on**, so they show whatever was true at signup. That is the same failure mode as an evergreen job posting: a live page asserting something that stopped being true months ago.
+
+Every agency name in this list came from a directory — Smartlead, Instantly, Clay, Apollo. Assume any of them may be out of date.
+
+**Rule: before an agency name goes into a message, confirm it on the person's LinkedIn profile.** Ten seconds. Where the directory and LinkedIn disagree, **LinkedIn wins** — it is the primary source and the directory is an aggregator, exactly the hierarchy applied to signal rows.
+
+Naming the wrong company in a message whose argument is "I verify things before I send them" costs more than the personalisation was worth. If affiliation cannot be confirmed quickly, drop the agency name from the note rather than guess.
+
+### Worth using in the pitch
+
+This is a second, independent data-quality finding produced by our own process: **partner directories decay like job boards do.** It generalises the stale-signal argument beyond hiring data and is credible precisely because it was found the hard way, on our own list.
