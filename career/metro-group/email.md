@@ -42,3 +42,19 @@ Kind regards,
   over the weekend.
 - **Delete every `[[ ]]` in this email too**, including the one in your signature.
 - **Log it in `../application-tracker.md`** the same day, and diarise a follow-up for 7 working days later.
+
+---
+
+## Ready-made documents
+
+`Peace-Sossa-CV-Metro-Group.docx` and `Peace-Sossa-Cover-Letter-Metro-Group.docx` in this folder are
+the markdown versions already laid out and formatted. Open either in Word, Google Docs or WPS:
+
+1. Everything still needing your input is in **bold red** — fill it in and set it back to black.
+2. Delete any line whose instruction does not apply to you (the accounting-software line, the CGPA
+   line, the whole Experience section if you have nothing for it).
+3. Export to **PDF** before sending. In Google Docs: *File → Download → PDF*.
+
+Both were checked against the Word schema and both fit on one page with room to spare, so your real
+details will not push them onto a second page. They could not be visually rendered in the environment
+that produced them — open them once and glance at the layout before you send.
