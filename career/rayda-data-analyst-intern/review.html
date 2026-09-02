@@ -1,0 +1,850 @@
+<title>Rayda Internship Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+  :root {
+    --ground: #EDEFF1;
+    --surface: #FFFFFF;
+    --surface-2: #F5F7F8;
+    --ink: #171C22;
+    --ink-2: #5A6674;
+    --ink-3: #8B95A1;
+    --rule: #D6DBE0;
+    --rule-strong: #B9C2CA;
+    --accent: #14596B;
+    --accent-soft: #E2EEF1;
+    --signal: #A8560B;
+    --signal-soft: #F8EDE0;
+    --good: #2E6B4F;
+    --good-soft: #E4EFE9;
+    --warn: #8C3A2B;
+    --warn-soft: #F6E6E2;
+    --shadow: 0 1px 2px rgba(23, 28, 34, .06), 0 8px 24px -12px rgba(23, 28, 34, .14);
+
+    --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+    color-scheme: light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #10161A;
+      --surface: #171E24;
+      --surface-2: #1D252C;
+      --ink: #E6EBEF;
+      --ink-2: #9AA7B4;
+      --ink-3: #6E7C8A;
+      --rule: #2A343D;
+      --rule-strong: #3B4854;
+      --accent: #5FB6CC;
+      --accent-soft: #16333C;
+      --signal: #E0A155;
+      --signal-soft: #35281A;
+      --good: #6FC59B;
+      --good-soft: #153024;
+      --warn: #E08D7A;
+      --warn-soft: #35211C;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px -12px rgba(0, 0, 0, .5);
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #10161A;
+    --surface: #171E24;
+    --surface-2: #1D252C;
+    --ink: #E6EBEF;
+    --ink-2: #9AA7B4;
+    --ink-3: #6E7C8A;
+    --rule: #2A343D;
+    --rule-strong: #3B4854;
+    --accent: #5FB6CC;
+    --accent-soft: #16333C;
+    --signal: #E0A155;
+    --signal-soft: #35281A;
+    --good: #6FC59B;
+    --good-soft: #153024;
+    --warn: #E08D7A;
+    --warn-soft: #35211C;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px -12px rgba(0, 0, 0, .5);
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.25rem;
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead { display: flex; flex-direction: column; gap: 1.25rem; }
+
+  .kicker {
+    font-family: var(--mono);
+    font-size: .7rem;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem .9rem;
+  }
+
+  h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2rem, 6vw, 2.9rem);
+    line-height: 1.05;
+    letter-spacing: -.022em;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  .dek {
+    font-size: 1.12rem;
+    color: var(--ink-2);
+    max-width: 34rem;
+    text-wrap: pretty;
+  }
+
+  .verdict {
+    display: flex;
+    align-items: baseline;
+    gap: .85rem;
+    flex-wrap: wrap;
+    border-left: 3px solid var(--accent);
+    padding: .1rem 0 .1rem 1rem;
+  }
+  .verdict b {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: -.01em;
+    color: var(--accent);
+  }
+  .verdict span { color: var(--ink-2); font-size: .98rem; }
+
+  /* ---------- shared section furniture ---------- */
+  section { display: flex; flex-direction: column; gap: 1.1rem; }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+  }
+  .eyebrow::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  h2 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(1.35rem, 3.6vw, 1.65rem);
+    line-height: 1.18;
+    letter-spacing: -.018em;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  h3 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1.02rem;
+    letter-spacing: -.008em;
+    margin: 0;
+  }
+
+  p { margin: 0; text-wrap: pretty; }
+  section > p + p { margin-top: -.35rem; }
+
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  strong { font-weight: 600; }
+  em { font-style: italic; color: var(--ink-2); }
+
+  code {
+    font-family: var(--mono);
+    font-size: .86em;
+    color: var(--accent);
+    overflow-wrap: anywhere;
+  }
+
+  .note {
+    background: var(--signal-soft);
+    border: 1px solid color-mix(in srgb, var(--signal) 28%, transparent);
+    border-radius: 3px;
+    padding: 1rem 1.15rem;
+    font-size: .95rem;
+    display: flex;
+    flex-direction: column;
+    gap: .55rem;
+  }
+  .note .tag {
+    font-family: var(--mono);
+    font-size: .66rem;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--signal);
+  }
+
+  /* ---------- company facts ---------- */
+  .facts {
+    display: grid;
+    grid-template-columns: minmax(6.5rem, 8rem) 1fr;
+    gap: .1rem 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 1.25rem 1.35rem;
+    box-shadow: var(--shadow);
+  }
+  .facts dt {
+    font-family: var(--mono);
+    font-size: .7rem;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    padding-top: .55rem;
+  }
+  .facts dd {
+    margin: 0;
+    font-size: .97rem;
+    padding: .35rem 0 .5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .facts dd:last-of-type { border-bottom: 0; padding-bottom: 0; }
+
+  /* ---------- tool decode ---------- */
+  .decode { display: flex; flex-direction: column; gap: .55rem; }
+  .decode-row {
+    display: grid;
+    grid-template-columns: minmax(7rem, 9rem) 1fr;
+    gap: .3rem 1rem;
+    align-items: baseline;
+    padding-bottom: .55rem;
+    border-bottom: 1px dashed var(--rule);
+  }
+  .decode-row:last-child { border-bottom: 0; padding-bottom: 0; }
+  .decode-row code {
+    font-family: var(--mono);
+    font-size: .82rem;
+    font-weight: 500;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: .12rem .45rem;
+    border-radius: 2px;
+    justify-self: start;
+  }
+  .decode-row span { font-size: .96rem; color: var(--ink-2); }
+
+  /* ---------- day split bar ---------- */
+  .split { display: flex; flex-direction: column; gap: .7rem; }
+  .split-bar {
+    display: flex;
+    height: 2.6rem;
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid var(--rule-strong);
+  }
+  .seg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: .78rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--surface);
+    white-space: nowrap;
+  }
+  .seg-a { flex: 70; background: var(--accent); }
+  .seg-b { flex: 20; background: color-mix(in srgb, var(--accent) 55%, var(--ground)); color: var(--ink); }
+  .seg-c { flex: 10; background: color-mix(in srgb, var(--accent) 22%, var(--ground)); color: var(--ink); }
+  .split-key {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem 1.4rem;
+    font-size: .85rem;
+    color: var(--ink-2);
+  }
+  .split-key div { display: flex; align-items: center; gap: .45rem; }
+  .swatch { width: .7rem; height: .7rem; border-radius: 2px; flex: none; }
+  .caption { font-size: .82rem; color: var(--ink-3); }
+
+  /* ---------- fit columns ---------- */
+  .fit { display: grid; gap: 1.5rem; }
+  @media (min-width: 40rem) { .fit { grid-template-columns: 1fr 1fr; gap: 2rem; } }
+
+  .fit-col { display: flex; flex-direction: column; gap: 1rem; }
+  .fit-head {
+    font-family: var(--mono);
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid currentColor;
+  }
+  .fit-col.plus .fit-head { color: var(--good); }
+  .fit-col.minus .fit-head { color: var(--warn); }
+  .fit-item { display: flex; flex-direction: column; gap: .3rem; }
+  .fit-item p { font-size: .95rem; color: var(--ink-2); }
+
+  .risk {
+    background: var(--warn-soft);
+    border-left: 3px solid var(--warn);
+    padding: .9rem 1.1rem;
+    font-size: .97rem;
+    border-radius: 0 3px 3px 0;
+  }
+
+  /* ---------- legitimacy ---------- */
+  .clean {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    font-family: var(--mono);
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--good);
+    background: var(--good-soft);
+    border-radius: 3px;
+    padding: .7rem 1rem;
+  }
+  .rules { display: flex; flex-direction: column; gap: .6rem; margin: 0; padding: 0; list-style: none; }
+  .rules li {
+    display: grid;
+    grid-template-columns: 1.4rem 1fr;
+    gap: .6rem;
+    font-size: .95rem;
+    color: var(--ink-2);
+  }
+  .rules li::before {
+    content: "✕";
+    font-family: var(--mono);
+    color: var(--warn);
+    font-size: .85rem;
+    line-height: 1.7;
+  }
+
+  /* ---------- plan timeline ---------- */
+  .plan { display: flex; flex-direction: column; gap: 0; }
+  .step {
+    display: grid;
+    grid-template-columns: minmax(5.5rem, 6.5rem) 1fr;
+    gap: .4rem 1.25rem;
+    padding: 1.1rem 0;
+    border-top: 1px solid var(--rule);
+  }
+  .step:last-child { border-bottom: 1px solid var(--rule); }
+  .when {
+    font-family: var(--mono);
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-top: .18rem;
+  }
+  .step-body { display: flex; flex-direction: column; gap: .5rem; }
+  .step-body p { font-size: .95rem; color: var(--ink-2); }
+  .step-body ul { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: .35rem; font-size: .95rem; color: var(--ink-2); }
+
+  /* ---------- checklist ---------- */
+  .check { display: flex; flex-direction: column; gap: 0; }
+  .check-item {
+    display: grid;
+    grid-template-columns: 1.6rem 1fr;
+    align-items: start;
+    gap: .75rem;
+    padding: .75rem .25rem;
+    border-bottom: 1px solid var(--rule);
+    cursor: pointer;
+    font-size: .95rem;
+  }
+  .check-item:first-child { border-top: 1px solid var(--rule); }
+  .check-item input {
+    appearance: none;
+    width: 1.05rem;
+    height: 1.05rem;
+    margin: .22rem 0 0;
+    border: 1.5px solid var(--rule-strong);
+    border-radius: 2px;
+    background: var(--surface);
+    cursor: pointer;
+    flex: none;
+    display: grid;
+    place-content: center;
+  }
+  .check-item input::after {
+    content: "";
+    width: .55rem;
+    height: .3rem;
+    border-left: 2px solid var(--surface);
+    border-bottom: 2px solid var(--surface);
+    transform: rotate(-45deg) scale(0);
+    transition: transform .12s ease;
+  }
+  .check-item input:checked { background: var(--accent); border-color: var(--accent); }
+  .check-item input:checked::after { transform: rotate(-45deg) scale(1); }
+  .check-item input:checked + .check-label { color: var(--ink-3); text-decoration: line-through; text-decoration-color: var(--rule-strong); }
+  .check-label { display: flex; flex-direction: column; gap: .15rem; }
+  .check-label em { font-size: .87rem; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+
+  /* ---------- letter ---------- */
+  .letter {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 1.5rem 1.6rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    font-size: .97rem;
+  }
+  .letter p:last-child { font-family: var(--mono); font-size: .82rem; color: var(--ink-2); }
+  .letter .fill {
+    font-family: var(--mono);
+    font-size: .85rem;
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: .05rem .35rem;
+    border-radius: 2px;
+  }
+
+  .why { display: flex; flex-direction: column; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+  .why li {
+    display: grid;
+    grid-template-columns: 1.2rem 1fr;
+    gap: .5rem;
+    font-size: .92rem;
+    color: var(--ink-2);
+  }
+  .why li::before { content: "→"; font-family: var(--mono); color: var(--accent); }
+
+  /* ---------- project steps ---------- */
+  .proj { display: flex; flex-direction: column; gap: 1.1rem; }
+  .proj-step { display: grid; grid-template-columns: 2rem 1fr; gap: .9rem; align-items: start; }
+  .proj-num {
+    font-family: var(--mono);
+    font-size: .78rem;
+    font-weight: 600;
+    color: var(--surface);
+    background: var(--accent);
+    width: 1.55rem;
+    height: 1.55rem;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    margin-top: .1rem;
+  }
+  .proj-body { display: flex; flex-direction: column; gap: .4rem; }
+  .proj-body p { font-size: .95rem; color: var(--ink-2); }
+  .proj-body ol { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: .4rem; font-size: .95rem; color: var(--ink-2); }
+
+  /* ---------- tables ---------- */
+  .scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 3px; background: var(--surface); }
+  table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+  th, td { text-align: left; padding: .6rem .9rem; border-bottom: 1px solid var(--rule); }
+  tr:last-child td { border-bottom: 0; }
+  th {
+    font-family: var(--mono);
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    white-space: nowrap;
+  }
+  td:first-child { font-family: var(--mono); font-size: .82rem; color: var(--accent); white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+  /* ---------- Q&A ---------- */
+  .qa { display: flex; flex-direction: column; gap: 1.1rem; }
+  .qa-item { display: flex; flex-direction: column; gap: .35rem; }
+  .q { font-family: var(--display); font-weight: 600; font-size: .97rem; }
+  .a { font-size: .95rem; color: var(--ink-2); }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    font-size: .84rem;
+    color: var(--ink-3);
+  }
+  footer code { font-family: var(--mono); font-size: .8rem; color: var(--ink-2); }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="kicker">
+      <span>Reviewed 2 Sep 2026</span>
+      <span>Rayda · Zoho Recruit</span>
+      <span>Remote · Lagos</span>
+    </div>
+    <h1>Data Analyst Intern at Rayda</h1>
+    <p class="dek">A read on the company, the role, and whether it's worth your week — plus the exact materials to send.</p>
+    <div class="verdict">
+      <b>Apply, and apply this week.</b>
+      <span>Real company, real fit, and the posting is already about ten days old.</span>
+    </div>
+  </header>
+
+  <div class="note">
+    <span class="tag">One caveat, up front</span>
+    <p>I couldn't open the Zoho page itself — this environment blocks <code>rayda.zohorecruit.com</code> and the job boards that mirror it. Everything about the <strong>company</strong> below is independently verified from press and company databases. Everything about the <strong>role</strong> is reconstructed from job-board indexes of this exact posting, so treat stipend, duration and deadline as unconfirmed. Paste me the posting text and I'll match it line by line against your CV.</p>
+  </div>
+
+  <section>
+    <div class="eyebrow">The company</div>
+    <h2>Rayda checks out</h2>
+    <dl class="facts">
+      <dt>Product</dt>
+      <dd>An IT operations platform — companies use it to buy, ship, track, repair and recover employee laptops, especially for remote teams in hard-to-serve regions.</dd>
+      <dt>Founded</dt>
+      <dd>2022 by Ogochukwu Francis Osifo (CEO); launched January 2023. Dan Duggan joined as co-founder and CRO in 2024.</dd>
+      <dt>Backing</dt>
+      <dd>Techstars London 2024 cohort. Pre-seed from Microtraction, Beta Ventures, Techstars, HOAQ Club and angels.</dd>
+      <dt>Size</dt>
+      <dd>Around 27 people.</dd>
+      <dt>Health</dt>
+      <dd>Reported profitable since early 2025 — rare and good for a startup this young.</dd>
+      <dt>Markets</dt>
+      <dd>Africa, LATAM, APAC. Strong Lagos presence, incorporated in Delaware.</dd>
+    </dl>
+    <p>A 27-person profitable startup is the best kind of internship for someone who wants to run her own business one day. You'll see the whole machine — billing, customers, product, logistics — not one slice of it. At a 2,000-person bank you'd see one slice.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">The role</div>
+    <h2>What the job really is</h2>
+    <p>The posting names <strong>Statistics, SQL and Data Visualization</strong>, and describes supporting the collection, cleaning and organisation of data from different business systems — feeding Rayda's data warehouse, which brings together product, billing and customer-interaction data.</p>
+    <div class="decode">
+      <div class="decode-row"><code>Segment</code><span>The pipe that collects "what users did" events</span></div>
+      <div class="decode-row"><code>PostHog</code><span>Product analytics — who clicked what, who dropped off</span></div>
+      <div class="decode-row"><code>Customer.io</code><span>The emails and messages sent to customers</span></div>
+      <div class="decode-row"><code>Billing data</code><span>Who pays what, and when</span></div>
+    </div>
+    <div class="split">
+      <h3>How the day actually splits</h3>
+      <div class="split-bar" role="img" aria-label="Estimated split of a first analyst role: 70 percent cleaning and joining data, 20 percent writing queries, 10 percent building charts.">
+        <div class="seg seg-a">70%</div>
+        <div class="seg seg-b">20%</div>
+        <div class="seg seg-c">10%</div>
+      </div>
+      <div class="split-key">
+        <div><span class="swatch" style="background: var(--accent)"></span>Cleaning &amp; joining messy data</div>
+        <div><span class="swatch" style="background: color-mix(in srgb, var(--accent) 55%, var(--ground))"></span>Writing queries</div>
+        <div><span class="swatch" style="background: color-mix(in srgb, var(--accent) 22%, var(--ground))"></span>Charts</div>
+      </div>
+      <p class="caption">My estimate for a first analyst role, not a figure from the posting. Anyone who tells you a first analyst job is mostly modelling is selling a course.</p>
+    </div>
+    <p>That 70% isn't a warning. It's the part that teaches you how a business actually earns money — exactly the knowledge you'll want later.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Fit</div>
+    <h2>Honest assessment</h2>
+    <div class="fit">
+      <div class="fit-col plus">
+        <div class="fit-head">Working for you</div>
+        <div class="fit-item">
+          <h3>Statistics is your degree</h3>
+          <p>200L Economics — distributions, regression and inference are coursework, not a YouTube hobby. Most applicants for this role are self-taught. Say "Economics, 200L, statistics and econometrics coursework" early.</p>
+        </div>
+        <div class="fit-item">
+          <h3>You're already remote-native</h3>
+          <p>Miva is an online university. Two years of managing your own deadlines without supervision is a genuine hiring signal for a remote-first company. Say it explicitly — don't assume they infer it.</p>
+        </div>
+        <div class="fit-item">
+          <h3>French is your quiet advantage</h3>
+          <p>Rayda is expanding across Africa, and Francophone West Africa is the part almost no Lagos-based applicant can support. Put it on line one of the cover letter, not buried under "Languages" on page two.</p>
+        </div>
+        <div class="fit-item">
+          <h3>It matches the actual ambition</h3>
+          <p>Analysis is one of the few skills that's genuinely remote, genuinely portable, and directly useful when you're running your own numbers later.</p>
+        </div>
+      </div>
+      <div class="fit-col minus">
+        <div class="fit-head">Gaps to close</div>
+        <div class="fit-item">
+          <h3>SQL</h3>
+          <p>This is the one thing that decides it. Not "have you heard of SQL" — can you write a <code>JOIN</code> and a <code>GROUP BY</code> without looking them up. A week of real effort gets you to interview-credible.</p>
+        </div>
+        <div class="fit-item">
+          <h3>No named-tool experience</h3>
+          <p>You haven't used Segment, PostHog or Customer.io. Completely fine — nobody expects an intern to have. Don't fake it, and don't apologise for it either.</p>
+        </div>
+        <div class="fit-item">
+          <h3>No portfolio yet</h3>
+          <p>The real gap, and the easiest to close. Four to six hours of work, and it's the thing that gets you read.</p>
+        </div>
+      </div>
+    </div>
+    <p class="risk"><strong>The honest risk:</strong> remote analyst internships at funded startups draw hundreds of applicants in Nigeria. A plain CV with nothing attached doesn't get read. Your whole strategy is: be the one who attached proof.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Safety check</div>
+    <h2>This one is clean</h2>
+    <p class="clean">✓ Verified — real company, real founders, real investors</p>
+    <p>Zoho Recruit is a normal, widely-used applicant-tracking system, and the <code>source=Free-JobBoards-Network</code> tag in your link is just their tracking, not a red flag. Named founders, press coverage, a real product.</p>
+    <p>The standard rules still apply — to this and every other application:</p>
+    <ul class="rules">
+      <li>Never pay for training, equipment, onboarding or a "background check". Ever.</li>
+      <li>Never give BVN, bank details or NIN before a signed offer and a contract.</li>
+      <li>Interviews come from a <code>@rayda.co</code> address and a named human — not WhatsApp-only, not Telegram.</li>
+    </ul>
+    <p>If any of that breaks, it isn't Rayda — it's someone using their name.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Sequence</div>
+    <h2>Speed beats polish</h2>
+    <p>Don't spend two weeks preparing and then apply. Apply now, build the proof this week, follow up with it.</p>
+    <div class="plan">
+      <div class="step">
+        <div class="when">Today</div>
+        <div class="step-body">
+          <p><strong>Submit the application.</strong> CV plus the cover letter below. Two to three hours.</p>
+          <p>Do not wait for the portfolio to exist before applying.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="when">This week</div>
+        <div class="step-body">
+          <p>About an hour a day.</p>
+          <ul>
+            <li>Work the SQL sprint below — <code>SELECT</code> through window functions.</li>
+            <li>Build the device lifecycle project. It's about Rayda's own business problem.</li>
+            <li>Publish it. Google Sheet, GitHub repo, or a one-page write-up — it needs a URL.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="step">
+        <div class="when">Day 7–10</div>
+        <div class="step-body">
+          <p><strong>Follow up once</strong>, with the link. This is the move that gets replies — see the message at the bottom.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Open questions</div>
+    <h2>Confirm these from the posting</h2>
+    <p>I couldn't read these off the page. Check them before or during the process — asking isn't rude, it's what a serious candidate does. Tick them off as you confirm each one.</p>
+    <div class="check" id="checklist">
+      <label class="check-item"><input type="checkbox" data-k="paid"><span class="check-label"><span>Is it paid, and how much?</span><em>I saw a stipend figure attached to a different Rayda internship — don't assume it applies here.</em></span></label>
+      <label class="check-item"><input type="checkbox" data-k="hours"><span class="check-label"><span>Hours per week, and does it flex around Miva deadlines and exams?</span></span></label>
+      <label class="check-item"><input type="checkbox" data-k="length"><span class="check-label"><span>Duration — and is there a path to a full-time or contract role after?</span></span></label>
+      <label class="check-item"><input type="checkbox" data-k="deadline"><span class="check-label"><span>Application deadline</span></span></label>
+      <label class="check-item"><input type="checkbox" data-k="remote"><span class="check-label"><span>Fully remote, or Lagos hybrid?</span><em>The listing carries both "remote" and "Lagos" signals.</em></span></label>
+      <label class="check-item"><input type="checkbox" data-k="kit"><span class="check-label"><span>Laptop and data — provided, or a stipend?</span><em>A fair question at a company whose entire product is providing equipment.</em></span></label>
+      <label class="check-item"><input type="checkbox" data-k="manager"><span class="check-label"><span>Who you'd report to, and whether there's an existing data person to learn from</span></span></label>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">What to send</div>
+    <h2>Cover letter draft</h2>
+    <p>Under 200 words. At a 27-person company, a founder may read this personally. Edit it — if a sentence isn't true about you, cut it.</p>
+    <div class="letter">
+      <p>Hi Rayda team,</p>
+      <p>I'm applying for the Data Analyst Intern role. I'm a 200-level Economics student at Miva Open University, where statistics and econometrics are my core coursework rather than a side interest — so cleaning messy data and asking whether a number actually means anything is what I train on daily.</p>
+      <p>Two things I'd bring beyond the basics. First, I'm fluent in French and English — Beninese-Nigerian — which may be useful as Rayda grows across Francophone West Africa. Second, I already work fully remotely: Miva is an online university, so managing my own schedule and deadlines without supervision is simply how I've studied for two years.</p>
+      <p>To understand the problem you actually solve, I built a small analysis of device lifecycle data — recovery rates, time-to-deploy and repair cost per device. It's here: <span class="fill">[LINK]</span>.</p>
+      <p>I'm comfortable in spreadsheets and I'm working through SQL now. I'd like to learn the rest on real data, with people who'll tell me when I'm wrong.</p>
+      <p>Peace Sossa · <span class="fill">[phone]</span> · peace.launchoperator@gmail.com</p>
+    </div>
+    <h3>Why it's written that way</h3>
+    <ul class="why">
+      <li>Line one says what you're applying for. No "I am writing to express my keen interest."</li>
+      <li>French comes early, framed as useful to <em>them</em> — not as a fact about you.</li>
+      <li>The project link is the letter's whole job. Everything else is context for it.</li>
+      <li>"Tell me when I'm wrong" signals coachability, which is what people actually hire interns for.</li>
+      <li>Only claim SQL fluency once it's true. Say the honest version and they'll respect it; claim it and fail a live query, and it's over.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="eyebrow">The differentiator</div>
+    <h2>Device Lifecycle Analytics</h2>
+    <p>Anyone can submit a Titanic notebook. Almost nobody submits an analysis of <em>the thing the company sells</em>. Four to six hours.</p>
+    <div class="proj">
+      <div class="proj-step">
+        <div class="proj-num">1</div>
+        <div class="proj-body">
+          <h3>Make the data — 60 min</h3>
+          <p>You don't need real data and shouldn't pretend you have it. Generate about 300 rows in Google Sheets, one per device: <code>device_id</code>, <code>model</code>, <code>country</code>, <code>assigned_date</code>, <code>employee_status</code>, <code>return_date</code>, <code>repair_count</code>, <code>repair_cost_usd</code>, <code>purchase_cost_usd</code>.</p>
+          <p>Countries: Nigeria, Kenya, Ghana, Côte d'Ivoire, Philippines, Brazil. Make some returns late, some never returned, some repaired twice. Realistic messiness is the point.</p>
+        </div>
+      </div>
+      <div class="proj-step">
+        <div class="proj-num">2</div>
+        <div class="proj-body">
+          <h3>Answer five questions — 2 hrs</h3>
+          <p>These are the questions an IT-ops company loses money on.</p>
+          <ol>
+            <li><strong>Recovery rate</strong> — of devices assigned to employees who left, what share came back? By country.</li>
+            <li><strong>Time-to-deploy</strong> — median days from assignment to delivery. Where is it slowest?</li>
+            <li><strong>Cost per device per year</strong> — purchase amortised plus repairs. Which model is actually cheapest once repairs count? Often <em>not</em> the cheapest to buy — that's your headline.</li>
+            <li><strong>Repair concentration</strong> — do 20% of devices generate 80% of repair cost?</li>
+            <li><strong>Value at risk</strong> — total book value of unrecovered devices. One number, in dollars.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="proj-step">
+        <div class="proj-num">3</div>
+        <div class="proj-body">
+          <h3>Five charts — 1 hr</h3>
+          <p>Bar chart for recovery by country. Line for time-to-deploy by month. Nothing 3D, no pie chart with eleven slices. Label the axes.</p>
+        </div>
+      </div>
+      <div class="proj-step">
+        <div class="proj-num">4</div>
+        <div class="proj-body">
+          <h3>The one-page memo — 1 hr</h3>
+          <p><strong>This is your real differentiator.</strong> Three findings, and for each: the number, why it happens, what you'd do about it. An Economics student who writes <em>"recovery in Côte d'Ivoire is 41% against 78% in Nigeria; at $600 a laptop that's $X a year; I'd test a prepaid return label at exit"</em> is thinking like an owner, not a button-pusher. That's who gets hired.</p>
+        </div>
+      </div>
+      <div class="proj-step">
+        <div class="proj-num">5</div>
+        <div class="proj-body">
+          <h3>Publish, and label it honestly</h3>
+          <p>A Google Sheet set to "anyone with the link can view" is fine; a GitHub repo with a README is better. Put a line at the top: <em>"Synthetic dataset built to model a real device-lifecycle problem."</em> Never imply it's real company data — the honesty costs you nothing and protects you completely.</p>
+          <p>Want more? Load the same CSV into DB Fiddle or SQLite Online and write the five answers as queries instead of formulas. Screenshot them into the README — now you've <em>demonstrated</em> SQL rather than claimed it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">One week</div>
+    <h2>The SQL sprint</h2>
+    <p>An hour a day. All free, all in-browser, no installation — works on a laptop or a phone.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Day</th><th>Focus</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><code>SELECT</code>, <code>WHERE</code>, <code>ORDER BY</code>, <code>LIMIT</code></td></tr>
+          <tr><td>2</td><td><code>GROUP BY</code>, <code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, <code>HAVING</code></td></tr>
+          <tr><td>3</td><td><code>JOIN</code> — inner and left. The one interviewers test</td></tr>
+          <tr><td>4</td><td><code>CASE WHEN</code>, date functions, <code>NULL</code> handling</td></tr>
+          <tr><td>5</td><td>CTEs (<code>WITH … AS</code>) — how real analysts write readable queries</td></tr>
+          <tr><td>6</td><td>Window functions: <code>ROW_NUMBER()</code>, <code>RANK()</code>, running totals</td></tr>
+          <tr><td>7</td><td>Rewrite your five project questions as SQL queries</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">SQLBolt · Mode's SQL Tutorial · PostgreSQL Exercises. By day 7 you can honestly say "I write SQL." Not "expert" — nobody believes an intern is.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Interview</div>
+    <h2>What they'll ask</h2>
+    <div class="qa">
+      <div class="qa-item">
+        <p class="q">Why data analysis?</p>
+        <p class="a">Connect it to Economics, not to a trend. <em>"Economics taught me to ask whether a number means what people say it means. Analysis is the same question with better tools."</em></p>
+      </div>
+      <div class="qa-item">
+        <p class="q">You have no work experience — why should we take you?</p>
+        <p class="a">Don't apologise. <em>"I don't have a job history, so I built the thing instead — here's an analysis of device recovery rates and what I'd do about them."</em> Then send the link.</p>
+      </div>
+      <div class="qa-item">
+        <p class="q">Do you know Segment, PostHog or Customer.io?</p>
+        <p class="a"><em>"Not yet. I understand what each is for — Segment collects events, PostHog analyses product usage, Customer.io sends lifecycle messages — and I'd expect to be useful on them within a couple of weeks."</em> Confident, honest, specific. Never bluff a tool.</p>
+      </div>
+      <div class="qa-item">
+        <p class="q">What's a JOIN?</p>
+        <p class="a">Be ready to say it in one sentence <em>and</em> write one. <em>"It combines rows from two tables on a matching column. A LEFT JOIN keeps every row from the left table even when there's no match — I use it when I don't want to silently drop records."</em></p>
+      </div>
+      <div class="qa-item">
+        <p class="q">How would you handle messy data?</p>
+        <p class="a">Give a process, not an adjective: check duplicates, check nulls, check the date range makes sense, check totals against a known source — then ask whoever owns the system about anything that still looks wrong. That last step is the one juniors forget and managers love.</p>
+      </div>
+      <div class="qa-item">
+        <p class="q">Your two questions for them</p>
+        <p class="a"><em>"What would a successful first three months look like for this intern?"</em> and <em>"Is there an existing data person I'd be learning from, or am I the first?"</em> The second answer changes the job enormously — ask it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Day 7–10</div>
+    <h2>The follow-up</h2>
+    <div class="letter">
+      <p>Hi <span class="fill">[Name]</span>, I applied for the Data Analyst Intern role on <span class="fill">[date]</span>. While waiting I put together a short analysis of device lifecycle data — recovery rates by country, cost per device once repairs are counted, and where the value leaks: <span class="fill">[LINK]</span>. Happy to walk through it if useful. — Peace</p>
+    </div>
+    <p>One follow-up. If there's no answer after that, move on and reuse the whole kit for the next application — the project doesn't expire.</p>
+  </section>
+
+  <footer>
+    <p>Source files: <code>career/rayda-data-analyst-intern/review.md</code> and <code>application-kit.md</code>, on branch <code>claude/job-posting-review-v2l95l</code>.</p>
+    <p>Company details from Crunchbase, Tracxn, CB Insights, PitchBook and TechCabal (July 2026). Role details from job-board indexes — the Zoho posting itself was not reachable from this session.</p>
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var KEY = "rayda-review-checklist";
+    var boxes = document.querySelectorAll("#checklist input[type=checkbox]");
+    var saved = {};
+    try {
+      saved = JSON.parse(localStorage.getItem(KEY) || "{}") || {};
+    } catch (e) {
+      saved = {};
+    }
+    boxes.forEach(function (box) {
+      if (saved[box.dataset.k]) box.checked = true;
+      box.addEventListener("change", function () {
+        var state = {};
+        boxes.forEach(function (b) { if (b.checked) state[b.dataset.k] = 1; });
+        try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* private mode */ }
+      });
+    });
+  })();
+</script>
