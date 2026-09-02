@@ -18,9 +18,9 @@ Every experiment gets a written hypothesis **before** it runs and a verdict **af
 
 | Metric | Target | Actual |
 |---|---:|---:|
-| Contacts | 200 | **36** |
+| Contacts | 200 | **48** |
 | Replies | 10 | 0 |
-| **Connections accepted** | — | **6** |
+| **Connections accepted** | — | **7** |
 | Reply rate | 5% | — *(n too small to read)* |
 | Conversations | 5 | 0 |
 | Serious leads | 3 | 0 |
@@ -47,6 +47,10 @@ Every experiment gets a written hypothesis **before** it runs and a verdict **af
 | 2026-09-02 | — | 36 | LinkedIn | Sixth acceptance — Cesar Espino (Leadify). Acceptance 6/36 (17%), up from ~6% two days earlier. Six samples now delivered, still 0 replies; the day-3 follow-up round is the first real test of the message. |
 
 | 2026-09-02 | — | 36 | LinkedIn | **First follow-up sent** — Faraz (ThynkGrowth), Perfect Venue row, no ask. Dimitar due 3 Sept; Kenny, Ericson, Huzaifa, Cesar due 4 Sept. |
+
+| 2026-09-02 | 12 | **48** | LinkedIn | Batch 5 sent. Seventh acceptance — Garrett Wolfe (OneGTM), same day. Acceptance 7/48 (15%). Three Clay-sourced contacts blocked as unfindable. |
+
+**Funnel read at 48:** 48 requests → 6–7 accepted → 0 replied. **Acceptance is the bottleneck, not the offer** — nobody can reply to a message they never received. At 60 contacts, if acceptance is still near 12–15%, rewrite the 300-character connection note. That is the cheapest high-leverage variable; do not touch ICP, price, or sample first.
 
 **Pipeline state:** 23 contacted · 40 queued (was: 13 contacted · 9 queued (Spring Drive, ScaleSprint, Newlead, Digital Creativs, BuildingReach, LeadHaste, Kinetyca, Brokr Leads, Leadgrove) · 1 blocked (ColdIQ, needs correct LinkedIn URL).
 
