@@ -1,210 +1,164 @@
 # Rayda Data Analyst Intern — Application Kit
 
-Rewritten against the real posting text. Everything here is a draft to edit, not a script to
-paste. Replace anything in `[brackets]`. If a sentence isn't true about you, cut it — a founder
-at a 27-person company can smell a template.
+**Rewritten after reading your CV and LinkedIn.** The earlier version of this file assumed you
+had no work history, no SQL and no BI tools. All three were wrong. What follows uses what you
+actually have.
+
+Companion files: `cv-rayda.md` (the tailored CV) and `linkedin-fixes.md` (profile fixes).
 
 ---
 
 ## 1. Cover letter draft
 
-Under 200 words. It deliberately echoes the posting's own phrases — *collecting, cleaning and
-organising data*, *translating business questions*, *asset lifecycle* — because whoever screens
-this is matching against that text, whether they realise it or not.
+Around 200 words. It leads with evidence because you have evidence — no placeholder project, no
+hedging.
 
 > Hi Rayda team,
 >
 > I'm applying for the Data Analyst Intern role. I'm a 200-level Economics student at Miva Open
-> University, so the statistics side of this is my coursework rather than a side interest — and
-> the collecting, cleaning and organising part is the work I actually enjoy, because that's where
-> you find out whether a number means what people say it means.
+> University (CGPA 4.53/5.00), and I've been doing a version of this work for the last year and
+> a half.
 >
-> To understand what you do, I built a small asset lifecycle dashboard in Looker Studio —
-> recovery rate by country, time-to-deploy, true cost per device once repairs are counted, and
-> recovered value at disposal. It's here: [LINK]. The dataset is synthetic, but the questions
-> are the ones I'd want answered if I ran the fleet.
+> As an independent research analyst I pull financial data from six sources that don't agree
+> with each other — the IMF Financial Access Survey via FRED, NIBSS, the Central Bank of
+> Nigeria, EFInA and GSMA — clean them into comparable series, verify every figure against its
+> primary source, and publish the methodology and limitations alongside the result. My July
+> study found that Nigeria's third-place regional rank by mobile money accounts hides the
+> lowest per-capita penetration in the region; that only shows up once the series is normalised.
+> [LINK, if you have one.]
 >
-> Two things beyond the basics. I'm fluent in French and English — Beninese-Nigerian — which may
-> be useful as Rayda grows across Francophone West Africa. And I already work fully remotely:
-> Miva is an online university, so managing my own deadlines without supervision is simply how
-> I've studied for two years.
+> Alongside that, seventeen months as a remote executive assistant tracking distribution sales
+> and expenses, reconciling cash, and delivering the monthly report to the Director — sixteen
+> consecutive cycles, on time.
+>
+> On your tools: Excel and Sheets daily, certified in MySQL and in Tableau and Power BI, and I
+> studied SQL databases during my first year at Université d'Abomey-Calavi. I'm also native in
+> French and English, which may be useful as Rayda grows across Francophone West Africa.
 >
 > Peace Sossa
-> [phone] · peace.launchoperator@gmail.com · [LinkedIn]
+> +234 903 052 5488 · peace.sossa@gmail.com · linkedin.com/in/peacesossa
 
 **Why it's built this way**
-- Line one says what you're applying for. No "I am writing to express my keen interest."
-- It mirrors their verbs. Free points at the screening stage.
-- The dashboard link is the letter's whole job. Everything else is context for it.
-- "The dataset is synthetic" — said plainly, up front. Honesty here costs you nothing and
-  protects you completely.
-- French comes late here on purpose: the project is the stronger opener now that you have one.
-  If you apply *before* the dashboard exists, cut that paragraph and lead with French instead.
-- **Note what's missing: no apology for SQL.** The posting says SQL is *an advantage*. Don't
-  volunteer a weakness they didn't ask about.
+- **Paragraph two is the whole letter.** It is Rayda's first listed duty — *"collection,
+  cleaning and organisation of data from different business systems"* — described in your own
+  real work, with a specific finding attached. Very few interns can write that paragraph.
+- **"Sixteen consecutive cycles, on time"** does more work than any adjective. It answers the
+  unasked question about a remote hire: will she deliver without being chased?
+- **Tools come last and land flat.** No apology, no "I'm still learning" — you hold certificates
+  in the exact tools they listed as advantages. State them and move on.
+- **Use `peace.sossa@gmail.com`**, not your other address. Match the CV and LinkedIn exactly.
+- If the mobile money study isn't publicly linkable, cut the bracket. Don't link something
+  half-finished — but see §3, because making it linkable is worth an hour.
 
 ---
 
-## 2. CV lines that pull weight
+## 2. What you no longer need to do
 
-Same facts, said in the language the reader is scanning for.
+The plan in the earlier version had you spending a week learning SQL and an afternoon learning
+Looker Studio. Reading your actual documents, both were solving problems you don't have:
 
-**Education**
-> BSc Economics (in progress, 200L) — Miva Open University, Nigeria
-> Relevant coursework: Statistics, Microeconomics, Macroeconomics, [Econometrics when you reach it]
-
-**Skills** — order this to match the posting's own priority
-> Google Sheets / Excel (pivot tables, XLOOKUP, SUMIFS, charting) · Data visualisation
-> (Looker Studio) · Statistics · SQL (basic: SELECT, JOIN, GROUP BY) · Languages: English
-> (fluent), French (fluent), Korean (beginner)
-
-**Projects** — the section that gets you the interview
-> **Asset Lifecycle Analytics** (2026) — Built a Looker Studio dashboard over a synthetic
-> device-fleet dataset covering acquisition, deployment, repair, recovery and disposal.
-> Measured recovery rate by country, median time-to-deploy, true annual cost per device, and
-> value recovered at end of life; wrote a one-page memo on where the money leaks. [LINK]
-
-**What not to do**
-- No "References available on request" — it wastes a line.
-- No photo, no age, no marital status.
-- One page. Two is for people with ten years of experience.
-
----
-
-## 3. The portfolio project — "Asset Lifecycle Analytics"
-
-**Why this one:** it's a small version of Rayda's own business, in their own words —
-*acquire, manage, track and dispose*. And building it in **Looker Studio** closes a stated
-"advantage" requirement at the same time. Two birds, one afternoon.
-
-### Build it in about 4–5 hours
-
-**Step 1 — Make the data (60 min).** You don't need real data and shouldn't pretend you have
-it. Generate ~300 rows in Google Sheets, one row per device:
-
-| device_id | model | country | purchase_cost_usd | assigned_date | delivered_date | employee_status | return_date | repair_count | repair_cost_usd | disposal_status | resale_value_usd |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-
-Countries: Nigeria, Kenya, Ghana, Côte d'Ivoire, Philippines, Brazil. Make some returns late,
-some never returned, some repaired twice, some sold on and some scrapped. Realistic messiness
-is the point — and cleaning it is literally duty #1 in the posting.
-
-**Step 2 — Answer six questions (2 hrs).** These are the questions an asset lifecycle company
-loses money on. The last one exists because *dispose* is in their own description of themselves.
-
-1. **Recovery rate** — of devices assigned to employees who left, what share came back? By country.
-2. **Time-to-deploy** — median days from assignment to delivery. Where is it slowest?
-3. **True cost per device per year** — purchase amortised + repairs. Which model is actually
-   cheapest once repairs count? Often *not* the cheapest to buy — that's your headline finding.
-4. **Repair concentration** — do 20% of devices generate 80% of repair cost?
-5. **Value at risk** — total book value of unrecovered devices. One number, in dollars.
-6. **Recovery at disposal** — what share of purchase cost comes back as resale value, and how
-   does that vary by model and by age at retirement?
-
-**Step 3 — Build it in Looker Studio (1 hr).** Connect the Google Sheet directly — it's free,
-browser-based, nothing to install, and it's one of the three tools the posting names. Six
-tiles: scorecards for the headline numbers, a bar chart for recovery by country, a time series
-for time-to-deploy. Nothing 3D, no pie chart with eleven slices. Label the axes. Set sharing to
-"anyone with the link can view".
-
-**Step 4 — The one-page memo (1 hr). This is your real differentiator.** Three findings, and
-for each: *the number, why it happens, what I'd do about it.* An Economics student who writes
-*"recovery in Côte d'Ivoire is 41% against 78% in Nigeria; at $600 a laptop that's $X a year;
-I'd test a prepaid return label issued at exit"* is thinking like an owner, not a
-button-pusher. That's who gets hired, and it maps straight onto the posting's *"translate
-business questions into simple data analyses and insights."*
-
-**Step 5 — Label it honestly.** Put a line at the top of the dashboard and the memo:
-*"Synthetic dataset built to model a real asset-lifecycle problem."* Never imply it's real
-company data.
-
-### If you want the extra point
-Load the same CSV into a free browser SQL tool (DB Fiddle, SQLite Online) and write two or
-three of the answers as queries. Screenshot them into the memo. Now "basic knowledge of SQL"
-is demonstrated rather than claimed — which is exactly the level they asked for.
-
----
-
-## 4. Google Sheets — the one hard requirement
-
-*"Familiarity with Excel or Google Sheets"* is the only tool requirement that isn't hedged with
-"is an advantage". Make sure these are genuinely automatic before an interview:
-
-- **Pivot tables** — group by country, sum a cost column. Build three from your device data.
-- **`XLOOKUP`** (or `VLOOKUP`) — pull a value from another table by matching an ID.
-- **`SUMIFS` / `COUNTIFS`** — conditional totals, the workhorse of every business report.
-- **`IF` and nested conditions** — flag rows: returned late, never returned, over-repaired.
-- **Date maths** — `delivered_date - assigned_date`, then a median of it.
-- **Charts** — bar, line, and knowing which to use when.
-- **Clean-up habits** — remove duplicates, `TRIM`, split columns, spot blanks.
-
-Building the project above exercises every one of these. That's deliberate — don't study them
-separately, just build the thing.
-
-## 5. SQL — a week, an hour a day, and no more
-
-The posting asks for *basic* SQL as an *advantage*. Get to honest-basic and stop; spend the
-extra hours on the dashboard instead.
-
-| Day | Focus |
+| Earlier advice | Reality |
 |---|---|
-| 1 | `SELECT`, `WHERE`, `ORDER BY`, `LIMIT` |
-| 2 | `GROUP BY`, `COUNT`, `SUM`, `AVG`, `HAVING` |
-| 3 | `JOIN` — inner and left. The one interviewers test |
-| 4 | `CASE WHEN`, date functions, `NULL` handling |
-| 5 | CTEs (`WITH … AS`) |
-| 6–7 | Rewrite two or three of your project questions as queries |
+| "SQL is the one thing that decides it" | You have a **Database Management with MySQL** certificate and studied SQL databases at Abomey-Calavi. It's on your CV skills line |
+| "Learn Looker Studio to close the visualisation requirement" | You're certified in **Tableau and Power BI** — two of the three tools they name |
+| "Build a synthetic dataset, you have no portfolio" | You have **published research** with documented methodology, benchmarks and a limitations section |
+| "No work experience — don't apologise for it" | **17 months** of remote work across two roles. The posting asks for 0–1 year; you're at the top of that band |
 
-Free, in-browser, no install: **SQLBolt** (sqlbolt.com), **Mode's SQL Tutorial**
-(mode.com/sql-tutorial), **PostgreSQL Exercises** (pgexercises.com).
+**What's actually left:** a refresher, a link, and one artefact. That's it — maybe six hours
+total, not two weeks.
 
 ---
 
-## 6. Likely screening questions
+## 3. The three things worth doing
 
-**"Why data analysis?"**
-Connect it to Economics, not to a trend. *"Economics taught me to ask whether a number means
-what people say it means. Analysis is the same question with better tools."*
+### a) Make the mobile money study linkable — 1 hour, do this first
+This is your strongest asset and right now it may be invisible. Publish it where it has a URL:
+a LinkedIn article, Substack, Medium, or even a clean PDF in Google Drive set to "anyone with
+the link". Then put that link in your CV bullet, your cover letter and your LinkedIn.
 
-**"You don't have work experience — why should we take you?"**
-Don't apologise. *"I don't have a job history, so I built the thing instead — here's an asset
-lifecycle dashboard and what I'd do about what it shows."* Then send the link.
+A hiring manager who clicks through to sourced, dated analysis with a limitations section has
+already made up their mind. Nothing else you build this week beats that.
+
+### b) Turn a certificate into an artefact — 3 hours
+You're certified in Power BI and Tableau, but there's nothing anyone can *look at*. Build one
+dashboard over the data you already have — your West African financial access figures — and
+publish a screenshot or a link.
+
+Four or five tiles is enough:
+- Accounts per capita by country, ranked — your headline finding, as a bar chart
+- Registered versus active accounts side by side — the distinction you documented
+- The trend over time for the three markets you compared
+- A scorecard or two for the numbers that matter most
+- One note on the page naming your sources and their dates
+
+**Why this beats the synthetic device dataset I suggested earlier:** it's real data you sourced
+and verified yourself, it proves the certificate, and it's the same skill Rayda needs — turning
+messy multi-source data into something a non-analyst can read. Domain fit is nice; provenance
+and rigour are better.
+
+*If you'd rather have something Rayda-shaped as well, the device-fleet version is in the git
+history of this file — but do this one first.*
+
+### c) SQL refresher — 2 hours, not a week
+You've studied it and you're certified. You just need it fresh enough to write a query on a call
+without freezing. Two hours on SQLBolt or PostgreSQL Exercises, focused on:
+`SELECT` → `WHERE` → `GROUP BY` → `JOIN` (inner and left) → `CASE WHEN`.
+
+That's the level the posting asked for — *"basic knowledge of SQL is an advantage"* — and you're
+already there. Don't over-invest.
+
+---
+
+## 4. Likely screening questions
+
+**"Tell me about yourself."**
+Lead with the research, not the studies. *"I'm an Economics undergraduate, and for the past year
+and a half I've been doing independent research on West African financial markets — pulling data
+from the IMF, the Central Bank of Nigeria, NIBSS and others, cleaning it into comparable series
+and publishing with the methodology attached."* Then the degree. Then the VA role for the
+reliability story.
 
 **"How comfortable are you with SQL?"**
-The posting asked for basic, so answer at that level without shrinking. *"Basic — I can select,
-filter, group and join, and I've written queries against my own dataset. I'd expect to be
-faster within a few weeks on real tables."* Never bluff a level you can't demonstrate live.
+*"I studied SQL databases in my first year at Abomey-Calavi and I'm certified in MySQL. I'd call
+it solid basic — select, filter, group, join. I haven't used it daily, so I'd be a bit slow in
+week one and fine by week three."* That's honest, specific, and it beats a confident bluff you
+can't back up live.
 
-**"Do you know Power BI or Tableau?"**
-*"I built my project dashboard in Looker Studio. The concepts carry — data source, dimensions,
-measures, filters — so I'd expect to pick up Power BI quickly if that's what the team uses."*
+**"Power BI or Tableau?"**
+*"Certified in both. Here's a dashboard I built over my own research data —"* then show it. This
+is exactly why §3b is worth three hours.
+
+**"You're a student — can you work full time?"**
+Have your real answer ready. If you need flex, say it early and without apology: *"Miva is an
+online university, so my schedule is genuinely flexible — but I want to be straight with you.
+Is there room to agree hours, or is 40 a week firm?"* Asking in the first conversation is
+professional; discovering it after an offer is a problem.
+
+**"You do freelance research — how does that fit with a full-time role?"**
+They will see your LinkedIn, so expect this. Decide your answer before the call, and make it a
+clean one. *"I've been building research skills independently because there wasn't a role to
+build them in. This is the role."* Don't improvise this one.
 
 **"How would you handle messy data?"**
-Give a process, not an adjective: check duplicates, check nulls, check the date range makes
-sense, check totals against a known source, then ask whoever owns the system about anything
-that still looks wrong. That last step is the one juniors forget and managers love — and it's
-duty #5 in the posting, *"data validation and quality checks"*.
+You have the best possible answer and it's already on your CV: check it against the primary
+source. *"I verify every figure against its original source before it goes anywhere, and I
+document the limitations — for instance, most coverage of Nigerian mobile money conflates
+registered and active accounts, which changes the conclusion entirely."* That is duty five of
+their posting, answered with a real example.
 
-**"Can you work full time?"** — **Have your real answer ready before they ask.**
-If you can: say so plainly. If you need flex, say it early and without apology: *"I'm a
-200-level student at an online university, so my schedule is genuinely flexible — but I want to
-be straight with you about it. Is there room to agree hours, or is 40 a week firm?"* Asking in
-the first conversation reads as professional. Discovering it after an offer reads as a problem.
-
-**Your questions for them** — always have two:
+**Your two questions for them**
 - *"What would a successful first three months look like for this intern?"*
-- *"I saw the role supports an existing Data Analyst — what does that working relationship
-  look like day to day?"* (Shows you read the posting properly. Very few candidates do.)
+- *"I saw the role supports an existing Data Analyst — what does that working relationship look
+  like day to day?"* Shows you read the posting properly. Most candidates don't.
 
 ---
 
-## 7. Follow-up message (day 7–10, if no reply)
+## 5. Follow-up message (day 7–10, if no reply)
 
-> Hi [Name], I applied for the Data Analyst Intern role on [date]. While waiting I built a
-> small asset lifecycle dashboard — recovery rates by country, true cost per device once
-> repairs are counted, and value recovered at disposal: [LINK]. Synthetic data, but the
-> questions are real ones. Happy to walk through it if useful. — Peace
+> Hi [Name], I applied for the Data Analyst Intern role on [date]. Since then I've published a
+> dashboard over my West African financial access data — accounts per capita across three
+> markets, registered versus active, sources dated on the page: [LINK]. Same approach I'd bring
+> to product and billing data. Happy to walk through it. — Peace
 
-One follow-up. If there's no answer after that, move on and reuse the whole kit for the next
-application — the dashboard doesn't expire, and every asset-heavy or logistics company in
-Nigeria has the same problem.
+One follow-up. If there's no reply after that, reuse all of this for the next application —
+nothing in it expires.
