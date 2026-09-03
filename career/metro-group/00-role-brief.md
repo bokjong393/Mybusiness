@@ -46,42 +46,43 @@ reconciliation* engine, you will stand out immediately. That is the hook in the 
 
 ---
 
-## Do you qualify? Yes.
+## Do you qualify? Comfortably — you are over the bar, not under it.
 
 | Their requirement | You |
 |---|---|
-| Bachelor's degree **or currently studying** Finance, Accounting, Economics or related | ✅ BSc Economics, 200L, Miva Open University |
-| 1–2 years experience or prior internship | ⚠️ Listed as **"an advantage"**, not required. Do not self-reject over this. |
-| Strong analytical and numerical skills | ✅ Economics coursework — evidence it with a project |
-| Basic proficiency in Excel, financial modelling, accounting software | ⚠️ "Basic" is the bar. Buildable in a weekend — see below. |
-| High attention to detail and integrity | ✅ Demonstrate it; never just assert it |
+| Bachelor's degree **or currently studying** Finance, Accounting, Economics or related | ✅ BSc Economics, **CGPA 4.53/5.00**, plus the **CFA Investment Foundations Certificate** |
+| 1–2 years experience or prior internship (listed as *an advantage*) | ✅ 17 months as Executive Virtual Assistant — cash reconciliation, sales and expense tracking, monthly reporting — plus independent research analyst work since July 2026 |
+| Strong analytical and numerical skills | ✅ Published research built from IMF, CBN, NIBSS, EFInA and GSMA data; Statistics I & II; L1 mathematics and computing at Abomey-Calavi |
+| Basic proficiency in Excel, financial modelling, **accounting software** | ✅ Excel, SQL/MySQL, Power BI, Tableau — ahead of most interns. ⚠️ **No named accounting package.** The only real gap. |
+| High attention to detail and integrity | ✅ "Verifying each against primary sources"; a published limitations section correcting a conflation common in secondary coverage. That *is* the evidence — never just assert the trait |
 
-Only two boxes need work, and both are closeable before you send.
+**The one gap worth closing:** the posting names accounting software and you list none. One weekend
+running a month of dummy transactions through **Wave** (free) or QuickBooks lets you add the line
+honestly. Do it before you send if you can.
 
 ---
 
-## Do this before you apply — 2 weekends, and it changes the outcome
+## The real obstacle is not your CV — it is Lagos
 
-Right now your CV says you studied economics. After this it says you have done the job.
+You are in **Okpoma, Cross River State**. The role is **fully on-site in Lagos**, roughly 700–800 km
+away. This, not your qualifications, is what will decide the application.
 
-**Project 1 — Collections & Liquidity Tracker** *(the one that matters)*
-Build it in Excel. Invent 40 rent-to-own buyers on monthly instalments paying into 3 bank accounts and
-1 wallet, with a few paying in USD or GBP. Then build:
-- a reconciliation sheet matching each receipt to the right buyer
-- flags for short payments, late payers and unmatched receipts
-- a weekly liquidity summary: opening balance, collections in, vendor payments out, closing position
-  per account and per currency
+**What it means for the application.** A Cross River address on an on-site Lagos posting gets filtered
+out silently unless you address it. Both your CV and cover letter now state plainly that you are ready
+to relocate and when you can start. Answering it yourself removes the objection; leaving it unanswered
+lets someone else answer it for you.
 
-That is line-for-line their job description. Bring it to the interview.
+**What it means for you, honestly.** ₦200,000 a month is a real Lagos salary for an intern — but Lagos
+landlords typically want **one to two years of rent upfront**, which is the barrier that catches people
+out, not the monthly budget. Before you accept, price the actual move: upfront rent, transport to Oniru,
+food, utilities. Ask whether they offer any relocation or accommodation support — many Lagos employers
+do for out-of-state hires, and nobody offers what nobody asks for.
 
-**Project 2 — Three-statement model.** 12 linked months (P&L, balance sheet, cash flow) for a small
-property business. Proves the "financial modelling" requirement outright.
-
-**Excel gaps to close:** XLOOKUP, SUMIFS, pivot tables, IFERROR, `$` absolute references. A focused
-weekend genuinely covers the "basic proficiency" bar.
-
-**Accounting software:** if you have used none, install **Wave** (free) and run one month of dummy
-transactions. Then the CV line is true.
+**Worth naming:** you have built a genuinely remote working life — a virtual assistant role and
+independent research you publish yourself — and you have said you want to earn from home. A full-time
+on-site Lagos job runs against that. That is not an argument against taking it; a year inside a real
+finance function is a serious education and you are 21. It is just a decision to make deliberately
+rather than by momentum. Apply either way — an offer is what creates the choice, and you can decline one.
 
 ---
 
@@ -91,13 +92,14 @@ The company is real and CAC-registered, the email is on its own domain, and ₦2
 market stipend rather than bait. Nothing here looks wrong. These are ordinary due-diligence items:
 
 - [ ] **Is ₦200,000 monthly?** The posting does not say. Ask before accepting.
-- [ ] **Where exactly is the office, and can you get there daily?** The listing says "location not
-      specified (fully on-site)"; the head office is Oniru, Lagos. Confirm the site and think honestly
-      about the commute — Oniru/VI traffic is punishing and the cost comes out of the ₦200,000.
-- [ ] **How does "full time, on-site" fit around 200L?** Your course is fully online, which is what makes
-      this even possible — but a full-time on-site role plus coursework is real strain. Raise your
-      availability yourself rather than waiting to be caught out; being upfront reads as integrity, and
-      integrity is literally on their requirements list.
+- [ ] **Where exactly is the office?** The listing says "location not specified (fully on-site)"; the
+      head office is Oniru, Lagos. Confirm the site before you price housing — where you can afford to
+      live and how long the commute is both follow from it.
+- [ ] **Is there relocation or accommodation support?** Ask. Many Lagos employers offer something for
+      out-of-state hires, and it is never volunteered.
+- [ ] **How does "full time, on-site" fit around your degree?** Miva being fully online is what makes
+      this possible at all. Raise your availability yourself rather than waiting to be caught out; being
+      upfront reads as integrity, and integrity is literally on their requirements list.
 - [ ] **Is it paid from month one, and is there a written offer?** Get the terms in writing.
 - [ ] **The role's real content.** The JD's treasury language may be templated. Ask what the first month
       actually involves.

@@ -1,137 +1,94 @@
+# Master CV — Peace Sossa
+
+**This is the full record.** Never send it as-is. Copy it, cut to one page, and reorder so the most
+role-relevant experience sits highest. Role-specific versions live in their own folders
+(e.g. `metro-group/cv.md`).
+
+---
+
 # PEACE SOSSA
 
-[[City, State]], Nigeria · peace.launchoperator@gmail.com · [[+234 phone]] · [[linkedin.com/in/your-handle]]
-
----
-
-## PROFILE
-
-Second-year BSc Economics student with working knowledge of financial statements, Excel-based analysis
-and market research. Fully bilingual in English and French — able to handle documents, suppliers and
-calls across Nigeria and francophone West Africa without a translator. Studying at a fully online
-university, so I plan, execute and deliver my own work to deadline without supervision. Seeking a
-finance internship where I can take real ownership of reconciliation, reporting and analysis work.
-
-> **Tailoring note:** rewrite the last sentence for every application to name the actual role and
-> company. "Seeking a finance internship" → "Seeking the Finance Intern role at [[Company]], where
-> [[one specific thing from the posting]]."
-
----
-
-## EDUCATION
-
-**Miva Open University** — BSc Economics, 200 Level · Expected [[Month YYYY]]
-*[[City]], Nigeria*
-
-- Relevant coursework: [[Microeconomics, Macroeconomics, Statistics for Economists, Mathematics for
-  Economists, Financial Accounting, Business Finance — list only what you have actually taken]]
-- [[CGPA: X.XX / 5.00]] — *include this line only if it is 3.5/5.0 or above. Otherwise delete it; an
-  omitted CGPA is far less damaging than a weak one.*
-- [[Any award, scholarship, dean's list, or course you scored an A in — one line]]
-
----
-
-## SKILLS
-
-**Finance:** reading and interpreting P&L, balance sheet and cash flow statements · bank and ledger
-reconciliation · budget vs. actual variance analysis · invoice processing · basic three-statement modelling
-
-**Tools:** Microsoft Excel and Google Sheets — [[XLOOKUP/VLOOKUP, pivot tables, SUMIFS, IF logic,
-conditional formatting, charts]] · Microsoft Word and PowerPoint · [[QuickBooks / Wave / Zoho Books /
-Sage — delete if you have used none]]
-
-**Analysis:** descriptive statistics · data cleaning and validation · dashboard and chart building ·
-market, competitor and sector research · report writing
-
-**Languages:** English (fluent) · French (fluent, [[native / near-native]]) · Korean (beginner, A1)
-
-> **Do not claim a tool you cannot demonstrate in an interview.** If Excel is thin right now, spend a
-> weekend on pivot tables, XLOOKUP and SUMIFS — that is genuinely enough for an intern, and then the
-> line is true.
+Okpoma, Cross River, Nigeria · +234 903 052 5488 · peace.sossa@gmail.com · linkedin.com/in/peacesossa
 
 ---
 
 ## EXPERIENCE
 
-*[[If you have held any paid, unpaid, volunteer, family-business or campus role — put it here. Almost
-everyone has more than they think: helping with a family shop's books, treasurer of a group, tutoring,
-running a small resale or hair/beauty side hustle, a church or association's finances. All of it counts.
-If you genuinely have none, delete this section entirely and let PROJECTS carry the CV.]]*
+**Economic Research Analyst** — Independent Economic Research · Okpoma, Nigeria · July 2026 – Present
 
-**[[Role title]]** — [[Organisation / Family business / Association]] · [[Month YYYY – Month YYYY]]
+- Extract and process financial data from the IMF Financial Access Survey, FRED, NIBSS, the Central
+  Bank of Nigeria, EFInA and GSMA, verifying every series against primary sources before publication
+- Analyse West and Central African financial markets with documented methodology, benchmarks and
+  limitations; published a study on Nigerian mobile money in July 2026, with ongoing research into
+  digital real estate
+- Reframed Nigeria's regional standing by comparing a single IMF data series across three markets,
+  showing that a third-place rank by account count masks the region's lowest per-capita penetration and
+  its largest gap
+- Published a limitations section distinguishing registered from active accounts, correcting a
+  conflation common in secondary market coverage
 
-- [[Action verb]] [[what you did]], [[handling / covering]] [[scale — number of items, ₦ value, number
-  of people, frequency]]
-- [[Second bullet — something you improved, caught, or made faster, with the result]]
-- [[Third bullet — a tool you used, e.g. "Tracked X in Excel using pivot tables, cutting Y from Z to W"]]
+**Executive Virtual Assistant** — Peace and Unity Media Enterprise / World Peace Center · Okpoma,
+Nigeria · April 2025 – Present
 
-> **Bullet formula:** *Verb + what you did + the number + the result.*
-> Weak: "Was responsible for keeping records."
-> Strong: "Recorded and reconciled ₦180,000/month in daily sales across two sales books, cutting
-> end-of-month closing from three days to one."
-> Numbers are what separate an intern CV from every other intern CV. Estimate honestly if you must —
-> just never invent.
-
----
-
-## PROJECTS
-
-*This section does the heavy lifting when work experience is light. Two entries is enough. If you have
-none yet, build one this week — each of the suggestions below is a weekend of work and turns your CV
-from "student" into "student who has done the job".*
-
-**[[Project name — e.g. "Nigerian Inflation and Household Food Spending, 2020–2025"]]** · [[Month YYYY]]
-
-- Pulled [[data source — e.g. NBS CPI releases, CBN statistical bulletin, World Bank Open Data]] and
-  cleaned [[N]] rows in Excel
-- Built [[what you built — a variance model, a dashboard, a set of charts]] showing [[the finding]]
-- Concluded [[the actual insight, in one sentence a non-economist would understand]]
-
-**[[Second project]]** · [[Month YYYY]]
-
-- [[Same shape]]
-
-> **Three project ideas you can complete in a weekend, in order of how well they signal "finance intern":**
-> 1. **A three-statement model of a small business.** Invent a realistic Nigerian small business — a
->    provisions shop, a laundry, a food vendor. Build P&L, balance sheet and cash flow for 12 months in
->    Excel, with the sheets actually linked. This is the single most convincing thing a finance intern
->    applicant can show, and almost none of them have it.
-> 2. **A budget-vs-actual tracker.** Take three months of your own or a family business's real spending,
->    categorise it, build a variance report with pivot tables, and write a half-page on what drove the
->    biggest variance.
-> 3. **A one-page equity note.** Pick a listed Nigerian company (Dangote Cement, MTN Nigeria, GTCO, Zenith
->    Bank), read its latest annual report, and write one page: what it does, how it makes money, three
->    numbers that moved, and why. This one also doubles as excellent interview material.
+- Reconcile cash and track sales and expenses for an ice-block distribution operation, reporting to the
+  Director monthly
+- Delivered Nigeria's monthly activity report on time for 16 consecutive cycles
+- Provide executive support to the founder through reports, presentations, documents and research
+- Build slide decks for international meetings and public dissemination from site documentation
 
 ---
 
-## CERTIFICATIONS & TRAINING
+## EDUCATION
 
-*[[Delete this section if empty — do not pad it.]]*
+**Miva Open University** — BSc Economics · Abuja, Nigeria · May 2025 – April 2028 (expected)
 
-- [[Certificate name]] — [[Issuer]], [[YYYY]]
+- CGPA 4.53 / 5.00
+- Coursework: Financial Markets and Monetary Economics; Mathematics for Economists; Statistics I and II
+  (probability distributions, sampling theory, statistical estimation)
 
-> **Worth doing, cheap or free, and recognised:** the CFI *Financial Modeling & Valuation* free preview
-> courses, Coursera's *Financial Markets* (Yale, free to audit), Microsoft Excel certification, or the
-> ICAN Foundation level if you want a formal accounting track. Any one of these on the CV beats an empty
-> section — but an internship offer will not hinge on it, so do it after the projects.
+**Université d'Abomey-Calavi** — Licence coursework, Mathématiques, Informatique et Applications ·
+Cotonou, Bénin · 2022 – 2023
 
----
+- Completed L1 coursework in mathematical analysis, algebra, probability and statistics, algorithmics,
+  programming and SQL databases; did not complete the degree
 
-## ADDITIONAL
-
-- **Languages:** English (fluent), French (fluent), Korean (beginner — currently studying)
-- **Remote-ready:** [[stable internet, own laptop, quiet workspace — say so plainly if the role is remote]]
-- [[Volunteering, leadership, association membership — one line each, only if genuinely relevant]]
+**CFA Institute** — Investment Foundations Certificate · May 2026 · Credential ID 182401104
 
 ---
 
-### Before you send it — a checklist
+## SKILLS
 
-- [ ] Every `[[ ]]` slot is filled or the line is deleted. Not one bracket left.
-- [ ] It is **one page**. Cut the weakest bullets until it is.
-- [ ] Exported as **PDF**, named `Peace-Sossa-CV-[[Company]].pdf`. Never send .docx — formatting breaks.
-- [ ] Your name and phone number are on the page and correct.
-- [ ] Read every bullet out loud once. Anything you could not defend in an interview comes off.
-- [ ] Spellcheck run in **English**, not French. A finance CV with typos reads as careless with detail,
-      which is the one thing the job is about.
+- **Quantitative and analytical:** financial and economic data from primary databases · market analysis
+  · probability and statistics · linear algebra
+- **Software:** Excel · SQL / MySQL · Tableau · Power BI · Word · PowerPoint
+- **Languages:** French (native) · English (native)
+
+---
+
+## Notes on tailoring this
+
+**What is genuinely strong here — do not let it get buried:**
+
+- **CGPA 4.53/5.00.** Well above the threshold where you would consider hiding it. It leads.
+- **CFA Investment Foundations.** A recognised credential most applicants at your stage do not have.
+- **You already reconcile cash.** The ice-block bullet is the most underrated line on this CV. For any
+  finance-operations, treasury, audit or accounts role it is the single most relevant thing you have
+  done, and it currently sits third in its section. Promote it.
+- **16 consecutive cycles.** A reliability number. Reporting roles are bought on reliability.
+- **"Verifying each against primary sources"** and the limitations section are not just method notes —
+  they are your evidence for "attention to detail and integrity", which appears on almost every finance
+  job description. Never assert those traits; point at these lines.
+- **SQL, Power BI and Tableau** put you ahead of most interns, who bring Excel alone.
+- **Native French and English.** Not "conversational" — native. Tie it to the employer's actual
+  operations or it reads as decoration.
+
+**The one real gap:** no named accounting package (QuickBooks, Sage, Zoho Books, Wave). Postings ask for
+it routinely. A weekend running dummy transactions through **Wave** (free) closes it honestly.
+
+**A framing note on Abomey-Calavi.** Keeping "did not complete the degree" is right — it is honest and
+it explains the gap before anyone has to ask. Just lead the entry with what you *studied*, not with
+what you did not finish. The SQL and programming from that year are load-bearing on your skills list.
+
+**Reordering rule.** Research-heavy roles: lead with Independent Economic Research. Finance-operations,
+treasury or accounting roles: still lead with the research (it is more senior in character), but pull
+the reconciliation bullet to the top of the VA block.

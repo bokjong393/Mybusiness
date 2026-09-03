@@ -136,3 +136,45 @@ opportunity. Prepare the core vocabulary so you are not translating live:
 
 Say early that you work in both languages and let them choose. Offering the choice is itself the
 impressive move.
+
+
+---
+
+## 7. Your specific talking points
+
+Generic prep above; this is yours. Have each of these ready as a 30–60 second answer.
+
+**The reconciliation story.** They are hiring for reconciliation. You do it. Be ready to describe the
+ice-block operation concretely: what comes in, how you match cash against sales, what you do when it
+does not balance, what goes into the Director's monthly report. Have a real example of a discrepancy
+you found and how you chased it down. This is your strongest single answer — do not let modesty about
+the scale flatten it. Small business reconciliation is *harder* in some ways: no system does it for you.
+
+**"Sixteen consecutive cycles."** When they ask about reliability or deadlines, this is the answer. A
+number beats an adjective every time.
+
+**The mobile money study.** Be able to explain in plain language what you found — that a third-place
+rank by account count hid the region's lowest per-capita penetration — and *why the distinction matters*
+to someone making a decision. This demonstrates exactly the skill a finance team wants: not reporting
+the number, but noticing what it conceals.
+
+**The limitations section.** If asked about attention to detail or integrity, do not say "I'm detail
+oriented". Say: you published a limitations section distinguishing registered from active accounts,
+because secondary coverage routinely conflates the two. That is integrity demonstrated rather than
+claimed, and it is the kind of answer interviewers remember.
+
+**Why real estate, given your research is in financial access?** Have this ready — it is the obvious
+challenge. Honest answer: your current research is on digital real estate, and rent-to-own sits exactly
+where household financial access and property meet. That is not a pivot; it is the same question.
+
+**The gap they may probe: Abomey-Calavi.** If asked why you did not complete the Licence, answer briefly
+and without apology, then move to what you took from it — the mathematics, programming and SQL you still
+use. Do not over-explain. A short, unembarrassed answer closes the topic; a long one opens it.
+
+**Relocation.** Expect it early, possibly as the first question. Have a definite answer: when you can be
+in Lagos, that you have thought about accommodation, that you are not going to accept and then wobble.
+Vagueness here undoes everything else.
+
+**The one you should ask them.** "What does the reconciliation process look like today — how are
+instalment payments matched to buyer accounts?" It signals you know where the difficulty lives, and
+their answer tells you whether the job is real analytical work or data entry.

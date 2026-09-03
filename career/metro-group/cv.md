@@ -1,101 +1,90 @@
+# CV — Metro Group, Finance Intern
+
+One page. Only two things still need your input: the relocation line and confirming your LinkedIn URL.
+
+---
+
 # PEACE SOSSA
 
-[[City]], Nigeria · peace.launchoperator@gmail.com · [[+234 XXX XXX XXXX]] · [[linkedin.com/in/your-handle]]
+Okpoma, Cross River, Nigeria · +234 903 052 5488 · peace.sossa@gmail.com · linkedin.com/in/peacesossa
 
 ---
 
 ## PROFILE
 
-BSc Economics student (200 Level) seeking the Finance Intern role at Metro Group. I work in Excel on
-reconciliations, collections tracking and budget variance analysis, and I am fluent in English and
-French. Economics training means I can explain *why* a number moved — an FX shift, an inflation effect,
-a collections shortfall — not only report that it did. **Available full time and on-site in Lagos.**
-
----
-
-## CORE SKILLS
-
-**Financial reporting** — daily and weekly reporting on revenue, margins and transaction volumes;
-budget vs. actual variance analysis; presenting figures so a non-finance reader can act on them
-
-**Reconciliation & controls** — matching receipts to source records, investigating and documenting
-discrepancies, maintaining a clean audit trail
-
-**Treasury support** — tracking cash positions across multiple accounts and currencies; recording
-internal transfers, settlements and vendor payments
-
-**Excel & financial modelling** — XLOOKUP/VLOOKUP · SUMIFS/COUNTIFS · pivot tables · IF and IFERROR
-logic · absolute references · linked three-statement models · charts and dashboards
-
-**Accounting software** — [[Wave / QuickBooks / Zoho Books — delete this line if you have used none]]
-
-**Languages** — English (fluent) · French (fluent) · Korean (beginner)
-
----
-
-## PROJECTS
-
-**Multi-Account Collections & Liquidity Tracker** · Excel · [[Month 2026]]
-
-- Built a reconciliation model tracking monthly instalment payments from [[40]] buyers across [[3]] bank
-  accounts and [[1]] payment wallet, including receipts in USD and GBP
-- Automated matching of receipts to individual buyer accounts using XLOOKUP and SUMIFS, with exception
-  flags for short payments, late payers and unmatched receipts
-- Produced a weekly liquidity summary — opening balance, collections in, vendor payments out, closing
-  position by account and by currency
-
-**Three-Statement Financial Model — Property Business** · Excel · [[Month 2026]]
-
-- Built a linked 12-month income statement, balance sheet and cash flow statement for a [[N]]-unit
-  rent-to-own property business
-- Modelled instalment collections against construction and vendor payment schedules to identify the
-  months where cash position tightened
-
-> **Build both before you send this CV.** Full specifications are in `00-role-brief.md`. They map
-> line-for-line onto Metro Group's job description, and they are what turn "economics student" into
-> "candidate who has already done a version of the work". Then replace the `[[ ]]` figures with what you
-> actually built and delete this note.
-
----
-
-## EDUCATION
-
-**Miva Open University** — BSc Economics, 200 Level · Expected [[Month YYYY]]
-
-- Relevant coursework: [[Microeconomics · Macroeconomics · Statistics for Economists · Mathematics for
-  Economists · Financial Accounting — list only what you have actually taken]]
-- [[CGPA: X.XX / 5.00 — include only if 3.5+, otherwise delete this line]]
+BSc Economics student (CGPA 4.53/5.00) and CFA Investment Foundations certificate holder. I reconcile
+cash and track sales and expenses for a distribution business, and publish independent research on West
+and Central African financial markets built from IMF, CBN, NIBSS and EFInA data — currently focused on
+digital real estate. Native French and English. **Available full time and on-site in Lagos; ready to
+relocate from [[state your start availability]].**
 
 ---
 
 ## EXPERIENCE
 
-*[[Any paid, unpaid, volunteer, family-business or campus role goes here — helping with a shop's books,
-treasurer of a group, tutoring, a side hustle you ran. If you truly have none, delete this whole
-section; the projects above carry the CV. Do not leave an empty heading.]]*
+**Executive Virtual Assistant** — Peace and Unity Media Enterprise / World Peace Center
+*Okpoma, Nigeria · April 2025 – Present*
 
-**[[Role]]** — [[Organisation]] · [[Month YYYY – Month YYYY]]
+- **Reconcile cash and track sales and expenses** for an ice-block distribution operation, reporting to
+  the Director monthly
+- Delivered Nigeria's monthly activity report on time for **16 consecutive cycles**
+- Provide executive support to the founder through reports, presentations, documents and research
+- Build slide decks for international meetings and public dissemination from site documentation
 
-- [[Verb]] [[what you did]], handling [[the number — items, ₦ value, people, frequency]]
-- [[Something you caught, fixed or made faster, and the result]]
+**Economic Research Analyst** — Independent Economic Research
+*Okpoma, Nigeria · July 2026 – Present*
+
+- Extract and process financial data from the IMF Financial Access Survey, FRED, NIBSS, the Central Bank
+  of Nigeria, EFInA and GSMA, **verifying every series against primary sources before publication**
+- Published a study on Nigerian mobile money (July 2026) with documented methodology, benchmarks and
+  limitations; **ongoing research into digital real estate**
+- Reframed Nigeria's regional standing by comparing a single IMF data series across three markets,
+  showing that a third-place rank by account count masks the region's lowest per-capita penetration
+- Published a limitations section distinguishing registered from active accounts, correcting a
+  conflation common in secondary market coverage
 
 ---
 
-## ADDITIONAL
+## EDUCATION & CERTIFICATION
 
-- **Availability:** full time, on-site in Lagos. My degree is delivered fully online, so my study
-  schedule flexes around working hours.
-- **Languages:** English and French — able to handle documents and calls with francophone clients,
-  diaspora buyers and suppliers without a translator.
-- [[Volunteering or leadership — one line, only if relevant]]
+**Miva Open University** — BSc Economics · *Abuja · May 2025 – April 2028 (expected)*
+**CGPA 4.53 / 5.00.** Coursework: Financial Markets and Monetary Economics; Mathematics for Economists;
+Statistics I and II (probability distributions, sampling theory, statistical estimation).
+
+**CFA Institute** — Investment Foundations Certificate · *May 2026 · Credential ID 182401104*
+
+**Université d'Abomey-Calavi** — Licence coursework, Mathématiques, Informatique et Applications ·
+*Cotonou, Bénin · 2022–2023.* L1 coursework in mathematical analysis, algebra, probability and
+statistics, algorithmics, programming and SQL databases; did not complete the degree.
 
 ---
 
-### Before sending
+## SKILLS
 
-- [ ] Every `[[ ]]` filled or the line deleted — not one bracket left
-- [ ] Every `>` instruction block deleted
-- [ ] Cut to **one page**
-- [ ] Exported as PDF, named `Peace-Sossa-CV-Metro-Group.pdf`
-- [ ] Spellchecked in **English**
-- [ ] Read aloud once — anything you could not defend in an interview comes off
+- **Finance operations:** cash reconciliation · sales and expense tracking · monthly management
+  reporting · primary-source verification
+- **Quantitative:** financial and economic data from primary databases · market analysis · probability
+  and statistics · linear algebra
+- **Software:** Excel · SQL / MySQL · Power BI · Tableau · Word · PowerPoint
+- **Languages:** French (native) · English (native)
+
+---
+
+## Why this version is ordered the way it is
+
+**The VA role now leads.** Metro Group is hiring for reconciliation, liquidity tracking and a reporting
+cadence. "Reconcile cash and track sales and expenses… reporting to the Director monthly" is the closest
+thing on your CV to their actual job description — smaller in scale, identical in discipline. It was
+third in its block; here it is the first line a reader sees.
+
+**A Finance Operations line was added to Skills** so a keyword scan hits "reconciliation" and "reporting"
+immediately. Every word of it is drawn from work you have actually done.
+
+**Nothing was invented.** Ignore my earlier suggestion that you build practice Excel projects — that was
+written before I had seen your CV, and it was wrong. Your real experience is stronger than any exercise
+would have been, and the two weekends are better spent on the accounting-software gap and on the
+relocation question.
+
+**The one genuine gap:** their posting asks for "accounting software" and you list none. A weekend
+running one month of dummy transactions through **Wave** (free) or QuickBooks lets you add it truthfully.
+Do that before you send if you can; it is the only box you do not already tick.

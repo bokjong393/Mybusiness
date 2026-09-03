@@ -14,11 +14,12 @@ Dear Metro Group Hiring Team,
 I am applying for the Finance Intern position advertised for your Lagos office. My CV and cover letter
 are attached.
 
-I am a 200-level BSc Economics student at Miva Open University, available full time and on-site, and I
-work in both English and French. To prepare for this kind of role I built an Excel reconciliation model
-that tracks monthly instalment collections across multiple bank accounts and currencies, matches
-receipts to individual buyer accounts, and produces a weekly liquidity summary — closely related to the
-treasury and reporting work described in the posting.
+I am a BSc Economics student at Miva Open University (CGPA 4.53/5.00) and hold the CFA Institute's
+Investment Foundations Certificate. In my current role I reconcile cash and track sales and expenses for
+a distribution business, reporting monthly to the Director, and I publish independent research on West
+and Central African financial markets using IMF, Central Bank of Nigeria, NIBSS and EFInA data — with
+ongoing research into digital real estate. I am based in Cross River State and ready to relocate to
+Lagos for this role.
 
 I would welcome the opportunity to discuss the role, and I am happy to provide any further information.
 
@@ -26,21 +27,21 @@ Thank you for your consideration.
 
 Kind regards,
 **Peace Sossa**
-[[+234 XXX XXX XXXX]] · peace.launchoperator@gmail.com
-[[linkedin.com/in/your-handle]]
++234 903 052 5488 · peace.sossa@gmail.com
+linkedin.com/in/peacesossa
 
 ---
 
 ### Email rules that matter more than people think
 
-- **Send from a professional address.** `peace.launchoperator@gmail.com` is fine — it is clean and
-  readable. Do not send from a nickname address.
+- **Send from `peace.sossa@gmail.com`** — the address on your CV. Keep the two consistent; a CV and an
+  email header that disagree makes a reader pause for the wrong reason.
 - **Attach PDFs, never .docx.** Word formatting breaks on someone else's machine and it looks careless.
 - **Open both attachments before you hit send.** Confirm they are the right files, and that no `[[ ]]`
   placeholder survived. This is the single most common self-inflicted rejection.
 - **Send Tuesday to Thursday, 8–10am WAT.** Monday inboxes are floods; Friday applications get buried
   over the weekend.
-- **Delete every `[[ ]]` in this email too**, including the one in your signature.
+- **Confirm your LinkedIn vanity URL resolves.** Your CV shows `linkedin.com/in/peace-sossa-94201b361` but you shared `linkedin.com/in/peacesossa`. Use the short one everywhere if it works — I could not check it, LinkedIn is blocked from here.
 - **Log it in `../application-tracker.md`** the same day, and diarise a follow-up for 7 working days later.
 
 ---
