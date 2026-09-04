@@ -51,12 +51,38 @@ Shorter, evidence-led, and the last line tells a recruiter what to do with you.
 
 ## Fix 2 — The headline
 
-Currently six keyword blocks separated by pipes. It's long enough that LinkedIn truncates it in
-search results, so the end is invisible where it matters most.
+Current:
 
-> **Economics Undergraduate · Data & Market Research, EN/FR · Excel, SQL, Power BI, Tableau**
+> Economic Research Analyst | Financial, Real Estate & Digital Economics | Bilingual EN/FR | West African Markets | CFA Investment Foundations Certificate Holder | Miva Open University
 
-Tools in the headline is deliberate — that's what a recruiter's search matches on.
+Six keyword blocks. The character limit isn't the problem — **truncation is.** In search
+results, comments and connection requests, LinkedIn cuts the headline at roughly 60 characters
+on mobile. Everything past "Financial, Real Est…" is invisible in exactly the places a recruiter
+first sees you.
+
+**Use this:**
+
+> Economic Research Analyst | Data Analysis & Market Research, EN/FR | Excel · SQL · Power BI · Tableau
+
+101 characters. The first 60 — *"Economic Research Analyst | Data Analysis & Market Research"* —
+carry your identity and the pivot, so both survive the cut.
+
+**If you want to keep the regional specificity**, swap the middle block:
+
+> Economic Research Analyst | Data Analysis, West African Markets, EN/FR | Excel · SQL · Power BI · Tableau
+
+**What's dropped, and why**
+
+| Removed | Reason |
+|---|---|
+| Financial, Real Estate & Digital Economics | Three verticals is a service list, not a headline |
+| CFA Investment Foundations Certificate Holder | "Certificate Holder" is padding, and it's already verified in your Certifications section |
+| Miva Open University | Your Education section covers it; naming your school in the headline reads student-first |
+| West African Markets | Folded into "Market Research" — restore it with the variant above if you'd rather |
+
+**Don't put "open to work" in the headline.** LinkedIn has a dedicated setting for it
+(Open to → Finding a new job), which also lets you signal to recruiters only. It does the same
+job without spending headline characters.
 
 ## Fix 3 — Add the Economic Research Analyst role to Experience
 
