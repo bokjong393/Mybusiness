@@ -1,0 +1,22 @@
+{
+  "name": "ayoka",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ayoka \u2014 an AI studio that helps African freelancers win, price and get paid by clients. Bilingual English/French.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node scripts/test-guardrails.mjs && node scripts/test-markdown.mjs",
+    "test:e2e": "node scripts/test-e2e.mjs",
+    "smoke": "node scripts/smoke-test.mjs",
+    "mock": "node scripts/mock-anthropic.mjs",
+    "license": "node scripts/mint-license.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.123.0"
+  }
+}
