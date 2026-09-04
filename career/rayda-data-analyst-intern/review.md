@@ -4,6 +4,9 @@
 **Opened:** 21 August 2026 · **Reviewed:** 3 September 2026, against the full posting text, your CV and your LinkedIn
 **Verdict:** You are over-qualified on paper for an internship. Apply this week, and stop selling yourself as a beginner.
 
+> **Status: submitted 3 September 2026.** Follow-up window **10–13 September**. Message in
+> `application-kit.md` §5. Between now and then: publish the study, build the dashboard.
+
 ---
 
 ## Corrections to my earlier reads
