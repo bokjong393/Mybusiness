@@ -62,7 +62,35 @@ Tools in the headline is deliberate — that's what a recruiter's search matches
 
 **This is a real gap.** Your headline says "Economic Research Analyst" but there is no
 corresponding entry in your Experience section — only the VA role appears. Anyone who scrolls
-sees a headline the profile doesn't support. Add it, using the bullets from `cv-rayda.md`.
+sees a headline the profile doesn't support.
+
+Fill the form like this:
+
+| Field | Value |
+|---|---|
+| Title | `Economic Research Analyst` |
+| Employment type | `Self-employed` |
+| Company | `Independent` — LinkedIn will offer to create it; that's fine |
+| Start date | July 2026 · tick **I am currently working in this role** |
+| Location | Okpoma, Cross River, Nigeria |
+| Location type | `Remote` |
+
+**Description — paste as-is:**
+
+> • Pull and clean financial datasets from multiple institutional sources — IMF Financial Access
+> Survey via FRED, NIBSS, the Central Bank of Nigeria, EFInA and GSMA — reconciling inconsistent
+> definitions and formats into comparable series.
+> • Validate figures against primary sources before publication and document methodology,
+> benchmarks and limitations so the analysis can be checked and reproduced.
+> • Published a July 2026 study on Nigeria's mobile money market showing that a third-place
+> regional rank by account count masks the lowest per-capita penetration among the markets
+> compared.
+> • Identified and documented the distinction between registered and active accounts, preventing
+> a common misreading of market size.
+>
+> Tools: Excel, SQL/MySQL, Power BI, Tableau.
+
+The tools line at the end is deliberate — LinkedIn reads it for skill matching.
 
 ## Fix 4 — Rewrite the VA entry using your CV version
 
@@ -71,9 +99,11 @@ describes it as **tracking sales and expenses, reconciling cash, and 16 consecut
 monthly reports.** The CV version is far stronger and it's the one that matters for a data role.
 LinkedIn is currently underselling seventeen months of your own work.
 
-Add to the entry:
-- Track distribution sales and expenses; reconcile cash against records; report to the Director monthly.
-- Delivered Nigeria's monthly activity report on time for 16 consecutive cycles.
+**Add these two lines to the top of that entry's description:**
+
+> • Track distribution sales and expenses, reconcile cash against records, and report monthly
+> results to the Director.
+> • Delivered Nigeria's monthly activity report on time for 16 consecutive reporting cycles.
 
 ## Fix 5 — Education
 
