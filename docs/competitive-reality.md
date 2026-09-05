@@ -90,3 +90,94 @@ Uniqueness is not the asset. Access is.
 - [M&E software comparison, Africa](https://sourceforge.net/software/monitoring-and-evaluation-m-e/africa/)
 - [Grantable — AI grant writing tools compared](https://grantable.co/guides/ai-grant-writing-tools)
 - [Aid cuts across West Africa and the Sahel](https://www.cgdev.org/blog/west-africa-crossroads-fostering-stability-after-aid-cuts)
+
+---
+
+# Second check: the WhatsApp cash engine
+
+*Same test applied to Move 1, after the francophone NGO claim collapsed.*
+
+This one damages the thesis more than the first.
+
+## The load-bearing assumption was wrong
+
+The brief argued: Meta shipped a click-to-configure AI agent, which destroyed the value of
+*building* a chatbot and moved all the value to *configuring* one well.
+
+The first half is right. The second half does not follow.
+
+**Meta Business Agent went globally available on 3 June 2026** — not March, as this repo
+originally stated. It answers customer questions, recommends products, books appointments,
+qualifies leads and reroutes to a human. It connects to hundreds of systems including
+Shopify and Zendesk. Meta's own description is that it "can be set up in minutes."
+**Over one million businesses are already using it.**
+
+If it sets up in minutes, configuring it is not a scarce skill either. The thing cited as
+the opportunity is closer to being the threat.
+
+## The Nigerian market is already served at every price point
+
+| Tier | Who | Price |
+|---|---|---|
+| Free / near-free | Meta Business Agent, native in WhatsApp Business | Minutes to set up; monetised later via Premium tiers |
+| DIY API access | WapsChat PRO and similar | from **₦4,950/month** |
+| Custom build | Musskart, Nexoris, RyderTech, Algosoft — registered Nigerian companies with teams | **₦300,000–₦1,500,000**; MVP ~₦900,000; production ₦1.2M–₦3M+ |
+| Running costs | — | ₦40,000–₦120,000/month for a small business |
+
+The proposed ₦75,000–₦250,000 setup fee sits between a free tool and a ₦900,000 agency
+build. That gap is squeezed from both sides.
+
+## What actually survives
+
+Not "I will set up your bot." A business owner can do that themselves in minutes.
+
+What remains genuinely hard is **the knowledge the agent answers from**: the FAQ, the
+product catalogue, the prices, the policies, the tone — in two languages. A trader in
+Cotonou with 200 products and nothing written down has nothing to feed the agent. That
+content work is tedious, human-directed, and nobody's free tool does it.
+
+Honest consequence: that is worth perhaps **₦30,000–₦50,000**, not ₦75,000–₦250,000. Lower
+price, lower ceiling, weaker story than the one this repo originally told.
+
+## The pattern across both checks
+
+Two ideas checked, two sets of real incumbents. That is not bad luck — that is what the
+world looks like. Every remaining idea in this repo would survive scrutiny about as well.
+
+The scoring exercise created a false impression that some cell in the market was empty.
+None of them are. What actually separates a workable business from a dead one is not an
+empty cell:
+
+> **Can I reach a specific customer more cheaply than the incumbents can — and does that
+> customer have money?**
+
+On that test, something real does remain:
+
+- Musskart, Nexoris and RyderTech are chasing clients who can pay ₦900,000. They will
+  never pursue a ₦40,000 job in Cotonou. Not because they can't do it — because the
+  customer acquisition cost makes it irrational for them.
+- Meta's agent is free, but reaching a market trader who doesn't read English tech news
+  is not something Meta's marketing does.
+
+So the business is not "AI setup." It is **being linguistically and physically close to
+customers no incumbent finds it economical to serve.** That is the same conclusion the
+NGO check reached, arrived at from the opposite direction.
+
+## And an honest word about scale
+
+This is a small business, not a startup. A service reaching ₦300,000–₦500,000 a month
+requires no capital, no team and no investors — and for a 21-year-old student who wants
+income from home, that may simply be the right target for year one.
+
+The "build a real product company" framing is not wrong in general. It is wrong as a
+*starting point* for someone with no capital, no team, and fifteen hours a week. The
+product company, if it comes, comes out of the service.
+
+## Sources (second check)
+
+- [TechCrunch — Meta's AI agent for WhatsApp Business available globally](https://techcrunch.com/2026/06/03/metas-ai-agent-for-whatsapp-business-is-now-available-globally/)
+- [Meta — Be There for Every Customer With Meta Business Agent](https://about.fb.com/news/2026/06/meta-business-agent/)
+- [Nexoris — AI chatbot for Nigerian businesses, build vs buy](https://www.nexoristech.com/insights/ai-chatbot-for-nigerian-businesses)
+- [Algosoft — AI chatbot development cost in Nigeria](https://www.algosoft.co/locations/ai-chatbot-development-cost-in-nigeria)
+- [WapsChat — WhatsApp API pricing](https://wapschat.ng/pro-pricing)
+- [Musskart — AI chatbot & WhatsApp automation, Nigeria](https://musskart.com/ai-chatbot-whatsapp-automation-nigeria.html)

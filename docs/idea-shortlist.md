@@ -20,18 +20,22 @@ building something that outlives the hours I put in.
 into WhatsApp Business. Not writing code — writing the business's knowledge: FAQ,
 product catalogue, tone, escalation rules, then teaching the owner to run it.
 
-**Why this window is open right now:** In March 2026 Meta put AI agents directly
-inside the WhatsApp Business app, click-to-configure. That destroyed the value of
-*building* a chatbot and moved all the value to *configuring* one well. Meanwhile
-agencies still quote ₦1.5–3M for full WhatsApp Business API builds. The micro-business
-that will never pay ₦2M is completely unserved.
+**Revised after a competitive check — see `competitive-reality.md`.** Meta Business
+Agent went global on 3 June 2026 and sets up in minutes; over a million businesses
+already use it. So "I'll configure your bot" is not a scarce skill, and the ₦75k–250k
+setup fee below is squeezed between a free tool and ₦900k agency builds from registered
+Nigerian firms.
+
+**What survives:** not the setup — the *knowledge* the agent answers from. The FAQ,
+catalogue, prices, policies and tone, written in two languages, for an owner who has
+nothing written down. Worth ₦30,000–₦50,000, not ₦75,000–₦250,000.
 
 **Why the demand is real:** 95% of Nigeria's digital population uses WhatsApp. Roughly
 78% of Sub-Saharan SMEs already sell on it. Meta counts ~14M Nigerian SMEs on its
 platforms. These are businesses losing sales at 11pm because nobody replies.
 
-**Price:** ₦75,000–₦250,000 setup, then ₦25,000–₦60,000/month to maintain and improve.
-In XOF: 50,000–150,000 setup, 20,000–40,000/month.
+**Price (revised down):** ₦30,000–₦50,000 for the knowledge build, then
+₦20,000–₦40,000/month to maintain it. In XOF: 20,000–35,000, then 15,000–25,000/month.
 
 **First move:** Build one on a fake boutique. Screen-record it answering a customer at
 midnight. That 40-second video is the entire sales pitch.
