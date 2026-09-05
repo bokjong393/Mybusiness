@@ -2,8 +2,19 @@
 
 **Rule for week 1: I am not selling. I am collecting complaints.**
 
-Twenty messages. Five real conversations. Zero sales expected. If someone tries to buy in
+Twenty messages over the week — 3–5 a day, not all at once. Five real conversations. Zero
+sales expected. If someone tries to buy in
 week 1, say yes — but that is not the target, and chasing it will wreck the research.
+
+## Channel, before anything else
+
+**Send these on Instagram DM, not WhatsApp.** Messaging strangers on WhatsApp is the number
+one cause of WhatsApp bans, and my number is not worth risking — see `finding-contacts.md`.
+
+Use WhatsApp only when *they* move the conversation there, or when they have published a
+`wa.me` link themselves. And use a **dedicated business SIM**, never my personal number.
+
+**Pace: 3–5 a day, typed individually.** Not twenty in one evening.
 
 ## Before sending anything
 
@@ -19,7 +30,8 @@ not. The detail is the whole message.
 
 ## 1. First contact
 
-Send between 7pm and 9pm. That is when the problem is happening.
+Send between 7pm and 9pm — that is when the problem is happening. Instagram DM. A few a
+day, never a batch.
 
 ### English
 

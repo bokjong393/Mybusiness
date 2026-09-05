@@ -8,13 +8,16 @@ Everything needed to start Monday. No more analysis.
 | `prospect-tracker.csv` | Open in Sheets. 40 rows before sending anything |
 | `client-questions.md` | Their exact words. The most valuable file here |
 | `demo-script.md` | The 40-second video, filmed once in week 2 |
+| `finding-contacts.md` | Where to find businesses, and how not to get my number banned |
 
 ## The week in four steps
 
 1. **Build the list.** 40 businesses — 20 francophone (Cotonou, Abidjan, Dakar), 20
    anglophone (Lagos, Abuja, Port Harcourt). Only ones showing a visible signal: unanswered
    comments, "DM for price", slow replies.
-2. **Send 20 messages,** between 7pm and 9pm, one at a time, each with a real detail.
+2. **Send on Instagram DM, not WhatsApp** — 3–5 a day between 7pm and 9pm, each typed
+   individually with a real detail. Cold-messaging strangers on WhatsApp is the top cause of
+   bans; let them move the conversation there. Get a dedicated business SIM first.
 3. **Log every reply** in their exact words.
 4. **Target: 5 real conversations. Zero sales.** Anyone who tries to buy, say yes — but
    chasing sales now wrecks the research.
