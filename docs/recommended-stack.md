@@ -54,6 +54,30 @@ someone who has paid once is a fundamentally different person to sell to.
 This is the part almost everyone skips, and it is the reason the average Selar creator
 earns ₦45,000 a year. They built a product and *then* went looking for buyers.
 
+## Move 3b — The high-rate service to test from week 8
+
+**French donor-report writing for francophone NGO consultants.**
+
+Freelance M&E consultants in Benin, Senegal and Côte d'Ivoire write quarterly narrative
+reports to AFD, EU and UN templates. It is slow, repetitive, in French, and they are paid
+per report out of their own fee — so they decide in a week, unlike an NGO whose
+procurement takes months.
+
+**Why a service and not software:** francophone M&E platforms already exist and are
+regionally entrenched — WEBGRAM's SmartEval alone runs in 18 countries including Benin and
+Côte d'Ivoire. I cannot out-build them. But none of them writes your narrative for you,
+and a consultant paying for a finished report does not care about a feature matrix.
+Full detail in `competitive-reality.md`.
+
+**Headwind to respect:** France cut aid by 37% (€2.1bn) and Sahel appeals ran badly
+underfunded. The sector is contracting — which is exactly why the work shifts from
+salaried M&E staff to freelancers. That is the wedge.
+
+**Test it cheaply:** three consultants, one report each, priced per report. If they come
+back, it is real. If they don't, I have lost two weeks, not two quarters.
+
+---
+
 ## Move 4 — Leverage (opportunistic, month 4+)
 
 **Localization rev-share**, once I have one francophone launch to point at. Pitch 10
