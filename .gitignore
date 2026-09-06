@@ -1,0 +1,21 @@
+# Environment / secrets — never commit these
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.json
+
+# Dependencies & build output
+node_modules/
+.vercel/
+.next/
+dist/
+build/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
