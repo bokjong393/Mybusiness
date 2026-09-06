@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Village People — Meeting Minutes</title>
+<meta name="description" content="Something went wrong this week? Get the official minutes of the meeting where your village people planned it.">
+<meta name="theme-color" content="#1A1A18">
+<meta property="og:title" content="Village People — Meeting Minutes">
+<meta property="og:description" content="They met. They deliberated. They passed resolutions about your life. Here are the minutes.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📜</text></svg>">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<a class="skip" href="#compose">Skip to the form</a>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <span class="wordmark">Village People</span>
+    <span class="topbar__tag">Committee Secretariat</span>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="hero__eyebrow">It was not your fault</p>
+      <h1 class="hero__title">They held a meeting<br>about your life.</h1>
+      <p class="hero__body">
+        The alarm that didn&rsquo;t ring. The transfer still pending. The message left on read.
+        None of that was coincidence &mdash; there were <strong>minutes taken</strong>.
+      </p>
+      <p class="hero__body hero__body--tight">Tell us what went wrong. We&rsquo;ll obtain the paperwork.</p>
+    </div>
+  </section>
+
+  <section class="compose" id="compose">
+    <div class="wrap">
+      <div class="form">
+        <label class="field field--name">
+          <span class="field__label">Whose progress was discussed?</span>
+          <input type="text" id="subject-name" maxlength="24" placeholder="Your name" autocomplete="given-name">
+        </label>
+
+        <label class="field">
+          <span class="field__label">What went wrong this week?</span>
+          <textarea id="complaint" rows="4" maxlength="1200"
+            placeholder="My alarm didn't ring, my transfer is still pending, and NEPA took the light while I was submitting my assignment…"></textarea>
+        </label>
+
+        <div class="quick">
+          <span class="quick__label">Or tap what happened:</span>
+          <div class="chips" id="quick-chips"></div>
+        </div>
+
+        <div class="form__actions">
+          <button class="btn btn--primary" data-action="generate">Obtain the minutes</button>
+          <span class="status" id="status" role="status" aria-live="polite"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="output" id="output">
+    <div class="wrap">
+      <p class="output__badge" id="output-badge">Example minutes &mdash; put your own week in above</p>
+
+      <div class="doc-frame">
+        <canvas id="minutes-canvas" role="img" aria-label="Official minutes of the meeting about you"></canvas>
+        <!-- Embedded builds swap in a real <img>: a sandboxed frame blocks
+             downloads but still allows long-press "save image". -->
+        <img id="minutes-img" alt="Official minutes of the meeting about you" hidden>
+      </div>
+
+      <p class="savehint" id="save-hint" hidden>Tap and hold the document (or right-click) to save it.</p>
+
+      <div class="output__actions">
+        <button class="btn btn--primary" data-action="download">Download minutes</button>
+        <button class="btn btn--ghost is-hidden" data-action="share">Share</button>
+        <button class="btn btn--ghost" data-action="again">Hold another meeting</button>
+      </div>
+      <p class="status" id="share-status" role="status" aria-live="polite"></p>
+      <p class="output__source" id="source-line"></p>
+
+      <details class="drawer">
+        <summary>Read it as text <span class="drawer__hint">(screen-reader friendly)</span></summary>
+        <div class="drawer__body"><div id="transcript" class="transcript"></div></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="settings">
+    <div class="wrap">
+      <details class="drawer">
+        <summary>Use your own AI key <span class="drawer__hint">(optional)</span></summary>
+        <div class="drawer__body">
+          <p class="drawer__intro">
+            This works fine without AI &mdash; a built-in classifier sorts your complaints into
+            departments. A key only makes it read messier sentences more cleverly.
+          </p>
+          <div class="keyform">
+            <label class="field">
+              <span class="field__label">Provider</span>
+              <select id="ai-provider">
+                <option value="">None &mdash; use the built-in classifier</option>
+                <option value="anthropic">Claude (Anthropic)</option>
+                <option value="gemini">Gemini (Google)</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field__label">API key</span>
+              <input type="password" id="ai-key" placeholder="Paste your own key" autocomplete="off" spellcheck="false">
+            </label>
+            <button class="btn btn--small" data-action="save-key">Save key</button>
+            <span class="status" id="key-status" role="status" aria-live="polite"></span>
+          </div>
+          <p class="drawer__caveat">
+            Stored only in <strong>this browser</strong>, sent only to the provider you choose.
+            It never reaches this site, because this site has no server.
+          </p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="footer__satire"><strong>This is satire.</strong> The minutes are fictional, the committee does not exist, and your auntie is probably innocent.</p>
+    <p class="footer__small">
+      &ldquo;Village people&rdquo; is a running Nigerian joke &mdash; the imaginary culprits behind
+      inexplicable bad luck. This toy takes the joke literally and files the paperwork.
+      Built for the MIVA May Cohort 25 AI Build Challenge.
+    </p>
+    <p class="footer__small"><a href="../">← PAY ME</a> &nbsp;·&nbsp; <a href="https://github.com/bokjong393/Mybusiness">Source on GitHub</a></p>
+  </div>
+</footer>
+
+<script>
+  /* Optional server-side AI proxy; null on the static build so the page never
+     fires a request that cannot succeed. */
+  window.VP_CONFIG = { proxyUrl: null };
+</script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/engine.js"></script>
+<script src="assets/js/minutes.js"></script>
+<script src="assets/js/ai.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

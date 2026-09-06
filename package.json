@@ -2,13 +2,14 @@
   "name": "pay-me",
   "version": "1.0.0",
   "private": true,
-  "description": "The household payroll nobody runs \u2014 turns unpaid housework into a payslip using the replacement-cost method.",
+  "description": "Two AI toys for the MIVA May Cohort 25 AI Build Challenge: PAY ME and Village People.",
   "type": "module",
   "scripts": {
-    "test": "node --test tests/*.test.mjs",
+    "test": "node --test tests/*.test.mjs village-people/tests/*.test.mjs",
     "start": "npx --yes http-server -p 8080 -c-1 .",
-    "build:standalone": "node tools/build-standalone.mjs dist/pay-me-standalone.html",
-    "build:fragment": "node tools/build-standalone.mjs dist/pay-me-artifact.html --fragment"
+    "build:payme": "node tools/build-standalone.mjs dist/pay-me-standalone.html",
+    "build:village": "node tools/build-standalone.mjs dist/village-people-standalone.html --src village-people",
+    "build": "npm run build:payme && npm run build:village"
   },
   "keywords": [
     "unpaid-work",
