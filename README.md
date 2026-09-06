@@ -112,6 +112,24 @@ npm test           # runs the engine unit tests
 
 Or just open `index.html` in a browser.
 
+## Single-file build
+
+The whole app can be collapsed into one self-contained HTML file with no
+external requests at all — useful for an offline copy, a sandboxed host, or
+handing someone a file that just opens.
+
+```bash
+npm run build:standalone   # -> dist/pay-me-standalone.html
+```
+
+It is generated from the same sources by [`tools/build-standalone.mjs`](tools/build-standalone.mjs),
+so it cannot drift from the real app, and the build verifies every inlined file
+survived byte-for-byte before writing.
+
+Standalone builds run in **embedded mode**: a sandboxed frame can't start a
+download, so the payslip is presented as an ordinary image you can long-press to
+save, and the app upgrades to a real download button if the host offers one.
+
 ## Using your own AI key
 
 Entirely optional — the app is fully functional without one.

@@ -242,7 +242,13 @@ textarea { resize: vertical; font-size: 16px; }
   border-radius: var(--radius);
   margin-bottom: 14px;
 }
-#payslip-canvas { display: block; width: 100%; height: auto; }
+#payslip-canvas, #payslip-img { display: block; width: 100%; height: auto; }
+#payslip-canvas[hidden], #payslip-img[hidden] { display: none; }
+
+.result__savehint {
+  font-size: 14px; color: var(--muted); margin: 0 0 18px;
+  border-left: 3px solid var(--stamp); padding-left: 13px;
+}
 
 .result__source { font-size: 13px; color: var(--muted); margin: 0 0 20px; }
 .result__actions { display: flex; gap: 10px; flex-wrap: wrap; }

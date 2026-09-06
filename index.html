@@ -91,7 +91,14 @@
         <p class="step__num">Your payslip</p>
         <div class="payslip-frame">
           <canvas id="payslip-canvas" role="img" aria-label="Your household payslip"></canvas>
+          <!-- Embedded builds swap the canvas for a real <img>, because a
+               sandboxed frame blocks downloads but still allows long-press
+               "save image" on an ordinary image element. -->
+          <img id="payslip-img" alt="Your household payslip" hidden>
         </div>
+        <p class="result__savehint" id="save-hint" hidden>
+          Tap and hold the payslip (or right-click on a computer) to save it.
+        </p>
         <p class="result__source" id="result-source"></p>
 
         <div class="result__actions">

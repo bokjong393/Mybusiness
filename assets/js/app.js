@@ -30,6 +30,12 @@
 
   var DEFAULT_HOURS = 3;
 
+  /* Embedded builds (a sandboxed artifact frame) cannot start a download and
+   * cannot open a share sheet. There, the payslip is presented as an ordinary
+   * <img> so long-press "save image" still works, and the buttons that would
+   * silently do nothing are removed rather than left to disappoint. */
+  var EMBEDDED = !!(window.PAY_ME_CONFIG && window.PAY_ME_CONFIG.embedded);
+
   /* ------------------------------------------------------------- helpers */
 
   function show(el) { el.classList.remove('is-hidden'); }
@@ -310,7 +316,16 @@
       result: result
     };
 
-    Payslip.render($('#payslip-canvas'), model);
+    var canvas = $('#payslip-canvas');
+    Payslip.render(canvas, model);
+
+    if (EMBEDDED) {
+      var img = $('#payslip-img');
+      img.src = canvas.toDataURL('image/png');
+      img.hidden = false;
+      canvas.hidden = true;
+    }
+
     renderSummary(result, model);
 
     var sourceLabel = {
@@ -416,7 +431,52 @@
     return 'pay-me-payslip-' + (state.ref || 'draft') + '.png';
   }
 
+  /* Hosted in a sandboxed frame, the page cannot start a download itself;
+   * the host mediates it. Ask for that ability at runtime and only then offer
+   * the button — otherwise the long-press hint stands. */
+  var hostDownloads = null;
+
+  async function connectHostDownloads() {
+    if (!EMBEDDED || !window.claude || typeof window.claude.use !== 'function') return;
+    try {
+      hostDownloads = await window.claude.use('downloads');
+    } catch (err) {
+      hostDownloads = null;
+    }
+    if (!hostDownloads) return;
+
+    // Capability confirmed — restore the real affordance.
+    var button = document.createElement('button');
+    button.className = 'btn btn--primary';
+    button.dataset.action = 'download';
+    button.textContent = 'Download payslip';
+    var actions = $('.result__actions');
+    if (actions) actions.insertBefore(button, actions.firstChild);
+    $('#save-hint').hidden = true;
+  }
+
+  async function saveViaHost() {
+    var status = $('#share-status');
+    try {
+      var blob = await Payslip.toBlob($('#payslip-canvas'));
+      await hostDownloads.save({ filename: exportFilename(), data: blob });
+      setStatus(status, 'Saved as ' + exportFilename());
+    } catch (err) {
+      var code = err && err.code;
+      if (code === 'declined') {
+        setStatus(status, '');
+      } else if (code === 'rate_limited') {
+        setStatus(status, 'One save at a time — try again in a moment.', 'error');
+      } else {
+        $('#save-hint').hidden = false;
+        setStatus(status, 'Could not save automatically. Tap and hold the payslip instead.', 'error');
+      }
+    }
+  }
+
   async function downloadPayslip() {
+    if (hostDownloads) return saveViaHost();
+
     var status = $('#share-status');
     try {
       var blob = await Payslip.toBlob($('#payslip-canvas'));
@@ -525,7 +585,15 @@
     var saved = AI.loadCredentials();
     if (saved.provider) $('#ai-provider').value = saved.provider;
 
-    if (navigator.share) show($('[data-action="share"]'));
+    if (EMBEDDED) {
+      // Start in the state that always works, then upgrade if the host allows.
+      $('[data-action="download"]').remove();
+      $('[data-action="share"]').remove();
+      $('#save-hint').hidden = false;
+      connectHostDownloads();
+    } else if (navigator.share) {
+      show($('[data-action="share"]'));
+    }
 
     var actions = {
       start: function () { $('#builder').scrollIntoView({ behavior: 'smooth', block: 'start' }); $('#employee-name').focus(); },
