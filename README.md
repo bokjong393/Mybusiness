@@ -14,9 +14,11 @@ The work happens. The measurement doesn't count it. PAY ME counts it.
 
 **[▶ Live demo](https://bokjong393.github.io/Mybusiness/)**
 
-> Also in this repo: **[Village People — Meeting Minutes](village-people/)**, a second
-> entry for the same challenge. Describe your bad week, receive the official minutes
-> of the meeting where your village people planned it.
+> **Also in this repo, for the same challenge:**
+> - **[SAPA](sapa/)** — Nigeria's Personal Financial Survival Simulator. A financial
+>   runway calculator, a 30-day survival game, and a stress-test lab.
+> - **[Village People — Meeting Minutes](village-people/)** — describe your bad week,
+>   receive the official minutes of the meeting where your village people planned it.
 
 ![An example payslip: 22.5 hours of housework, ₦22,950 outstanding, stamped UNPAID](docs/payslip-example.png)
 

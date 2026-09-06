@@ -26,8 +26,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Run engine tests
+
+      - name: Test the static projects (PAY ME, Village People)
         run: npm test
+
+      - name: Install SAPA dependencies
+        run: npm ci
+        working-directory: sapa
+
+      - name: Test the SAPA engines
+        run: npm test
+        working-directory: sapa
 
   deploy:
     needs: test
@@ -37,17 +46,38 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
 
-      # enablement: true creates the Pages site on first run, so no manual
-      # click in repository settings is needed before the first deploy.
+      # SAPA is a Vite app and needs building; the other two are plain static
+      # files. BASE_PATH makes its asset URLs correct under the Pages subpath.
+      - name: Build SAPA
+        run: npm ci && npm run build
+        working-directory: sapa
+        env:
+          BASE_PATH: /Mybusiness/sapa/
+
+      # Assemble one publishable tree rather than publishing the repo root,
+      # which would ship node_modules and source files.
+      - name: Assemble the site
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp -r assets _site/
+          cp -r docs _site/
+          cp -r village-people _site/
+          rm -rf _site/village-people/tests
+          mkdir -p _site/sapa
+          cp -r sapa/dist/* _site/sapa/
+
       - uses: actions/configure-pages@v5
         with:
           enablement: true
 
-      # The site is plain static files at the repo root — nothing to build.
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: _site
 
       - id: deployment
         uses: actions/deploy-pages@v4
