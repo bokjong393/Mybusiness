@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PAY ME — The Household Payroll Nobody Runs</title>
+<meta name="description" content="You've been working for free. PAY ME turns your unpaid housework into a payslip, using the replacement-cost method economists use to value household labour.">
+<meta name="theme-color" content="#17150F">
+<meta property="og:title" content="PAY ME — The Household Payroll Nobody Runs">
+<meta property="og:description" content="Cooking. Cleaning. Tutoring your siblings. Standard GDP accounting counts none of it. Find out what your household owes you.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧾</text></svg>">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<a class="skip" href="#builder">Skip to the calculator</a>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <span class="wordmark">PAY&nbsp;ME</span>
+    <span class="topbar__tag">The household payroll nobody runs</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- ─────────────────────────────────────────────── hero -->
+  <section class="hero">
+    <div class="wrap">
+      <h1 class="hero__title">You&rsquo;ve been<br>working for free.</h1>
+      <p class="hero__lede">Let&rsquo;s calculate the bill.</p>
+      <p class="hero__body">
+        Cooking. Cleaning. Tutoring your siblings. Running errands. Standing in a
+        queue that was never yours. Caring for people who need you.
+        <strong>Standard GDP accounting counts none of it.</strong>
+      </p>
+      <div class="hero__actions">
+        <button class="btn btn--primary" data-action="start">Start my payslip</button>
+        <button class="btn btn--ghost" data-action="sample">Show me an example</button>
+      </div>
+      <p class="hero__method">
+        Built on the <strong>replacement-cost method</strong> economists use to value unpaid
+        household work &mdash; not a vibe, and not invented by a chatbot.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────── builder -->
+  <section class="builder" id="builder">
+    <div class="wrap">
+
+      <!-- Step 1 -->
+      <div class="step" id="step-tasks">
+        <p class="step__num">Step 1</p>
+        <h2 class="step__title">What did your household get from you this week?</h2>
+
+        <label class="field">
+          <span class="field__label">Your name <span class="field__hint">(goes on the payslip)</span></span>
+          <input type="text" id="employee-name" maxlength="28" placeholder="e.g. Peace" autocomplete="given-name">
+        </label>
+
+        <div class="chips" id="task-chips" role="group" aria-label="Household tasks"></div>
+
+        <details class="describe">
+          <summary>Or just describe your week and let AI sort it out</summary>
+          <div class="describe__body">
+            <label class="sr-only" for="freeform">Describe your week</label>
+            <textarea id="freeform" rows="3" maxlength="1200"
+              placeholder="I cooked every night, braided my sister's hair for 3 hours, helped my brother with his WAEC maths and queued at the bank for my mum…"></textarea>
+            <div class="describe__actions">
+              <button class="btn btn--small" data-action="interpret">Turn this into a timesheet</button>
+              <span class="describe__status" id="interpret-status" role="status" aria-live="polite"></span>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step is-hidden" id="step-hours">
+        <p class="step__num">Step 2</p>
+        <h2 class="step__title">How many hours, roughly?</h2>
+        <p class="step__sub">Per week. Estimates are fine &mdash; nobody keeps a stopwatch on this work.</p>
+        <div class="hours" id="hours-list"></div>
+        <p class="hours__total" id="hours-total"></p>
+        <button class="btn btn--primary btn--wide" data-action="run">Run my payroll</button>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step is-hidden" id="step-result">
+        <p class="step__num">Your payslip</p>
+        <div class="payslip-frame">
+          <canvas id="payslip-canvas" role="img" aria-label="Your household payslip"></canvas>
+        </div>
+        <p class="result__source" id="result-source"></p>
+
+        <div class="result__actions">
+          <button class="btn btn--primary" data-action="download">Download payslip</button>
+          <button class="btn btn--ghost is-hidden" data-action="share">Share</button>
+          <button class="btn btn--ghost" data-action="edit">Change my hours</button>
+          <button class="btn btn--ghost" data-action="reset">Start again</button>
+        </div>
+        <p class="result__note" id="share-status" role="status" aria-live="polite"></p>
+
+        <div class="summary" id="summary"></div>
+
+        <details class="drawer" id="method-drawer">
+          <summary>Rates &amp; method <span class="drawer__hint">(you can disagree with my numbers)</span></summary>
+          <div class="drawer__body">
+            <p class="drawer__intro">
+              There is no single objective price for unpaid work. PAY ME uses <strong>replacement cost</strong>:
+              roughly what it would cost to buy comparable services on the market. Replacement cost is used
+              instead of opportunity cost so that two people doing identical housework get identical
+              valuations, regardless of what they earn elsewhere.
+            </p>
+            <div class="tiers" id="tier-picker" role="group" aria-label="Rate assumption"></div>
+            <table class="rates">
+              <caption class="sr-only">Editable hourly replacement rates</caption>
+              <thead>
+                <tr><th scope="col">Task</th><th scope="col">Market comparator</th><th scope="col">₦ / hour</th></tr>
+              </thead>
+              <tbody id="rates-body"></tbody>
+            </table>
+            <p class="drawer__caveat">
+              These rates are <strong>illustrative</strong>, not survey data. Change any of them and the
+              payslip recalculates. Emotional support is counted in hours but never priced &mdash;
+              there is no honest market substitute for it.
+            </p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────── context -->
+  <section class="facts" id="facts" aria-labelledby="facts-title">
+    <div class="wrap">
+      <h2 class="facts__title" id="facts-title">This isn&rsquo;t just your household.</h2>
+      <div class="facts__grid" id="facts-grid"></div>
+      <p class="facts__kicker">Invisible doesn&rsquo;t mean worthless.</p>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────── AI settings -->
+  <section class="settings">
+    <div class="wrap">
+      <details class="drawer">
+        <summary>Use your own AI key <span class="drawer__hint">(optional)</span></summary>
+        <div class="drawer__body">
+          <p class="drawer__intro">
+            PAY ME works completely without AI &mdash; the tap-chips and the built-in classifier
+            handle everything. Adding a key only improves the free-text reading and writes you a
+            sharper job title.
+          </p>
+          <div class="keyform">
+            <label class="field">
+              <span class="field__label">Provider</span>
+              <select id="ai-provider">
+                <option value="">None &mdash; use the built-in classifier</option>
+                <option value="anthropic">Claude (Anthropic)</option>
+                <option value="gemini">Gemini (Google)</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field__label">API key</span>
+              <input type="password" id="ai-key" placeholder="Paste your own key" autocomplete="off" spellcheck="false">
+            </label>
+            <button class="btn btn--small" data-action="save-key">Save key</button>
+            <span class="describe__status" id="key-status" role="status" aria-live="polite"></span>
+          </div>
+          <p class="drawer__caveat">
+            Your key is stored only in <strong>this browser</strong> and sent only to the provider you pick.
+            It never reaches this site&rsquo;s servers, because this site has none. No key is committed to the
+            repository. If you deploy the optional <code>api/interpret</code> function, visitors need no key at all.
+          </p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="footer__line"><strong>PAY ME</strong> &mdash; an interactive experiment about the invisible economy of unpaid household work.</p>
+    <p class="footer__small">
+      Figures are illustrative replacement-cost estimates. They are not a wage, not a debt, not a legal
+      claim and not a measure of GDP. Built for the MIVA May Cohort 25 AI Build Challenge.
+    </p>
+    <p class="footer__small"><a href="https://github.com/bokjong393/Mybusiness">Source code on GitHub</a></p>
+  </div>
+</footer>
+
+<script>
+  /* Optional server-side AI proxy.
+     The GitHub Pages build is purely static, so this stays null and the page
+     never fires a request that cannot succeed. If you deploy the serverless
+     function in api/interpret.js (Vercel, Netlify, Cloudflare), set this to
+     'api/interpret' and visitors get AI reading with no key of their own. */
+  window.PAY_ME_CONFIG = { proxyUrl: null };
+</script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/engine.js"></script>
+<script src="assets/js/payslip.js"></script>
+<script src="assets/js/ai.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
