@@ -193,6 +193,39 @@ Verify these three *after* she has studied, and only then treat a miss as real:
 - [ ] Why logic is the philosopher's compass — it guides reasoning and
       argumentation. **She got this one right cold.**
 
+**Practice assessment after studying: 3/3.** The pre-test loop closed cleanly —
+1/3 cold before any content, 3/3 after. No content weak spots from this week.
+
+**The extraction rule for this course is now confirmed.** Two of the three
+questions were name-to-concept pairs (Dewey → experiential learning, Popper →
+falsifiability) and the third was an item from the deck's numbered list of four
+roles. So in every remaining GST 212 week: pull the named thinkers and their one
+concept each, plus any clean numbered list, and that is the quiz. This is what an
+efficient A in this course looks like — it does not require reading anything
+twice.
+
+Week 1 content that produced those marks:
+
+| Discipline | Thinker | Concept |
+|---|---|---|
+| Law | John Rawls | *A Theory of Justice*, the "Original Position" |
+| Education | John Dewey | experiential, student-centred learning |
+| Education | William C. Bagley | Essentialism — core curriculum, high standards |
+| Psychology | — | mind–body problem, dualism, materialism |
+| Science | Karl Popper | falsifiability |
+
+Four roles of philosophy in interdisciplinary discourse: critical thinking and
+analysis; questioning fundamentals; ethical frameworks; methodological insights.
+
+Logic summary: logic is the systematic study of valid argumentation, from Greek
+*logos*. **Formal** logic → structure and validity; **informal** → content and
+soundness. Note this pairing is a compression: soundness is validity *plus* true
+premises, so it contains validity rather than opposing it. Answer the course's
+version, but the real relationship is what makes it memorable.
+
+**The course tests Greek etymologies** — *philosophy* (philo + sophia) cost her a
+pop-quiz mark, *logos* followed immediately. Learn every Greek root on sight.
+
 ---
 
 ## Scores as they land
