@@ -1,0 +1,10 @@
+{
+  "name": "semester-command-center",
+  "version": "0.1.0",
+  "description": "Grade targeting, deadline tracking and time budgeting for a 5.0 CGPA semester.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test src/engine/__tests__/"
+  }
+}

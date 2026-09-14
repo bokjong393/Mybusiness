@@ -1,0 +1,54 @@
+{
+  "_comment": "Shape of the real data file. Replace with your own once intake.md is filled in.",
+  "program": {
+    "university": "Miva Open University",
+    "programme": "BSc Economics",
+    "level": 200,
+    "semester": "second",
+    "session": "2026/2027",
+    "startDate": "2026-09-14",
+    "endDate": "2027-01-29",
+    "examPeriod": { "start": "2027-01-11", "end": "2027-01-29" },
+    "previousCgpa": 4.6,
+    "previousUnits": 42
+  },
+  "courses": [
+    {
+      "code": "ECO 201",
+      "title": "Intermediate Microeconomics",
+      "units": 3,
+      "difficulty": 4,
+      "assessments": [
+        { "name": "Quiz 1", "weight": 10, "maxScore": 10, "closesAt": "2026-10-05T23:59+01:00" },
+        { "name": "Quiz 2", "weight": 10, "maxScore": 10, "closesAt": "2026-11-02T23:59+01:00" },
+        { "name": "Assignment", "weight": 20, "maxScore": 20, "closesAt": "2026-11-23T23:59+01:00" },
+        { "name": "Final exam", "weight": 60, "maxScore": 100, "closesAt": "2027-01-18T23:59+01:00" }
+      ]
+    }
+  ],
+  "life": {
+    "sleepHoursPerNight": 8,
+    "peakFocusWindow": "05:00-09:00",
+    "fixedCommitments": [
+      { "name": "Meals and personal care", "hoursPerWeek": 17 },
+      { "name": "Family and chores", "hoursPerWeek": 10 },
+      { "name": "Worship", "hoursPerWeek": 4 }
+    ]
+  },
+  "extracurriculars": [
+    {
+      "name": "Korean study",
+      "tier": "protected",
+      "floorHoursPerWeek": 3,
+      "targetHoursPerWeek": 6,
+      "fixedTiming": null
+    },
+    {
+      "name": "Business building",
+      "tier": "flexible",
+      "floorHoursPerWeek": 2,
+      "targetHoursPerWeek": 10,
+      "fixedTiming": null
+    }
+  ]
+}
