@@ -1,13 +1,12 @@
 {
-  "_status": "PARTIAL — see _missing. Built from SIS screenshots and 5 of 8 course guides, 2026-09-14.",
+  "_status": "PARTIAL \u2014 see _missing. From SIS screenshots, LMS cards and 6 of 8 course guides, 2026-09-14.",
   "_missing": [
-    "Course guides for MIVA-ECO 208, SSC 202 and GST 212 (marking scheme assumed to match the other five)",
-    "CA1 and CA2 due dates from the LMS for every course",
-    "Difficulty ratings (1-5) — currently defaulted to 3",
+    "CA1 and CA2 due dates from the LMS for every course \u2014 highest-value gap",
+    "LMS activity counts for the 6 courses not yet screenshotted",
+    "Difficulty ratings (1-5) \u2014 currently defaulted to 3",
     "life: sleep, fixed commitments, peak focus window",
-    "extracurriculars: tiers, floors and targets"
+    "extracurriculars: hours, tiers, floors and targets"
   ],
-
   "program": {
     "university": "Miva Open University",
     "programme": "BSc Economics",
@@ -15,47 +14,147 @@
     "semester": "second",
     "startDate": "2026-09-07",
     "lecturesStarted": "2026-09-07",
-    "examWindow": { "start": "2026-11-28", "end": "2026-12-05" },
+    "examWindow": {
+      "start": "2026-11-28",
+      "end": "2026-12-05"
+    },
     "teachingWeeks": 12,
     "_source": "miva.vercel.app calendar"
   },
-
   "transcript": {
-    "_source": "sis.miva.university/result — verified: reproduces portal CGPA 4.53 and 54 completed units",
+    "_source": "sis.miva.university/result \u2014 verified: reproduces portal CGPA 4.53 and 54 completed units",
     "attemptedUnits": 57,
     "completedUnits": 54,
     "totalGradePoints": 258,
     "cgpa": 4.53,
     "semesters": [
-      { "label": "100L First Semester", "units": 21, "gradePoints": 78, "gpa": 3.71 },
-      { "label": "100L Retake (MIVA-ECO 105)", "units": 3, "gradePoints": 15, "gpa": 5.0 },
-      { "label": "100L Second Semester", "units": 17, "gradePoints": 85, "gpa": 5.0 },
-      { "label": "200L First Semester", "units": 16, "gradePoints": 80, "gpa": 5.0 }
+      {
+        "label": "100L First Semester",
+        "units": 21,
+        "gradePoints": 78,
+        "gpa": 3.71
+      },
+      {
+        "label": "100L Retake (MIVA-ECO 105)",
+        "units": 3,
+        "gradePoints": 15,
+        "gpa": 5.0
+      },
+      {
+        "label": "100L Second Semester",
+        "units": 17,
+        "gradePoints": 85,
+        "gpa": 5.0
+      },
+      {
+        "label": "200L First Semester",
+        "units": 16,
+        "gradePoints": 80,
+        "gpa": 5.0
+      }
     ],
     "_note": "MIVA-ECO 105 was failed at 29 then retaken at 93. Both attempts sit in the CGPA denominator; only the pass counts toward completed units. That single first attempt is the entire gap between a 4.53 and a near-perfect record."
   },
-
   "markingScheme": {
-    "_source": "Identical across all five course guides supplied",
+    "_source": "Identical across all six course guides supplied (ECO 202/204/206, MIVA-ECO 208/212/216). Assumed for GST 212 and SSC 202, which have no guide.",
     "assessments": [
-      { "name": "CA1", "weight": 20, "maxScore": 100, "kind": "Problem sets / case or policy analysis" },
-      { "name": "CA2", "weight": 20, "maxScore": 100, "kind": "Multiple-choice / online tests" },
-      { "name": "Final Examination", "weight": 60, "maxScore": 100, "kind": "Exam" }
+      {
+        "name": "CA1",
+        "weight": 20,
+        "maxScore": 100,
+        "kind": "Problem sets / case or policy analysis"
+      },
+      {
+        "name": "CA2",
+        "weight": 20,
+        "maxScore": 100,
+        "kind": "Multiple-choice / online tests"
+      },
+      {
+        "name": "Final Examination",
+        "weight": 60,
+        "maxScore": 100,
+        "kind": "Exam"
+      }
     ]
   },
-
   "courses": [
-    { "code": "ECO 202",      "title": "Introduction to Microeconomics II",          "units": 2, "type": "CORE",     "difficulty": 3, "guideReceived": true },
-    { "code": "ECO 204",      "title": "Introduction to Macroeconomics II",          "units": 2, "type": "CORE",     "difficulty": 3, "guideReceived": true },
-    { "code": "ECO 206",      "title": "Statistics for Economists",                  "units": 2, "type": "CORE",     "difficulty": 3, "guideReceived": true },
-    { "code": "MIVA-ECO 212", "title": "Introduction to Decision Science",           "units": 2, "type": "CORE",     "difficulty": 3, "guideReceived": true },
-    { "code": "MIVA-ECO 216", "title": "Labour Economics",                           "units": 2, "type": "ELECTIVE", "difficulty": 3, "guideReceived": true },
-    { "code": "MIVA-ECO 208", "title": "Behavioural Economics",                      "units": 2, "type": "CORE",     "difficulty": 3, "guideReceived": false },
-    { "code": "SSC 202",      "title": "Introduction to Computer and Its Applications", "units": 3, "type": "CORE",  "difficulty": 3, "guideReceived": false },
-    { "code": "GST 212",      "title": "Philosophy, Logic and Human Existence",      "units": 2, "type": "CORE",     "difficulty": 3, "guideReceived": false }
+    {
+      "code": "ECO 202",
+      "title": "Introduction to Microeconomics II",
+      "units": 2,
+      "type": "CORE",
+      "difficulty": 3,
+      "guideReceived": true,
+      "markingSchemeConfirmed": true
+    },
+    {
+      "code": "ECO 204",
+      "title": "Introduction to Macroeconomics II",
+      "units": 2,
+      "type": "CORE",
+      "difficulty": 3,
+      "guideReceived": true,
+      "markingSchemeConfirmed": true
+    },
+    {
+      "code": "ECO 206",
+      "title": "Statistics for Economists",
+      "units": 2,
+      "type": "CORE",
+      "difficulty": 3,
+      "guideReceived": true,
+      "markingSchemeConfirmed": true
+    },
+    {
+      "code": "MIVA-ECO 212",
+      "title": "Introduction to Decision Science",
+      "units": 2,
+      "type": "CORE",
+      "difficulty": 3,
+      "guideReceived": true,
+      "markingSchemeConfirmed": true
+    },
+    {
+      "code": "MIVA-ECO 216",
+      "title": "Labour Economics",
+      "units": 2,
+      "type": "ELECTIVE",
+      "difficulty": 3,
+      "guideReceived": true,
+      "markingSchemeConfirmed": true
+    },
+    {
+      "code": "MIVA-ECO 208",
+      "title": "Behavioural Economics",
+      "units": 2,
+      "type": "CORE",
+      "difficulty": 3,
+      "guideReceived": true,
+      "markingSchemeConfirmed": true
+    },
+    {
+      "code": "SSC 202",
+      "title": "Introduction to Computer and Its Applications",
+      "units": 3,
+      "type": "CORE",
+      "difficulty": 3,
+      "guideReceived": false,
+      "lmsActivities": 76,
+      "markingSchemeConfirmed": false
+    },
+    {
+      "code": "GST 212",
+      "title": "Philosophy, Logic and Human Existence",
+      "units": 2,
+      "type": "CORE",
+      "difficulty": 3,
+      "guideReceived": false,
+      "lmsActivities": 111,
+      "markingSchemeConfirmed": false
+    }
   ],
   "totalUnits": 17,
-
   "life": null,
   "extracurriculars": null
 }
