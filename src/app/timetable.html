@@ -124,7 +124,7 @@ h2{font-family:var(--display);font-size:21px;font-weight:600;letter-spacing:-.01
 .legend i{width:12px;height:12px;border-radius:3px;flex:none;border:1px solid var(--rule)}
 
 /* ---- rest tally ---- */
-.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:12px}
 .tile{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
   padding:15px 16px;box-shadow:var(--shadow)}
 .tile .k{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);
@@ -176,8 +176,8 @@ footer{margin-top:52px;padding-top:19px;border-top:1px solid var(--rule);
   <p class="eyebrow">Miva Open University &middot; 200L Second Semester &middot; 12 teaching weeks</p>
   <h1>The 5.00 Week</h1>
   <p class="sub">Miva is asynchronous &mdash; no lecture ever forces you to be anywhere. That freedom is the whole
-     risk, so this timetable is the structure nothing else provides. <b>Rest is scheduled, not left over</b>,
-     because rest that has to be earned never actually gets taken.</p>
+     risk, so this timetable is the structure nothing else provides. Built around three fixed points:
+     <b>devotion at 06:00</b>, <b>no coursework before 09:00</b>, and <b>worship at 16:00 on Sunday</b>.</p>
 
   <div class="nowcard" id="nowcard"></div>
 
@@ -208,31 +208,31 @@ footer{margin-top:52px;padding-top:19px;border-top:1px solid var(--rule);
   <section>
     <div class="shead"><h2>Why it is built this way</h2><p>Each rule earns its place</p></div>
     <div class="rules">
-      <div class="rule"><h3>Hardest work at 06:45</h3>
-        <p>Analytical work &mdash; Decision Science, Statistics, the two intermediate theory courses &mdash; goes
-           in the first block, when focus is cheapest. Nothing competes with it yet and the power is usually on.</p></div>
+      <div class="rule"><h3>Devotion opens every day</h3>
+        <p>06:00 to 07:00, all seven days. It is the one block nothing is allowed to move, and the rest of the
+           week is arranged around it rather than the other way round.</p></div>
+      <div class="rule"><h3>Coursework waits until 09:00</h3>
+        <p>Your rule, kept exactly. The eight o'clock hour goes to internship applications and your own
+           research &mdash; work that matters but isn't coursework, so the morning isn't idle and the line still holds.</p></div>
+      <div class="rule"><h3>Hardest work in the 09:00 block</h3>
+        <p>Decision Science, Statistics and the two intermediate theory courses take the first two hours, while
+           focus is cheapest and nothing else is competing for it yet.</p></div>
       <div class="rule"><h3>Courses recur, they don't block</h3>
-        <p>Each course appears two or three times across the week rather than once in a long sitting. Spacing the
-           same material across days is the difference between recognising it and recalling it.</p></div>
-      <div class="rule"><h3>An hour of recall every afternoon</h3>
-        <p>14:15 is for retrieving the morning's material from memory, not rereading it. Re-reading feels
-           productive and mostly is not; retrieval is what survives to the exam hall.</p></div>
+        <p>Each course appears two or three times across the week rather than once in a long sitting. Spacing
+           the same material across days is the difference between recognising it and recalling it.</p></div>
+      <div class="rule"><h3>Recall at 16:15, not re-reading</h3>
+        <p>That hour is for retrieving the morning's material from memory. Re-reading feels productive and
+           mostly is not; retrieval is what survives to the exam hall.</p></div>
       <div class="rule"><h3>LMS volume gets its own slot</h3>
-        <p>GST 212 alone has 111 activities. That is throughput work, not thinking work, so it sits at 11:15
+        <p>GST 212 alone has 111 activities. That is throughput work, not thinking work, so it sits at 14:15
            where concentration is already fading rather than stealing a deep-work block.</p></div>
       <div class="rule"><h3>Trading is boxed, not banned</h3>
         <p>Two hours, three afternoons, inside the New York session. Trading is the one activity on your list
            whose hours expand on their own, so it gets a box with walls rather than a floor.</p></div>
-      <div class="rule"><h3>Sunday is genuinely off</h3>
-        <p>Worship, family, and nothing academic. Twelve weeks is a long run and the students who collapse in
-           week nine are the ones who never took a full day. A rest day is part of the plan, not a failure of it.</p></div>
-      <div class="rule"><h3>One flex hour every evening</h3>
-        <p>19:15 belongs to internships or your own research &mdash; unless something slipped, in which case it
-           is catch-up. A timetable with no slack breaks the first time the power goes out.</p></div>
-      <div class="rule"><h3>Evenings end at 20:15</h3>
-        <p>The last block of every weekday is yours with nothing attached to it. Scheduled relaxation is the
-           only kind that is actually restful, because nothing is being neglected while you take it.</p></div>
-    </div>
+      <div class="rule"><h3>Religious study closes the day</h3>
+        <p>20:15 on weekdays, 19:00 on Saturday &mdash; after the working day is done, six days a week.
+           Sunday has worship at 16:00 in its place.</p></div>
+      </div>
   </section>
 
   <section>
@@ -244,9 +244,9 @@ footer{margin-top:52px;padding-top:19px;border-top:1px solid var(--rule);
   </section>
 
   <footer>
-    Built on a 7.5-hour night and the fixed commitments estimated in the Command Center. Change those figures
-    there and these blocks shift with them. Exams begin 28 November &mdash; in crunch weeks the skill and flex
-    blocks halve and the deep-work blocks absorb them.
+    Built on a 7.25-hour night (22:15 to 05:30) and the fixed commitments estimated in the Command Center.
+    Devotion, religious study and worship are treated as fixed, not as activities competing for leftover time.
+    Exams begin 28 November &mdash; in crunch weeks trading and German halve and the deep-work blocks absorb them.
   </footer>
 </div>
 
@@ -255,49 +255,60 @@ const DAYS=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunda
 const T0=5, T1=23, PX=1080;                     // track runs 05:00 to 23:00
 const fmt=h=>String(Math.floor(h)).padStart(2,"0")+":"+String(Math.round((h%1)*60)).padStart(2,"0");
 
-/* A weekday is one shape with different course assignments dropped into it. */
-const weekday=(deep1,deep2,lms,recall,skill,flex)=>[
- {t:5.5, d:.75,type:"life",  l:"Wake, devotion, freshen up"},
- {t:6.25,d:.5, type:"life",  l:"Breakfast"},
- {t:6.75,d:2,  type:"deep",  l:deep1, n:"Deep work — peak focus"},
- {t:8.75,d:.5, type:"brk",   l:"Break", n:"Move. No screen."},
- {t:9.25,d:1.5,type:"deep",  l:deep2, n:"Deep work"},
- {t:10.75,d:.5,type:"brk",   l:"Break"},
- {t:11.25,d:1.5,type:"lms",  l:lms, n:"Lectures, quizzes, activities"},
- {t:12.75,d:1.5,type:"relax",l:"Lunch and real rest", n:"Away from the desk"},
- {t:14.25,d:1, type:"recall",l:recall, n:"Retrieve from memory, don't reread"},
- {t:15.25,d:.5,type:"brk",   l:"Break"},
- {t:15.75,d:2, type:"skill", l:skill},
- {t:17.75,d:1.5,type:"life", l:"Dinner, family, chores"},
- {t:19.25,d:1, type:"skill", l:flex, n:"or catch up whatever slipped"},
- {t:20.25,d:1.75,type:"relax",l:"Yours", n:"Nothing attached to this"},
- {t:22,  d:1,  type:"sleep", l:"Sleep"}
+/* Three fixed anchors shape the week: devotion 06:00-07:00 every day, coursework
+   never before 09:00, and worship at 16:00 on Sunday. Religious study takes an
+   hour each evening, six days; Sunday has worship in its place. */
+const weekday=(deep1,deep2,lms,recall,skill,early)=>[
+ {t:5.5, d:.5, type:"life",  l:"Wake, freshen up"},
+ {t:6,   d:1,  type:"faith", l:"Devotion", n:"The day starts here"},
+ {t:7,   d:1,  type:"life",  l:"Breakfast, chores"},
+ {t:8,   d:1,  type:"skill", l:early, n:"Before coursework begins"},
+ {t:9,   d:2,  type:"deep",  l:deep1, n:"Deep work \u2014 peak focus"},
+ {t:11,  d:.5, type:"brk",   l:"Break", n:"Move. No screen."},
+ {t:11.5,d:1.5,type:"deep",  l:deep2, n:"Deep work"},
+ {t:13,  d:1.25,type:"relax",l:"Lunch and real rest", n:"Away from the desk"},
+ {t:14.25,d:1.5,type:"lms",  l:lms, n:"Lectures, quizzes, activities"},
+ {t:15.75,d:.5,type:"brk",   l:"Break"},
+ {t:16.25,d:1, type:"recall",l:recall, n:"Retrieve from memory, don't reread"},
+ {t:17.25,d:2, type:"skill", l:skill},
+ {t:19.25,d:1, type:"life",  l:"Dinner, family"},
+ {t:20.25,d:1, type:"faith", l:"Religious study"},
+ {t:21.25,d:1, type:"relax", l:"Yours", n:"Nothing attached to this"},
+ {t:22.25,d:.75,type:"sleep",l:"Sleep"}
 ];
 
 const SCHEDULE=[
- weekday("MIVA-ECO 212","ECO 202","GST 212 activities","Recall — 212 + 202","Trading","Internship applications"),
- weekday("ECO 206","MIVA-ECO 208","SSC 202 activities","Recall — 206 + 208","German","Independent research"),
- weekday("ECO 202","ECO 206","MIVA-ECO 208 activities","Recall — 202 + 206","Trading","Internship applications"),
- weekday("ECO 204","MIVA-ECO 216","MIVA-ECO 216 activities","Recall — 204 + 216","German","Independent research"),
- weekday("SSC 202","MIVA-ECO 212","ECO 204 activities","Recall — SSC 202 + 212","Trading","Internship applications"),
- [ {t:7,  d:1,  type:"life",  l:"Slow start, breakfast"},
-   {t:8,  d:2,  type:"deep",  l:"SSC 202", n:"The biggest course gets the quiet morning"},
-   {t:10, d:.5, type:"brk",   l:"Break"},
-   {t:10.5,d:1.5,type:"lms",  l:"GST 212 activities", n:"Clear the backlog"},
-   {t:12, d:1,  type:"life",  l:"Lunch"},
-   {t:13, d:1,  type:"recall",l:"Weekly review", n:"Scores, deadlines, next week's plan"},
-   {t:14, d:2,  type:"skill", l:"Trading"},
-   {t:16, d:1,  type:"skill", l:"Independent research"},
-   {t:17, d:5,  type:"relax", l:"Free", n:"Family, friends, whatever you want"},
-   {t:22, d:1,  type:"sleep", l:"Sleep"} ],
- [ {t:7,   d:1.5,type:"relax",l:"Slow morning", n:"No alarm"},
-   {t:8.5, d:3,  type:"life", l:"Worship"},
-   {t:11.5,d:1,  type:"faith",l:"Religious study session"},
-   {t:12.5,d:1.5,type:"life", l:"Lunch with family"},
-   {t:14,  d:5.5,type:"relax",l:"Rest day", n:"No coursework. This is what makes week 10 possible."},
+ weekday("MIVA-ECO 212","ECO 202","GST 212 activities","Recall \u2014 212 + 202","Trading","Internship applications"),
+ weekday("ECO 206","MIVA-ECO 208","SSC 202 activities","Recall \u2014 206 + 208","German","Independent research"),
+ weekday("ECO 202","ECO 206","MIVA-ECO 208 activities","Recall \u2014 202 + 206","Trading","Internship applications"),
+ weekday("ECO 204","MIVA-ECO 216","MIVA-ECO 216 activities","Recall \u2014 204 + 216","German","Independent research"),
+ weekday("SSC 202","MIVA-ECO 212","ECO 204 activities","Recall \u2014 SSC 202 + 212","Trading","Internship applications"),
+ [ {t:5.5,d:.5, type:"life",  l:"Wake, freshen up"},
+   {t:6,  d:1,  type:"faith", l:"Devotion"},
+   {t:7,  d:1,  type:"life",  l:"Breakfast, chores"},
+   {t:8,  d:1,  type:"relax", l:"Slow hour", n:"It's Saturday"},
+   {t:9,  d:2,  type:"deep",  l:"SSC 202", n:"The biggest course gets the quiet morning"},
+   {t:11, d:.5, type:"brk",   l:"Break"},
+   {t:11.5,d:1.5,type:"lms",  l:"GST 212 activities", n:"Clear the backlog"},
+   {t:13, d:1,  type:"life",  l:"Lunch"},
+   {t:14, d:1,  type:"recall",l:"Weekly review", n:"Scores, deadlines, next week's plan"},
+   {t:15, d:2,  type:"skill", l:"Trading"},
+   {t:17, d:1,  type:"skill", l:"Independent research"},
+   {t:18, d:1,  type:"life",  l:"Dinner, family"},
+   {t:19, d:1,  type:"faith", l:"Religious study"},
+   {t:20, d:2.25,type:"relax",l:"Free", n:"Family, friends, whatever you want"},
+   {t:22.25,d:.75,type:"sleep",l:"Sleep"} ],
+ [ {t:5.5,d:.5, type:"life",  l:"Wake, freshen up"},
+   {t:6,  d:1,  type:"faith", l:"Devotion"},
+   {t:7,  d:2,  type:"relax", l:"Slow morning", n:"No coursework today"},
+   {t:9,  d:3,  type:"relax", l:"Rest, family", n:"Whatever the day wants to be"},
+   {t:12, d:1.5,type:"life",  l:"Lunch with family"},
+   {t:13.5,d:2.5,type:"relax",l:"Rest", n:"This is what makes week 10 possible"},
+   {t:16, d:1,  type:"faith", l:"Worship"},
+   {t:17, d:2.5,type:"relax", l:"Evening with people you like"},
    {t:19.5,d:.5, type:"recall",l:"Ten minutes on the week ahead", n:"Then close the laptop"},
-   {t:20,  d:2,  type:"relax",l:"Wind down"},
-   {t:22,  d:1,  type:"sleep",l:"Sleep"} ]
+   {t:20, d:2.25,type:"relax",l:"Wind down"},
+   {t:22.25,d:.75,type:"sleep",l:"Sleep"} ]
 ];
 
 const HOURS=[["MIVA-ECO 212","Introduction to Decision Science",2,5],
@@ -364,19 +375,20 @@ function renderNow(){
 function renderTiles(){
   const sum=t=>SCHEDULE.flat().filter(b=>t.includes(b.type)).reduce((s,b)=>s+b.d,0);
   const study=sum(["deep","lms","recall"]), skill=sum(["skill"]),
-        rest=sum(["relax","brk"]), sleep=7.5*7;
+        rest=sum(["relax","brk"]), faith=sum(["faith"]), sleep=7.25*7;
   const tiles=[
     {k:"Study each week",v:study.toFixed(1)+"h",n:"Deep work, activities and recall",cls:""},
     {k:"Rest and breaks",v:rest.toFixed(1)+"h",n:"Scheduled, not left over",cls:" rest"},
+    {k:"Faith",v:faith.toFixed(0)+"h",n:"Devotion, study and worship",cls:""},
     {k:"Trading, German, internships",v:skill.toFixed(0)+"h",n:"Boxed into named slots",cls:""},
-    {k:"Sleep",v:sleep.toFixed(0)+"h",n:"7.5 hours a night, every night",cls:""}
+    {k:"Sleep",v:sleep.toFixed(2)+"h",n:"7.25 hours a night",cls:""}
   ];
   $("tiles").innerHTML=tiles.map(t=>
     `<div class="tile${t.cls}"><span class="k">${t.k}</span><span class="v">${t.v}</span>
      <div class="n">${t.n}</div></div>`).join("");
   $("resthint").innerHTML=`That is <b>${rest.toFixed(1)} hours</b> of genuine rest a week &mdash; more than the
     ${study.toFixed(1)} hours of study, and none of it contingent on finishing something first. Sunday alone
-    carries over nine of them. If a week ever forces you to choose, the flex hour goes before the rest does.`;
+    carries twelve of them. If a week ever forces a choice, trading gives way before the rest does.`;
 }
 
 function renderHours(){

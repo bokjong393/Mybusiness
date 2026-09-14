@@ -150,7 +150,7 @@ h2{font-family:var(--display);font-size:21px;font-weight:600;letter-spacing:-.01
 .alloc .muted{color:var(--ink-3)}
 h3{font-family:var(--display);font-size:14.5px;font-weight:600;margin-bottom:8px}
 
-.knobs{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));
+.knobs{display:grid;grid-template-columns:repeat(auto-fit,minmax(124px,1fr));
   gap:11px;margin-top:20px;padding-top:19px;border-top:1px solid var(--rule)}
 .knob label{display:block;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
   color:var(--ink-3);font-weight:600;margin-bottom:5px;line-height:1.3}
@@ -252,6 +252,7 @@ footer{margin-top:52px;padding-top:19px;border-top:1px solid var(--rule);
         <div class="knob"><label for="k-sleep">Sleep / night</label><input type="number" id="k-sleep" step="0.5" min="4" max="12"></div>
         <div class="knob"><label for="k-meals">Meals &amp; care / wk</label><input type="number" id="k-meals" step="1" min="0" max="60"></div>
         <div class="knob"><label for="k-family">Family &amp; chores / wk</label><input type="number" id="k-family" step="1" min="0" max="80"></div>
+        <div class="knob"><label for="k-faith">Devotion &amp; worship / wk</label><input type="number" id="k-faith" step="1" min="0" max="60"></div>
         <div class="knob"><label for="k-other">Other fixed / wk</label><input type="number" id="k-other" step="1" min="0" max="80"></div>
       </div>
       <p class="note" id="budgetnote"></p>
@@ -297,7 +298,7 @@ const RATE={1:1.5,2:1.75,3:2,4:2.5,5:3};
 const SLACK=.15, START=new Date("2026-09-07T00:00:00+01:00"), EXAM=new Date("2026-11-28T00:00:00+01:00");
 const TOTAL_UNITS=COURSES.reduce((s,c)=>s+c.units,0);
 
-let state={scores:{},dates:{},life:{sleep:7.5,meals:14,family:10,other:0},crunch:false};
+let state={scores:{},dates:{},life:{sleep:7.25,meals:14,family:10,faith:14,other:0},crunch:false};
 let db=null,saveTimer=null;
 const $=id=>document.getElementById(id);
 const r2=n=>Math.round(n*100)/100;
@@ -417,7 +418,7 @@ function renderLeverage(){
 
 function budget(){
   const L=state.life;
-  const sleep=L.sleep*7, fixed=L.meals+L.family+L.other;
+  const sleep=L.sleep*7, fixed=L.meals+L.family+L.faith+L.other;
   const disc=168-sleep-fixed;
   const study=COURSES.reduce((s,c)=>s+c.units*RATE[c.diff],0);
   const slack=study*SLACK;
@@ -521,7 +522,7 @@ function save(){
 (async function boot(){
   renderAll();
   $("crunch").addEventListener("change",e=>{state.crunch=e.target.checked;renderBudget();save();});
-  for(const [id,key] of [["k-sleep","sleep"],["k-meals","meals"],["k-family","family"],["k-other","other"]]){
+  for(const [id,key] of [["k-sleep","sleep"],["k-meals","meals"],["k-family","family"],["k-faith","faith"],["k-other","other"]]){
     const el=$(id); el.value=state.life[key];
     el.addEventListener("input",()=>{
       const v=Number(el.value); if(!Number.isFinite(v)) return;
@@ -534,7 +535,7 @@ function save(){
     const doc=await db.doc("semester/state").get();
     if(doc){
       state={...state,...doc,life:{...state.life,...(doc.life||{})}};
-      for(const [id,key] of [["k-sleep","sleep"],["k-meals","meals"],["k-family","family"],["k-other","other"]])
+      for(const [id,key] of [["k-sleep","sleep"],["k-meals","meals"],["k-family","family"],["k-faith","faith"],["k-other","other"]])
         $(id).value=state.life[key];
       $("crunch").checked=!!state.crunch;
       renderAll();
