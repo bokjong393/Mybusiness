@@ -21,16 +21,30 @@ Status: `open` (still shaky) · `revisited` (checked once, holding) · `solid`
 *Studied 2026-09-14. Structure: 3 introductory videos, ungraded practice
 assessment (two attempts), summary, live-lesson request form.*
 
+Content note: the Week 1 summary covers **time periods and factor flexibility
+only**. It does not cover TP/AP/MP curves, the three stages of production, or the
+Law of Diminishing Returns — those belong to the cost-analysis weeks. An earlier
+recall list in this session wrongly assumed the standard textbook Week 1; the
+list below is drawn from her actual summary.
+
+Miva teaches **three** periods, not two: short run, long run, and **very long
+run** (external forces — regulation, technology, shifts in market demand). The
+third is easy to miss and is explicit in the summary, so treat it as assessable.
+
 Must be producible from a blank page:
 
-- [ ] Short run vs long run, one line each
-- [ ] `AP = TP/L` and `MP = ΔTP/ΔL`
-- [ ] TP, AP and MP drawn on the same labour axis, from memory
-- [ ] The three stages of production, marked on that drawing
-- [ ] Law of Diminishing Marginal Returns, in her own words
-- [ ] **Why** MP cuts AP at AP's maximum — not just that it does
-- [ ] Diminishing returns (short run, one factor varies) vs returns to scale
-      (long run, all factors vary together) — the distinction ECO 202 tests all term
+- [ ] Short run — defined by *at least one factor fixed*, not by elapsed time
+- [ ] Long run — all factors variable
+- [ ] Very long run — external forces; name two
+- [ ] Three fixed factors (land, buildings, heavy machinery) and two variable
+      (labour, raw materials)
+- [ ] What the firm optimises in the short run, and what constrains it
+- [ ] Typical timeframes as the summary states them: six months or less;
+      beyond six months to several years
+- [ ] **The criterion, not the clock** — given a described firm, say which period
+      it is in and why. This is where the marks separate: a firm whose fixed
+      factors take 18 months to change is in the short run today regardless of
+      what the calendar says.
 
 Weak spots after her cold practice attempt: *(to fill in)*
 
