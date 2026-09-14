@@ -162,8 +162,36 @@ prior course to lean on.*
 *No entries yet. Three units, the largest single course.*
 
 ## GST 212 — Philosophy, Logic and Human Existence
-*No entries yet. 111 LMS activities against 2 credit units — aim for an
-efficient A, not a brilliant one.*
+
+Strategy: 111 LMS activities against 2 credit units, the worst marks-per-hour on
+the timetable. Aim for an efficient A, not a brilliant one. The course is modular
+rather than cumulative, so a weak week does not compound the way ECO 202's does.
+
+**Logic is the seam to mine.** It is in the course title, and unlike the
+existential material it has definite right answers, so it is where reliable marks
+live. Prioritise logic content when it arrives.
+
+Week structure differs from ECO 202: nine items, including **two** ungraded
+quizzes — a Practice Pop Quiz placed before the content and a Practice Assessment
+after it — for four free attempts a week. The pop quiz's position is deliberate:
+taken cold it works as a pre-test, and attempting retrieval on unseen material
+primes it. There is also a Discussion Forum, which ECO 202 lacks; check whether
+it carries participation marks.
+
+### Week 1 — Introduction to Philosophy
+*2026-09-14.*
+
+**Pop quiz taken cold before any content: 1/3.** This is a baseline, not a weak
+spot — it measures nothing, and a low score is the expected and intended result.
+Verify these three *after* she has studied, and only then treat a miss as real:
+
+- [ ] The literal meaning of "philosophy" — *philo* (love) + *sophia* (wisdom)
+- [ ] What distinguishes philosophy's scope: interdisciplinary and boundless,
+      **not** clearly bounded. She guessed the opposite, which is the sensible
+      guess for an academic discipline and exactly the misconception the week's
+      main PDF, "Philosophy and Other Disciplines", exists to correct
+- [ ] Why logic is the philosopher's compass — it guides reasoning and
+      argumentation. **She got this one right cold.**
 
 ---
 
