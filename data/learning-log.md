@@ -46,9 +46,38 @@ Must be producible from a blank page:
       factors take 18 months to change is in the short run today regardless of
       what the calendar says.
 
-Weak spots after her cold practice attempt: *(to fill in)*
+**Cold practice attempt 1: 3/5.** Q1-Q3 correct. Two errors, of different kinds.
 
-Revisit due: **2026-09-17** — redraw TP/AP/MP from memory, five minutes, nothing else.
+**Q4 — reading error, not a knowledge gap.** "What does the long run allow that
+the short run does not?" She answered *adjust variable inputs*; the answer was
+*adjust fixed inputs*. Variable inputs can be adjusted in both periods, so that
+option was eliminable from the question's wording alone. She had the definitions
+right in Q1-Q3. Technique given: on any "X that Y does not" question, strike out
+every option true of both before reasoning about content. Watch whether this
+recurs — if it does, it is an exam-technique problem worth drilling separately,
+and at 60% weight it is expensive.
+
+**Q5 — real content gap. Priority.** "In the long run, how is the behaviour of
+output studied?" She answered *production function of variable proportions*,
+which is the short-run concept; the answer was *returns to scale*. Three of the
+four options were short-run synonyms:
+
+| Term | Period | What varies |
+|---|---|---|
+| Returns to a factor | Short | one factor |
+| Law of variable proportions | Short | one factor |
+| Law of diminishing returns | Short | one factor |
+| **Returns to scale** | **Long** | **all factors together** |
+
+This is the distinction the course tests all term and it appeared in week 1.
+Re-test it in later weeks rather than assuming it is fixed.
+
+Revisit due: **2026-09-17** — five minutes, nothing else: reproduce the
+short/long/very-long definitions, then the returns-to-a-factor vs returns-to-scale
+table from memory.
+
+Also available in the LMS sidebar: recorded live lessons and a **Revision Live
+Lesson**. Point her at the revision one in late November.
 
 ---
 
