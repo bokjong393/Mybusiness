@@ -131,7 +131,15 @@ her. But **week 3 is "The Short-Run and Long-Run cost curves"**, where the two
 U-shapes must be separated and have different causes. Expect this conflation to
 cause trouble there and pre-empt it.
 
-Practice attempt: *(to fill in)*
+**Practice attempt: 5/5 cold, first attempt, 2 min 20 sec (2026-09-14 13:18).**
+No retake needed. Week 1 was 3/5 cold; week 2 is 5/5 cold on harder material,
+so the sequence — summary as map, videos, reading, check-set, then cold quiz —
+is working. No new content weak spots from this week.
+
+Watch the speed on **graded** assessments rather than practice ones. Her only
+content-independent error so far was the week 1 reading error on "what does X
+allow that Y does not", and 2:20 for five questions leaves little room to catch
+that phrasing.
 
 ## ECO 204 — Introduction to Macroeconomics II
 *No entries yet.*
@@ -166,7 +174,7 @@ to the published artifact still knows where she stands.
 
 | Course | CA1 /100 | CA2 /100 | Exam needed for an A |
 |---|---|---|---|
-| ECO 202 | — | — | 70.0% |  <!-- wk1 practice 3/5 cold, 5/5 on retake -->
+| ECO 202 | — | — | 70.0% |  <!-- practice: wk1 3/5 cold then 5/5; wk2 5/5 cold -->
 | ECO 204 | — | — | 70.0% |
 | ECO 206 | — | — | 70.0% |
 | MIVA-ECO 208 | — | — | 70.0% |
