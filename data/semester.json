@@ -1,11 +1,11 @@
 {
   "_status": "PARTIAL \u2014 see _missing. From SIS screenshots, LMS cards and 6 of 8 course guides, 2026-09-14.",
   "_missing": [
-    "CA1 and CA2 due dates from the LMS for every course \u2014 highest-value gap",
-    "LMS activity counts for the 6 courses not yet screenshotted",
-    "Difficulty ratings (1-5) \u2014 currently defaulted to 3",
-    "life: sleep, fixed commitments, peak focus window",
-    "extracurriculars: hours, tiers, floors and targets"
+    "CA1 and CA2 due dates from the LMS \u2014 highest-value gap",
+    "LMS activity counts for the other 6 courses",
+    "Confirmation of life figures (sleep, fixed commitments) \u2014 currently assumed",
+    "Peak focus window",
+    "Weekly hours for German, internships and independent study \u2014 currently proposed"
   ],
   "program": {
     "university": "Miva Open University",
@@ -86,7 +86,8 @@
       "type": "CORE",
       "difficulty": 3,
       "guideReceived": true,
-      "markingSchemeConfirmed": true
+      "markingSchemeConfirmed": true,
+      "_difficultyBasis": "Scored 88 in Microeconomics I \u2014 proven ground, but II adds cost curves and market structures"
     },
     {
       "code": "ECO 204",
@@ -95,7 +96,8 @@
       "type": "CORE",
       "difficulty": 3,
       "guideReceived": true,
-      "markingSchemeConfirmed": true
+      "markingSchemeConfirmed": true,
+      "_difficultyBasis": "Scored 89 in Macroeconomics I \u2014 II adds fiscal policy, money and the international sector"
     },
     {
       "code": "ECO 206",
@@ -104,16 +106,18 @@
       "type": "CORE",
       "difficulty": 3,
       "guideReceived": true,
-      "markingSchemeConfirmed": true
+      "markingSchemeConfirmed": true,
+      "_difficultyBasis": "Retook Introductory Statistics at 93 and scored 90 in Statistics II \u2014 a demonstrated strength, not the old weakness"
     },
     {
       "code": "MIVA-ECO 212",
       "title": "Introduction to Decision Science",
       "units": 2,
       "type": "CORE",
-      "difficulty": 3,
+      "difficulty": 4,
       "guideReceived": true,
-      "markingSchemeConfirmed": true
+      "markingSchemeConfirmed": true,
+      "_difficultyBasis": "New and quantitative \u2014 decision models plus behavioural theory, no prior course to lean on"
     },
     {
       "code": "MIVA-ECO 216",
@@ -122,7 +126,8 @@
       "type": "ELECTIVE",
       "difficulty": 3,
       "guideReceived": true,
-      "markingSchemeConfirmed": true
+      "markingSchemeConfirmed": true,
+      "_difficultyBasis": "New, but largely applied micro/macro on familiar foundations"
     },
     {
       "code": "MIVA-ECO 208",
@@ -131,7 +136,8 @@
       "type": "CORE",
       "difficulty": 3,
       "guideReceived": true,
-      "markingSchemeConfirmed": true
+      "markingSchemeConfirmed": true,
+      "_difficultyBasis": "New subject, but 94 in Venture Economics suggests applied/behavioural material sits well"
     },
     {
       "code": "SSC 202",
@@ -141,20 +147,76 @@
       "difficulty": 3,
       "guideReceived": false,
       "lmsActivities": 76,
-      "markingSchemeConfirmed": false
+      "markingSchemeConfirmed": false,
+      "_difficultyBasis": "Scored 78 in Introduction to Computing; 3 units makes it the largest single course"
     },
     {
       "code": "GST 212",
       "title": "Philosophy, Logic and Human Existence",
       "units": 2,
       "type": "CORE",
-      "difficulty": 3,
+      "difficulty": 2,
       "guideReceived": false,
       "lmsActivities": 111,
-      "markingSchemeConfirmed": false
+      "markingSchemeConfirmed": false,
+      "_difficultyBasis": "GST record is consistently strong (75, 72, 79, 94, 72) \u2014 but 111 LMS activities means volume, not difficulty"
     }
   ],
   "totalUnits": 17,
-  "life": null,
-  "extracurriculars": null
+  "life": {
+    "_assumed": true,
+    "_note": "Placeholder pending confirmation. Every number here is a guess and changes the plan.",
+    "sleepHoursPerNight": 7.5,
+    "peakFocusWindow": null,
+    "fixedCommitments": [
+      {
+        "name": "Meals and personal care",
+        "hoursPerWeek": 14,
+        "_assumed": true
+      },
+      {
+        "name": "Family, chores and errands",
+        "hoursPerWeek": 10,
+        "_assumed": true
+      }
+    ]
+  },
+  "extracurriculars": [
+    {
+      "name": "Trading (learning + taking trades)",
+      "tier": "flexible",
+      "floorHoursPerWeek": 2,
+      "targetHoursPerWeek": 8,
+      "ceilingHoursPerWeek": 10,
+      "_note": "She reports 5-10 hrs/wk. Ceiling matters more than floor here \u2014 this is the one activity whose hours expand on their own."
+    },
+    {
+      "name": "Internship search and applications",
+      "tier": "flexible",
+      "floorHoursPerWeek": 1,
+      "targetHoursPerWeek": 3,
+      "_note": "Bursty by nature; external deadlines. Needs burst capacity more than a steady baseline."
+    },
+    {
+      "name": "German",
+      "tier": "flexible",
+      "floorHoursPerWeek": 1,
+      "targetHoursPerWeek": 4,
+      "_note": "Replaces Korean. Beginner language: consistency beats volume \u2014 4 hrs over 5 days beats 4 hrs in one sitting."
+    },
+    {
+      "name": "Independent research and study",
+      "tier": "surplus",
+      "floorHoursPerWeek": 0,
+      "targetHoursPerWeek": 3,
+      "_note": "Confirmed as its own thing, separate from trading and internships."
+    },
+    {
+      "name": "Religious study sessions",
+      "tier": "flexible",
+      "floorHoursPerWeek": 1,
+      "targetHoursPerWeek": 1,
+      "_note": "She specified 1h. Left unprotected per her explicit choice that nothing is protected."
+    }
+  ]
 }
