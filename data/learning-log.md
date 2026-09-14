@@ -107,6 +107,30 @@ The taxonomy is the distinctive part, and distinctive means assessable:
 - [ ] The geometric framing the reading material will likely add: MC cuts AC at
       AC's **minimum**. Same fact — at the minimum AC is momentarily constant.
 
+**Reading material, read 2026-09-14.** Adds beyond the summary: the geometric
+framing (MC cuts AC at AC's lowest point), the named concept **point of
+productive efficiency** (where MC = AC), a passing mention of AFC and AVC with no
+formulas or curves, and the U-shape — which appears only in its lesson questions,
+not its body. Notation drifts between `dTC/dQ` and `ΔTC/ΔQ`; same thing.
+
+**The reading contains an error worth carrying forward.** It attributes falling
+MC to *"increasing returns to scale or efficiencies gained from the initial
+spread of fixed costs."* Both halves are wrong:
+
+- Returns to scale is a **long-run** concept requiring all inputs to vary. These
+  are short-run curves — AFC exists, so a factor is fixed. The correct term is
+  increasing **marginal returns to the variable factor**. This is the same
+  short-run/long-run confusion she missed on the week 1 quiz, now present in the
+  course material itself.
+- `MC = ΔTC/ΔQ` and `ΔTFC = 0`, so `MC = ΔTVC/ΔQ`. Fixed costs contribute nothing
+  to marginal cost. Spreading them explains falling AFC and hence falling AC, not
+  falling MC.
+
+She was told to answer what the course says on the assessment, since Miva marks
+her. But **week 3 is "The Short-Run and Long-Run cost curves"**, where the two
+U-shapes must be separated and have different causes. Expect this conflation to
+cause trouble there and pre-empt it.
+
 Practice attempt: *(to fill in)*
 
 ## ECO 204 — Introduction to Macroeconomics II
