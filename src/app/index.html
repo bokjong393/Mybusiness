@@ -1,0 +1,545 @@
+<title>Semester Command Center</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#eef1f4; --surface:#fbfcfd; --surface-2:#e6eaef;
+  --ink:#101a2b; --ink-2:#42506a; --ink-3:#71809a;
+  --rule:#d3dae3; --rule-2:#bcc6d3;
+  --accent:#0d6a6f; --accent-ink:#fff; --accent-soft:#d9eced;
+  --good:#1d7a4c; --good-soft:#d6ece0;
+  --warn:#9d6510; --warn-soft:#f4e6cd;
+  --bad:#a93226;  --bad-soft:#f3dcd9;
+  --ghost:#c3ccd8; --lost:#dfc4c0;
+  --shadow:0 1px 2px rgba(16,26,43,.06),0 4px 16px rgba(16,26,43,.05);
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#0b1220; --surface:#131d2e; --surface-2:#1b273b;
+  --ink:#e6ebf2; --ink-2:#a6b3c7; --ink-3:#7b8aa3;
+  --rule:#27334a; --rule-2:#36445e;
+  --accent:#3fb0b5; --accent-ink:#06212a; --accent-soft:#14333a;
+  --good:#4cc088; --good-soft:#123326;
+  --warn:#d69b3f; --warn-soft:#33260f;
+  --bad:#e0685a;  --bad-soft:#371a17;
+  --ghost:#33415a; --lost:#4d2f2c;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+}}
+:root[data-theme="dark"]{
+  --ground:#0b1220; --surface:#131d2e; --surface-2:#1b273b;
+  --ink:#e6ebf2; --ink-2:#a6b3c7; --ink-3:#7b8aa3;
+  --rule:#27334a; --rule-2:#36445e;
+  --accent:#3fb0b5; --accent-ink:#06212a; --accent-soft:#14333a;
+  --good:#4cc088; --good-soft:#123326;
+  --warn:#d69b3f; --warn-soft:#33260f;
+  --bad:#e0685a;  --bad-soft:#371a17;
+  --ghost:#33415a; --lost:#4d2f2c;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);
+  font-size:15px;line-height:1.55;margin:0;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding-inline:20px;padding-block:32px 72px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* ---- masthead ---- */
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600;margin:0 0 10px}
+h1{font-family:var(--display);font-size:clamp(30px,6.4vw,46px);font-weight:600;
+  line-height:1.04;letter-spacing:-.015em}
+.sub{color:var(--ink-2);margin:10px 0 0;max-width:62ch}
+.clock{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chip{display:inline-flex;align-items:baseline;gap:7px;background:var(--surface);
+  border:1px solid var(--rule);border-radius:999px;padding:5px 13px;font-size:12.5px;color:var(--ink-2)}
+.chip b{font-family:var(--mono);font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.chip.hot{background:var(--bad-soft);border-color:var(--bad);color:var(--bad)}
+.chip.hot b{color:var(--bad)}
+
+/* ---- sections ---- */
+section{margin-top:44px}
+.shead{display:flex;align-items:baseline;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:9px;margin-bottom:18px}
+h2{font-family:var(--display);font-size:21px;font-weight:600;letter-spacing:-.01em}
+.shead p{margin:0;font-size:12.5px;color:var(--ink-3)}
+
+/* ---- standing tiles ---- */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+  padding:15px 16px;box-shadow:var(--shadow)}
+.tile .k{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600;display:block;margin-bottom:7px;line-height:1.3}
+.tile .v{font-family:var(--mono);font-size:30px;font-weight:600;
+  line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.tile .n{font-size:11.5px;color:var(--ink-3);margin-top:7px;line-height:1.35}
+.tile.lead{background:var(--ink);border-color:var(--ink)}
+.tile.lead .k{color:rgba(255,255,255,.62)}
+.tile.lead .v{color:#fff}
+.tile.lead .n{color:rgba(255,255,255,.62)}
+
+/* ---- course ledger ---- */
+.ledger{border:1px solid var(--rule);border-radius:10px;overflow:hidden;
+  background:var(--surface);box-shadow:var(--shadow)}
+.lrow{display:grid;grid-template-columns:170px 1fr 148px;gap:18px;
+  padding:15px 17px;border-top:1px solid var(--rule);align-items:center}
+.lrow:first-child{border-top:none}
+.lhead{background:var(--surface-2);font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);font-weight:600;padding-block:9px}
+.code{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:-.01em}
+.ctitle{font-size:12.5px;color:var(--ink-3);line-height:1.35;margin-top:2px}
+.units{font-family:var(--mono);font-size:11px;color:var(--ink-3)}
+
+.bar{height:26px;background:var(--surface-2);border-radius:4px;
+  position:relative;overflow:hidden;display:flex}
+.seg{height:100%}
+.seg.banked{background:var(--good)}
+.seg.banked.warn{background:var(--warn)}
+.seg.banked.bad{background:var(--bad)}
+.seg.win{background:var(--ghost)}
+.seg.lost{background:var(--lost)}
+.tick{position:absolute;top:-3px;bottom:-3px;left:70%;width:2px;background:var(--ink);z-index:2}
+.tick::after{content:"70";position:absolute;top:-15px;left:50%;transform:translateX(-50%);
+  font-family:var(--mono);font-size:9.5px;color:var(--ink);font-weight:600}
+.barwrap{padding-top:14px}
+.barkey{display:flex;gap:13px;margin-top:7px;font-size:11px;color:var(--ink-3);flex-wrap:wrap}
+.barkey i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:baseline}
+
+.inputs{display:flex;gap:7px;align-items:center;margin-top:9px;flex-wrap:wrap}
+.inputs label{font-family:var(--mono);font-size:11px;color:var(--ink-3);
+  display:flex;align-items:center;gap:5px}
+.inputs input{width:56px;font-family:var(--mono);font-size:12.5px;padding:4px 7px;
+  border:1px solid var(--rule-2);border-radius:5px;background:var(--ground);
+  color:var(--ink);text-align:right;font-variant-numeric:tabular-nums}
+.inputs input:focus-visible{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.inputs span{font-size:11px;color:var(--ink-3)}
+
+.verdict{text-align:right}
+.need{font-family:var(--mono);font-size:25px;font-weight:600;line-height:1;
+  letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.needlab{font-size:10.5px;color:var(--ink-3);margin-top:5px;line-height:1.3}
+.pill{display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.05em;
+  text-transform:uppercase;padding:3px 9px;border-radius:999px;margin-top:8px}
+.pill.good{background:var(--good-soft);color:var(--good)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.pill.bad{background:var(--bad-soft);color:var(--bad)}
+
+/* ---- leverage table ---- */
+.lev{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;
+  background:var(--rule);border:1px solid var(--rule);border-radius:10px;overflow:hidden}
+.lev div{background:var(--surface);padding:11px 12px;text-align:center}
+.lev .ca{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.lev .ex{font-family:var(--mono);font-size:19px;font-weight:600;margin-top:3px;font-variant-numeric:tabular-nums}
+
+/* ---- week budget ---- */
+.budget{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+  padding:19px;box-shadow:var(--shadow)}
+.stack{display:flex;height:40px;border-radius:6px;overflow:hidden;background:var(--surface-2)}
+.stack div{height:100%;display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:10.5px;font-weight:600;color:#fff;overflow:hidden;white-space:nowrap}
+.slegend{display:flex;flex-wrap:wrap;gap:15px;margin-top:13px;font-size:12px;color:var(--ink-2)}
+.slegend span{display:flex;align-items:center;gap:6px}
+.slegend i{width:11px;height:11px;border-radius:3px;flex:none}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:26px}
+.alloc{display:flex;justify-content:space-between;gap:12px;padding:7px 0;
+  border-bottom:1px dotted var(--rule);font-size:13.5px;align-items:baseline}
+.alloc:last-child{border-bottom:none}
+.alloc b{font-family:var(--mono);font-weight:600;font-variant-numeric:tabular-nums;flex:none}
+.alloc .muted{color:var(--ink-3)}
+h3{font-family:var(--display);font-size:14.5px;font-weight:600;margin-bottom:8px}
+
+.knobs{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));
+  gap:11px;margin-top:20px;padding-top:19px;border-top:1px solid var(--rule)}
+.knob label{display:block;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600;margin-bottom:5px;line-height:1.3}
+.knob input{width:100%;font-family:var(--mono);font-size:13.5px;padding:6px 9px;
+  border:1px solid var(--rule-2);border-radius:6px;background:var(--ground);
+  color:var(--ink);font-variant-numeric:tabular-nums}
+.knob input:focus-visible{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+
+.toggle{display:inline-flex;align-items:center;gap:9px;cursor:pointer;font-size:13px;
+  background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:6px 14px;color:var(--ink-2)}
+.toggle input{accent-color:var(--accent);width:15px;height:15px;cursor:pointer;margin:0}
+
+/* ---- deadlines ---- */
+.dl{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+  padding:17px 19px;box-shadow:var(--shadow)}
+.dgrid{display:grid;grid-template-columns:150px 1fr 1fr;gap:11px;align-items:center;
+  padding:9px 0;border-bottom:1px dotted var(--rule)}
+.dgrid:last-of-type{border-bottom:none}
+.dgrid input[type=date]{font-family:var(--mono);font-size:12.5px;padding:5px 8px;
+  border:1px solid var(--rule-2);border-radius:5px;background:var(--ground);color:var(--ink);width:100%}
+.dgrid input:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.dlab{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.soon{color:var(--bad);font-weight:600}
+
+.note{font-size:12.5px;color:var(--ink-3);margin-top:13px;line-height:1.5;max-width:70ch}
+.note b{color:var(--ink-2);font-weight:600}
+.saved{font-size:11.5px;color:var(--ink-3);font-family:var(--mono)}
+footer{margin-top:52px;padding-top:19px;border-top:1px solid var(--rule);
+  font-size:12px;color:var(--ink-3);line-height:1.6}
+
+@media(max-width:860px){
+  .tiles{grid-template-columns:repeat(2,1fr)}
+  .lev{grid-template-columns:repeat(2,1fr)}
+  .lrow{grid-template-columns:1fr;gap:11px}
+  .lhead{display:none}
+  .verdict{text-align:left;display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .needlab{margin-top:0}
+  .pill{margin-top:0}
+  .cols{grid-template-columns:1fr;gap:22px}
+  .dgrid{grid-template-columns:1fr 1fr;gap:8px}
+  .dgrid .dcode{grid-column:1/-1}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+  <p class="eyebrow">Miva Open University &middot; BSc Economics &middot; 200L Second Semester</p>
+  <h1>Semester Command Center</h1>
+  <p class="sub">Eight courses, seventeen units, one target: an A in every one of them. Every mark banked on
+     continuous assessment buys <b>1.5 marks of relief</b> in the final exam.</p>
+  <div class="clock" id="clock"></div>
+
+  <section>
+    <div class="shead"><h2>Standing</h2><p>Transcript verified against the SIS portal</p></div>
+    <div class="tiles" id="tiles"></div>
+    <p class="note" id="ceilnote"></p>
+  </section>
+
+  <section>
+    <div class="shead"><h2>Course ledger</h2><p>Enter CA scores as they land &mdash; out of 100</p></div>
+    <div class="ledger" id="ledger"></div>
+    <div class="barkey" style="margin-top:12px">
+      <span><i style="background:var(--good)"></i>Marks banked</span>
+      <span><i style="background:var(--ghost)"></i>Still winnable</span>
+      <span><i style="background:var(--lost)"></i>Marks lost for good</span>
+      <span><i style="background:var(--ink);width:2px;border-radius:0"></i>The 70 line</span>
+    </div>
+    <p class="note"><b>CA1 20% &middot; CA2 20% &middot; Final exam 60%</b> &mdash; confirmed identical across all six
+       published course guides, assumed for GST&nbsp;212 and SSC&nbsp;202, which have none.</p>
+  </section>
+
+  <section>
+    <div class="shead"><h2>Why continuous assessment decides this</h2><p>Marks banked out of 40 &rarr; exam score then needed for an A</p></div>
+    <div class="lev" id="lev"></div>
+    <p class="note">Below <b>10 out of 40</b> on continuous assessment, an A stops being reachable in that course
+       no matter how well the exam goes. A missed quiz window is not a setback you can study your way out of.</p>
+  </section>
+
+  <section>
+    <div class="shead"><h2>The week as a budget constraint</h2>
+      <p>168 hours, allocated in priority order</p></div>
+    <div class="budget">
+      <div class="stack" id="stack"></div>
+      <div class="slegend" id="slegend"></div>
+      <div class="cols">
+        <div>
+          <h3>Study floor, by course</h3>
+          <div id="studyList"></div>
+        </div>
+        <div>
+          <h3 style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+            <span>Everything else</span>
+            <label class="toggle"><input type="checkbox" id="crunch"> Crunch week</label>
+          </h3>
+          <div id="extraList"></div>
+        </div>
+      </div>
+      <div class="knobs">
+        <div class="knob"><label for="k-sleep">Sleep / night</label><input type="number" id="k-sleep" step="0.5" min="4" max="12"></div>
+        <div class="knob"><label for="k-meals">Meals &amp; care / wk</label><input type="number" id="k-meals" step="1" min="0" max="60"></div>
+        <div class="knob"><label for="k-family">Family &amp; chores / wk</label><input type="number" id="k-family" step="1" min="0" max="80"></div>
+        <div class="knob"><label for="k-other">Other fixed / wk</label><input type="number" id="k-other" step="1" min="0" max="80"></div>
+      </div>
+      <p class="note" id="budgetnote"></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><h2>Deadline radar</h2><p>Fill these in from the LMS &mdash; closing dates, not opening dates</p></div>
+    <div class="dl">
+      <div class="dgrid"><span class="dlab">Course</span><span class="dlab">CA1 closes</span><span class="dlab">CA2 closes</span></div>
+      <div id="dlRows"></div>
+      <p class="note" id="dlNext"></p>
+    </div>
+  </section>
+
+  <footer>
+    <span id="savedNote" class="saved"></span><br>
+    Grading on the Nigerian 5-point scale: A 70+ &middot; B 60&ndash;69 &middot; C 50&ndash;59 &middot; D 45&ndash;49 &middot; E 40&ndash;44 &middot; F below 40.
+    Semester runs 7 September to the exam window of 28 November &ndash; 5 December 2026.
+  </footer>
+</div>
+
+<script>
+const COURSES=[
+ {code:"ECO 202",title:"Introduction to Microeconomics II",units:2,diff:3},
+ {code:"ECO 204",title:"Introduction to Macroeconomics II",units:2,diff:3},
+ {code:"ECO 206",title:"Statistics for Economists",units:2,diff:3},
+ {code:"MIVA-ECO 208",title:"Behavioural Economics",units:2,diff:3},
+ {code:"MIVA-ECO 212",title:"Introduction to Decision Science",units:2,diff:4},
+ {code:"MIVA-ECO 216",title:"Labour Economics",units:2,diff:3},
+ {code:"SSC 202",title:"Introduction to Computer and Its Applications",units:3,diff:3},
+ {code:"GST 212",title:"Philosophy, Logic and Human Existence",units:2,diff:2}
+];
+const EXTRAS=[
+ {name:"Trading",tier:"flexible",floor:2,target:8},
+ {name:"Internship applications",tier:"flexible",floor:1,target:3},
+ {name:"German",tier:"flexible",floor:1,target:4},
+ {name:"Religious study",tier:"flexible",floor:1,target:1},
+ {name:"Independent research",tier:"surplus",floor:0,target:3}
+];
+const PRIOR={units:57,points:258};          // verified: 258/57 = 4.53, matches portal
+const RATE={1:1.5,2:1.75,3:2,4:2.5,5:3};
+const SLACK=.15, START=new Date("2026-09-07T00:00:00+01:00"), EXAM=new Date("2026-11-28T00:00:00+01:00");
+const TOTAL_UNITS=COURSES.reduce((s,c)=>s+c.units,0);
+
+let state={scores:{},dates:{},life:{sleep:7.5,meals:14,family:10,other:0},crunch:false};
+let db=null,saveTimer=null;
+const $=id=>document.getElementById(id);
+const r2=n=>Math.round(n*100)/100;
+const pts=s=>s>=70?5:s>=60?4:s>=50?3:s>=45?2:s>=40?1:0;
+
+/* One course's position against the 70 line. */
+function analyse(code){
+  const s=state.scores[code]||{};
+  const parts=[{w:20,v:s.ca1},{w:20,v:s.ca2},{w:60,v:null}];
+  let banked=0,lost=0,win=0;
+  for(const p of parts){
+    if(typeof p.v==="number"){banked+=p.v/100*p.w; lost+=(1-p.v/100)*p.w;}
+    else win+=p.w;
+  }
+  const ceiling=banked+win;
+  const need=win>0?(70-banked)/win*100:null;
+  let status,cls;
+  if(win===0) {status=banked>=70?"Secured":"Missed"; cls=banked>=70?"good":"bad";}
+  else if(ceiling<70){status="Out of reach";cls="bad";}
+  else if(need<=0){status="Secured";cls="good";}
+  else if(need>90){status="At risk";cls="bad";}
+  else if(need>70){status="Stretch";cls="warn";}
+  else {status="On track";cls="good";}
+  return {banked:r2(banked),lost:r2(lost),win:r2(win),ceiling:r2(ceiling),need,status,cls};
+}
+
+function renderClock(){
+  const now=new Date();
+  const wk=Math.max(1,Math.floor((now-START)/6048e5)+1);
+  const days=Math.ceil((EXAM-now)/864e5);
+  $("clock").innerHTML=
+    `<span class="chip">Week <b>${wk}</b> of 12</span>`+
+    `<span class="chip${days<=21?" hot":""}"><b>${days}</b> days to exams</span>`+
+    `<span class="chip">Exams <b>28 Nov &ndash; 5 Dec</b></span>`+
+    `<span class="chip"><b>${TOTAL_UNITS}</b> units this semester</span>`;
+}
+
+function renderStanding(){
+  const rows=COURSES.map(c=>({c,a:analyse(c.code)}));
+  // Projection assumes every outstanding assessment lands exactly on the target.
+  const proj=rows.reduce((s,{c,a})=>s+pts(a.banked+a.win*0.7)*c.units,0)/TOTAL_UNITS;
+  const ceil=rows.reduce((s,{c,a})=>s+pts(a.ceiling)*c.units,0)/TOTAL_UNITS;
+  const after=(PRIOR.points+proj*TOTAL_UNITS)/(PRIOR.units+TOTAL_UNITS);
+  const tiles=[
+    {k:"Semester GPA projected",v:proj.toFixed(2),n:`Ceiling still available ${ceil.toFixed(2)}`,lead:true},
+    {k:"CGPA now",v:"4.53",n:"54 of 120 units completed"},
+    {k:"CGPA after this semester",v:after.toFixed(2),n:"If the projection holds"},
+    {k:"Consecutive 5.00 semesters",v:"3",n:"100L second, 200L first, and the 105 retake"}
+  ];
+  $("tiles").innerHTML=tiles.map(t=>
+    `<div class="tile${t.lead?" lead":""}"><span class="k">${t.k}</span>
+     <span class="v">${t.v}</span><div class="n">${t.n}</div></div>`).join("");
+  $("ceilnote").innerHTML=`A clean 5.00 this semester moves the cumulative figure to <b>${after.toFixed(2)}</b>.
+    The absolute ceiling by graduation is <b>4.78</b> &mdash; the single 29 in MIVA-ECO 105 stays in the CGPA
+    denominator even though the 93 retake replaced it in the completed-unit count. That is arithmetic, not effort,
+    and 4.78 is comfortably First Class.`;
+}
+
+function renderLedger(){
+  const head=`<div class="lrow lhead"><div>Course</div><div>Marks against the 70 line</div><div style="text-align:right">Exam needed</div></div>`;
+  $("ledger").innerHTML=head+COURSES.map(c=>{
+    const a=analyse(c.code), s=state.scores[c.code]||{};
+    const need=a.need===null?"&mdash;":a.ceiling<70?"&mdash;":`${Math.max(0,a.need).toFixed(1)}%`;
+    return `<div class="lrow">
+      <div>
+        <div class="code">${c.code}</div>
+        <div class="ctitle">${c.title}</div>
+        <div class="units">${c.units} units</div>
+      </div>
+      <div>
+        <div class="barwrap">
+          <div class="bar">
+            <div class="seg banked ${a.cls==="good"?"":a.cls}" style="width:${a.banked}%"></div>
+            <div class="seg win" style="width:${a.win}%"></div>
+            <div class="seg lost" style="width:${a.lost}%"></div>
+            <div class="tick"></div>
+          </div>
+        </div>
+        <div class="inputs">
+          <label>CA1<input type="number" id="in-${c.code}-ca1" min="0" max="100" step="1"
+            value="${s.ca1??""}" placeholder="--" aria-label="${c.code} CA1 score out of 100"></label>
+          <label>CA2<input type="number" id="in-${c.code}-ca2" min="0" max="100" step="1"
+            value="${s.ca2??""}" placeholder="--" aria-label="${c.code} CA2 score out of 100"></label>
+          <span>banked ${a.banked.toFixed(1)} of 40</span>
+        </div>
+      </div>
+      <div class="verdict">
+        <div class="need">${need}</div>
+        <div class="needlab">${a.ceiling<70?"an A is no longer reachable":"in the final exam, for an A"}</div>
+        <span class="pill ${a.cls}">${a.status}</span>
+      </div>
+    </div>`;
+  }).join("");
+  COURSES.forEach(c=>["ca1","ca2"].forEach(k=>{
+    const el=$(`in-${c.code}-${k}`);
+    el.addEventListener("input",()=>{
+      const v=el.value.trim();
+      state.scores[c.code]=state.scores[c.code]||{};
+      state.scores[c.code][k]=v===""?null:Math.max(0,Math.min(100,Number(v)));
+      const focus=document.activeElement?.id;
+      renderLedger(); renderStanding();
+      if(focus){const f=$(focus); if(f){f.focus(); f.setSelectionRange?.(f.value.length,f.value.length);}}
+      save();
+    });
+  }));
+}
+
+function renderLeverage(){
+  $("lev").innerHTML=[40,36,32,28,24,20,16,12,10,8].map(ca=>{
+    const need=(70-ca)/60*100;
+    const cls=need>100?"bad":need>90?"bad":need>70?"warn":"good";
+    return `<div><div class="ca">${ca} / 40</div>
+      <div class="ex" style="color:var(--${cls==="good"?"good":cls==="warn"?"warn":"bad"})">
+      ${need>100?"none":need.toFixed(1)+"%"}</div></div>`;
+  }).join("");
+}
+
+function budget(){
+  const L=state.life;
+  const sleep=L.sleep*7, fixed=L.meals+L.family+L.other;
+  const disc=168-sleep-fixed;
+  const study=COURSES.reduce((s,c)=>s+c.units*RATE[c.diff],0);
+  const slack=study*SLACK;
+  const floor=study+slack;
+  let left=Math.max(0,disc-floor);
+  const acts=EXTRAS.map(e=>({...e,
+    f:state.crunch&&e.tier==="surplus"?0:e.floor,
+    t:state.crunch?(e.tier==="surplus"?0:e.target*.5):e.target,
+    got:0}));
+  for(const a of acts){const g=Math.min(a.f,left); a.got=g; left-=g;}
+  for(const a of acts){const g=Math.min(Math.max(0,a.t-a.got),left); a.got+=g; left-=g;}
+  return {sleep,fixed,disc,study,slack,floor,acts,rest:left,
+    used:acts.reduce((s,a)=>s+a.got,0),feasible:disc-floor>=0};
+}
+
+function renderBudget(){
+  const b=budget();
+  const segs=[
+    {l:"Sleep",v:b.sleep,c:"var(--ink-3)",fg:"#fff"},
+    {l:"Fixed",v:b.fixed,c:"var(--rule-2)",fg:"var(--ink)"},
+    {l:"Study",v:b.floor,c:"var(--accent)",fg:"var(--accent-ink)"},
+    {l:"Everything else",v:b.used,c:"var(--good)",fg:"#fff"},
+    {l:"Unallocated",v:b.rest,c:"var(--surface-2)",fg:"var(--ink-3)"}
+  ];
+  $("stack").innerHTML=segs.map(s=>
+    `<div style="width:${s.v/168*100}%;background:${s.c};color:${s.fg}"
+      title="${s.l}: ${r2(s.v)}h">${s.v/168>.075?r2(s.v)+"h":""}</div>`).join("");
+  $("slegend").innerHTML=segs.map(s=>
+    `<span><i style="background:${s.c};border:1px solid var(--rule)"></i>${s.l} <b class="num">${r2(s.v)}h</b></span>`).join("");
+
+  $("studyList").innerHTML=COURSES.map(c=>
+    `<div class="alloc"><span>${c.code}<span class="muted"> &middot; ${c.units}u</span></span>
+     <b>${r2(c.units*RATE[c.diff])}h</b></div>`).join("")+
+    `<div class="alloc"><span class="muted">+ ${Math.round(SLACK*100)}% slack for power and network</span>
+     <b class="muted">${r2(b.slack)}h</b></div>`;
+
+  $("extraList").innerHTML=b.acts.map(a=>{
+    const cut=a.got<a.target;
+    return `<div class="alloc"><span>${a.name}<span class="muted"> &middot; ${a.tier}</span></span>
+      <b style="${cut?"color:var(--warn)":""}">${r2(a.got)}h${cut?` <span class="muted">of ${a.target}</span>`:""}</b></div>`;
+  }).join("")+`<div class="alloc"><span class="muted">Unallocated &mdash; rest, social, margin</span>
+      <b class="muted">${r2(b.rest)}h</b></div>`;
+
+  $("budgetnote").innerHTML=b.feasible
+    ? `Study time is reserved before anything else claims it &mdash; <b>${r2(b.floor)}h</b> a week across eight
+       courses. The <b>${r2(b.rest)}h</b> left unallocated is real slack, and it looks generous because the fixed
+       figures above are estimates. Correct them and the whole plan recomputes.
+       ${state.crunch?"<br><br><b>Crunch week is on:</b> flexible activities are halved and surplus ones suspended. Religious study holds its hour anyway &mdash; its floor equals its target, and floors are funded before any target is trimmed.":""}`
+    : `<b style="color:var(--bad)">This week does not fit.</b> The course load alone needs ${r2(b.floor)}h
+       but only ${r2(b.disc)}h are free. Reduce a fixed commitment or the plan is fiction.`;
+}
+
+function renderDeadlines(){
+  $("dlRows").innerHTML=COURSES.map(c=>{
+    const d=state.dates[c.code]||{};
+    return `<div class="dgrid">
+      <span class="code dcode">${c.code}</span>
+      <input type="date" id="d-${c.code}-ca1" value="${d.ca1||""}" aria-label="${c.code} CA1 closing date">
+      <input type="date" id="d-${c.code}-ca2" value="${d.ca2||""}" aria-label="${c.code} CA2 closing date">
+    </div>`;
+  }).join("");
+  COURSES.forEach(c=>["ca1","ca2"].forEach(k=>{
+    $(`d-${c.code}-${k}`).addEventListener("change",e=>{
+      state.dates[c.code]=state.dates[c.code]||{};
+      state.dates[c.code][k]=e.target.value;
+      renderNext(); save();
+    });
+  }));
+  renderNext();
+}
+
+function renderNext(){
+  const now=new Date(), all=[];
+  for(const c of COURSES) for(const k of ["ca1","ca2"]){
+    const v=state.dates[c.code]?.[k];
+    if(v){const t=new Date(v+"T23:59:00+01:00"); if(t>now) all.push({c:c.code,k:k.toUpperCase(),t});}
+  }
+  all.sort((a,b)=>a.t-b.t);
+  $("dlNext").innerHTML=all.length
+    ? `Next up: `+all.slice(0,3).map(d=>{
+        const days=Math.ceil((d.t-now)/864e5);
+        return `<b class="${days<=2?"soon":""}">${d.c} ${d.k} in ${days} day${days===1?"":"s"}</b>`;
+      }).join(" &middot; ")
+    : `No dates entered yet. This is the highest-value thing you can fill in &mdash; a closed quiz window costs
+       marks that no amount of exam preparation recovers.`;
+}
+
+function renderAll(){renderClock();renderStanding();renderLedger();renderLeverage();renderBudget();renderDeadlines();}
+
+/* ---- persistence ---- */
+function save(){
+  if(!db) return;
+  clearTimeout(saveTimer);
+  saveTimer=setTimeout(async()=>{
+    try{ await db.doc("semester/state").set({...state,updatedAt:Date.now()});
+         $("savedNote").textContent="Saved "+new Date().toLocaleTimeString();
+    }catch(e){ $("savedNote").textContent="Not saved — this view is read-only."; }
+  },600);
+}
+
+(async function boot(){
+  renderAll();
+  $("crunch").addEventListener("change",e=>{state.crunch=e.target.checked;renderBudget();save();});
+  for(const [id,key] of [["k-sleep","sleep"],["k-meals","meals"],["k-family","family"],["k-other","other"]]){
+    const el=$(id); el.value=state.life[key];
+    el.addEventListener("input",()=>{
+      const v=Number(el.value); if(!Number.isFinite(v)) return;
+      state.life[key]=v; renderBudget(); save();
+    });
+  }
+  db=await window.claude?.use?.("db");
+  if(!db){ $("savedNote").textContent="Working offline — entries last only for this visit."; return; }
+  try{
+    const doc=await db.doc("semester/state").get();
+    if(doc){
+      state={...state,...doc,life:{...state.life,...(doc.life||{})}};
+      for(const [id,key] of [["k-sleep","sleep"],["k-meals","meals"],["k-family","family"],["k-other","other"]])
+        $(id).value=state.life[key];
+      $("crunch").checked=!!state.crunch;
+      renderAll();
+      $("savedNote").textContent="Loaded your saved entries.";
+    } else { $("savedNote").textContent="Ready — entries save automatically."; }
+  }catch(e){ $("savedNote").textContent="Could not load saved entries."; }
+})();
+</script>
