@@ -1,0 +1,415 @@
+<title>The 5.00 Week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#eef1f4; --surface:#fbfcfd; --surface-2:#e6eaef;
+  --ink:#101a2b; --ink-2:#42506a; --ink-3:#71809a;
+  --rule:#d3dae3; --rule-2:#bcc6d3;
+  --accent:#0d6a6f; --accent-ink:#fff;
+  --shadow:0 1px 2px rgba(16,26,43,.06),0 4px 16px rgba(16,26,43,.05);
+  --deep-bg:#0d6a6f;   --deep-fg:#ffffff;
+  --lms-bg:#d7e5f4;    --lms-fg:#1c3a5c;
+  --recall-bg:#e3dcf3; --recall-fg:#362a5e;
+  --skill-bg:#f6e3c4;  --skill-fg:#5c4210;
+  --relax-bg:#d5ead9;  --relax-fg:#1b4a2a;
+  --life-bg:#e6eaef;   --life-fg:#42506a;
+  --faith-bg:#f3dde6;  --faith-fg:#5c2440;
+  --break-fg:#71809a;  --sleep-bg:#1a2436; --sleep-fg:#8493ab;
+  --now:#a93226;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#0b1220; --surface:#131d2e; --surface-2:#1b273b;
+  --ink:#e6ebf2; --ink-2:#a6b3c7; --ink-3:#7b8aa3;
+  --rule:#27334a; --rule-2:#36445e;
+  --accent:#3fb0b5; --accent-ink:#06212a;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+  --deep-bg:#17767c;   --deep-fg:#eafcfd;
+  --lms-bg:#1c3350;    --lms-fg:#bcd6f0;
+  --recall-bg:#2e2551; --recall-fg:#d3c8f0;
+  --skill-bg:#4a3612;  --skill-fg:#f0d9a8;
+  --relax-bg:#173a25;  --relax-fg:#b5e0c1;
+  --life-bg:#1f2b3f;   --life-fg:#a6b3c7;
+  --faith-bg:#43203a;  --faith-fg:#f0c8dc;
+  --break-fg:#7b8aa3;  --sleep-bg:#060b14; --sleep-fg:#4d5c74;
+  --now:#e0685a;
+}}
+:root[data-theme="dark"]{
+  --ground:#0b1220; --surface:#131d2e; --surface-2:#1b273b;
+  --ink:#e6ebf2; --ink-2:#a6b3c7; --ink-3:#7b8aa3;
+  --rule:#27334a; --rule-2:#36445e;
+  --accent:#3fb0b5; --accent-ink:#06212a;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+  --deep-bg:#17767c;   --deep-fg:#eafcfd;
+  --lms-bg:#1c3350;    --lms-fg:#bcd6f0;
+  --recall-bg:#2e2551; --recall-fg:#d3c8f0;
+  --skill-bg:#4a3612;  --skill-fg:#f0d9a8;
+  --relax-bg:#173a25;  --relax-fg:#b5e0c1;
+  --life-bg:#1f2b3f;   --life-fg:#a6b3c7;
+  --faith-bg:#43203a;  --faith-fg:#f0c8dc;
+  --break-fg:#7b8aa3;  --sleep-bg:#060b14; --sleep-fg:#4d5c74;
+  --now:#e0685a;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);
+  font-size:15px;line-height:1.55;margin:0;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px;padding-block:32px 72px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600;margin:0 0 10px}
+h1{font-family:var(--display);font-size:clamp(30px,6.4vw,46px);font-weight:600;
+  line-height:1.04;letter-spacing:-.015em}
+.sub{color:var(--ink-2);margin:10px 0 0;max-width:64ch}
+section{margin-top:40px}
+.shead{display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+  flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:9px;margin-bottom:18px}
+h2{font-family:var(--display);font-size:21px;font-weight:600;letter-spacing:-.01em}
+.shead p{margin:0;font-size:12.5px;color:var(--ink-3)}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* ---- now card ---- */
+.nowcard{background:var(--ink);color:#fff;border-radius:12px;padding:20px 22px;
+  margin-top:24px;box-shadow:var(--shadow);display:grid;
+  grid-template-columns:1fr 1fr;gap:22px}
+.nowcard .k{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(255,255,255,.58);font-weight:600;display:block;margin-bottom:7px}
+.nowcard .big{font-family:var(--display);font-size:24px;font-weight:600;line-height:1.15}
+.nowcard .t{font-family:var(--mono);font-size:12.5px;color:rgba(255,255,255,.7);margin-top:6px}
+.nowcard .nxt{opacity:.78}
+
+/* ---- week grid ---- */
+.scroller{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.week{display:grid;grid-template-columns:54px repeat(7,minmax(128px,1fr));gap:6px;min-width:960px}
+.daycol{position:relative}
+.dayname{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;
+  color:var(--ink-3);text-align:center;padding-bottom:7px;height:30px}
+.dayname.today{color:var(--now)}
+.track{position:relative;height:1080px;border-left:1px solid var(--rule)}
+.axis .track{border-left:none}
+.hr{position:absolute;left:0;right:0;border-top:1px dotted var(--rule);pointer-events:none}
+.hrlab{position:absolute;left:0;font-family:var(--mono);font-size:10.5px;
+  color:var(--ink-3);transform:translateY(-50%)}
+.blk{position:absolute;left:2px;right:2px;border-radius:6px;padding:6px 8px;
+  overflow:hidden;cursor:pointer;border:1px solid transparent;
+  transition:filter .12s ease,opacity .12s ease}
+.blk:hover{filter:brightness(1.04)}
+.blk:focus-visible{outline:2px solid var(--now);outline-offset:1px}
+.blk .bt{font-family:var(--mono);font-size:9.5px;opacity:.75;letter-spacing:-.02em}
+.blk .bl{font-size:11.5px;font-weight:600;line-height:1.22;margin-top:2px;letter-spacing:-.01em}
+.blk .bn{font-size:10px;opacity:.78;line-height:1.25;margin-top:2px}
+.blk.tight{padding:3px 8px;display:flex;align-items:center}
+.blk.tight .bl{margin-top:0;font-size:10.5px;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;font-weight:500}
+.blk.done{opacity:.42}
+.blk.done .bl{text-decoration:line-through}
+.deep{background:var(--deep-bg);color:var(--deep-fg)}
+.lms{background:var(--lms-bg);color:var(--lms-fg)}
+.recall{background:var(--recall-bg);color:var(--recall-fg)}
+.skill{background:var(--skill-bg);color:var(--skill-fg)}
+.relax{background:var(--relax-bg);color:var(--relax-fg)}
+.life{background:var(--life-bg);color:var(--life-fg)}
+.faith{background:var(--faith-bg);color:var(--faith-fg)}
+.sleep{background:var(--sleep-bg);color:var(--sleep-fg)}
+.brk{background:transparent;color:var(--break-fg);border:1px dashed var(--rule-2)}
+.nowline{position:absolute;left:-2px;right:-2px;height:2px;background:var(--now);z-index:5}
+.nowline::before{content:"";position:absolute;left:-4px;top:-3px;width:8px;height:8px;
+  border-radius:50%;background:var(--now)}
+
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px;font-size:12px;color:var(--ink-2)}
+.legend span{display:flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:3px;flex:none;border:1px solid var(--rule)}
+
+/* ---- rest tally ---- */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+  padding:15px 16px;box-shadow:var(--shadow)}
+.tile .k{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);
+  font-weight:600;display:block;margin-bottom:7px;line-height:1.3}
+.tile .v{font-family:var(--mono);font-size:29px;font-weight:600;line-height:1;
+  letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.tile .n{font-size:11.5px;color:var(--ink-3);margin-top:7px;line-height:1.35}
+.tile.rest{background:var(--relax-bg);border-color:transparent}
+.tile.rest .k{color:var(--relax-fg);opacity:.72}
+.tile.rest .v,.tile.rest .n{color:var(--relax-fg)}
+
+/* ---- principles ---- */
+.rules{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.rule{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+  padding:16px 18px;box-shadow:var(--shadow)}
+.rule h3{font-family:var(--display);font-size:15.5px;font-weight:600;margin-bottom:6px}
+.rule p{margin:0;font-size:13px;color:var(--ink-2);line-height:1.5}
+
+/* ---- course hours ---- */
+.hours{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+  padding:17px 19px;box-shadow:var(--shadow)}
+.hrow{display:flex;justify-content:space-between;gap:12px;padding:7px 0;
+  border-bottom:1px dotted var(--rule);font-size:13.5px;align-items:baseline}
+.hrow:last-child{border-bottom:none}
+.hrow b{font-family:var(--mono);font-weight:600;font-variant-numeric:tabular-nums;flex:none}
+.hrow .c{font-family:var(--mono);font-size:12.5px}
+.hrow .m{color:var(--ink-3);font-size:12px}
+
+.note{font-size:12.5px;color:var(--ink-3);margin-top:14px;line-height:1.55;max-width:72ch}
+.note b{color:var(--ink-2);font-weight:600}
+.bar-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:16px}
+.btn{font-family:var(--body);font-size:12.5px;padding:6px 14px;border-radius:999px;
+  border:1px solid var(--rule-2);background:var(--surface);color:var(--ink-2);cursor:pointer}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.saved{font-size:11.5px;color:var(--ink-3);font-family:var(--mono)}
+footer{margin-top:52px;padding-top:19px;border-top:1px solid var(--rule);
+  font-size:12px;color:var(--ink-3);line-height:1.6}
+
+@media(max-width:900px){
+  .nowcard{grid-template-columns:1fr;gap:16px}
+  .tiles{grid-template-columns:repeat(2,1fr)}
+  .rules{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <p class="eyebrow">Miva Open University &middot; 200L Second Semester &middot; 12 teaching weeks</p>
+  <h1>The 5.00 Week</h1>
+  <p class="sub">Miva is asynchronous &mdash; no lecture ever forces you to be anywhere. That freedom is the whole
+     risk, so this timetable is the structure nothing else provides. <b>Rest is scheduled, not left over</b>,
+     because rest that has to be earned never actually gets taken.</p>
+
+  <div class="nowcard" id="nowcard"></div>
+
+  <section>
+    <div class="shead"><h2>The week</h2><p>Tap any block to tick it off &mdash; resets every Monday</p></div>
+    <div class="scroller"><div class="week" id="week"></div></div>
+    <div class="legend">
+      <span><i style="background:var(--deep-bg)"></i>Deep work</span>
+      <span><i style="background:var(--lms-bg)"></i>LMS activities</span>
+      <span><i style="background:var(--recall-bg)"></i>Active recall</span>
+      <span><i style="background:var(--skill-bg)"></i>Trading, German, internships</span>
+      <span><i style="background:var(--relax-bg)"></i>Rest and relaxation</span>
+      <span><i style="background:var(--life-bg)"></i>Meals, family, chores</span>
+      <span><i style="border-style:dashed;background:transparent"></i>Break</span>
+    </div>
+    <div class="bar-actions">
+      <button class="btn" id="clearBtn" type="button">Clear this week's ticks</button>
+      <span class="saved" id="savedNote"></span>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><h2>What the week actually holds</h2><p>Every hour accounted for</p></div>
+    <div class="tiles" id="tiles"></div>
+    <p class="note" id="resthint"></p>
+  </section>
+
+  <section>
+    <div class="shead"><h2>Why it is built this way</h2><p>Each rule earns its place</p></div>
+    <div class="rules">
+      <div class="rule"><h3>Hardest work at 06:45</h3>
+        <p>Analytical work &mdash; Decision Science, Statistics, the two intermediate theory courses &mdash; goes
+           in the first block, when focus is cheapest. Nothing competes with it yet and the power is usually on.</p></div>
+      <div class="rule"><h3>Courses recur, they don't block</h3>
+        <p>Each course appears two or three times across the week rather than once in a long sitting. Spacing the
+           same material across days is the difference between recognising it and recalling it.</p></div>
+      <div class="rule"><h3>An hour of recall every afternoon</h3>
+        <p>14:15 is for retrieving the morning's material from memory, not rereading it. Re-reading feels
+           productive and mostly is not; retrieval is what survives to the exam hall.</p></div>
+      <div class="rule"><h3>LMS volume gets its own slot</h3>
+        <p>GST 212 alone has 111 activities. That is throughput work, not thinking work, so it sits at 11:15
+           where concentration is already fading rather than stealing a deep-work block.</p></div>
+      <div class="rule"><h3>Trading is boxed, not banned</h3>
+        <p>Two hours, three afternoons, inside the New York session. Trading is the one activity on your list
+           whose hours expand on their own, so it gets a box with walls rather than a floor.</p></div>
+      <div class="rule"><h3>Sunday is genuinely off</h3>
+        <p>Worship, family, and nothing academic. Twelve weeks is a long run and the students who collapse in
+           week nine are the ones who never took a full day. A rest day is part of the plan, not a failure of it.</p></div>
+      <div class="rule"><h3>One flex hour every evening</h3>
+        <p>19:15 belongs to internships or your own research &mdash; unless something slipped, in which case it
+           is catch-up. A timetable with no slack breaks the first time the power goes out.</p></div>
+      <div class="rule"><h3>Evenings end at 20:15</h3>
+        <p>The last block of every weekday is yours with nothing attached to it. Scheduled relaxation is the
+           only kind that is actually restful, because nothing is being neglected while you take it.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><h2>Hours per course</h2><p>Scaled by credit units and difficulty</p></div>
+    <div class="hours" id="hours"></div>
+    <p class="note">SSC 202 draws the most at six hours &mdash; three credit units, the largest single course on
+       the timetable. GST 212 draws the least in deep work but the most in LMS activities: you need an
+       <b>efficient</b> A there, not a brilliant one. Marks per hour is the thing to watch.</p>
+  </section>
+
+  <footer>
+    Built on a 7.5-hour night and the fixed commitments estimated in the Command Center. Change those figures
+    there and these blocks shift with them. Exams begin 28 November &mdash; in crunch weeks the skill and flex
+    blocks halve and the deep-work blocks absorb them.
+  </footer>
+</div>
+
+<script>
+const DAYS=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+const T0=5, T1=23, PX=1080;                     // track runs 05:00 to 23:00
+const fmt=h=>String(Math.floor(h)).padStart(2,"0")+":"+String(Math.round((h%1)*60)).padStart(2,"0");
+
+/* A weekday is one shape with different course assignments dropped into it. */
+const weekday=(deep1,deep2,lms,recall,skill,flex)=>[
+ {t:5.5, d:.75,type:"life",  l:"Wake, devotion, freshen up"},
+ {t:6.25,d:.5, type:"life",  l:"Breakfast"},
+ {t:6.75,d:2,  type:"deep",  l:deep1, n:"Deep work — peak focus"},
+ {t:8.75,d:.5, type:"brk",   l:"Break", n:"Move. No screen."},
+ {t:9.25,d:1.5,type:"deep",  l:deep2, n:"Deep work"},
+ {t:10.75,d:.5,type:"brk",   l:"Break"},
+ {t:11.25,d:1.5,type:"lms",  l:lms, n:"Lectures, quizzes, activities"},
+ {t:12.75,d:1.5,type:"relax",l:"Lunch and real rest", n:"Away from the desk"},
+ {t:14.25,d:1, type:"recall",l:recall, n:"Retrieve from memory, don't reread"},
+ {t:15.25,d:.5,type:"brk",   l:"Break"},
+ {t:15.75,d:2, type:"skill", l:skill},
+ {t:17.75,d:1.5,type:"life", l:"Dinner, family, chores"},
+ {t:19.25,d:1, type:"skill", l:flex, n:"or catch up whatever slipped"},
+ {t:20.25,d:1.75,type:"relax",l:"Yours", n:"Nothing attached to this"},
+ {t:22,  d:1,  type:"sleep", l:"Sleep"}
+];
+
+const SCHEDULE=[
+ weekday("MIVA-ECO 212","ECO 202","GST 212 activities","Recall — 212 + 202","Trading","Internship applications"),
+ weekday("ECO 206","MIVA-ECO 208","SSC 202 activities","Recall — 206 + 208","German","Independent research"),
+ weekday("ECO 202","ECO 206","MIVA-ECO 208 activities","Recall — 202 + 206","Trading","Internship applications"),
+ weekday("ECO 204","MIVA-ECO 216","MIVA-ECO 216 activities","Recall — 204 + 216","German","Independent research"),
+ weekday("SSC 202","MIVA-ECO 212","ECO 204 activities","Recall — SSC 202 + 212","Trading","Internship applications"),
+ [ {t:7,  d:1,  type:"life",  l:"Slow start, breakfast"},
+   {t:8,  d:2,  type:"deep",  l:"SSC 202", n:"The biggest course gets the quiet morning"},
+   {t:10, d:.5, type:"brk",   l:"Break"},
+   {t:10.5,d:1.5,type:"lms",  l:"GST 212 activities", n:"Clear the backlog"},
+   {t:12, d:1,  type:"life",  l:"Lunch"},
+   {t:13, d:1,  type:"recall",l:"Weekly review", n:"Scores, deadlines, next week's plan"},
+   {t:14, d:2,  type:"skill", l:"Trading"},
+   {t:16, d:1,  type:"skill", l:"Independent research"},
+   {t:17, d:5,  type:"relax", l:"Free", n:"Family, friends, whatever you want"},
+   {t:22, d:1,  type:"sleep", l:"Sleep"} ],
+ [ {t:7,   d:1.5,type:"relax",l:"Slow morning", n:"No alarm"},
+   {t:8.5, d:3,  type:"life", l:"Worship"},
+   {t:11.5,d:1,  type:"faith",l:"Religious study session"},
+   {t:12.5,d:1.5,type:"life", l:"Lunch with family"},
+   {t:14,  d:5.5,type:"relax",l:"Rest day", n:"No coursework. This is what makes week 10 possible."},
+   {t:19.5,d:.5, type:"recall",l:"Ten minutes on the week ahead", n:"Then close the laptop"},
+   {t:20,  d:2,  type:"relax",l:"Wind down"},
+   {t:22,  d:1,  type:"sleep",l:"Sleep"} ]
+];
+
+const HOURS=[["MIVA-ECO 212","Introduction to Decision Science",2,5],
+ ["SSC 202","Introduction to Computer and Its Applications",3,6],
+ ["ECO 202","Introduction to Microeconomics II",2,4],
+ ["ECO 204","Introduction to Macroeconomics II",2,4],
+ ["ECO 206","Statistics for Economists",2,4],
+ ["MIVA-ECO 208","Behavioural Economics",2,4],
+ ["MIVA-ECO 216","Labour Economics",2,4],
+ ["GST 212","Philosophy, Logic and Human Existence",2,3.5]];
+
+let ticks={},weekKey="",db=null,saveTimer=null;
+const $=id=>document.getElementById(id);
+const todayIdx=()=>(new Date().getDay()+6)%7;          // Monday = 0
+function mondayKey(){const d=new Date();d.setDate(d.getDate()-todayIdx());return d.toISOString().slice(0,10);}
+
+function renderWeek(){
+  const ti=todayIdx(), now=new Date(), nowH=now.getHours()+now.getMinutes()/60;
+  let html=`<div class="daycol axis"><div class="dayname">&nbsp;</div><div class="track">`;
+  for(let h=T0;h<=T1;h++) html+=`<div class="hrlab" style="top:${(h-T0)/(T1-T0)*PX}px">${fmt(h)}</div>`;
+  html+=`</div></div>`;
+  SCHEDULE.forEach((day,di)=>{
+    html+=`<div class="daycol"><div class="dayname${di===ti?" today":""}">${DAYS[di]}${di===ti?" · today":""}</div><div class="track">`;
+    for(let h=T0;h<=T1;h++) html+=`<div class="hr" style="top:${(h-T0)/(T1-T0)*PX}px"></div>`;
+    day.forEach((b,bi)=>{
+      const top=(b.t-T0)/(T1-T0)*PX, hgt=b.d/(T1-T0)*PX-3;
+      const key=`${di}-${bi}`, done=ticks[key]?" done":"";
+      // Under ~42px only one line fits, so the label wins and the timestamp goes.
+      const tight=hgt<42;
+      html+=`<div class="blk ${b.type}${done}${tight?" tight":""}" style="top:${top}px;height:${hgt}px"
+        data-k="${key}" role="button" tabindex="0"
+        aria-pressed="${!!ticks[key]}" aria-label="${b.l}, ${fmt(b.t)} to ${fmt(b.t+b.d)}">
+        ${tight?"":`<div class="bt">${fmt(b.t)}&ndash;${fmt(b.t+b.d)}</div>`}
+        <div class="bl">${b.l}</div>
+        ${b.n&&hgt>62?`<div class="bn">${b.n}</div>`:""}</div>`;
+    });
+    if(di===ti&&nowH>=T0&&nowH<=T1)
+      html+=`<div class="nowline" style="top:${(nowH-T0)/(T1-T0)*PX}px"></div>`;
+    html+=`</div></div>`;
+  });
+  $("week").innerHTML=html;
+  $("week").querySelectorAll(".blk").forEach(el=>{
+    const toggle=()=>{const k=el.dataset.k; ticks[k]=!ticks[k];
+      el.classList.toggle("done",ticks[k]); el.setAttribute("aria-pressed",!!ticks[k]); save();};
+    el.addEventListener("click",toggle);
+    el.addEventListener("keydown",e=>{if(e.key===" "||e.key==="Enter"){e.preventDefault();toggle();}});
+  });
+}
+
+function renderNow(){
+  const ti=todayIdx(), now=new Date(), h=now.getHours()+now.getMinutes()/60;
+  const day=SCHEDULE[ti];
+  const cur=day.find(b=>h>=b.t&&h<b.t+b.d);
+  const nxt=day.find(b=>b.t>h);
+  $("nowcard").innerHTML=
+    `<div><span class="k">Right now &middot; ${DAYS[ti]}</span>
+      <div class="big">${cur?cur.l:"Off the clock"}</div>
+      <div class="t">${cur?fmt(cur.t)+" – "+fmt(cur.t+cur.d):"Nothing scheduled — rest"}</div></div>
+     <div class="nxt"><span class="k">Next</span>
+      <div class="big">${nxt?nxt.l:"Sleep"}</div>
+      <div class="t">${nxt?fmt(nxt.t)+" – "+fmt(nxt.t+nxt.d):"Day's done"}</div></div>`;
+}
+
+function renderTiles(){
+  const sum=t=>SCHEDULE.flat().filter(b=>t.includes(b.type)).reduce((s,b)=>s+b.d,0);
+  const study=sum(["deep","lms","recall"]), skill=sum(["skill"]),
+        rest=sum(["relax","brk"]), sleep=7.5*7;
+  const tiles=[
+    {k:"Study each week",v:study.toFixed(1)+"h",n:"Deep work, activities and recall",cls:""},
+    {k:"Rest and breaks",v:rest.toFixed(1)+"h",n:"Scheduled, not left over",cls:" rest"},
+    {k:"Trading, German, internships",v:skill.toFixed(0)+"h",n:"Boxed into named slots",cls:""},
+    {k:"Sleep",v:sleep.toFixed(0)+"h",n:"7.5 hours a night, every night",cls:""}
+  ];
+  $("tiles").innerHTML=tiles.map(t=>
+    `<div class="tile${t.cls}"><span class="k">${t.k}</span><span class="v">${t.v}</span>
+     <div class="n">${t.n}</div></div>`).join("");
+  $("resthint").innerHTML=`That is <b>${rest.toFixed(1)} hours</b> of genuine rest a week &mdash; more than the
+    ${study.toFixed(1)} hours of study, and none of it contingent on finishing something first. Sunday alone
+    carries over nine of them. If a week ever forces you to choose, the flex hour goes before the rest does.`;
+}
+
+function renderHours(){
+  $("hours").innerHTML=HOURS.map(([c,t,u,h])=>
+    `<div class="hrow"><span><span class="c">${c}</span> <span class="m">&middot; ${t}</span></span>
+     <b>${h}h <span class="m">/ ${u}u</span></b></div>`).join("")+
+    `<div class="hrow"><span class="m">Total study floor, before slack</span><b>34.5h</b></div>`;
+}
+
+function save(){
+  if(!db) return;
+  clearTimeout(saveTimer);
+  saveTimer=setTimeout(async()=>{
+    try{ await db.doc("timetable/ticks").set({week:weekKey,ticks,updatedAt:Date.now()});
+         $("savedNote").textContent="Saved "+new Date().toLocaleTimeString();
+    }catch(e){ $("savedNote").textContent="Not saved — this view is read-only."; }
+  },500);
+}
+
+(async function boot(){
+  weekKey=mondayKey();
+  renderNow(); renderWeek(); renderTiles(); renderHours();
+  setInterval(()=>{renderNow();renderWeek();},60000);
+  $("clearBtn").addEventListener("click",()=>{ticks={};renderWeek();save();});
+
+  db=await window.claude?.use?.("db");
+  if(!db){ $("savedNote").textContent="Ticks last only for this visit."; return; }
+  try{
+    const doc=await db.doc("timetable/ticks").get();
+    // Ticks belong to one week; a new Monday starts clean.
+    if(doc&&doc.week===weekKey){ ticks=doc.ticks||{}; renderWeek();
+      $("savedNote").textContent="Loaded this week's ticks."; }
+    else { $("savedNote").textContent="New week — starting clean."; }
+  }catch(e){ $("savedNote").textContent="Could not load saved ticks."; }
+})();
+</script>
