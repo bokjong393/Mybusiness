@@ -5,6 +5,6 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "test": "node --test src/engine/__tests__/"
+    "test": "node --test src/engine/__tests__/*.test.js"
   }
 }
