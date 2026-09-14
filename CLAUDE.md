@@ -87,6 +87,13 @@ the higher score recorded. They are free diagnostics — protect their value.
    start of a tutoring session, and revisit old entries, not just new material.
 6. **Space it.** Push a five-minute revisit two or three days out over another
    half hour today.
+7. **Never project textbook scope onto a Miva week.** Her weekly summaries are
+   consistently narrower than the standard treatment of the same topic, and
+   guessing at the content has now misfired twice — week 1 was time periods only
+   with no production curves, week 2 is definitions and a taxonomy with no
+   AFC/AVC/ATC and no curve shapes. Wait for the summary, read it, and build the
+   recall list from what is actually there. Anything beyond it may be real
+   economics but it is not what her assessment tests.
 
 ## Her week
 

@@ -81,6 +81,34 @@ Lesson**. Point her at the revision one in late November.
 
 ---
 
+### Week 2 — Fixed, variable, average and marginal costs
+*Summary read 2026-09-14. Structure adds a **Reading Material** item not present
+in week 1, titled "Relationship between Average Cost and Marginal Cost" — the
+LMS naming an item after one relationship is a strong signal of what it tests.*
+
+Scope note: the summary covers definitions, a classification taxonomy, two
+formulas and one relationship. It does **not** cover AFC, AVC or ATC, curve
+shapes, or why average curves are U-shaped. An orientation given before the
+summary arrived wrongly assumed all of that.
+
+The taxonomy is the distinctive part, and distinctive means assessable:
+
+- [ ] Fixed vs variable costs — definition and three examples each
+- [ ] `TC = FC + VC`
+- [ ] **Recurrent** fixed costs (regular cash outlays) vs **allocable** fixed
+      costs (implicit, no payment — depreciation), with an example of each
+- [ ] Depreciation, and why it is allocable rather than recurrent
+- [ ] **Fully variable** vs **semi-variable** costs, with an example of each
+      (her reflection question 4 is entirely about this pair)
+- [ ] Variable costs include **opportunity costs** — easy to skim, easy to test
+- [ ] `AC = TC / Q` and `MC = ΔTC / ΔQ`
+- [ ] The relationship in both directions: AC falling → MC < AC; AC rising →
+      MC > AC; AC constant → MC = AC
+- [ ] The geometric framing the reading material will likely add: MC cuts AC at
+      AC's **minimum**. Same fact — at the minimum AC is momentarily constant.
+
+Practice attempt: *(to fill in)*
+
 ## ECO 204 — Introduction to Macroeconomics II
 *No entries yet.*
 
@@ -114,7 +142,7 @@ to the published artifact still knows where she stands.
 
 | Course | CA1 /100 | CA2 /100 | Exam needed for an A |
 |---|---|---|---|
-| ECO 202 | — | — | 70.0% |
+| ECO 202 | — | — | 70.0% |  <!-- wk1 practice 3/5 cold, 5/5 on retake -->
 | ECO 204 | — | — | 70.0% |
 | ECO 206 | — | — | 70.0% |
 | MIVA-ECO 208 | — | — | 70.0% |
