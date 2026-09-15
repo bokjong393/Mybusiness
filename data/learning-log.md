@@ -145,8 +145,56 @@ that phrasing.
 *No entries yet.*
 
 ## ECO 206 — Statistics for Economists
-*No entries yet. Note: a demonstrated strength (93 on the Introductory Statistics
-retake, 90 in Statistics II). Pitch accordingly.*
+
+A demonstrated strength — 93 on the Introductory Statistics retake, 90 in
+Statistics II. Pitch accordingly. **The risk in this course is not difficulty, it
+is skimming**: the early weeks feel trivial against that record.
+
+Structure is the tightest dependency chain on her timetable. Week 1 (descriptive
+statistics) is standalone. Week 2 (probability) begins a chain that runs through
+distributions to sampling, inference and ANOVA — a gap in week 2 does not make
+week 7 harder, it makes it impossible.
+
+### Week 1 — Foundations of data: descriptive statistics
+*2026-09-15. Items: two videos, a Reading on frequency distribution, a Worksheet
+on distribution shapes, practice assessment, summary.*
+
+**Practice assessment: 3/5 cold, then 4/5. Did not close.**
+
+The timestamps matter: attempt 1 finished 10:16, attempt 2 started 10:17 and took
+47 seconds for five questions. **She skipped the repair step** — attempt 2 was a
+faster re-guess, not a test of a fix, so a gap survived both attempts and both
+were spent. Worth watching whether this recurs; the protocol is cold attempt,
+then repair, then retest.
+
+3/5 cold is her weakest cold result so far, in her strongest subject, which is
+the skimming risk confirmed rather than hypothesised.
+
+**The surviving error — a real weak spot, not noise.**
+
+For {3, 7, 8, 10, 15} she gave the mean deviation as 3.93. The answer is 3.12.
+
+| | |
+|---|---|
+| mean deviation = 15.6 / 5 | **3.12** |
+| standard deviation = √(77.2 / 5) | **3.93** ← what she gave |
+
+She did not miscalculate; she computed a different statistic. **3.93 is exactly
+the standard deviation of that dataset**, so the distractor was built by running
+the other measure on the same data. The pull toward SD is natural since mean
+deviation is taught and then abandoned in practice.
+
+**A distractor pattern to expect all semester:** this course builds wrong answers
+by computing a different valid statistic from the same figures. "That looks like
+a number I would get" is therefore no check at all. Weeks 4-12 are full of
+measures one step apart — variance against SD, population against sample,
+one-tailed against two-tailed.
+
+The fix given: one table, absolute-deviation column beside squared-deviation
+column. Both measures fall out of a single computation and stop collapsing into
+each other.
+
+- [ ] Re-test mean deviation vs standard deviation in a later week
 
 ## MIVA-ECO 208 — Behavioural Economics
 *No entries yet.*
